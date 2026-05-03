@@ -1,0 +1,195 @@
+<div class="min-h-screen bg-[#F5F2ED] flex flex-col md:flex-row">
+  <!-- Sidebar Navigation -->
+  <nav class="md:w-64 md:h-screen md:sticky top-0 bg-white border-r border-ink/10 flex flex-col p-8 z-50">
+    <div class="mb-12">
+      <h1 class="text-3xl font-display font-medium tracking-tighter text-primary">Beograde</h1>
+      <p class="text-[10px] uppercase tracking-widest text-ink/40 font-mono mt-1">Interactive City Guide</p>
+    </div>
+
+    <div class="space-y-6 flex-1">
+      <button 
+        (click)="setCategory('all')"
+        class="flex items-center gap-4 w-full text-left group transition-all"
+        [class.text-primary]="selectedCategory() === 'all'"
+        [class.text-ink/60]="selectedCategory() !== 'all'">
+        <mat-icon class="scale-90">explore</mat-icon>
+        <span class="text-sm font-medium tracking-tight">Overview</span>
+      </button>
+      <button 
+        (click)="setCategory('sight')"
+        class="flex items-center gap-4 w-full text-left group transition-all"
+        [class.text-primary]="selectedCategory() === 'sight'"
+        [class.text-ink/60]="selectedCategory() !== 'sight'">
+        <mat-icon class="scale-90">account_balance</mat-icon>
+        <span class="text-sm font-medium tracking-tight">Sightseeing</span>
+      </button>
+      <button 
+        (click)="setCategory('cuisine')"
+        class="flex items-center gap-4 w-full text-left group transition-all"
+        [class.text-primary]="selectedCategory() === 'cuisine'"
+        [class.text-ink/60]="selectedCategory() !== 'cuisine'">
+        <mat-icon class="scale-90">restaurant</mat-icon>
+        <span class="text-sm font-medium tracking-tight">Cuisine</span>
+      </button>
+      <button 
+        (click)="setCategory('nightlife')"
+        class="flex items-center gap-4 w-full text-left group transition-all"
+        [class.text-primary]="selectedCategory() === 'nightlife'"
+        [class.text-ink/60]="selectedCategory() !== 'nightlife'">
+        <mat-icon class="scale-90">nightlife</mat-icon>
+        <span class="text-sm font-medium tracking-tight">Nightlife</span>
+      </button>
+    </div>
+
+    <div class="mt-auto pt-8 border-t border-ink/5">
+      <div class="flex items-center gap-3">
+        <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+        <span class="text-[10px] uppercase font-mono tracking-wider opacity-40">Live Guide</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-1">
+    <!-- Hero Block -->
+    <header class="relative h-[70vh] flex items-end p-8 md:p-16 overflow-hidden bg-bg-dark">
+      <!-- High-res background with overlay -->
+      <img 
+        src="https://images.unsplash.com/photo-1599388302325-18881267605d?q=80&w=2000" 
+        alt="Belgrade Skyline" 
+        class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity"
+        referrerpolicy="no-referrer">
+      <div class="absolute inset-0 bg-gradient-to-t from-bg-dark via-bg-dark/20 to-transparent"></div>
+      
+      <div class="relative z-10 w-full max-w-4xl">
+        <span class="text-primary text-xs uppercase tracking-[0.3em] font-mono mb-4 block">White City • Gateway to the Balkans</span>
+        <h2 class="text-[clamp(4rem,15vw,10rem)] leading-[0.8] mb-6 text-white font-display uppercase tracking-tighter">
+          Beo<br>grade
+        </h2>
+        <p class="text-white/60 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-8">
+          Where the Sava meets the Danube, and history meets the future. Explore Europe’s most vibrant capital.
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <div class="px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white text-xs tracking-widest uppercase font-medium">
+            20°C Sunny
+          </div>
+          <div class="px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white text-xs tracking-widest uppercase font-medium">
+            1 RSD = 0.0085 €
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Places Content -->
+    <section class="p-8 md:p-16">
+      <div class="flex items-baseline justify-between mb-12">
+        <h3 class="text-4xl font-display italic">Curated Experience</h3>
+        <span class="text-ink/40 font-mono text-xs uppercase tracking-widest">{{ filteredPlaces().length }} Recommendations</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @for (place of filteredPlaces(); track place.id) {
+          <div class="place-card group cursor-pointer">
+            <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
+              <img 
+                [src]="place.image" 
+                [alt]="place.name"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerpolicy="no-referrer">
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-white">
+                  <mat-icon>arrow_outward</mat-icon>
+                </div>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] uppercase font-bold tracking-wider rounded-full">
+                  {{ place.category }}
+                </span>
+              </div>
+            </div>
+            <h4 class="text-xl font-display text-ink group-hover:text-primary transition-colors">{{ place.name }}</h4>
+            <p class="text-sm text-ink/60 font-light mt-2 line-clamp-2 leading-relaxed">
+              {{ place.description }}
+            </p>
+            <div class="flex items-center gap-2 mt-4 text-[10px] uppercase tracking-widest font-mono text-ink/40">
+              <mat-icon class="scale-75">location_on</mat-icon>
+              {{ place.location }}
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- AI Travel Assistant -->
+    <section class="m-8 md:m-16 p-12 bg-ink text-white rounded-[40px] overflow-hidden relative">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 blur-[100px] -mr-48 -mt-48"></div>
+      
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-primary font-mono text-xs uppercase tracking-[0.4em] mb-4 block">AI Conciege</span>
+          <h3 class="text-5xl font-display leading-[1.1] mb-6">Need a custom<br>itinerary?</h3>
+          <p class="text-white/60 text-lg font-light mb-8 max-w-md">
+            Our AI assistant can plan your perfect 24 hours in Belgrade based on your vibe.
+          </p>
+          <div class="relative max-w-md">
+            <input 
+              type="text" 
+              [(ngModel)]="userInput"
+              (keyup.enter)="askAI()"
+              placeholder="E.g. I love jazz and street food..."
+              class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 focus:outline-none focus:border-primary transition-colors text-white placeholder:text-white/20">
+            <button 
+              (click)="askAI()"
+              [disabled]="isAiLoading()"
+              class="absolute right-2 top-2 bottom-2 px-6 bg-primary rounded-xl text-[10px] uppercase font-bold tracking-widest hover:scale-105 transition-transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
+              {{ isAiLoading() ? 'Seeking...' : 'Ask AI' }}
+            </button>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          @if (aiResponse()) {
+            <div class="p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div class="flex gap-4 items-start">
+                <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <mat-icon class="text-primary">auto_awesome</mat-icon>
+                </div>
+                <div>
+                  <p class="text-sm text-white/80 font-light leading-relaxed">
+                    {{ aiResponse() }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          } @else if (isAiLoading()) {
+            <div class="p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+                  <mat-icon class="text-primary">hourglass_empty</mat-icon>
+                </div>
+                <div class="space-y-2 flex-1">
+                  <div class="h-2 bg-white/10 rounded animate-pulse w-full"></div>
+                  <div class="h-2 bg-white/10 rounded animate-pulse w-3/4"></div>
+                </div>
+              </div>
+            </div>
+          } @else {
+            <div class="p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm opacity-50">
+              <div class="flex gap-4 items-start">
+                <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                  <mat-icon class="text-primary">auto_awesome</mat-icon>
+                </div>
+                <div>
+                  <p class="text-sm text-white/80 font-light leading-relaxed italic">
+                    "Try a morning coffee at Hotel Moskva, then head to the Zemun Quay for a riverside walk before the splavovi start pumping tonight."
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
