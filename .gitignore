@@ -56,3 +56,4 @@ src/assets/fonts/
 # Superpowers brainstorming (mockups + server state)
 .superpowers/
 
+.smoke/
