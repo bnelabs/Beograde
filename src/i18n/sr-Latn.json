@@ -1,0 +1,88 @@
+{
+  "tabs": {
+    "home": "Početna",
+    "map": "Mapa",
+    "routes": "Rute",
+    "trips": "Izleti",
+    "saved": "Sačuvano"
+  },
+  "home": {
+    "greeting": "Zdravo, Beograde",
+    "todays_pick": "Danas preporučujemo",
+    "open_now": "Otvoreno blizu tebe",
+    "day_trips": "Izleti iz grada",
+    "day_trips_coming_soon": "Izleti vozom i autobusom stižu u sledećem ažuriranju.",
+    "see_all": "Pogledaj sve"
+  },
+  "map": {
+    "all_places": "Sva mesta",
+    "download_pack": "Preuzmi paket za Beograd",
+    "downloading": "Preuzimanje Beograda…",
+    "download_failed": "Preuzimanje nije uspelo",
+    "try_again": "Pokušaj ponovo",
+    "recenter": "Centriraj na moju lokaciju",
+    "tracking_on": "Zaustavi praćenje",
+    "tracking_off": "Pokreni praćenje",
+    "min_walk": "{n} min pešaka"
+  },
+  "poi": {
+    "back": "Nazad",
+    "save": "Sačuvaj",
+    "saved": "Sačuvano",
+    "open_now": "Otvoreno",
+    "closed": "Zatvoreno",
+    "verified_on": "Provereno {date}",
+    "editor_pick": "Izbor urednika",
+    "wikipedia": "Vikipedija",
+    "osm": "OpenStreetMap",
+    "official": "Zvanično",
+    "reviews": "{n} recenzija",
+    "no_image": "Nema fotografije",
+    "not_found": "Nije pronađeno",
+    "address": "Adresa",
+    "hours": "Radno vreme",
+    "price": "Cena",
+    "tags": "Oznake"
+  },
+  "itinerary": {
+    "back": "Nazad",
+    "show_on_map": "Prikaži na mapi",
+    "complete": "Ruta završena",
+    "next_stop": "Sledeća stanica",
+    "stops": "{n} stanica",
+    "route_unavailable": "Geometrija rute nije dostupna — koraci i dalje rade."
+  },
+  "saved": {
+    "empty_title": "Još ništa nije sačuvano",
+    "empty_body": "Dodirni oznaku na mestu da bi ga sačuvao ovde."
+  },
+  "trips": {
+    "empty_title": "Izleti uskoro",
+    "empty_body": "Novi Sad, Topola, Avala i još mnogo toga — sa info o prevozu — stižu u sledećem ažuriranju."
+  },
+  "settings": {
+    "language": "Jezik",
+    "language_en": "English",
+    "language_sr": "Srpski",
+    "currency": "Valuta",
+    "currency_rsd": "RSD (srpski dinar)",
+    "currency_rsd_eur": "RSD sa EUR",
+    "offline_pack": "Paket za rad bez interneta",
+    "gps": "GPS",
+    "permission": "Dozvola",
+    "tracking": "praćenje",
+    "start": "Pokreni",
+    "stop": "Zaustavi",
+    "install": "Instaliraj Beograd vodič",
+    "install_ios": "Dodirni Podeli, pa Dodaj na početni ekran.",
+    "downloaded_today": "Danas",
+    "downloaded_yesterday": "Juče",
+    "downloaded_days": "Pre {n} dana"
+  },
+  "common": {
+    "close": "Zatvori",
+    "cancel": "Otkaži",
+    "confirm": "Potvrdi",
+    "loading": "Učitavanje…"
+  }
+}
