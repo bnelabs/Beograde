@@ -1,0 +1,59 @@
+/*
+ * Soft Modern — base design tokens for Beograde.
+ * Pair with belgrade-tokens.css for the city-specific identity layer.
+ */
+
+:root {
+  /* Surfaces */
+  --bg-warm-1: #FFF8F1;
+  --bg-warm-2: #F4ECE0;
+  --surface: #FFFFFF;
+  --surface-elev: #FFFFFF;
+
+  /* Ink */
+  --ink: #2A2018;
+  --ink-2: #7A6A5A;
+  --ink-3: #9A8B7A;
+
+  /* Brand */
+  --accent: #B8540C;
+  --accent-soft: #FFE3CC;
+
+  /* Status */
+  --good: #2D7A1F;
+  --good-soft: #E0F2DC;
+  --warn: #B8810C;
+  --bad: #B8200C;
+
+  /* Map */
+  --map-water: #A4C8E0;
+  --map-park: #D6E8C4;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-card: 20px;
+  --radius-card-lg: 24px;
+  --radius-tile: 14px;
+
+  /* Shadows */
+  --shadow-card: 0 6px 18px rgba(140, 80, 30, 0.10), 0 1px 3px rgba(140, 80, 30, 0.05);
+  --shadow-nav: 0 -4px 16px rgba(0, 0, 0, 0.06);
+
+  /* Type sizes */
+  --fs-display: 26px;
+  --fs-display-lg: 32px;
+  --fs-body: 15px;
+  --fs-secondary: 13px;
+  --fs-meta: 11px;
+
+  /* Motion */
+  --motion-tab: 180ms ease-out;
+  --motion-detail: 280ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-tab: 0ms;
+    --motion-detail: 0ms;
+  }
+}
