@@ -71,7 +71,7 @@ export class TilePackService {
         if (total > 0) this.progress.set(received / total);
       }
 
-      const blob = new Blob(chunks, { type: 'application/octet-stream' });
+      const blob = new Blob(chunks as BlobPart[], { type: 'application/octet-stream' });
       await setTilePack(blob, { bytes: blob.size, etag });
       this.blob = blob;
       this.meta.set((await getTilePackMeta()) ?? null);
