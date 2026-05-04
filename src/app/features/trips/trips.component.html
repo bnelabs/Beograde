@@ -1,1 +1,14 @@
-<section class="p-5"><h1>Trips</h1><p>Built in Task 17.</p></section>
+<div class="trips">
+  <header class="trips-head">
+    <span class="trips-eyebrow">Beyond Belgrade</span>
+    <h1 class="trips-title">{{ t().tabs.trips }}</h1>
+  </header>
+
+  <app-card variant="concrete">
+    <div class="trips-empty">
+      <span class="material-symbols-outlined" aria-hidden="true">directions_train</span>
+      <h2>{{ t().trips.empty_title }}</h2>
+      <p>{{ t().trips.empty_body }}</p>
+    </div>
+  </app-card>
+</div>

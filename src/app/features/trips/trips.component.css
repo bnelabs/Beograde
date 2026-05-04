@@ -1,0 +1,9 @@
+:host { display: block; }
+.trips { padding: env(safe-area-inset-top) 18px 96px; min-height: 100%; }
+.trips-head { padding: 24px 0 16px; }
+.trips-eyebrow { font-size: 11px; font-weight: 600; color: var(--transit-red); letter-spacing: 0.04em; }
+.trips-title { font-size: 32px; line-height: 1.05; margin: 4px 0 0; color: var(--ink); }
+.trips-empty { padding: 32px 24px; color: white; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.trips-empty .material-symbols-outlined { font-size: 36px; opacity: 0.9; }
+.trips-empty h2 { font-size: 18px; margin: 4px 0 4px; }
+.trips-empty p { font-size: 13px; line-height: 1.5; opacity: 0.9; margin: 0; }
