@@ -1,1 +1,37 @@
-<section class="p-5"><h1>Saved</h1><p>Built in Task 18.</p></section>
+<div class="sv">
+  <header class="sv-head">
+    <h1 class="sv-title">{{ t().tabs.saved }}</h1>
+    <span class="sv-count">{{ enriched().length }}</span>
+  </header>
+
+  @if (enriched().length === 0) {
+    <div class="sv-empty">
+      <span class="material-symbols-outlined" aria-hidden="true">bookmark_border</span>
+      <h2>{{ t().saved.empty_title }}</h2>
+      <p>{{ t().saved.empty_body }}</p>
+    </div>
+  } @else {
+    <ul class="sv-list">
+      @for (item of enriched(); track item.poi.id) {
+        <li>
+          <a [routerLink]="['/poi', item.poi.id]" class="block">
+            <app-card>
+              <div class="sv-row">
+                <div class="sv-thumb">
+                  <span class="material-symbols-outlined" aria-hidden="true">{{ icons[item.poi.category] }}</span>
+                </div>
+                <div class="sv-info">
+                  <span class="sv-name">{{ item.poi.name | i18nText }}</span>
+                  <span class="sv-meta">{{ item.poi.address | i18nText }}</span>
+                </div>
+                @if (item.distance !== null) {
+                  <span class="sv-dist">{{ fmtDistance(item.distance) }}</span>
+                }
+              </div>
+            </app-card>
+          </a>
+        </li>
+      }
+    </ul>
+  }
+</div>

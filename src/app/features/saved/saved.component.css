@@ -1,0 +1,23 @@
+:host { display: block; }
+.sv { padding: env(safe-area-inset-top) 18px 96px; min-height: 100%; }
+.sv-head { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+.sv-title { font-size: 32px; line-height: 1.05; margin: 0; color: var(--ink); }
+.sv-count { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+.sv-empty { padding: 48px 24px; text-align: center; color: var(--ink-2); }
+.sv-empty .material-symbols-outlined { font-size: 48px; color: var(--accent); opacity: 0.6; }
+.sv-empty h2 { font-size: 18px; margin: 12px 0 6px; color: var(--ink); }
+.sv-empty p { font-size: 13px; line-height: 1.5; margin: 0; }
+
+.sv-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.sv-row { padding: 12px 14px; display: flex; align-items: center; gap: 14px; }
+.sv-thumb {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--accent-soft); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.sv-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.sv-name { font-size: 14px; font-weight: 600; color: var(--ink); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.sv-meta { font-size: 12px; color: var(--ink-3); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.sv-dist { font-size: 12px; font-weight: 600; color: var(--ink-2); white-space: nowrap; }

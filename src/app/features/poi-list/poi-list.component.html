@@ -1,57 +1,43 @@
-<div class="min-h-full pb-24">
-  <header class="px-5 pt-8 pb-4 sticky top-0 bg-[#F5F2ED]/95 backdrop-blur z-10 border-b border-ink/5">
-    <div class="flex items-baseline justify-between mb-3">
-      <h1 class="text-3xl font-display tracking-tighter">Places</h1>
-      <span class="text-[10px] uppercase tracking-widest font-mono text-ink/40">
-        {{ visible().length }} found
-      </span>
+<div class="pl">
+  <header class="pl-head">
+    <div class="pl-head-row">
+      <h1 class="pl-title">Places</h1>
+      <span class="pl-count">{{ visible().length }} found</span>
     </div>
 
     @if (!geo.position() && geo.permission() !== 'denied') {
-      <button
-        type="button"
-        (click)="enableGps()"
-        class="w-full mb-3 py-2 px-3 rounded-xl bg-ink text-white text-xs font-medium tracking-wide flex items-center justify-center gap-2">
-        <span class="material-symbols-outlined" style="font-size: 16px;">my_location</span>
+      <button type="button" (click)="enableGps()" class="pl-gps-btn">
+        <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">my_location</span>
         Enable GPS to sort by distance
       </button>
     }
 
-    <div class="flex gap-2 overflow-x-auto -mx-5 px-5 pb-1">
+    <div class="pl-chip-row">
       @for (f of filters; track f) {
-        <button
-          type="button"
-          (click)="filter.set(f)"
-          class="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide whitespace-nowrap transition border"
-          [class.bg-ink]="filter() === f"
-          [class.text-white]="filter() === f"
-          [class.border-ink]="filter() === f"
-          [class.bg-transparent]="filter() !== f"
-          [class.text-ink]="filter() !== f"
-          [class.border-ink/15]="filter() !== f">
+        <button type="button" (click)="filter.set(f)"
+                class="pl-chip"
+                [class.is-active]="filter() === f">
           {{ filterLabel(f) }}
         </button>
       }
     </div>
   </header>
 
-  <ul class="divide-y divide-ink/5">
+  <ul class="pl-list">
     @for (item of visible(); track item.poi.id) {
       <li>
-        <a
-          [routerLink]="['/poi', item.poi.id]"
-          class="flex items-center gap-4 px-5 py-4 active:bg-ink/5 transition">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-            <span class="material-symbols-outlined text-primary">{{ icons[item.poi.category] }}</span>
+        <a [routerLink]="['/poi', item.poi.id]" class="pl-row">
+          <div class="pl-thumb">
+            <span class="material-symbols-outlined" aria-hidden="true">{{ icons[item.poi.category] }}</span>
           </div>
-          <div class="flex-1 min-w-0">
-            <div class="text-sm font-medium text-ink truncate">{{ item.poi.name }}</div>
-            <div class="text-xs text-ink/50 truncate">{{ item.poi.address }}</div>
+          <div class="pl-info">
+            <span class="pl-name">{{ item.poi.name | i18nText }}</span>
+            <span class="pl-addr">{{ item.poi.address | i18nText }}</span>
           </div>
           @if (item.distance !== null) {
-            <div class="text-right shrink-0">
-              <div class="text-sm font-medium text-ink">{{ fmtDistance(item.distance) }}</div>
-              <div class="text-[10px] uppercase tracking-widest font-mono text-ink/40">{{ fmtWalk(item.distance) }}</div>
+            <div class="pl-dist">
+              <span class="pl-dist-m">{{ fmtDistance(item.distance) }}</span>
+              <span class="pl-dist-w">{{ fmtWalk(item.distance) }}</span>
             </div>
           }
         </a>
