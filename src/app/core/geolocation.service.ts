@@ -57,6 +57,13 @@ export class GeolocationService {
       (err) => {
         this.error.set(err.message);
         if (err.code === err.PERMISSION_DENIED) this.permission.set('denied');
+        // Reset watch state so the toggle can drive a retry rather than
+        // leaving the UI stuck in a "tracking" state with no live fixes.
+        if (this.watchId !== null) {
+          navigator.geolocation.clearWatch(this.watchId);
+          this.watchId = null;
+        }
+        this.isWatching.set(false);
       },
       { enableHighAccuracy: true, maximumAge: 5_000, timeout: 15_000 },
     );

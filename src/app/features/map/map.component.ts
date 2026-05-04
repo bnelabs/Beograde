@@ -11,11 +11,12 @@ import {
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
 import { TilePackService } from '../../core/tile-pack.service';
-import { POIS, CATEGORY_LABELS } from '../../data/pois';
+import { POIS, CATEGORY_LABELS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
 
@@ -36,6 +37,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   readonly geo = inject(GeolocationService);
   readonly proximity = inject(ProximityService);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   readonly itineraries = ITINERARIES;
   readonly activeItineraryId = signal<string | null>(null);
@@ -46,9 +48,16 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   );
   readonly nearestThree = computed(() => this.proximity.ranked().slice(0, 3));
 
+  // Deep-link query params from /poi/:id ("Map →" with focus=<id>) and
+  // /itinerary/:id ("Show on map" with itinerary=<id>).
+  private readonly queryParams = toSignal(this.route.queryParamMap, { requireSync: true });
+  private readonly intendedItinerary = computed(() => this.queryParams().get('itinerary'));
+  private readonly focusedPoiId = computed(() => this.queryParams().get('focus'));
+
   private map: import('maplibre-gl').Map | null = null;
   private userMarker: import('maplibre-gl').Marker | null = null;
   private accuracyCircleId = 'user-accuracy';
+  private lastFocusedPoiId: string | null = null;
 
   constructor() {
     // Re-create the map any time the tile pack becomes ready.
@@ -70,6 +79,27 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       const id = this.activeItineraryId();
       if (!this.map) return;
       void this.renderItinerary(id);
+    });
+
+    // Adopt ?itinerary=<id> from the URL once on entry / whenever it changes.
+    effect(() => {
+      const id = this.intendedItinerary();
+      if (id && id !== this.activeItineraryId()) {
+        this.activeItineraryId.set(id);
+      }
+    });
+
+    // Fly to ?focus=<poiId> once the map is ready. Tracks the last value so
+    // re-entering the route with the same id doesn't snap the camera again
+    // mid-pan.
+    effect(() => {
+      const id = this.focusedPoiId();
+      if (!id || !this.mapReady() || !this.map) return;
+      if (id === this.lastFocusedPoiId) return;
+      const poi = getPoi(id);
+      if (!poi) return;
+      this.lastFocusedPoiId = id;
+      this.map.flyTo({ center: [poi.lng, poi.lat], zoom: 16, speed: 1.4 });
     });
   }
 
