@@ -1,68 +1,75 @@
-<div class="min-h-full pb-24">
+<div class="it">
   @if (!itinerary()) {
-    <div class="p-8 text-center">
-      <h1 class="text-2xl font-display mb-2">Not found</h1>
-      <a routerLink="/itineraries" class="text-primary text-sm font-medium">Back to itineraries →</a>
+    <div class="it-empty">
+      <h1>Not found</h1>
+      <a routerLink="/routes" class="it-empty-link">← Back to routes</a>
     </div>
   } @else {
-    <header class="bg-ink text-white p-5 pb-8 rounded-b-[32px] relative">
-      <a
-        routerLink="/itineraries"
-        aria-label="Back"
-        class="absolute top-5 left-5 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur">
-        <span class="material-symbols-outlined">arrow_back</span>
+    <header class="it-hero">
+      <a routerLink="/routes" class="it-back" [attr.aria-label]="t().itinerary.back">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
       </a>
-      <div class="pt-12">
-        <span class="text-primary font-mono text-[10px] uppercase tracking-[0.4em]">
-          {{ itinerary()!.stops.length }} stops · {{ hours(itinerary()!.durationMinutes) }}
-        </span>
-        <h1 class="text-3xl font-display mt-2 leading-tight">{{ itinerary()!.title }}</h1>
-        <p class="text-white/60 text-sm mt-2">{{ itinerary()!.subtitle }}</p>
-
-        <a
-          [routerLink]="['/']"
-          [queryParams]="{ itinerary: itinerary()!.id }"
-          class="inline-flex items-center gap-2 mt-5 px-4 py-2 bg-primary text-white text-xs font-medium tracking-wide rounded-xl active:scale-95 transition">
-          <span class="material-symbols-outlined" style="font-size: 16px;">map</span>
-          Show on map
-        </a>
+      <div class="it-hero-fg">
+        <span class="it-eyebrow">{{ t().itinerary.stops.replace('{n}', enrichedStops().length.toString()) }} · {{ hours(itinerary()!.durationMinutes) }}</span>
+        <h1 class="it-title">{{ itinerary()!.title | i18nText }}</h1>
+        <p class="it-sub">{{ itinerary()!.subtitle | i18nText }}</p>
+        <div class="it-actions">
+          <a [routerLink]="['/map']" [queryParams]="{ itinerary: itinerary()!.id }" class="it-btn it-btn-primary">
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">map</span>
+            {{ t().itinerary.show_on_map }}
+          </a>
+          @if (progress.activeId() !== itinerary()!.id && !isComplete()) {
+            <button type="button" class="it-btn it-btn-secondary" (click)="startItinerary()">Start</button>
+          }
+          @if (progress.activeId() === itinerary()!.id) {
+            <button type="button" class="it-btn it-btn-secondary" (click)="resetItinerary()">Reset</button>
+          }
+        </div>
       </div>
     </header>
 
-    <ol class="px-5 pt-6 space-y-3">
+    @if (isComplete()) {
+      <div class="it-complete">
+        <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">check_circle</span>
+        {{ t().itinerary.complete }}
+      </div>
+    }
+
+    <section class="it-section">
+      <app-itinerary-timeline [nodes]="timelineNodes()" />
+    </section>
+
+    @if (progress.activeId() === itinerary()!.id) {
+      <section class="it-section it-progress">
+        <app-distance-progress [walkedMeters]="walkedMeters()" [totalMeters]="totalMeters()" />
+      </section>
+    }
+
+    @if (!itinerary()!.geometryUrl) {
+      <p class="it-no-geom">{{ t().itinerary.route_unavailable }}</p>
+    }
+
+    <ol class="it-stops">
       @for (s of enrichedStops(); track s.stop.poiId; let i = $index) {
         <li>
-          <a
-            [routerLink]="s.poi ? ['/poi', s.poi.id] : null"
-            class="flex gap-4 p-3 rounded-2xl active:bg-ink/5 transition"
-            [class.bg-primary/5]="i === nextStopIndex()">
-            <div class="flex flex-col items-center pt-1">
-              <div
-                class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium"
-                [class.bg-primary]="i === nextStopIndex()"
-                [class.text-white]="i === nextStopIndex()"
-                [class.bg-ink/10]="i !== nextStopIndex()"
-                [class.text-ink]="i !== nextStopIndex()">
-                {{ i + 1 }}
-              </div>
-              @if (i < enrichedStops().length - 1) {
-                <div class="w-px flex-1 bg-ink/10 my-1 min-h-[24px]"></div>
-              }
+          <a [routerLink]="s.poi ? ['/poi', s.poi.id] : null"
+             class="it-stop"
+             [class.is-next]="i === nextStopIndex() && !isComplete()"
+             [class.is-reached]="s.reached">
+            <div class="it-stop-rail">
+              <div class="it-stop-num">{{ i + 1 }}</div>
+              @if (i < enrichedStops().length - 1) { <div class="it-stop-line"></div> }
             </div>
-            <div class="flex-1 min-w-0 pt-1">
-              <div class="flex items-baseline gap-2">
-                <span class="text-[10px] uppercase tracking-widest font-mono text-ink/40">
-                  {{ offset(s.stop.arrivalOffsetMinutes) }}
-                </span>
+            <div class="it-stop-body">
+              <div class="it-stop-meta">
+                <span>{{ offset(s.stop.arrivalOffsetMinutes) }}</span>
                 @if (s.distance !== null) {
-                  <span class="text-[10px] uppercase tracking-widest font-mono text-primary">
-                    · {{ fmtDistance(s.distance) }}
-                  </span>
+                  <span class="it-stop-dist">· {{ fmtDistance(s.distance) }}</span>
                 }
               </div>
-              <div class="text-sm font-medium text-ink mt-0.5">{{ s.poi?.name ?? s.stop.poiId }}</div>
+              <div class="it-stop-name">{{ s.poi ? (s.poi.name | i18nText) : s.stop.poiId }}</div>
               @if (s.stop.notes) {
-                <div class="text-xs text-ink/60 mt-1">{{ s.stop.notes }}</div>
+                <div class="it-stop-notes">{{ s.stop.notes | i18nText }}</div>
               }
             </div>
           </a>
