@@ -85,3 +85,4 @@ deploy/               # nginx config + Hetzner deploy guide
 ## License & data attribution
 
 Map data © OpenStreetMap contributors, ODbL.
+
