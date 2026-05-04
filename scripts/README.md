@@ -7,6 +7,7 @@ These produce the assets the runtime cannot generate itself.
 | `build-tiles.sh` | `src/assets/tiles/belgrade.pmtiles` (50–100 MB) | Once, then whenever you want fresher OSM data. |
 | `build-fonts.sh` | `src/assets/fonts/Noto Sans Regular/*.pbf` (~1 MB) | Once. |
 | `build-itineraries.mjs` | `src/assets/itineraries/*.geojson` (real walking routes) | Whenever you change `src/app/data/itineraries.ts`. |
+| `migrate-pois.mjs` | rewrites `src/assets/pois.json` to v2 schema (bilingual + structured hours + provenance) | One-shot, already run during Phase 1a; idempotent. |
 
 ## Quick start
 
