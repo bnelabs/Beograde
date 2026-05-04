@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "foodie-crawl", "kind": "placeholder-straight-lines" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.4640, 44.8217],
+          [20.4628, 44.8208],
+          [20.4605, 44.8120],
+          [20.4593, 44.8131],
+          [20.4661, 44.8190],
+          [20.4626, 44.8195]
+        ]
+      }
+    }
+  ]
+}

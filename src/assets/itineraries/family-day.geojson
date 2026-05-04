@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "family-day", "kind": "placeholder-straight-lines" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.4503, 44.8226],
+          [20.4510, 44.8235],
+          [20.4582, 44.8175],
+          [20.4730, 44.8083],
+          [20.4710, 44.8060]
+        ]
+      }
+    }
+  ]
+}

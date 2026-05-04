@@ -1,80 +1,56 @@
-import {ChangeDetectionStrategy, Component, signal, computed, inject, PLATFORM_ID} from '@angular/core';
-import {CommonModule, isPlatformBrowser} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
-import {animate, stagger} from 'motion';
-import {GoogleGenAI} from '@google/genai';
-import {BELGRADE_PLACES, Place} from './city-data';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter } from 'rxjs/operators';
+import { PwaInstallService } from './core/pwa-install.service';
+
+interface NavTab {
+  id: 'map' | 'pois' | 'itineraries' | 'settings';
+  label: string;
+  icon: string;
+  route: string;
+}
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
-  imports: [CommonModule, MatIconModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  private platformId = inject(PLATFORM_ID);
-  
-  places = signal<Place[]>(BELGRADE_PLACES);
-  selectedCategory = signal<'all' | 'sight' | 'cuisine' | 'nightlife'>('all');
-  
-  // AI Assistant State
-  userInput = signal('');
-  aiResponse = signal<string | null>(null);
-  isAiLoading = signal(false);
+  private router = inject(Router);
+  protected readonly pwa = inject(PwaInstallService);
 
-  filteredPlaces = computed(() => {
-    const category = this.selectedCategory();
-    if (category === 'all') return this.places();
-    return this.places().filter(p => p.category === category);
+  protected readonly tabs: NavTab[] = [
+    { id: 'map', label: 'Map', icon: 'map', route: '/' },
+    { id: 'pois', label: 'Places', icon: 'explore', route: '/pois' },
+    { id: 'itineraries', label: 'Routes', icon: 'route', route: '/itineraries' },
+    { id: 'settings', label: 'Settings', icon: 'settings', route: '/settings' },
+  ];
+
+  protected readonly dismissedInstallTip = signal(false);
+
+  private readonly navEnd = toSignal(
+    this.router.events.pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd)),
+  );
+
+  protected readonly activeTab = computed<NavTab['id']>(() => {
+    // Recompute on every NavigationEnd.
+    this.navEnd();
+    const child = this.deepestChild(this.router.routerState.root.snapshot);
+    return (child?.data?.['tab'] as NavTab['id']) ?? 'map';
   });
 
-  setCategory(category: 'all' | 'sight' | 'cuisine' | 'nightlife') {
-    this.selectedCategory.set(category);
-    
-    // Quick animation for entering items
-    if (isPlatformBrowser(this.platformId)) {
-      setTimeout(() => {
-        const items = document.querySelectorAll('.place-card');
-        if (items.length > 0) {
-          animate(
-            items,
-            { opacity: [0, 1], y: [20, 0] },
-            { delay: stagger(0.05), duration: 0.5, ease: 'easeOut' }
-          );
-        }
-      }, 0);
-    }
-  }
+  protected readonly showIosInstallTip = computed(
+    () => this.pwa.isIos() && !this.pwa.isStandalone() && !this.dismissedInstallTip(),
+  );
 
-  async askAI() {
-    if (!this.userInput().trim() || this.isAiLoading()) return;
-    if (!isPlatformBrowser(this.platformId)) return;
-
-    this.isAiLoading.set(true);
-    this.aiResponse.set(null);
-
-    try {
-      const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-      
-      const prompt = `You are a Belgrade city expert and travel guide. 
-      The user wants a recommendation based on this input: "${this.userInput()}".
-      Provide a concise, engaging, and practical suggestion for things to do, eat, or visit in Belgrade.
-      Focus on hidden gems or specific "vibe" matches. Keep it under 100 words.`;
-
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: prompt
-      });
-
-      this.aiResponse.set(response.text || "I couldn't find a recommendation for that. Try another vibe!");
-    } catch (error) {
-      console.error('AI Error:', error);
-      this.aiResponse.set("I'm sorry, Belgrade is busy right now! Try again in a moment.");
-    } finally {
-      this.isAiLoading.set(false);
-      this.userInput.set('');
-    }
+  private deepestChild(node: import('@angular/router').ActivatedRouteSnapshot): import('@angular/router').ActivatedRouteSnapshot {
+    let current = node;
+    while (current.firstChild) current = current.firstChild;
+    return current;
   }
 }

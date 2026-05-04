@@ -2,12 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Google AI Studio Angular App</title>
+    <title>Beograde — Offline Belgrade Guide</title>
     <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Offline-first Belgrade city guide with GPS, hi-res map, POIs, and curated itineraries." />
+
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#FF6321" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- iOS Add to Home Screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Beograde" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png" />
+
+    <!-- Material Symbols (downloaded as part of build:fonts; falls back to network in dev) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      media="print"
+      onload="this.media='all'" />
   </head>
-  <body>
+  <body class="bg-[#F5F2ED]">
     <app-root></app-root>
+    <noscript>Beograde needs JavaScript to run.</noscript>
   </body>
 </html>

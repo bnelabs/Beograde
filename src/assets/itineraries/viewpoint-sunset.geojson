@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "viewpoint-sunset", "kind": "placeholder-straight-lines" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.4503, 44.8226],
+          [20.4520, 44.8155],
+          [20.4050, 44.8460],
+          [20.3980, 44.8470]
+        ]
+      }
+    }
+  ]
+}

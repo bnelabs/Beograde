@@ -1,0 +1,142 @@
+<div class="relative w-full h-full">
+  <div #mapHost class="absolute inset-0 bg-[#F5F2ED]"></div>
+
+  <!-- Tile pack: missing -->
+  @if (tilePack.status() === 'missing') {
+    <div class="absolute inset-0 z-30 flex items-center justify-center p-6 bg-[#F5F2ED]/95 backdrop-blur-sm">
+      <div class="max-w-sm w-full bg-white rounded-3xl shadow-xl p-8 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary" style="font-size: 32px;">cloud_download</span>
+        </div>
+        <h2 class="text-2xl font-display mb-2">Get ready for offline</h2>
+        <p class="text-sm text-ink/60 mb-6 leading-relaxed">
+          Beograde needs to download the Belgrade map pack once. After this, the app
+          works in airplane mode.
+        </p>
+        <button
+          type="button"
+          (click)="startDownload()"
+          class="w-full py-3 rounded-2xl bg-primary text-white text-sm font-medium tracking-wide hover:opacity-90 active:scale-[0.98] transition">
+          Download Belgrade pack
+        </button>
+        <p class="text-[11px] uppercase tracking-widest text-ink/40 font-mono mt-4">
+          One-time · Wi-Fi recommended
+        </p>
+      </div>
+    </div>
+  }
+
+  <!-- Tile pack: downloading -->
+  @if (tilePack.status() === 'downloading') {
+    <div class="absolute inset-0 z-30 flex items-center justify-center p-6 bg-[#F5F2ED]/95 backdrop-blur-sm">
+      <div class="max-w-sm w-full bg-white rounded-3xl shadow-xl p-8 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center animate-pulse">
+          <span class="material-symbols-outlined text-primary" style="font-size: 32px;">download</span>
+        </div>
+        <h2 class="text-xl font-display mb-2">Downloading Belgrade…</h2>
+        <p class="text-sm text-ink/60 mb-6">{{ downloadProgressPct() }}%</p>
+        <div class="w-full h-2 bg-ink/10 rounded-full overflow-hidden">
+          <div
+            class="h-full bg-primary transition-[width] duration-200"
+            [style.width.%]="downloadProgressPct()"></div>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Tile pack: error -->
+  @if (tilePack.status() === 'error') {
+    <div class="absolute inset-0 z-30 flex items-center justify-center p-6 bg-[#F5F2ED]/95 backdrop-blur-sm">
+      <div class="max-w-sm w-full bg-white rounded-3xl shadow-xl p-8 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-rose-100 flex items-center justify-center">
+          <span class="material-symbols-outlined text-rose-600" style="font-size: 32px;">error</span>
+        </div>
+        <h2 class="text-xl font-display mb-2">Download failed</h2>
+        <p class="text-sm text-ink/60 mb-6">{{ tilePack.error() }}</p>
+        <button
+          type="button"
+          (click)="startDownload()"
+          class="w-full py-3 rounded-2xl bg-primary text-white text-sm font-medium">
+          Try again
+        </button>
+      </div>
+    </div>
+  }
+
+  <!-- Map controls overlay -->
+  @if (tilePack.status() === 'ready') {
+    <div class="absolute top-4 left-4 right-16 z-20 flex flex-col gap-3 pointer-events-none">
+      <!-- Itinerary chips -->
+      <div class="flex gap-2 overflow-x-auto pointer-events-auto pb-1 -mb-1">
+        <button
+          type="button"
+          (click)="setActiveItinerary(null)"
+          class="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide whitespace-nowrap transition"
+          [class.bg-ink]="activeItineraryId() === null"
+          [class.text-white]="activeItineraryId() === null"
+          [class.bg-white/90]="activeItineraryId() !== null"
+          [class.text-ink]="activeItineraryId() !== null">
+          All POIs
+        </button>
+        @for (it of itineraries; track it.id) {
+          <button
+            type="button"
+            (click)="setActiveItinerary(it.id)"
+            class="shrink-0 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide whitespace-nowrap transition"
+            [class.bg-primary]="activeItineraryId() === it.id"
+            [class.text-white]="activeItineraryId() === it.id"
+            [class.bg-white/90]="activeItineraryId() !== it.id"
+            [class.text-ink]="activeItineraryId() !== it.id">
+            {{ it.title }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- GPS controls -->
+    <div class="absolute bottom-24 right-4 z-20 flex flex-col gap-2">
+      <button
+        type="button"
+        (click)="recenterOnUser()"
+        aria-label="Recenter on my location"
+        class="w-12 h-12 rounded-2xl bg-white shadow-lg flex items-center justify-center active:scale-95 transition">
+        <span class="material-symbols-outlined text-ink">my_location</span>
+      </button>
+      <button
+        type="button"
+        (click)="toggleGps()"
+        [attr.aria-label]="geo.isWatching() ? 'Stop tracking' : 'Start tracking'"
+        class="w-12 h-12 rounded-2xl shadow-lg flex items-center justify-center active:scale-95 transition"
+        [class.bg-primary]="geo.isWatching()"
+        [class.text-white]="geo.isWatching()"
+        [class.bg-white]="!geo.isWatching()"
+        [class.text-ink]="!geo.isWatching()">
+        <span class="material-symbols-outlined">{{ geo.isWatching() ? 'gps_fixed' : 'gps_off' }}</span>
+      </button>
+    </div>
+
+    <!-- Geo error toast -->
+    @if (geo.error()) {
+      <div class="absolute bottom-24 left-4 right-20 z-20 bg-rose-600 text-white text-xs font-medium px-4 py-2 rounded-2xl shadow-lg">
+        {{ geo.error() }}
+      </div>
+    }
+
+    <!-- Nearest POIs strip -->
+    @if (nearestThree().length) {
+      <div class="absolute bottom-4 left-4 right-4 z-20 flex gap-2 overflow-x-auto">
+        @for (item of nearestThree(); track item.poi.id) {
+          <a
+            [routerLink]="['/poi', item.poi.id]"
+            class="shrink-0 min-w-[180px] bg-white rounded-2xl shadow-lg p-3 flex flex-col gap-1 active:scale-[0.98] transition">
+            <span class="text-[10px] uppercase tracking-widest font-mono text-ink/40">
+              {{ categoryLabel(item.poi.category) }} · {{ formatDistance(item.meters) }}
+            </span>
+            <span class="text-sm font-medium text-ink leading-tight">{{ item.poi.name }}</span>
+            <span class="text-[11px] text-ink/50">{{ item.walkMinutes }} min walk</span>
+          </a>
+        }
+      </div>
+    }
+  }
+</div>

@@ -1,0 +1,152 @@
+{
+  "version": 8,
+  "name": "Beograde Basic",
+  "metadata": {
+    "description": "Minimal cartography for the offline Belgrade pack. Targets the OpenMapTiles schema produced by planetiler. Swap in a richer style if you want."
+  },
+  "glyphs": "assets/fonts/{fontstack}/{range}.pbf",
+  "sprite": "",
+  "sources": {
+    "openmaptiles": {
+      "type": "vector",
+      "url": "pmtiles://belgrade",
+      "attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": { "background-color": "#F5F2ED" }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "paint": { "fill-color": "#A4C8E0" }
+    },
+    {
+      "id": "park",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "paint": { "fill-color": "#D6E8C4", "fill-opacity": 0.6 }
+    },
+    {
+      "id": "landuse-residential",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "filter": ["==", "class", "residential"],
+      "paint": { "fill-color": "#ECE9E2" }
+    },
+    {
+      "id": "landuse-commercial",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "filter": ["==", "class", "commercial"],
+      "paint": { "fill-color": "#EAE3D5" }
+    },
+    {
+      "id": "buildings",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "minzoom": 13,
+      "paint": {
+        "fill-color": "#E2DBCC",
+        "fill-outline-color": "#CFC8B7",
+        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 13, 0, 14, 0.8]
+      }
+    },
+    {
+      "id": "roads-minor",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "minor", "service", "track"],
+      "minzoom": 12,
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 18, 5]
+      }
+    },
+    {
+      "id": "roads-secondary",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "secondary", "tertiary"],
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.4, 18, 8]
+      }
+    },
+    {
+      "id": "roads-primary",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "primary"],
+      "paint": {
+        "line-color": "#FFE9CC",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 7, 0.6, 18, 12]
+      }
+    },
+    {
+      "id": "roads-trunk",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["in", "class", "trunk", "motorway"],
+      "paint": {
+        "line-color": "#FFD9A8",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.8, 18, 16]
+      }
+    },
+    {
+      "id": "rail",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["==", "class", "rail"],
+      "paint": { "line-color": "#B8AEA0", "line-width": 1, "line-dasharray": [2, 2] }
+    },
+    {
+      "id": "place-labels",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "layout": {
+        "text-field": ["coalesce", ["get", "name:latin"], ["get", "name"]],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 11, 16, 16]
+      },
+      "paint": {
+        "text-color": "#1A1A1A",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "road-labels",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 14,
+      "layout": {
+        "text-field": ["coalesce", ["get", "name:latin"], ["get", "name"]],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 11,
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#3A3A3A",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
   "name": "Beograde",
-  "description": "An interactive, AI-enhanced guide to Belgrade's sights, cuisine, and nightlife.",
-  "requestFramePermissions": []
+  "description": "Offline-first Belgrade city guide with GPS, hi-res map, POIs, and curated itineraries.",
+  "requestFramePermissions": ["geolocation"]
 }
