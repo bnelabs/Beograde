@@ -96,10 +96,12 @@ export class GeolocationService {
           };
           this.position.set(p);
           this.permission.set('granted');
+          this.error.set(null);
           resolve(p);
         },
         (err) => {
           if (err.code === err.PERMISSION_DENIED) this.permission.set('denied');
+          this.error.set(err.message);
           reject(err);
         },
         { enableHighAccuracy: true, timeout: 15_000 },
