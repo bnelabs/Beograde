@@ -1,28 +1,34 @@
 import { TestBed } from '@angular/core/testing';
 import { I18nService } from './i18n.service';
 
-describe('I18nService', () => {
-  let localStorageMock: Record<string, string>;
+function createMemoryStorage(): Storage {
+  let store: Record<string, string> = {};
+  return {
+    getItem: (k) => (k in store ? store[k] : null),
+    setItem: (k, v) => {
+      store[k] = String(v);
+    },
+    removeItem: (k) => {
+      delete store[k];
+    },
+    clear: () => {
+      store = {};
+    },
+    key: (i) => Object.keys(store)[i] ?? null,
+    get length() {
+      return Object.keys(store).length;
+    },
+  } as Storage;
+}
 
+describe('I18nService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
+    vi.stubGlobal('localStorage', createMemoryStorage());
+  });
 
-    // Mock localStorage for Vitest
-    localStorageMock = {};
-    (window as any).localStorage = {
-      getItem: (key: string) => localStorageMock[key] ?? null,
-      setItem: (key: string, value: string) => {
-        localStorageMock[key] = value;
-      },
-      removeItem: (key: string) => {
-        delete localStorageMock[key];
-      },
-      clear: () => {
-        localStorageMock = {};
-      },
-      key: (index: number) => Object.keys(localStorageMock)[index] ?? null,
-      length: Object.keys(localStorageMock).length,
-    } as unknown as Storage;
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
   it('initialises to browser locale', () => {
