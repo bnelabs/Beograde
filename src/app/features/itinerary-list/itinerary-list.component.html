@@ -1,0 +1,32 @@
+<div class="min-h-full pb-24">
+  <header class="px-5 pt-8 pb-4">
+    <h1 class="text-3xl font-display tracking-tighter mb-1">Itineraries</h1>
+    <p class="text-sm text-ink/60">Hand-curated routes through Belgrade.</p>
+  </header>
+
+  <div class="px-5 space-y-3">
+    @for (it of itineraries; track it.id) {
+      <a
+        [routerLink]="['/itinerary', it.id]"
+        class="block bg-white rounded-3xl shadow-sm p-5 active:scale-[0.99] transition border border-ink/5">
+        <div class="flex items-baseline justify-between mb-2">
+          <h2 class="text-lg font-display text-ink">{{ it.title }}</h2>
+          <span class="text-[10px] uppercase tracking-widest font-mono text-ink/40">
+            {{ hours(it.durationMinutes) }}
+          </span>
+        </div>
+        <p class="text-sm text-ink/60 mb-3">{{ it.subtitle }}</p>
+        <div class="flex flex-wrap gap-1.5">
+          @for (v of it.vibe; track v) {
+            <span class="px-2 py-0.5 rounded-full bg-primary/10 text-[10px] font-medium text-primary uppercase tracking-wider">
+              {{ v }}
+            </span>
+          }
+          <span class="px-2 py-0.5 rounded-full bg-ink/5 text-[10px] font-medium text-ink/60 uppercase tracking-wider">
+            {{ it.stops.length }} stops
+          </span>
+        </div>
+      </a>
+    }
+  </div>
+</div>

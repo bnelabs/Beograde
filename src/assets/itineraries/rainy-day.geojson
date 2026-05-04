@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "rainy-day", "kind": "placeholder-straight-lines" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.4604, 44.8170],
+          [20.4593, 44.8131],
+          [20.4710, 44.8060],
+          [20.4567, 44.8141],
+          [20.4605, 44.8120]
+        ]
+      }
+    }
+  ]
+}

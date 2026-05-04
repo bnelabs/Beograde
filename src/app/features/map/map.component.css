@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+::ng-deep .user-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+::ng-deep .maplibregl-ctrl-attrib {
+  font-size: 10px;
+}

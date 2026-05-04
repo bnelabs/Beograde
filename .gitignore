@@ -45,3 +45,11 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Built offline assets (rebuild with scripts/build-tiles.sh and build-fonts.sh)
+src/assets/tiles/*.pmtiles
+src/assets/fonts/
+
+# Tile build workspace
+.tilebuild/
+

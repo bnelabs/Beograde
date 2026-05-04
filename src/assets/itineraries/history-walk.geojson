@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "history-walk", "kind": "placeholder-straight-lines" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.4503, 44.8226],
+          [20.4598, 44.8210],
+          [20.4525, 44.8190],
+          [20.4525, 44.8181],
+          [20.4582, 44.8175],
+          [20.4604, 44.8167]
+        ]
+      }
+    }
+  ]
+}

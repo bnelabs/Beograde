@@ -1,0 +1,45 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app-shell",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "icons-and-fonts",
+      "installMode": "prefetch",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/assets/icons/**",
+          "/assets/fonts/**"
+        ]
+      }
+    },
+    {
+      "name": "content",
+      "installMode": "prefetch",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/assets/pois.json",
+          "/assets/itineraries/**",
+          "/assets/styles/**",
+          "/assets/poi/**"
+        ]
+      }
+    }
+  ],
+  "dataGroups": []
+}
