@@ -1,124 +1,95 @@
-<div class="min-h-full pb-24">
-  <header class="px-5 pt-8 pb-4">
-    <h1 class="text-3xl font-display tracking-tighter">Settings</h1>
+<div class="st">
+  <header class="st-head">
+    <h1 class="st-title">Settings</h1>
   </header>
 
-  <section class="px-5 space-y-6">
+  <section>
+    <h2 class="st-section">{{ t().settings.language }}</h2>
+    <div class="st-card st-card-row">
+      <button type="button" (click)="setLocale('en')"
+              class="st-lang"
+              [class.is-active]="i18n.locale().locale === 'en'">
+        {{ t().settings.language_en }}
+      </button>
+      <button type="button" (click)="setLocale('sr')"
+              class="st-lang"
+              [class.is-active]="i18n.locale().locale === 'sr'">
+        {{ t().settings.language_sr }}
+      </button>
+    </div>
+  </section>
 
-    <div>
-      <h2 class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-2">Offline pack</h2>
-      <div class="bg-white rounded-2xl p-4 border border-ink/5">
-        <div class="flex items-center justify-between mb-3">
-          <div>
-            <div class="text-sm font-medium text-ink">Belgrade map pack</div>
-            <div class="text-xs text-ink/50 mt-0.5">
-              @if (tilePack.status() === 'ready') {
-                {{ tilePackSize() }} · stored {{ tilePackAge() }}
-              } @else if (tilePack.status() === 'missing') {
-                Not downloaded
-              } @else if (tilePack.status() === 'downloading') {
-                Downloading…
-              } @else {
-                Status unknown
-              }
-            </div>
-          </div>
-          <span
-            class="w-2.5 h-2.5 rounded-full"
-            [class.bg-emerald-500]="tilePack.status() === 'ready'"
-            [class.bg-amber-500]="tilePack.status() === 'downloading'"
-            [class.bg-rose-500]="tilePack.status() === 'error' || tilePack.status() === 'missing'">
+  <section>
+    <h2 class="st-section">{{ t().settings.currency }}</h2>
+    <div class="st-card st-card-info">
+      <strong>{{ t().settings.currency_rsd }}</strong>
+      <span>EUR shown in parentheses</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="st-section">{{ t().settings.offline_pack }}</h2>
+    <div class="st-card">
+      <div class="st-card-row st-card-row-info">
+        <div>
+          <strong>Belgrade map pack</strong>
+          <span>
+            @if (tilePack.status() === 'ready') {
+              {{ tilePackSize() }} · {{ tilePackAge() }}
+            } @else if (tilePack.status() === 'missing') {
+              Not downloaded
+            } @else if (tilePack.status() === 'downloading') {
+              Downloading…
+            } @else {
+              {{ tilePack.error() ?? 'Status unknown' }}
+            }
           </span>
         </div>
-        <div class="flex gap-2">
-          @if (tilePack.status() === 'missing' || tilePack.status() === 'error') {
-            <button
-              type="button"
-              (click)="tilePack.download()"
-              class="flex-1 py-2 rounded-xl bg-primary text-white text-xs font-medium tracking-wide">
-              Download
-            </button>
-          }
-          @if (tilePack.status() === 'ready') {
-            @if (!confirmingClear()) {
-              <button
-                type="button"
-                (click)="confirmingClear.set(true)"
-                class="flex-1 py-2 rounded-xl bg-ink/5 text-ink text-xs font-medium tracking-wide">
-                Clear pack
-              </button>
-              <button
-                type="button"
-                (click)="tilePack.download()"
-                class="flex-1 py-2 rounded-xl bg-ink/5 text-ink text-xs font-medium tracking-wide">
-                Re-download
-              </button>
-            } @else {
-              <button
-                type="button"
-                (click)="confirmingClear.set(false)"
-                class="flex-1 py-2 rounded-xl bg-ink/5 text-ink text-xs font-medium tracking-wide">
-                Cancel
-              </button>
-              <button
-                type="button"
-                (click)="clearPack()"
-                class="flex-1 py-2 rounded-xl bg-rose-600 text-white text-xs font-medium tracking-wide">
-                Confirm clear
-              </button>
-            }
-          }
-        </div>
+        <span class="st-status-dot"
+              [class.is-ready]="tilePack.status() === 'ready'"
+              [class.is-loading]="tilePack.status() === 'downloading'"
+              [class.is-error]="tilePack.status() === 'error' || tilePack.status() === 'missing'"></span>
       </div>
-    </div>
-
-    <div>
-      <h2 class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-2">Location</h2>
-      <div class="bg-white rounded-2xl p-4 border border-ink/5 flex items-center justify-between">
-        <div>
-          <div class="text-sm font-medium text-ink">GPS</div>
-          <div class="text-xs text-ink/50 mt-0.5">
-            Permission: {{ geo.permission() }}
-            @if (geo.isWatching()) { · tracking }
-          </div>
-        </div>
-        @if (!geo.isWatching()) {
-          <button
-            type="button"
-            (click)="geo.start()"
-            class="px-4 py-2 rounded-xl bg-ink text-white text-xs font-medium">
-            Start
-          </button>
-        } @else {
-          <button
-            type="button"
-            (click)="geo.stop()"
-            class="px-4 py-2 rounded-xl bg-ink/5 text-ink text-xs font-medium">
-            Stop
-          </button>
+      <div class="st-card-actions">
+        @if (tilePack.status() === 'missing' || tilePack.status() === 'error') {
+          <button type="button" (click)="tilePack.download()" class="st-btn st-btn-primary">Download</button>
+        }
+        @if (tilePack.status() === 'ready') {
+          @if (!confirmingClear()) {
+            <button type="button" (click)="confirmingClear.set(true)" class="st-btn st-btn-secondary">Clear pack</button>
+            <button type="button" (click)="tilePack.download()" class="st-btn st-btn-secondary">Re-download</button>
+          } @else {
+            <button type="button" (click)="confirmingClear.set(false)" class="st-btn st-btn-secondary">{{ t().common.cancel }}</button>
+            <button type="button" (click)="clearPack()" class="st-btn st-btn-danger">{{ t().common.confirm }}</button>
+          }
         }
       </div>
     </div>
+  </section>
 
-    @if (pwa.isIos() && !pwa.isStandalone()) {
+  <section>
+    <h2 class="st-section">{{ t().settings.gps }}</h2>
+    <div class="st-card st-card-row st-card-row-info">
       <div>
-        <h2 class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-2">Install on iPhone</h2>
-        <div class="bg-white rounded-2xl p-4 border border-ink/5 text-sm text-ink/70 leading-relaxed">
-          Tap the <strong>Share</strong> icon in Safari, then choose
-          <strong>Add to Home Screen</strong>. Beograde will launch like a regular app.
-        </div>
+        <strong>{{ t().settings.gps }}</strong>
+        <span>{{ t().settings.permission }}: {{ geo.permission() }}@if (geo.isWatching()) { · {{ t().settings.tracking }} }</span>
       </div>
-    } @else if (pwa.canPrompt()) {
-      <button
-        type="button"
-        (click)="install()"
-        class="w-full py-3 rounded-2xl bg-ink text-white text-sm font-medium tracking-wide">
-        Install Beograde
-      </button>
-    }
-
-    <div class="text-[10px] uppercase tracking-widest font-mono text-ink/30 text-center pt-6">
-      Beograde · offline-first
+      @if (!geo.isWatching()) {
+        <button type="button" (click)="geo.start()" class="st-btn st-btn-primary">{{ t().settings.start }}</button>
+      } @else {
+        <button type="button" (click)="geo.stop()" class="st-btn st-btn-secondary">{{ t().settings.stop }}</button>
+      }
     </div>
   </section>
+
+  @if (pwa.isIos() && !pwa.isStandalone()) {
+    <section>
+      <h2 class="st-section">{{ t().settings.install }}</h2>
+      <div class="st-card st-card-info">{{ t().settings.install_ios }}</div>
+    </section>
+  } @else if (pwa.canPrompt()) {
+    <button type="button" (click)="install()" class="st-btn st-btn-primary st-install">{{ t().settings.install }}</button>
+  }
+
+  <p class="st-foot">Beograde · offline-first</p>
 </div>

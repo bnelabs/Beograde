@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { TilePackService } from '../../core/tile-pack.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { PwaInstallService } from '../../core/pwa-install.service';
+import { I18nService } from '../../core/i18n/i18n.service';
+import enStrings from '../../../i18n/en.json';
+import srLatStrings from '../../../i18n/sr-Latn.json';
 
 @Component({
   selector: 'app-settings',
@@ -10,13 +13,17 @@ import { PwaInstallService } from '../../core/pwa-install.service';
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './settings.component.html',
+  styleUrl: './settings.component.css',
 })
 export class SettingsComponent {
   protected readonly tilePack = inject(TilePackService);
   protected readonly geo = inject(GeolocationService);
   protected readonly pwa = inject(PwaInstallService);
+  protected readonly i18n = inject(I18nService);
 
   protected readonly confirmingClear = signal(false);
+
+  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
 
   protected readonly tilePackSize = computed(() => {
     const meta = this.tilePack.meta();
@@ -28,9 +35,9 @@ export class SettingsComponent {
     const meta = this.tilePack.meta();
     if (!meta) return null;
     const days = Math.floor((Date.now() - meta.storedAt) / (1000 * 60 * 60 * 24));
-    if (days === 0) return 'Today';
-    if (days === 1) return 'Yesterday';
-    return `${days} days ago`;
+    if (days === 0) return this.t().settings.downloaded_today;
+    if (days === 1) return this.t().settings.downloaded_yesterday;
+    return this.t().settings.downloaded_days.replace('{n}', days.toString());
   });
 
   async clearPack(): Promise<void> {
@@ -40,6 +47,10 @@ export class SettingsComponent {
 
   async install(): Promise<void> {
     await this.pwa.promptInstall();
+  }
+
+  setLocale(loc: 'en' | 'sr'): void {
+    this.i18n.setLocale({ locale: loc, script: 'Latn' });
   }
 
   private formatBytes(bytes: number): string {
