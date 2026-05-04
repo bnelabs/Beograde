@@ -53,3 +53,6 @@ src/assets/fonts/
 # Tile build workspace
 .tilebuild/
 
+# Superpowers brainstorming (mockups + server state)
+.superpowers/
+
