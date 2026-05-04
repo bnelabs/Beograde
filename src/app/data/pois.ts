@@ -1,7 +1,8 @@
 import { POI } from './types';
 import poisData from '../../assets/pois.json';
 
-export const POIS: POI[] = poisData as POI[];
+// Cast — runtime structure is enforced by scripts/migrate-pois.mjs.
+export const POIS: POI[] = poisData as unknown as POI[];
 
 export const POI_BY_ID = new Map<string, POI>(POIS.map((p) => [p.id, p]));
 
