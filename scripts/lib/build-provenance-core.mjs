@@ -8,6 +8,12 @@ import {
   score,
   isPublishable,
 } from './provenance-checks.mjs';
+import { latnToCyrl } from './translit.mjs';
+
+function fillCyr(b) {
+  if (b.sr_cyr) return b;
+  return { ...b, sr_cyr: latnToCyrl(b.sr_lat || b.en || '') };
+}
 
 /**
  * Drives the four-check pipeline over every POI and writes pois.compiled.json.
@@ -45,6 +51,10 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
       crowdsourced: crowd.pass,
     };
     const reliability = { score: score(checks), checks };
+    poi.name = fillCyr(poi.name);
+    poi.description = fillCyr(poi.description);
+    poi.address = fillCyr(poi.address);
+    if (poi.hours?.notes) poi.hours.notes = fillCyr(poi.hours.notes);
     const enriched = { ...poi, sources, reliability };
     if (!isPublishable({ checks, editorialConfidence: poi.editorialConfidence })) {
       failed++;

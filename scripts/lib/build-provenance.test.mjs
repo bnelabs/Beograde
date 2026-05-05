@@ -68,4 +68,32 @@ describe('build-provenance', () => {
     assert.equal(result.failed, 1);
     rmSync(dir, { recursive: true, force: true });
   });
+
+  test('fills name.sr_cyr / description.sr_cyr / address.sr_cyr from sr_lat via translit', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    const src = [
+      {
+        id: 'p1', region: 'city', category: 'sight',
+        name: { en: 'Belgrade Fortress', sr_lat: 'Beogradska tvrđava', sr_cyr: '' },
+        description: { en: 'Old fort.', sr_lat: 'Stara tvrđava.', sr_cyr: '' },
+        address: { en: 'Kalemegdan Park', sr_lat: 'Kalemegdanski park', sr_cyr: '' },
+        lng: 0, lat: 0, tags: [], images: [],
+        verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+        reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+        editorialConfidence: 'high',
+        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+      },
+    ];
+    writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
+    await runBuildProvenance({
+      srcPath: join(dir, 'pois.json'),
+      outPath: join(dir, 'pois.compiled.json'),
+      cacheDir: dir,
+      fetchFn: async () => ({ ok: false }),
+    });
+    const compiled = JSON.parse(readFileSync(join(dir, 'pois.compiled.json'), 'utf8'));
+    assert.equal(compiled[0].name.sr_cyr, 'Београдска тврђава');
+    assert.equal(compiled[0].address.sr_cyr, 'Калемегдански парк');
+    rmSync(dir, { recursive: true, force: true });
+  });
 });
