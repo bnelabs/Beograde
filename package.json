@@ -12,6 +12,7 @@
     "build:itineraries": "node scripts/build-itineraries.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:scripts": "node scripts/run-tests.mjs",
     "lint": "ng lint"
   },
   "dependencies": {

@@ -39,3 +39,13 @@ and downloaded by the PWA on first run into IndexedDB.
 
 `build-itineraries.mjs` env vars:
 - `OSRM_BASE` — point at your own OSRM instance for production
+
+## Tests
+
+Build-script logic is tested via Node's built-in test runner:
+
+    npm run test:scripts
+
+The Angular unit tests are still:
+
+    npm test -- --watch=false
