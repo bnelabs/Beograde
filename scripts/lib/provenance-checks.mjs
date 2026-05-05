@@ -6,19 +6,21 @@ const MIN_EXTRACT_CHARS = 400;
 export async function checkWikipedia(title, lang, fetchFn = globalThis.fetch) {
   if (!title) return { pass: false };
   const url = `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
-  // Wikimedia REST returns single-page summary; we use it because it's quotaless.
-  const res = await fetchFn(url, {
-    headers: { 'user-agent': 'Beograde build-provenance (https://beograde.app)' },
-  });
-  if (!res.ok) return { pass: false };
-  const json = await res.json();
-  const page = json;
-  const extract = page.extract ?? '';
-  if (extract.length < MIN_EXTRACT_CHARS) return { pass: false };
-  return {
-    pass: true,
-    url: page.content_urls?.desktop?.page ?? `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title)}`,
-  };
+  try {
+    const res = await fetchFn(url, {
+      headers: { 'user-agent': 'Beograde build-provenance (https://beograde.app)' },
+    });
+    if (!res.ok) return { pass: false };
+    const json = await res.json();
+    const extract = json.extract ?? '';
+    if (extract.length < MIN_EXTRACT_CHARS) return { pass: false };
+    return {
+      pass: true,
+      url: json.content_urls?.desktop?.page ?? `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title)}`,
+    };
+  } catch {
+    return { pass: false };
+  }
 }
 
 const OVERPASS = 'https://overpass-api.de/api/interpreter';
@@ -28,16 +30,20 @@ export async function checkOSM(ref, fetchFn = globalThis.fetch) {
   const [type, id] = ref.split('/');
   if (!['node', 'way', 'relation'].includes(type) || !id) return { pass: false };
   const query = `[out:json][timeout:15]; ${type}(${id}); out tags;`;
-  const res = await fetchFn(OVERPASS, {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: `data=${encodeURIComponent(query)}`,
-  });
-  if (!res.ok) return { pass: false };
-  const json = await res.json();
-  const el = json.elements?.[0];
-  if (!el?.tags?.name) return { pass: false };
-  return { pass: true, ref };
+  try {
+    const res = await fetchFn(OVERPASS, {
+      method: 'POST',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: `data=${encodeURIComponent(query)}`,
+    });
+    if (!res.ok) return { pass: false };
+    const json = await res.json();
+    const el = json.elements?.[0];
+    if (!el?.tags?.name) return { pass: false };
+    return { pass: true, ref };
+  } catch {
+    return { pass: false };
+  }
 }
 
 const GOOGLE_REVIEW_THRESHOLD = 500;

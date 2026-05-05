@@ -42,6 +42,18 @@ describe('checkWikipedia', () => {
     const r = await checkWikipedia(null, 'en', async () => { throw new Error('should not call'); });
     assert.equal(r.pass, false);
   });
+
+  test('returns pass=false when fetch rejects (network failure)', async () => {
+    const fakeFetch = async () => { throw new Error('ECONNRESET'); };
+    const r = await checkWikipedia('Belgrade Fortress', 'en', fakeFetch);
+    assert.equal(r.pass, false);
+  });
+
+  test('returns pass=false when res.json throws (parse error)', async () => {
+    const fakeFetch = async () => ({ ok: true, json: async () => { throw new SyntaxError('Unexpected token'); } });
+    const r = await checkWikipedia('Belgrade Fortress', 'en', fakeFetch);
+    assert.equal(r.pass, false);
+  });
 });
 
 describe('checkOSM', () => {
@@ -66,6 +78,12 @@ describe('checkOSM', () => {
 
   test('returns pass=false when ref is null', async () => {
     const r = await checkOSM(null, async () => { throw new Error(); });
+    assert.equal(r.pass, false);
+  });
+
+  test('returns pass=false when fetch rejects (network failure)', async () => {
+    const fakeFetch = async () => { throw new Error('ETIMEDOUT'); };
+    const r = await checkOSM('relation/8645819', fakeFetch);
     assert.equal(r.pass, false);
   });
 });
