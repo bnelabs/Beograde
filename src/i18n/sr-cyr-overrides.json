@@ -1,0 +1,3 @@
+{
+  "_doc": "Manual overrides for Latin→Cyrillic translit. Keys are dot-paths into sr-Latn.json (e.g. 'settings.install_ios'). Values are the explicit Cyrillic forms. Used when the deterministic table produces something wrong — typically loanwords (Wi-Fi, café names) and trademarks. Run `npm run build:i18n` to apply."
+}
