@@ -11,6 +11,7 @@
     "build:fonts": "bash scripts/build-fonts.sh",
     "build:itineraries": "node scripts/build-itineraries.mjs",
     "build:provenance": "node scripts/build-provenance.mjs",
+    "build:i18n": "node scripts/build-i18n.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:scripts": "node scripts/run-tests.mjs",
