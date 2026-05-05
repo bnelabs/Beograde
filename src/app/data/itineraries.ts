@@ -18,6 +18,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'knez-mihailova', arrivalOffsetMinutes: 180, durationMinutes: 30 },
       { poiId: 'republic-square', arrivalOffsetMinutes: 215, durationMinutes: 25 },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
   {
     id: 'foodie-crawl',
@@ -34,6 +35,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'skadarlija', arrivalOffsetMinutes: 320, durationMinutes: 90, notes: bg('Kafana dinner with live tamburica.') },
       { poiId: 'cetinjska', arrivalOffsetMinutes: 420, durationMinutes: 60, notes: bg('Last drink in the courtyard.') },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
   {
     id: 'riverside-splavovi',
@@ -49,6 +51,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'savamala', arrivalOffsetMinutes: 210, durationMinutes: 60, notes: bg('Pre-game drinks in a gallery bar.') },
       { poiId: 'splavovi', arrivalOffsetMinutes: 280, durationMinutes: 80, notes: bg('Pick a splav by the music spilling out.') },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
   {
     id: 'family-day',
@@ -64,6 +67,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'tasmajdan-park', arrivalOffsetMinutes: 250, durationMinutes: 60 },
       { poiId: 'tesla-museum', arrivalOffsetMinutes: 320, durationMinutes: 40, notes: bg('Time the coil demo.') },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
   {
     id: 'rainy-day',
@@ -79,6 +83,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'manaks-house', arrivalOffsetMinutes: 230, durationMinutes: 35 },
       { poiId: 'smokvica', arrivalOffsetMinutes: 270, durationMinutes: 30 },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
   {
     id: 'viewpoint-sunset',
@@ -93,6 +98,7 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'zemun-quay', arrivalOffsetMinutes: 110, durationMinutes: 60 },
       { poiId: 'gardos-tower', arrivalOffsetMinutes: 175, durationMinutes: 50, notes: bg('Climb for the final viewpoint.') },
     ],
+    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
   },
 ];
 

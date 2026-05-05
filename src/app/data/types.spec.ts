@@ -24,6 +24,7 @@ describe('types', () => {
         checks: { wikipedia: false, osm: false, official: false, crowdsourced: false },
       },
       editorialConfidence: 'medium',
+      provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
     };
     expect(poi.id).toBe('x');
   });
@@ -39,6 +40,7 @@ describe('types', () => {
       vibe: [],
       stops: [stop],
       geometryUrl: '',
+      provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-04' },
     };
     expect(it.stops).toHaveLength(1);
   });

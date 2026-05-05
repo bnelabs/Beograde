@@ -10,6 +10,7 @@
     "build:tiles": "bash scripts/build-tiles.sh",
     "build:fonts": "bash scripts/build-fonts.sh",
     "build:itineraries": "node scripts/build-itineraries.mjs",
+    "build:provenance": "node scripts/build-provenance.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:scripts": "node scripts/run-tests.mjs",

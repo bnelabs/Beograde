@@ -28,11 +28,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false
@@ -126,11 +132,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Skadarlija",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false
@@ -479,11 +491,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikola_Tesla_Museum",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false
@@ -676,11 +694,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gardo%C5%A1_Tower",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false
@@ -1073,11 +1097,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Belgrade_Zoo",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false
@@ -1172,11 +1202,17 @@
     ],
     "images": [],
     "verifiedAt": "2026-05-04",
-    "sources": [],
+    "sources": [
+      {
+        "kind": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Branko's_Bridge",
+        "lang": "en"
+      }
+    ],
     "reliability": {
-      "score": 0,
+      "score": 25,
       "checks": {
-        "wikipedia": false,
+        "wikipedia": true,
         "osm": false,
         "official": false,
         "crowdsourced": false

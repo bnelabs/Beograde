@@ -76,9 +76,18 @@ export interface POI {
   images: ImageAsset[];
   transit?: TransitInfo[];
   verifiedAt: string;
+  /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */
+  wikipediaTitle?: string;
+  /** Optional OSM ref like 'relation/8645819' or 'way/123'. */
+  osmRef?: string;
   sources: SourceRef[];
   reliability: ReliabilityScore;
   editorialConfidence: 'high' | 'medium' | 'low';
+  /** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
+  provenance: {
+    translatedBy: 'auto-draft' | 'curator';
+    lastReviewedAt: string;
+  };
 }
 
 export interface ItineraryStop {
@@ -98,6 +107,10 @@ export interface Itinerary {
   geometryUrl: string;
   elevationProfileUrl?: string;
   bestStartHourLocal?: number;
+  provenance: {
+    translatedBy: 'auto-draft' | 'curator';
+    lastReviewedAt: string;
+  };
 }
 
 export interface UserPosition {
