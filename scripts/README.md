@@ -49,3 +49,19 @@ Build-script logic is tested via Node's built-in test runner:
 The Angular unit tests are still:
 
     npm test -- --watch=false
+
+## Content pipelines (Phase 1b.1)
+
+| Script | Inputs | Output | When to run |
+|---|---|---|---|
+| `build-provenance.mjs` | `src/assets/pois.json` + `data/provenance-cache/<id>.json` (optional) | `src/assets/pois.compiled.json` | Whenever POI source data changes. Fails on any unpublishable POI. |
+| `build-i18n.mjs` | `src/i18n/sr-Latn.json` + `src/i18n/sr-cyr-overrides.json` | `src/i18n/sr-Cyrl.json` | Whenever SR-Latin strings change. Fails on any non-clean round-trip without an override. |
+
+Both run as part of `npm run build` via the `prebuild` lifecycle hook.
+
+Manual:
+
+    npm run build:provenance
+    npm run build:i18n
+    # or both
+    npm run build:content
