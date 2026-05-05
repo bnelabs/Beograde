@@ -33,7 +33,7 @@
       "updateMode": "lazy",
       "resources": {
         "files": [
-          "/assets/pois.json",
+          "/assets/pois.compiled.json",
           "/assets/itineraries/**",
           "/assets/styles/**",
           "/assets/poi/**"

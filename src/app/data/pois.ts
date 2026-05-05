@@ -1,5 +1,5 @@
 import { POI } from './types';
-import poisData from '../../assets/pois.json';
+import poisData from '../../assets/pois.compiled.json';
 
 // Cast — runtime structure is enforced by scripts/migrate-pois.mjs.
 export const POIS: POI[] = poisData as unknown as POI[];
