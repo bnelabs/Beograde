@@ -65,3 +65,11 @@ Manual:
     npm run build:i18n
     # or both
     npm run build:content
+
+> **Note on reliability-data churn:** `build-provenance.mjs` calls live Wikipedia
+> REST and OSM Overpass on every run. When those APIs are reachable, passing
+> POIs gain `wikipedia`/`osm` source entries; when they're rate-limited or down,
+> the same POIs flip to `pass: false`. The publish gate is unaffected (every POI
+> has `editorialConfidence: 'high'`), but `pois.compiled.json` will diff between
+> runs. Re-run the build until the diff stabilizes before committing if this
+> matters for the change you're making.

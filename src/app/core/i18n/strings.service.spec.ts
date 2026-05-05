@@ -23,9 +23,8 @@ describe('StringsService', () => {
   });
 
   it('returns SR-Cyrl when locale is sr/Cyrl AND cyrillicEnabled is true', () => {
-    // We bypass setLocale here because it clamps Cyrl→Latn while CYRILLIC_ENABLED
-    // is still the Phase-1a default. Setting the signal directly exercises the
-    // StringsService branch we're testing — Task 12 flips the constant later.
+    // Set the signal directly to bypass setLocale's localStorage write — we
+    // exercise the StringsService branch in isolation.
     i18n.cyrillicEnabled.set(true);
     i18n.locale.set({ locale: 'sr', script: 'Cyrl' });
     expect(svc.t().tabs.home).toBe('Почетна');
