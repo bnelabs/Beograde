@@ -64,6 +64,7 @@
     "language": "Jezik",
     "language_en": "English",
     "language_sr": "Srpski",
+    "language_sr_cyr": "Srpski (ћирилица)",
     "currency": "Valuta",
     "currency_rsd": "RSD (srpski dinar)",
     "currency_rsd_eur": "RSD sa EUR",

@@ -44,8 +44,9 @@ describe('I18nService', () => {
     expect(localStorage.getItem('beograde:locale')).toContain('sr');
   });
 
-  it('hides Cyrillic in Phase 1a', () => {
+  it('persists Cyrillic script when cyrillic is enabled', () => {
     const svc = TestBed.inject(I18nService);
-    expect(svc.cyrillicEnabled()).toBe(false);
+    svc.setLocale({ locale: 'sr', script: 'Cyrl' });
+    expect(svc.locale().script).toBe('Cyrl');
   });
 });

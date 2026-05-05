@@ -6,15 +6,8 @@
   <section>
     <h2 class="st-section">{{ t().settings.language }}</h2>
     <div class="st-card st-card-row">
-      <button type="button" (click)="setLocale('en')"
-              class="st-lang"
-              [class.is-active]="i18n.locale().locale === 'en'">
-        {{ t().settings.language_en }}
-      </button>
-      <button type="button" (click)="setLocale('sr')"
-              class="st-lang"
-              [class.is-active]="i18n.locale().locale === 'sr'">
-        {{ t().settings.language_sr }}
+      <button type="button" (click)="cycleLocale()" class="st-lang is-active">
+        {{ t().settings.language }}: {{ localeLabel() }}
       </button>
     </div>
   </section>

@@ -39,6 +39,13 @@ export class SettingsComponent {
     return this.t().settings.downloaded_days.replace('{n}', days.toString());
   });
 
+  protected readonly localeLabel = computed(() => {
+    const loc = this.i18n.locale();
+    if (loc.locale === 'en') return this.t().settings.language_en;
+    if (loc.script === 'Cyrl') return this.t().settings.language_sr_cyr;
+    return this.t().settings.language_sr;
+  });
+
   async clearPack(): Promise<void> {
     this.confirmingClear.set(false);
     await this.tilePack.clear();
@@ -48,8 +55,15 @@ export class SettingsComponent {
     await this.pwa.promptInstall();
   }
 
-  setLocale(loc: 'en' | 'sr'): void {
-    this.i18n.setLocale({ locale: loc, script: 'Latn' });
+  cycleLocale(): void {
+    const cur = this.i18n.locale();
+    if (cur.locale === 'en') {
+      this.i18n.setLocale({ locale: 'sr', script: 'Latn' });
+    } else if (cur.script === 'Latn') {
+      this.i18n.setLocale({ locale: 'sr', script: 'Cyrl' });
+    } else {
+      this.i18n.setLocale({ locale: 'en', script: 'Latn' });
+    }
   }
 
   private formatBytes(bytes: number): string {
