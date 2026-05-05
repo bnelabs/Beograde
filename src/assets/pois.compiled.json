@@ -5,17 +5,17 @@
     "category": "sight",
     "name": {
       "en": "Kalemegdan Fortress",
-      "sr_lat": "Kalemegdan Fortress",
+      "sr_lat": "Beogradska tvrđava (Kalemegdan)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
-      "sr_lat": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
+      "sr_lat": "Beogradska istorijska tvrđava na uzvisini gde se Sava uliva u Dunav. Prošetajte bedemima, pronađite Pobednika i posmatrajte zalazak sunca iz gornjeg grada.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Kalemegdan Park",
-      "sr_lat": "Kalemegdan Park",
+      "sr_lat": "Kalemegdanski park",
       "sr_cyr": ""
     },
     "lng": 20.4503,
@@ -60,12 +60,12 @@
     "category": "sight",
     "name": {
       "en": "Temple of Saint Sava",
-      "sr_lat": "Temple of Saint Sava",
+      "sr_lat": "Hram Svetog Save",
       "sr_cyr": ""
     },
     "description": {
       "en": "One of the largest Orthodox churches in the world. The interior mosaic, completed in 2020, is breathtaking — look up.",
-      "sr_lat": "One of the largest Orthodox churches in the world. The interior mosaic, completed in 2020, is breathtaking — look up.",
+      "sr_lat": "Jedna od najvećih pravoslavnih crkava na svetu. Unutrašnji mozaik, završen 2020. godine, oduzima dah — pogledajte gore.",
       "sr_cyr": ""
     },
     "address": {
@@ -108,17 +108,17 @@
     "category": "cuisine",
     "name": {
       "en": "Skadarlija (Bohemian Quarter)",
-      "sr_lat": "Skadarlija (Bohemian Quarter)",
+      "sr_lat": "Skadarlija (boemska četvrt)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
-      "sr_lat": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
+      "sr_lat": "Kaldrmisom popločana, fenjerima osvijetljena ulica tradicionalnih kafana. Živa tamburica skoro svake večeri. Turistički nastrojena, ali šarmantna.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Skadarska Street",
-      "sr_lat": "Skadarska Street",
+      "sr_lat": "Skadarska ulica",
       "sr_cyr": ""
     },
     "lng": 20.4661,
@@ -165,12 +165,12 @@
     "category": "cuisine",
     "name": {
       "en": "Beton Hala",
-      "sr_lat": "Beton Hala",
+      "sr_lat": "Beton hala",
       "sr_cyr": ""
     },
     "description": {
       "en": "Former concrete warehouse on the Sava waterfront, now a row of upmarket restaurants. Best for a long sunset dinner.",
-      "sr_lat": "Former concrete warehouse on the Sava waterfront, now a row of upmarket restaurants. Best for a long sunset dinner.",
+      "sr_lat": "Bivše betonsko skladište na savskom keju, danas niz restorana visokog nivoa. Idealno za dugi obrok uz zalazak sunca.",
       "sr_cyr": ""
     },
     "address": {
@@ -216,17 +216,17 @@
     "category": "nightlife",
     "name": {
       "en": "Splavovi (River Clubs)",
-      "sr_lat": "Splavovi (River Clubs)",
+      "sr_lat": "Splavovi (rečni klubovi)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Belgrade's legendary floating clubs along the Sava and Danube. Genres run from techno to turbofolk; pick your splav by the music.",
-      "sr_lat": "Belgrade's legendary floating clubs along the Sava and Danube. Genres run from techno to turbofolk; pick your splav by the music.",
+      "sr_lat": "Legendarni beogradski splavovi duž Save i Dunava. Muzika se kreće od tehna do turbofolka — izaberite splav po zvuku.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Sava and Danube banks",
-      "sr_lat": "Sava and Danube banks",
+      "sr_lat": "Obale Save i Dunava",
       "sr_cyr": ""
     },
     "lng": 20.435,
@@ -267,12 +267,12 @@
     "category": "nightlife",
     "name": {
       "en": "Cetinjska Street",
-      "sr_lat": "Cetinjska Street",
+      "sr_lat": "Cetinjska ulica",
       "sr_cyr": ""
     },
     "description": {
       "en": "A ramshackle former brewery courtyard hosting a dozen bars. The local alternative-scene heart, busy from Thursday on.",
-      "sr_lat": "A ramshackle former brewery courtyard hosting a dozen bars. The local alternative-scene heart, busy from Thursday on.",
+      "sr_lat": "Zapušteno dvorište nekadašnje pivare u kom se smestilo desetak barova. Srce beogradske alternativne scene, gužva od četvrtka nadalje.",
       "sr_cyr": ""
     },
     "address": {
@@ -322,7 +322,7 @@
     },
     "description": {
       "en": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
-      "sr_lat": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
+      "sr_lat": "Pešačka kičma starog grada. Knjižare, sladoled, uličnim svirači i veličanstvene fasade iz 19. veka.",
       "sr_cyr": ""
     },
     "address": {
@@ -365,17 +365,17 @@
     "category": "sight",
     "name": {
       "en": "Trg Republike (Republic Square)",
-      "sr_lat": "Trg Republike (Republic Square)",
+      "sr_lat": "Trg republike",
       "sr_cyr": ""
     },
     "description": {
       "en": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
-      "sr_lat": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
+      "sr_lat": "Centralno gradsko okupljalište — \"kod konja\". Omeđen Narodnim muzejom i Narodnim pozorištem.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Trg Republike",
-      "sr_lat": "Trg Republike",
+      "sr_lat": "Trg republike",
       "sr_cyr": ""
     },
     "lng": 20.4604,
@@ -412,17 +412,17 @@
     "category": "museum",
     "name": {
       "en": "National Museum of Serbia",
-      "sr_lat": "National Museum of Serbia",
+      "sr_lat": "Narodni muzej Srbije",
       "sr_cyr": ""
     },
     "description": {
       "en": "Reopened in 2018 after a 15-year renovation. Strong on medieval Serbian art and a small but real Impressionist collection.",
-      "sr_lat": "Reopened in 2018 after a 15-year renovation. Strong on medieval Serbian art and a small but real Impressionist collection.",
+      "sr_lat": "Otvoren ponovo 2018. godine nakon petnaestogodišnje rekonstrukcije. Bogata zbirka srednjovekovne srpske umetnosti i manja, ali autentična impresionistička kolekcija.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Trg Republike 1a",
-      "sr_lat": "Trg Republike 1a",
+      "sr_lat": "Trg republike 1a",
       "sr_cyr": ""
     },
     "lng": 20.4604,
@@ -463,12 +463,12 @@
     "category": "museum",
     "name": {
       "en": "Nikola Tesla Museum",
-      "sr_lat": "Nikola Tesla Museum",
+      "sr_lat": "Muzej Nikole Tesle",
       "sr_cyr": ""
     },
     "description": {
       "en": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
-      "sr_lat": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
+      "sr_lat": "Kompaktan muzej u vili iz dvadesetih godina sa originalnim Teslinim uređajima i živim demonstracijama kalemova. U leto rezervišite unapred.",
       "sr_cyr": ""
     },
     "address": {
@@ -520,12 +520,12 @@
     "category": "museum",
     "name": {
       "en": "House of Flowers (Tito's Mausoleum)",
-      "sr_lat": "House of Flowers (Tito's Mausoleum)",
+      "sr_lat": "Kuća cveća (Titov mauzolej)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
-      "sr_lat": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
+      "sr_lat": "Titovo počivalište unutar kompleksa Muzeja Jugoslavije. Kombinujte s glavnim muzejom za celo popodne posvećeno jugoslovenskom dobu.",
       "sr_cyr": ""
     },
     "address": {
@@ -575,7 +575,7 @@
     },
     "description": {
       "en": "Belgrade's \"Sea\" — a river island turned summer beach. Swimming, kayaking, beachside cafes, and 8 km of walking paths.",
-      "sr_lat": "Belgrade's \"Sea\" — a river island turned summer beach. Swimming, kayaking, beachside cafes, and 8 km of walking paths.",
+      "sr_lat": "Beogradsko \"more\" — rečno ostrvo pretvoreno u letnju plažu. Kupanje, kajaking, kafići uz vodu i 8 km pešačkih staza.",
       "sr_cyr": ""
     },
     "address": {
@@ -618,12 +618,12 @@
     "category": "viewpoint",
     "name": {
       "en": "Zemun Quay & Gardoš Tower",
-      "sr_lat": "Zemun Quay & Gardoš Tower",
+      "sr_lat": "Zemunski kej i Kula na Gardošu",
       "sr_cyr": ""
     },
     "description": {
       "en": "Walk the Danube quay through old Zemun, then climb to Gardoš Tower for the postcard view back over the rooftops.",
-      "sr_lat": "Walk the Danube quay through old Zemun, then climb to Gardoš Tower for the postcard view back over the rooftops.",
+      "sr_lat": "Prošetajte dunavskim kejem kroz stari Zemun, pa se popnite do Kule na Gardošu za panoramski pogled na krovove.",
       "sr_cyr": ""
     },
     "address": {
@@ -666,12 +666,12 @@
     "category": "viewpoint",
     "name": {
       "en": "Gardoš (Millennium) Tower",
-      "sr_lat": "Gardoš (Millennium) Tower",
+      "sr_lat": "Kula na Gardošu (Milenijumska kula)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Hilltop tower above Zemun built in 1896. Best sunset viewpoint in greater Belgrade.",
-      "sr_lat": "Hilltop tower above Zemun built in 1896. Best sunset viewpoint in greater Belgrade.",
+      "sr_lat": "Kula na brdu iznad Zemuna, podignuta 1896. Najbolje mesto za gledanje zalaska sunca u široj okolini Beograda.",
       "sr_cyr": ""
     },
     "address": {
@@ -722,12 +722,12 @@
     "category": "cafe",
     "name": {
       "en": "Hotel Moskva (Café)",
-      "sr_lat": "Hotel Moskva (Café)",
+      "sr_lat": "Hotel Moskva (kafe)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
-      "sr_lat": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
+      "sr_lat": "Secesijska znamenitost iz 1908. godine. Naručite Moskva Šnit uz kafu i posmatrajte kako pola Beograda prolazi.",
       "sr_cyr": ""
     },
     "address": {
@@ -778,7 +778,7 @@
     },
     "description": {
       "en": "Belgrade's oldest kafana (1823), opposite the cathedral. The name is the literal punctuation — long story involving the church.",
-      "sr_lat": "Belgrade's oldest kafana (1823), opposite the cathedral. The name is the literal punctuation — long story involving the church.",
+      "sr_lat": "Najstarija beogradska kafana (1823), nasuprot katedrale. Ime je bukvalno interpunkcijski znak — duga priča u kojoj učestvuje crkva.",
       "sr_cyr": ""
     },
     "address": {
@@ -828,7 +828,7 @@
     },
     "description": {
       "en": "Hidden courtyard café with a fig tree at the centre. Brunch and shaded tables; arrive early on weekends.",
-      "sr_lat": "Hidden courtyard café with a fig tree at the centre. Brunch and shaded tables; arrive early on weekends.",
+      "sr_lat": "Skriveni dvorišni kafić sa smokvom u centru. Brunch i stolovi u hladovini — vikendom dođite ranije.",
       "sr_cyr": ""
     },
     "address": {
@@ -873,12 +873,12 @@
     "category": "park",
     "name": {
       "en": "Tašmajdan Park",
-      "sr_lat": "Tašmajdan Park",
+      "sr_lat": "Tašmajdanski park",
       "sr_cyr": ""
     },
     "description": {
       "en": "Central park around Saint Mark's Church. Locals jog here; in summer, open-air concerts.",
-      "sr_lat": "Central park around Saint Mark's Church. Locals jog here; in summer, open-air concerts.",
+      "sr_lat": "Centralni park oko Crkve Svetog Marka. Meštani trče ovde; leti se održavaju koncerti na otvorenom.",
       "sr_cyr": ""
     },
     "address": {
@@ -921,12 +921,12 @@
     "category": "sight",
     "name": {
       "en": "Saint Mark's Church",
-      "sr_lat": "Saint Mark's Church",
+      "sr_lat": "Crkva Svetog Marka",
       "sr_cyr": ""
     },
     "description": {
       "en": "Serbo-Byzantine red-and-yellow brick church holding the tomb of Tsar Dušan. Quieter than Saint Sava, often overlooked.",
-      "sr_lat": "Serbo-Byzantine red-and-yellow brick church holding the tomb of Tsar Dušan. Quieter than Saint Sava, often overlooked.",
+      "sr_lat": "Srpsko-vizantijska crkva od crvene i žute opeke u kojoj se čuva grob cara Dušana. Mirnija od Hrama Svetog Save, često previđena.",
       "sr_cyr": ""
     },
     "address": {
@@ -967,12 +967,12 @@
     "category": "sight",
     "name": {
       "en": "Bajrakli Mosque",
-      "sr_lat": "Bajrakli Mosque",
+      "sr_lat": "Bajrakli džamija",
       "sr_cyr": ""
     },
     "description": {
       "en": "The only surviving Ottoman mosque in Belgrade, dating to the 1570s. Tucked into a narrow Dorćol street.",
-      "sr_lat": "The only surviving Ottoman mosque in Belgrade, dating to the 1570s. Tucked into a narrow Dorćol street.",
+      "sr_lat": "Jedina preživela osmanska džamija u Beogradu, iz 1570-ih godina. Sakriven u uskoj dorćolskoj ulici.",
       "sr_cyr": ""
     },
     "address": {
@@ -1012,12 +1012,12 @@
     "category": "museum",
     "name": {
       "en": "Residence of Princess Ljubica",
-      "sr_lat": "Residence of Princess Ljubica",
+      "sr_lat": "Konak kneginje Ljubice",
       "sr_cyr": ""
     },
     "description": {
       "en": "1830s Balkan-Ottoman townhouse, fully furnished. The smallest, most personal museum in town.",
-      "sr_lat": "1830s Balkan-Ottoman townhouse, fully furnished. The smallest, most personal museum in town.",
+      "sr_lat": "Balkansko-osmanska gradska kuća iz 1830-ih, potpuno nameštena. Najmanji i najintimniji muzej u gradu.",
       "sr_cyr": ""
     },
     "address": {
@@ -1063,12 +1063,12 @@
     "category": "park",
     "name": {
       "en": "Belgrade Zoo (Vrt dobre nade)",
-      "sr_lat": "Belgrade Zoo (Vrt dobre nade)",
+      "sr_lat": "Zoološki vrt Beograd (Vrt dobre nade)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Inside the Kalemegdan walls — strange and atmospheric, white tigers among the ramparts. Conditions are modest; bring perspective.",
-      "sr_lat": "Inside the Kalemegdan walls — strange and atmospheric, white tigers among the ramparts. Conditions are modest; bring perspective.",
+      "sr_lat": "Unutar kalemegdanskih bedema — neobično i atmosferično, beli tigrovi među zidinama. Uslovi su skromni; dođite sa razumevanjem.",
       "sr_cyr": ""
     },
     "address": {
@@ -1119,12 +1119,12 @@
     "category": "viewpoint",
     "name": {
       "en": "Ada Bridge",
-      "sr_lat": "Ada Bridge",
+      "sr_lat": "Most na Adi",
       "sr_cyr": ""
     },
     "description": {
       "en": "The 200-m pylon cable-stayed bridge that defines the modern skyline. Walk the pedestrian deck for river views.",
-      "sr_lat": "The 200-m pylon cable-stayed bridge that defines the modern skyline. Walk the pedestrian deck for river views.",
+      "sr_lat": "Viseći most sa 200-metarskim pilonom koji definiše savremenu siluetu grada. Prošetajte pešačkom stazom za pogled na reku.",
       "sr_cyr": ""
     },
     "address": {
@@ -1166,12 +1166,12 @@
     "category": "viewpoint",
     "name": {
       "en": "Brankov Most",
-      "sr_lat": "Brankov Most",
+      "sr_lat": "Brankov most",
       "sr_cyr": ""
     },
     "description": {
       "en": "The walking deck across the Sava, between Old Belgrade and Novi Beograd. Best at blue hour.",
-      "sr_lat": "The walking deck across the Sava, between Old Belgrade and Novi Beograd. Best at blue hour.",
+      "sr_lat": "Pešačka staza preko Save, između starog Beograda i Novog Beograda. Najlepše u plavi sat.",
       "sr_cyr": ""
     },
     "address": {
@@ -1220,17 +1220,17 @@
     "category": "park",
     "name": {
       "en": "Belgrade Waterfront Promenade",
-      "sr_lat": "Belgrade Waterfront Promenade",
+      "sr_lat": "Šetalište Beograd na vodi",
       "sr_cyr": ""
     },
     "description": {
       "en": "Polished new riverside promenade running south from Beton Hala. Controversial development, pleasant walk.",
-      "sr_lat": "Polished new riverside promenade running south from Beton Hala. Controversial development, pleasant walk.",
+      "sr_lat": "Uređena nova savska promenada koja se proteže južno od Beton hale. Kontroverzni projekat, prijatna šetnja.",
       "sr_cyr": ""
     },
     "address": {
       "en": "Sava Promenade",
-      "sr_lat": "Sava Promenade",
+      "sr_lat": "Savska promenada",
       "sr_cyr": ""
     },
     "lng": 20.4435,
@@ -1273,7 +1273,7 @@
     },
     "description": {
       "en": "Industrial-chic neighbourhood between the train tracks and the river. Galleries by day, bars by night.",
-      "sr_lat": "Industrial-chic neighbourhood between the train tracks and the river. Galleries by day, bars by night.",
+      "sr_lat": "Industrijsko-šik četvrt između pruge i reke. Galerije danju, barovi noću.",
       "sr_cyr": ""
     },
     "address": {
@@ -1316,12 +1316,12 @@
     "category": "museum",
     "name": {
       "en": "Manak's House (Ethnographic)",
-      "sr_lat": "Manak's House (Ethnographic)",
+      "sr_lat": "Manakova kuća (Etnografski muzej)",
       "sr_cyr": ""
     },
     "description": {
       "en": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
-      "sr_lat": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
+      "sr_lat": "Mala balkanska kuća pretvoren u etnografski muzej. Nošnje, tekstil i stare fotografije Beograda.",
       "sr_cyr": ""
     },
     "address": {
@@ -1367,12 +1367,12 @@
     "category": "park",
     "name": {
       "en": "Topčider Park",
-      "sr_lat": "Topčider Park",
+      "sr_lat": "Topčiderski park",
       "sr_cyr": ""
     },
     "description": {
       "en": "Royal-residence park with one of Europe's oldest plane trees (over 180 years). Picnic-perfect.",
-      "sr_lat": "Royal-residence park with one of Europe's oldest plane trees (over 180 years). Picnic-perfect.",
+      "sr_lat": "Park kraljevske rezidencije sa jednim od najstarijih platana u Evropi (stariji od 180 godina). Idealno za piknik.",
       "sr_cyr": ""
     },
     "address": {
@@ -1415,12 +1415,12 @@
     "category": "viewpoint",
     "name": {
       "en": "Avala Tower",
-      "sr_lat": "Avala Tower",
+      "sr_lat": "Avalski toranj",
       "sr_cyr": ""
     },
     "description": {
       "en": "204-m TV tower on Avala mountain, 16 km out of town. Clear-day views to the Pannonian plain. Bus 401 from Voždovac.",
-      "sr_lat": "204-m TV tower on Avala mountain, 16 km out of town. Clear-day views to the Pannonian plain. Bus 401 from Voždovac.",
+      "sr_lat": "TV toranj visok 204 m na planini Avali, 16 km od centra. Po vedrom vremenu pogled seže do Panonske nizije. Autobus 401 iz Voždovca.",
       "sr_cyr": ""
     },
     "address": {
@@ -1469,7 +1469,7 @@
     },
     "description": {
       "en": "Industrial techno club inside a former slaughterhouse. Friday/Saturday only, open late.",
-      "sr_lat": "Industrial techno club inside a former slaughterhouse. Friday/Saturday only, open late.",
+      "sr_lat": "Industrijski tehno klub u nekadašnjoj klanici. Radi samo petkom i subotom, do dugo u noć.",
       "sr_cyr": ""
     },
     "address": {
@@ -1519,7 +1519,7 @@
     },
     "description": {
       "en": "Specialty-coffee shop in Dorćol with consistent flat whites and an industrial fit-out. Take it to the river.",
-      "sr_lat": "Specialty-coffee shop in Dorćol with consistent flat whites and an industrial fit-out. Take it to the river.",
+      "sr_lat": "Specijalna kafeterija u Dorćolu sa pouzdanim flat whiteom i industrijskim enterijerom. Ponesite kafu do reke.",
       "sr_cyr": ""
     },
     "address": {
@@ -1568,7 +1568,7 @@
     },
     "description": {
       "en": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
-      "sr_lat": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
+      "sr_lat": "Dorćolski concept store sa brunchom tokom celog dana i dvorištem. Vegetarijancu prijatan, publika iz sveta dizajna.",
       "sr_cyr": ""
     },
     "address": {
