@@ -12,7 +12,7 @@ export async function checkWikipedia(title, lang, fetchFn = globalThis.fetch) {
   });
   if (!res.ok) return { pass: false };
   const json = await res.json();
-  const page = (json.pages?.[0]) ?? json;
+  const page = json;
   const extract = page.extract ?? '';
   if (extract.length < MIN_EXTRACT_CHARS) return { pass: false };
   return {

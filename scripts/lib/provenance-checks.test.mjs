@@ -14,12 +14,8 @@ describe('checkWikipedia', () => {
     const fakeFetch = async () => ({
       ok: true,
       json: async () => ({
-        pages: [
-          {
-            extract: 'Belgrade Fortress is a fortress consisting of...'.padEnd(600, ' x'),
-            content_urls: { desktop: { page: 'https://en.wikipedia.org/wiki/Belgrade_Fortress' } },
-          },
-        ],
+        extract: 'Belgrade Fortress is a fortress consisting of...'.padEnd(600, ' x'),
+        content_urls: { desktop: { page: 'https://en.wikipedia.org/wiki/Belgrade_Fortress' } },
       }),
     });
     const r = await checkWikipedia('Belgrade Fortress', 'en', fakeFetch);
@@ -30,7 +26,7 @@ describe('checkWikipedia', () => {
   test('returns pass=false when the article is too short (stub)', async () => {
     const fakeFetch = async () => ({
       ok: true,
-      json: async () => ({ pages: [{ extract: 'Stub.', content_urls: { desktop: { page: 'x' } } }] }),
+      json: async () => ({ extract: 'Stub.', content_urls: { desktop: { page: 'x' } } }),
     });
     const r = await checkWikipedia('Stubby', 'en', fakeFetch);
     assert.equal(r.pass, false);
