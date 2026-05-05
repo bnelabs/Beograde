@@ -20,9 +20,14 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
 
   for (const poi of list) {
     const cachedSourcesPath = join(cacheDir, `${poi.id}.json`);
-    const cached = existsSync(cachedSourcesPath)
-      ? JSON.parse(readFileSync(cachedSourcesPath, 'utf8'))
-      : { sources: [] };
+    let cached = { sources: [] };
+    if (existsSync(cachedSourcesPath)) {
+      try {
+        cached = JSON.parse(readFileSync(cachedSourcesPath, 'utf8'));
+      } catch (e) {
+        throw new Error(`failed to parse provenance cache for ${poi.id} at ${cachedSourcesPath}: ${e.message}`);
+      }
+    }
     const sources = [...poi.sources, ...cached.sources];
 
     const wiki = await checkWikipedia(poi.wikipediaTitle, 'en', fetchFn);

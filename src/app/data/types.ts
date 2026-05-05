@@ -11,6 +11,12 @@ export interface Bilingual {
   sr_cyr: string;
 }
 
+/** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
+export interface ProvenanceMeta {
+  translatedBy: 'auto-draft' | 'curator';
+  lastReviewedAt: string;
+}
+
 export interface OpeningHours {
   /** OSM opening_hours grammar — the canonical form. Parsed at runtime by HoursService. */
   raw: string;
@@ -83,11 +89,7 @@ export interface POI {
   sources: SourceRef[];
   reliability: ReliabilityScore;
   editorialConfidence: 'high' | 'medium' | 'low';
-  /** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
-  provenance: {
-    translatedBy: 'auto-draft' | 'curator';
-    lastReviewedAt: string;
-  };
+  provenance: ProvenanceMeta;
 }
 
 export interface ItineraryStop {
@@ -107,10 +109,7 @@ export interface Itinerary {
   geometryUrl: string;
   elevationProfileUrl?: string;
   bestStartHourLocal?: number;
-  provenance: {
-    translatedBy: 'auto-draft' | 'curator';
-    lastReviewedAt: string;
-  };
+  provenance: ProvenanceMeta;
 }
 
 export interface UserPosition {
