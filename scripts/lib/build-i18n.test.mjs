@@ -35,4 +35,17 @@ describe('build-i18n', () => {
     const { output } = await runBuildI18n({ srLatn, overrides });
     assert.equal(output._doc, undefined);
   });
+
+  test('preserves ICU placeholders like {n} and {date} during translit', async () => {
+    const srLatn = {
+      map: { min_walk: '{n} min pešaka' },
+      poi: { verified_on: 'Provereno {date}' },
+    };
+    const overrides = {};
+    const { output, warnings } = await runBuildI18n({ srLatn, overrides });
+    // Cyrillic translation around the placeholders, but {n} and {date} unchanged.
+    assert.equal(output.map.min_walk, '{n} мин пешака');
+    assert.equal(output.poi.verified_on, 'Проверено {date}');
+    assert.equal(warnings.length, 0);
+  });
 });

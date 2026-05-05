@@ -23,7 +23,7 @@
     "recenter": "Центрирај на моју локацију",
     "tracking_on": "Заустави праћење",
     "tracking_off": "Покрени праћење",
-    "min_walk": "{н} мин пешака"
+    "min_walk": "{n} мин пешака"
   },
   "poi": {
     "back": "Назад",
@@ -31,12 +31,12 @@
     "saved": "Сачувано",
     "open_now": "Отворено",
     "closed": "Затворено",
-    "verified_on": "Проверено {дате}",
+    "verified_on": "Проверено {date}",
     "editor_pick": "Избор уредника",
     "wikipedia": "Википедија",
-    "osm": "ОпенСтреетМап",
+    "osm": "OpenStreetMap",
     "official": "Званично",
-    "reviews": "{н} рецензија",
+    "reviews": "{n} рецензија",
     "no_image": "Нема фотографије",
     "not_found": "Није пронађено",
     "address": "Адреса",
@@ -49,7 +49,7 @@
     "show_on_map": "Прикажи на мапи",
     "complete": "Рута завршена",
     "next_stop": "Следећа станица",
-    "stops": "{н} станица",
+    "stops": "{n} станица",
     "route_unavailable": "Геометрија руте није доступна — кораци и даље раде."
   },
   "saved": {
@@ -62,7 +62,7 @@
   },
   "settings": {
     "language": "Језик",
-    "language_en": "Енглисх",
+    "language_en": "English",
     "language_sr": "Српски",
     "currency": "Валута",
     "currency_rsd": "РСД (српски динар)",
@@ -77,7 +77,7 @@
     "install_ios": "Додирни Подели, па Додај на почетни екран.",
     "downloaded_today": "Данас",
     "downloaded_yesterday": "Јуче",
-    "downloaded_days": "Пре {н} дана"
+    "downloaded_days": "Пре {n} дана"
   },
   "common": {
     "close": "Затвори",

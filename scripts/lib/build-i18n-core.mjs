@@ -10,7 +10,11 @@ export async function runBuildI18n({ srLatn, overrides }) {
     if (typeof obj === 'string') {
       const overrideKey = path.join('.');
       if (overrides[overrideKey] !== undefined) return overrides[overrideKey];
-      const cyrl = latnToCyrl(obj);
+      // Preserve ICU placeholders like {n} or {date} — the runtime substitutes
+      // those literally and would not match a transliterated form like {н}.
+      const cyrl = obj.split(/(\{[^}]+\})/g).map(part =>
+        part.startsWith('{') && part.endsWith('}') ? part : latnToCyrl(part)
+      ).join('');
       if (!roundTripsCleanly(obj)) warnings.push(`${overrideKey}: \"${obj}\" does not round-trip cleanly; add override`);
       return cyrl;
     }
