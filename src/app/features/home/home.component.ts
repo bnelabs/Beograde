@@ -6,15 +6,13 @@ import { CardComponent } from '../../ui/card/card.component';
 import { ChipComponent } from '../../ui/chip/chip.component';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { TwoRiversMarkComponent } from '../../ui/two-rivers-mark/two-rivers-mark.component';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { HoursService } from '../../core/hours/hours.service';
 import { ITINERARIES } from '../../data/itineraries';
 import { CATEGORY_ICONS } from '../../data/pois';
 import { formatDistance } from '../../data/distance';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-home',
@@ -25,15 +23,15 @@ import srLatStrings from '../../../i18n/sr-Latn.json';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  protected readonly i18n = inject(I18nService);
   protected readonly geo = inject(GeolocationService);
   private proximity = inject(ProximityService);
   private hours = inject(HoursService);
+  private readonly strings = inject(StringsService);
 
   readonly icons = CATEGORY_ICONS;
   protected fmtDistance = formatDistance;
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   /** Pick today's itinerary by current hour: morning → history-walk; midday → family-day;
    *  afternoon → viewpoint-sunset; evening → foodie-crawl; rainy fallback → rainy-day. */

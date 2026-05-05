@@ -6,11 +6,9 @@ import { POI } from '../../data/types';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
 import { HoursService } from '../../core/hours/hours.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { formatDistance, walkingMinutes } from '../../data/distance';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 type Filter = POI['category'] | 'all' | 'open-now';
 
@@ -29,10 +27,10 @@ export class PoiListComponent {
   protected readonly geo = inject(GeolocationService);
   private proximity = inject(ProximityService);
   private hours = inject(HoursService);
-  private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
   protected readonly filter = signal<Filter>('all');
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   protected readonly visible = computed(() => {
     const f = this.filter();

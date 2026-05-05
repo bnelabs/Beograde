@@ -7,13 +7,11 @@ import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { HoursService } from '../../core/hours/hours.service';
 import { SavedService } from '../../core/saved/saved.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { ChipComponent } from '../../ui/chip/chip.component';
 import { HoursHeatmapComponent } from '../../ui/charts/hours-heatmap.component';
 import { formatDistance, walkingMinutes } from '../../data/distance';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-poi-detail',
@@ -27,7 +25,7 @@ export class PoiDetailComponent {
   private route = inject(ActivatedRoute);
   private proximity = inject(ProximityService);
   private hours = inject(HoursService);
-  private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
   protected readonly geo = inject(GeolocationService);
   protected readonly saved = inject(SavedService);
 
@@ -46,7 +44,7 @@ export class PoiDetailComponent {
     return this.proximity.distanceTo(p);
   });
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   protected readonly openState = computed(() => {
     const p = this.poi();

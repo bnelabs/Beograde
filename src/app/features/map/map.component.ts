@@ -8,13 +8,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
 import { TilePackService } from '../../core/tile-pack.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { POIS, CATEGORY_LABELS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 const BELGRADE_CENTER: [number, number] = [20.4612, 44.8125];
 
@@ -34,7 +32,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   readonly proximity = inject(ProximityService);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
-  private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
 
   readonly itineraries = ITINERARIES;
   readonly activeItineraryId = signal<string | null>(null);
@@ -45,7 +43,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   );
   readonly nearestThree = computed(() => this.proximity.ranked().slice(0, 3));
 
-  readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  readonly t = this.strings.t;
 
   private readonly queryParams = toSignal(this.route.queryParamMap, { requireSync: true });
   private readonly intendedItinerary = computed(() => this.queryParams().get('itinerary'));

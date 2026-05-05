@@ -4,10 +4,8 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs/operators';
 import { PwaInstallService } from './core/pwa-install.service';
-import { I18nService } from './core/i18n/i18n.service';
+import { StringsService } from './core/i18n/strings.service';
 import { BottomNavComponent, NavTab } from './ui/bottom-nav/bottom-nav.component';
-import enStrings from '../i18n/en.json';
-import srLatStrings from '../i18n/sr-Latn.json';
 
 @Component({
   selector: 'app-root',
@@ -20,10 +18,9 @@ import srLatStrings from '../i18n/sr-Latn.json';
 export class App {
   private router = inject(Router);
   protected readonly pwa = inject(PwaInstallService);
-  protected readonly i18n = inject(I18nService);
-
+  private readonly strings = inject(StringsService);
   protected readonly tabs = computed<NavTab[]>(() => {
-    const t = this.i18n.locale().locale === 'sr' ? srLatStrings.tabs : enStrings.tabs;
+    const t = this.strings.t().tabs;
     return [
       { id: 'home', label: t.home, icon: 'home', route: '/home' },
       { id: 'map', label: t.map, icon: 'map', route: '/map' },

@@ -2,14 +2,12 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SavedService } from '../../core/saved/saved.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { CardComponent } from '../../ui/card/card.component';
 import { getPoi, CATEGORY_ICONS } from '../../data/pois';
 import { ProximityService } from '../../core/proximity.service';
 import { formatDistance } from '../../data/distance';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-saved',
@@ -22,11 +20,11 @@ import srLatStrings from '../../../i18n/sr-Latn.json';
 export class SavedComponent {
   protected readonly saved = inject(SavedService);
   private proximity = inject(ProximityService);
-  private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
   protected readonly icons = CATEGORY_ICONS;
   protected fmtDistance = formatDistance;
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   protected readonly enriched = computed(() => {
     return this.saved.list()

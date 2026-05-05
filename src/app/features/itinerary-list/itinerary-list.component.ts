@@ -3,12 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { ItineraryProgressService } from '../../core/itinerary-progress/itinerary-progress.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { CardComponent } from '../../ui/card/card.component';
 import { DistanceProgressComponent } from '../../ui/charts/distance-progress.component';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-itinerary-list',
@@ -21,9 +19,9 @@ import srLatStrings from '../../../i18n/sr-Latn.json';
 export class ItineraryListComponent {
   protected readonly itineraries = ITINERARIES;
   protected readonly progress = inject(ItineraryProgressService);
-  private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   protected readonly activeItinerary = computed(() => {
     const id = this.progress.activeId();

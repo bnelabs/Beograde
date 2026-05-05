@@ -12,8 +12,7 @@ import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { ItineraryTimelineComponent, TimelineNode } from '../../ui/charts/itinerary-timeline.component';
 import { DistanceProgressComponent } from '../../ui/charts/distance-progress.component';
 import { formatDistance, haversineMeters } from '../../data/distance';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-itinerary-detail',
@@ -27,6 +26,7 @@ export class ItineraryDetailComponent {
   private route = inject(ActivatedRoute);
   private proximity = inject(ProximityService);
   private i18n = inject(I18nService);
+  private readonly strings = inject(StringsService);
   protected readonly geo = inject(GeolocationService);
   protected readonly progress = inject(ItineraryProgressService);
   protected readonly icons = CATEGORY_ICONS;
@@ -34,7 +34,7 @@ export class ItineraryDetailComponent {
 
   private idSig = toSignal(this.route.paramMap, { requireSync: true });
 
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  protected readonly t = this.strings.t;
 
   protected readonly itinerary = computed(() => {
     const id = this.idSig().get('id');

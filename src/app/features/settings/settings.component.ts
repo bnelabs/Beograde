@@ -4,8 +4,7 @@ import { TilePackService } from '../../core/tile-pack.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { PwaInstallService } from '../../core/pwa-install.service';
 import { I18nService } from '../../core/i18n/i18n.service';
-import enStrings from '../../../i18n/en.json';
-import srLatStrings from '../../../i18n/sr-Latn.json';
+import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-settings',
@@ -22,8 +21,8 @@ export class SettingsComponent {
   protected readonly i18n = inject(I18nService);
 
   protected readonly confirmingClear = signal(false);
-
-  protected readonly t = computed(() => this.i18n.locale().locale === 'sr' ? srLatStrings : enStrings);
+  private readonly strings = inject(StringsService);
+  protected readonly t = this.strings.t;
 
   protected readonly tilePackSize = computed(() => {
     const meta = this.tilePack.meta();
