@@ -113,7 +113,7 @@
     },
     "description": {
       "en": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
-      "sr_lat": "Kaldrmisom popločana, fenjerima osvijetljena ulica tradicionalnih kafana. Živa tamburica skoro svake večeri. Turistički nastrojena, ali šarmantna.",
+      "sr_lat": "Kaldrmisom popločana, fenjerima osvetljena ulica tradicionalnih kafana. Živa tamburica skoro svake večeri. Turistički nastrojena, ali šarmantna.",
       "sr_cyr": ""
     },
     "address": {
@@ -322,7 +322,7 @@
     },
     "description": {
       "en": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
-      "sr_lat": "Pešačka kičma starog grada. Knjižare, sladoled, uličnim svirači i veličanstvene fasade iz 19. veka.",
+      "sr_lat": "Pešačka kičma starog grada. Knjižare, sladoled, ulični svirači i veličanstvene fasade iz 19. veka.",
       "sr_cyr": ""
     },
     "address": {
@@ -365,7 +365,7 @@
     "category": "sight",
     "name": {
       "en": "Trg Republike (Republic Square)",
-      "sr_lat": "Trg republike",
+      "sr_lat": "Trg Republike",
       "sr_cyr": ""
     },
     "description": {
@@ -375,7 +375,7 @@
     },
     "address": {
       "en": "Trg Republike",
-      "sr_lat": "Trg republike",
+      "sr_lat": "Trg Republike",
       "sr_cyr": ""
     },
     "lng": 20.4604,
@@ -422,7 +422,7 @@
     },
     "address": {
       "en": "Trg Republike 1a",
-      "sr_lat": "Trg republike 1a",
+      "sr_lat": "Trg Republike 1a",
       "sr_cyr": ""
     },
     "lng": 20.4604,
@@ -1321,7 +1321,7 @@
     },
     "description": {
       "en": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
-      "sr_lat": "Mala balkanska kuća pretvoren u etnografski muzej. Nošnje, tekstil i stare fotografije Beograda.",
+      "sr_lat": "Mala balkanska kuća pretvorena u etnografski muzej. Nošnje, tekstil i stare fotografije Beograda.",
       "sr_cyr": ""
     },
     "address": {
@@ -1568,7 +1568,7 @@
     },
     "description": {
       "en": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
-      "sr_lat": "Dorćolski concept store sa brunchom tokom celog dana i dvorištem. Vegetarijancu prijatan, publika iz sveta dizajna.",
+      "sr_lat": "Dorćolski concept store sa brunchom tokom celog dana i dvorištem. Vegetarijancima prijatan, publika iz sveta dizajna.",
       "sr_cyr": ""
     },
     "address": {
