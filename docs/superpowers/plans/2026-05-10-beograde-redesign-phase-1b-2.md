@@ -10,6 +10,29 @@
 
 **Spec:** `docs/superpowers/specs/2026-05-10-beograde-redesign-phase-1b-2-design.md`
 
+## Test-file conventions (apply to Tasks 2–8)
+
+The 1b.1 cores (e.g. `scripts/lib/provenance-checks.test.mjs`, `scripts/lib/translit.test.mjs`) use **multiple top-level `describe(...)` blocks**, one per function or behavior family — not a single wrapper. Tasks 2–8 below show their tests as bare `test(...)` calls for readability; **each task's tests must be wrapped in a new top-level `describe('<functionName>', () => { ... })` appended as a sibling at the bottom of `scripts/lib/build-images-core.test.mjs`** (do not nest inside the existing `describe('build-images', ...)` block from Task 1). Imports stay at the top of the file. Always import `assert` as `import { strict as assert } from 'node:assert'`, never `import assert from 'node:assert/strict'`.
+
+Concretely, after Task 2 the file looks like:
+
+```js
+import { test, describe } from 'node:test';
+import { strict as assert } from 'node:assert';
+import sharp from 'sharp';
+import { runBuildImages, jpegLqip } from './build-images-core.mjs';
+
+describe('build-images', () => {                  // from Task 1
+  test('runBuildImages exists', () => { ... });
+});
+
+describe('jpegLqip', () => {                      // new top-level block from Task 2
+  test('jpegLqip produces a base64 data-URI from an 8x8 JPEG', async () => { ... });
+});
+```
+
+Tasks 3–8 add their own sibling `describe(...)` blocks the same way.
+
 ---
 
 ## File Structure
