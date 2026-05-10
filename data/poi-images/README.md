@@ -23,7 +23,7 @@ One file per POI, named `<poi-id>.json`. Adding/editing a file here is the only 
 - `commonsFile` must start with `File:` — exact name from Commons.
 - `credit` and `license` are copied verbatim into `ImageAsset.credit` and `ImageAsset.license`. The curator (you) is responsible for getting attribution right.
 - `source` is the canonical Commons file page URL.
-- `fetchedAt` is the date you authored / last reviewed this entry. Bumping it forces re-fetch on the next `npm run build:images`.
+- `fetchedAt` is the date you authored / last reviewed this entry. The pipeline considers a POI's images fresh when its output AVIF set already exists AND the curator file has not been modified since those AVIFs were written. Set `fetchedAt` to today's date when first authoring an entry, and bump it (or any other edit to this file) to force a re-fetch on the next `npm run build:images`.
 
 ## Build step
 

@@ -1,7 +1,9 @@
-import { test } from 'node:test';
-import assert from 'node:assert/strict';
+import { test, describe } from 'node:test';
+import { strict as assert } from 'node:assert';
 import { runBuildImages } from './build-images-core.mjs';
 
-test('runBuildImages exists', () => {
-  assert.equal(typeof runBuildImages, 'function');
+describe('build-images', () => {
+  test('runBuildImages exists', () => {
+    assert.equal(typeof runBuildImages, 'function');
+  });
 });
