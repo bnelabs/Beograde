@@ -50,21 +50,36 @@ The Angular unit tests are still:
 
     npm test -- --watch=false
 
-## Content pipelines (Phase 1b.1)
+## Content pipelines
 
 | Script | Inputs | Output | When to run |
 |---|---|---|---|
 | `build-provenance.mjs` | `src/assets/pois.json` + `data/provenance-cache/<id>.json` (optional) | `src/assets/pois.compiled.json` | Whenever POI source data changes. Fails on any unpublishable POI. |
 | `build-i18n.mjs` | `src/i18n/sr-Latn.json` + `src/i18n/sr-cyr-overrides.json` | `src/i18n/sr-Cyrl.json` | Whenever SR-Latin strings change. Fails on any non-clean round-trip without an override. |
+| `build-images.mjs` | `src/assets/pois.compiled.json` + `data/poi-images/<id>.json` (optional) | `src/assets/poi/<id>/*.avif` + ImageAsset[] merged into `pois.compiled.json` | Whenever a curator file is added/edited. **Manual only — not in prebuild.** Skip-if-fresh; pass `--force` to rebuild. |
 
-Both run as part of `npm run build` via the `prebuild` lifecycle hook.
+`build:provenance` and `build:i18n` run as part of `npm run build` via the
+`prebuild` lifecycle hook. `build:images` does **not**, intentionally: it
+fetches Wikimedia Commons live, and CI builds must not depend on Wikimedia
+uptime. Outputs are committed (the 6–15 MB AVIF set ships in the repo).
 
 Manual:
 
     npm run build:provenance
     npm run build:i18n
-    # or both
+    npm run build:images
+    npm run build:images -- --force
+    # provenance + i18n together:
     npm run build:content
+
+Operator workflow when adding a new POI with images:
+
+1. Edit `src/assets/pois.json` (add the POI).
+2. `npm run build:content` (regenerates `pois.compiled.json`).
+3. Edit `data/poi-images/<id>.json` (curator file with Commons attribution).
+4. `npm run build:images` (fetches, transcodes, writes AVIFs, merges ImageAsset[]).
+5. Commit `pois.json`, `pois.compiled.json`, `data/poi-images/<id>.json`,
+   and `src/assets/poi/<id>/*.avif` together.
 
 > **Note on reliability-data churn:** `build-provenance.mjs` calls live Wikipedia
 > REST and OSM Overpass on every run. When those APIs are reachable, passing
