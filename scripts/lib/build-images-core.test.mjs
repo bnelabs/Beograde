@@ -45,38 +45,72 @@ describe('transcodeAvif', () => {
 describe('loadCurator', () => {
   test('loadCurator returns parsed object on valid file', () => {
     const dir = mkdtempSync(join(tmpdir(), 'curator-'));
-    const file = join(dir, 'kalemegdan.json');
-    writeFileSync(file, JSON.stringify({
-      images: [{
-        commonsFile: 'File:Kalemegdan_Belgrade.jpg',
-        credit: 'Foo, CC BY-SA 4.0',
-        license: 'CC BY-SA 4.0',
-        source: 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg',
-      }],
-      fetchedAt: '2026-05-10',
-    }));
-    const c = loadCurator(file);
-    assert.equal(c.images.length, 1);
-    assert.equal(c.images[0].commonsFile, 'File:Kalemegdan_Belgrade.jpg');
-    rmSync(dir, { recursive: true });
+    try {
+      const file = join(dir, 'kalemegdan.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          commonsFile: 'File:Kalemegdan_Belgrade.jpg',
+          credit: 'Foo, CC BY-SA 4.0',
+          license: 'CC BY-SA 4.0',
+          source: 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg',
+        }],
+        fetchedAt: '2026-05-10',
+      }));
+      const c = loadCurator(file);
+      assert.equal(c.images.length, 1);
+      assert.equal(c.images[0].commonsFile, 'File:Kalemegdan_Belgrade.jpg');
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
   });
 
   test('loadCurator throws on missing required field', () => {
     const dir = mkdtempSync(join(tmpdir(), 'curator-'));
-    const file = join(dir, 'broken.json');
-    writeFileSync(file, JSON.stringify({ images: [{ commonsFile: 'File:X.jpg' }], fetchedAt: '2026-05-10' }));
-    assert.throws(() => loadCurator(file), /credit|license|source/);
-    rmSync(dir, { recursive: true });
+    try {
+      const file = join(dir, 'broken.json');
+      writeFileSync(file, JSON.stringify({ images: [{ commonsFile: 'File:X.jpg' }], fetchedAt: '2026-05-10' }));
+      assert.throws(() => loadCurator(file), /credit|license|source/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
   });
 
   test('loadCurator throws when commonsFile lacks File: prefix', () => {
     const dir = mkdtempSync(join(tmpdir(), 'curator-'));
-    const file = join(dir, 'bad.json');
-    writeFileSync(file, JSON.stringify({
-      images: [{ commonsFile: 'X.jpg', credit: 'a', license: 'b', source: 'c' }],
-      fetchedAt: '2026-05-10',
-    }));
-    assert.throws(() => loadCurator(file), /File:/);
-    rmSync(dir, { recursive: true });
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{ commonsFile: 'X.jpg', credit: 'a', license: 'b', source: 'c' }],
+        fetchedAt: '2026-05-10',
+      }));
+      assert.throws(() => loadCurator(file), /File:/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('loadCurator throws when top-level JSON is not an object', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'array.json');
+      writeFileSync(file, JSON.stringify(['not', 'an', 'object']));
+      assert.throws(() => loadCurator(file), /top-level value must be an object/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('loadCurator throws when fetchedAt is not a string', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'numeric-date.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{ commonsFile: 'File:X.jpg', credit: 'a', license: 'b', source: 'c' }],
+        fetchedAt: 2026,
+      }));
+      assert.throws(() => loadCurator(file), /fetchedAt must be a non-empty string/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
   });
 });
