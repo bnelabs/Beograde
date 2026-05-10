@@ -582,9 +582,12 @@ Append to core:
 import { mkdirSync, writeFileSync as writeFSync } from 'node:fs';
 import { join as joinPath } from 'node:path';
 
-/** Filesystem-safe slug from a Commons file name or human title. */
+/** Filesystem-safe slug from a Commons file name or human title. Cyrillic
+ *  inputs are transliterated to Latin first via `cyrlToLatn` (1b.1 module);
+ *  without that step, Cyrillic codepoints would be silently stripped by the
+ *  alphanumeric filter, producing useless empty slugs. */
 export function slugify(s) {
-  return s
+  return cyrlToLatn(s)
     .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip combining marks
     .replace(/\.[a-z0-9]+$/i, '')                     // drop extension
     .toLowerCase()
