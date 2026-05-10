@@ -96,4 +96,74 @@ describe('build-provenance', () => {
     assert.equal(compiled[0].address.sr_cyr, 'Калемегдански парк');
     rmSync(dir, { recursive: true, force: true });
   });
+
+  test('preserves images[] from a prior compiled.json so build-images data is not stripped', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    const src = [
+      {
+        id: 'p1', region: 'city', category: 'sight',
+        name: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        description: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        address: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        lng: 0, lat: 0, tags: [], images: [],
+        verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+        reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+        editorialConfidence: 'high',
+        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+      },
+    ];
+    const srcPath = join(dir, 'pois.json');
+    const outPath = join(dir, 'pois.compiled.json');
+    writeFileSync(srcPath, JSON.stringify(src));
+    // Simulate a prior build-images run having merged ImageAsset[] into the
+    // compiled.json — this is exactly the state build-provenance must preserve.
+    const priorCompiled = [{
+      ...src[0],
+      images: [{
+        src: '/assets/poi/p1/hero-1024.avif', width: 1024, height: 768,
+        lqip: 'data:image/jpeg;base64,abc', credit: 'X', license: 'CC0', source: 'https://x',
+      }],
+    }];
+    writeFileSync(outPath, JSON.stringify(priorCompiled));
+
+    await runBuildProvenance({ srcPath, outPath, cacheDir: dir, fetchFn: async () => ({ ok: false }) });
+
+    const compiled = JSON.parse(readFileSync(outPath, 'utf8'));
+    assert.equal(compiled[0].images.length, 1);
+    assert.equal(compiled[0].images[0].src, '/assets/poi/p1/hero-1024.avif');
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  test('does not preserve a prior images[] for a POI that was removed from pois.json', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    // src has only p1; compiled previously had p1 and p2.
+    const src = [{
+      id: 'p1', region: 'city', category: 'sight',
+      name: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+      description: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+      address: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+      lng: 0, lat: 0, tags: [], images: [],
+      verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+      reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+      editorialConfidence: 'high',
+      provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+    }];
+    writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
+    writeFileSync(join(dir, 'pois.compiled.json'), JSON.stringify([
+      { ...src[0], images: [{ src: 'p1.avif', width: 1, height: 1, lqip: 'x', credit: 'x', license: 'x', source: 'x' }] },
+      { ...src[0], id: 'p2', images: [{ src: 'p2.avif', width: 1, height: 1, lqip: 'x', credit: 'x', license: 'x', source: 'x' }] },
+    ]));
+
+    await runBuildProvenance({
+      srcPath: join(dir, 'pois.json'),
+      outPath: join(dir, 'pois.compiled.json'),
+      cacheDir: dir,
+      fetchFn: async () => ({ ok: false }),
+    });
+
+    const compiled = JSON.parse(readFileSync(join(dir, 'pois.compiled.json'), 'utf8'));
+    assert.equal(compiled.length, 1);
+    assert.equal(compiled[0].id, 'p1');
+    rmSync(dir, { recursive: true, force: true });
+  });
 });

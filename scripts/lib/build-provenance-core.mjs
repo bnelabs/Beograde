@@ -24,6 +24,26 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
   let published = 0, failed = 0;
   const compiled = [];
 
+  // The build-images pipeline writes ImageAsset[] entries into the output
+  // file (pois.compiled.json) directly — that file is the merge target for
+  // both pipelines. Without this guard, a build-provenance run after
+  // build-images would silently strip the image entries (pois.json itself
+  // always has `"images": []`). Snapshot the prior images keyed by id so
+  // every enriched POI re-inherits them.
+  const priorImages = new Map();
+  if (existsSync(outPath)) {
+    try {
+      const prev = JSON.parse(readFileSync(outPath, 'utf8'));
+      for (const p of prev) {
+        if (Array.isArray(p?.images) && p.images.length > 0) {
+          priorImages.set(p.id, p.images);
+        }
+      }
+    } catch (e) {
+      // Malformed prior file — let it be overwritten with a clean compile.
+    }
+  }
+
   for (const poi of list) {
     const cachedSourcesPath = join(cacheDir, `${poi.id}.json`);
     let cached = { sources: [] };
@@ -56,6 +76,9 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
     poi.address = fillCyr(poi.address);
     if (poi.hours?.notes) poi.hours.notes = fillCyr(poi.hours.notes);
     const enriched = { ...poi, sources, reliability };
+    if (priorImages.has(poi.id)) {
+      enriched.images = priorImages.get(poi.id);
+    }
     if (!isPublishable({ checks, editorialConfidence: poi.editorialConfidence })) {
       failed++;
       console.error(`✗ ${poi.id} not publishable (score ${reliability.score}, conf ${poi.editorialConfidence})`);
