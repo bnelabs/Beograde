@@ -878,7 +878,10 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
       continue; // Tier B — POI ships images: []
     }
     const curator = loadCurator(curatorPath);
-    const slugs = curator.images.map((img) => slugify(img.commonsFile));
+    // Strip the Commons "File:" prefix before slugifying — slugify is a
+    // generic filesystem-safe slugger and would otherwise emit "file-..."
+    // (see the Task 6 slugify test that pins this behavior on raw input).
+    const slugs = curator.images.map((img) => slugify(img.commonsFile.replace(/^File:/, '')));
 
     if (!force && isFresh({ curatorPath, outDir, poiId: poi.id, expectedSlugs: slugs, widths: WIDTHS })) {
       fresh++;
