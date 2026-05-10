@@ -27,8 +27,11 @@ function isFresh({ curatorPath, outDir, poiId, expectedSlugs, widths }) {
  *  files in cacheDir, fetches Commons sources, transcodes to AVIF, writes
  *  per-POI dirs under outDir, and merges ImageAsset[] back into
  *  pois.compiled.json. Idempotent: skip if every output AVIF exists and is
- *  newer than the curator file. `force: true` rebuilds every Tier-A POI. */
-export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force = false }) {
+ *  newer than the curator file. `force: true` rebuilds every Tier-A POI.
+ *  `interPoiDelayMs` throttles requests between curated POIs to stay under
+ *  Wikimedia's anonymous rate limit (~30 req/min). Default 0 keeps unit tests
+ *  fast; the CLI passes a higher value for live runs. */
+export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force = false, interPoiDelayMs = 0 }) {
   const compiled = JSON.parse(readFileSync(compiledPath, 'utf8'));
   let curated = 0, skipped = 0, fresh = 0;
 
@@ -82,6 +85,10 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
     // entries in compiled.json (which would make them appear fresh on
     // re-run and never get their entries written).
     writeFileSync(compiledPath, JSON.stringify(compiled, null, 2) + '\n');
+
+    if (interPoiDelayMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, interPoiDelayMs));
+    }
   }
 
   // No-op re-write when per-POI persistence already ran; covers the
@@ -99,6 +106,11 @@ export async function jpegLqip(buffer) {
   return `data:image/jpeg;base64,${out.toString('base64')}`;
 }
 
+// Wikimedia's User-Agent policy requires a descriptive identifier so that
+// abusive bots can be contacted or blocked. Without this, anonymous fetches
+// are throttled aggressively (observed: HTTP 429 after ~3 sequential requests).
+const COMMONS_USER_AGENT = 'Beograde/1.0 (https://github.com/bnelabs/Beograde; image-curation pipeline)';
+
 /** Fetch a Commons file via Special:FilePath, return Buffer + dimensions.
  *  Caps source width at 2400px to keep transcode work bounded. */
 export async function fetchCommonsFile(commonsFile, fetchFn) {
@@ -110,7 +122,7 @@ export async function fetchCommonsFile(commonsFile, fetchFn) {
   // non-ASCII characters in real Commons file names (mirrors checkWikipedia
   // in scripts/lib/provenance-checks.mjs).
   const url = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=2400`;
-  const res = await fetchFn(url);
+  const res = await fetchFn(url, { headers: { 'User-Agent': COMMONS_USER_AGENT } });
   if (!res.ok) {
     throw new Error(`fetchCommonsFile: ${url} → ${res.status}${res.statusText ? ' ' + res.statusText : ''}`);
   }

@@ -13,6 +13,9 @@ const result = await runBuildImages({
   outDir: resolve('src/assets/poi'),
   fetchFn: globalThis.fetch,
   force,
+  // 1.5s between curated POIs keeps us comfortably under Wikimedia's
+  // anonymous ~30 req/min ceiling for the live image fetch.
+  interPoiDelayMs: 1500,
 });
 
 console.log(`✔ curated ${result.curated} POI(s); ${result.fresh} already fresh; ${result.skipped} without curator file (Tier B)`);
