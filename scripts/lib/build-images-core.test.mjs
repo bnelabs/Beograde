@@ -178,6 +178,13 @@ describe('slugify', () => {
     assert.equal(slugify('Saint Sava Cathedral (interior).JPG'), 'saint-sava-cathedral-interior');
     assert.equal(slugify('Beograd_–_Kalemegdan.jpeg'), 'beograd-kalemegdan');
   });
+
+  test('slugify transliterates Cyrillic before alphanumeric filtering', () => {
+    // Without cyrlToLatn the Cyrillic codepoints would be stripped, leaving 'file'.
+    assert.equal(slugify('File:Београд.jpg'), 'file-beograd');
+    // Mixed Cyrillic + Latin file names should also work.
+    assert.equal(slugify('Калемегдан Belgrade.JPG'), 'kalemegdan-belgrade');
+  });
 });
 
 describe('writeAvifSet', () => {

@@ -1,6 +1,7 @@
 import sharp from 'sharp';
 import { readFileSync, mkdirSync, writeFileSync as writeFSync } from 'node:fs';
 import { join as joinPath } from 'node:path';
+import { cyrlToLatn } from './translit.mjs';
 
 // Pipeline core. Pure async functions + the runBuildImages orchestrator.
 // Helpers are added in subsequent tasks.
@@ -87,11 +88,14 @@ export async function transcodeAvif(buffer, widths) {
   return out;
 }
 
-/** Filesystem-safe slug from a Commons file name or human title. */
+/** Filesystem-safe slug from a Commons file name or human title. Cyrillic
+ *  inputs are transliterated to Latin first via cyrlToLatn (1b.1 module);
+ *  without that step, Cyrillic codepoints would be silently stripped by the
+ *  alphanumeric filter, producing useless empty slugs. */
 export function slugify(s) {
-  return s
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')   // strip combining marks
-    .replace(/\.[a-z0-9]+$/i, '')                        // drop extension
+  return cyrlToLatn(s)
+    .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip combining marks
+    .replace(/\.[a-z0-9]+$/i, '')                      // drop extension
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
