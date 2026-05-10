@@ -12,6 +12,7 @@
     "build:itineraries": "node scripts/build-itineraries.mjs",
     "build:provenance": "node scripts/build-provenance.mjs",
     "build:i18n": "node scripts/build-i18n.mjs",
+    "build:images": "node scripts/build-images.mjs",
     "build:content": "npm run build:provenance && npm run build:i18n",
     "prebuild": "npm run build:content",
     "watch": "ng build --watch --configuration development",
