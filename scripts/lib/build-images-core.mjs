@@ -15,3 +15,16 @@ export async function jpegLqip(buffer) {
     .toBuffer();
   return `data:image/jpeg;base64,${out.toString('base64')}`;
 }
+
+/** Transcode a source buffer to AVIF at each requested width.
+ *  Returns { [width]: Buffer }. Aspect ratio preserved (width-based resize). */
+export async function transcodeAvif(buffer, widths) {
+  const out = {};
+  for (const w of widths) {
+    out[w] = await sharp(buffer)
+      .resize({ width: w, withoutEnlargement: true })
+      .avif({ quality: 50, effort: 4 })
+      .toBuffer();
+  }
+  return out;
+}
