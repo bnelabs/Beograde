@@ -356,4 +356,59 @@ describe('runBuildImages', () => {
       rmSync(fx.root, { recursive: true });
     }
   });
+
+  test('runBuildImages throws on slug collision within a POI', async () => {
+    const fx = await setupFixture();
+    try {
+      // Overwrite the curator file with two images whose names slugify to the
+      // same string.
+      writeFileSync(join(fx.cacheDir, 'kalemegdan.json'), JSON.stringify({
+        images: [
+          { commonsFile: 'File:Beograd_view_1.jpg', credit: 'a', license: 'a', source: 'a' },
+          { commonsFile: 'File:Beograd-view-1.jpg', credit: 'b', license: 'b', source: 'b' },
+        ],
+        fetchedAt: '2026-05-10',
+      }));
+      await assert.rejects(
+        () => runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: fx.fetchFn, force: false }),
+        /two images that slugify to "beograd-view-1"/,
+      );
+    } finally {
+      rmSync(fx.root, { recursive: true });
+    }
+  });
+
+  test('runBuildImages persists compiled.json after each POI, so a mid-run failure leaves earlier POIs recoverable without --force', async () => {
+    const fx = await setupFixture();
+    try {
+      // Add a second POI with its own curator file; its fetch will fail.
+      const compiled = JSON.parse(readFileSync(fx.compiledPath, 'utf8'));
+      compiled.push({ id: 'failing-poi', region: 'city', images: [] });
+      writeFileSync(fx.compiledPath, JSON.stringify(compiled));
+      writeFileSync(join(fx.cacheDir, 'failing-poi.json'), JSON.stringify({
+        images: [{ commonsFile: 'File:DoesNotExist.jpg', credit: 'a', license: 'a', source: 'a' }],
+        fetchedAt: '2026-05-10',
+      }));
+      let calls = 0;
+      const failingFetch = async (url) => {
+        calls++;
+        if (url.includes('DoesNotExist')) {
+          return { ok: false, status: 404, statusText: 'Not Found' };
+        }
+        return fx.fetchFn(url);
+      };
+      await assert.rejects(
+        () => runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: failingFetch, force: false }),
+        /404/,
+      );
+      // Despite the failure on failing-poi, kalemegdan should now have its
+      // ImageAsset[] persisted — proving the incremental write happened.
+      const after = JSON.parse(readFileSync(fx.compiledPath, 'utf8'));
+      const kale = after.find((p) => p.id === 'kalemegdan');
+      assert.equal(kale.images.length, 1);
+      assert.match(kale.images[0].src, /\/assets\/poi\/kalemegdan\/.+-1024\.avif$/);
+    } finally {
+      rmSync(fx.root, { recursive: true });
+    }
+  });
 });
