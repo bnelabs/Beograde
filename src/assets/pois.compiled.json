@@ -215,7 +215,17 @@
       "modern",
       "date"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/beton-hala/beograd-beton-hala-45033581361-1024.avif",
+        "width": 1024,
+        "height": 683,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAZEAADAQEBAAAAAAAAAAAAAAAAAQIRA2H/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAAMAAAAAAAAAAAAAAAAAAAABEv/aAAwDAQACEQMRAD8AuutS9jF41oALTEo//9k=",
+        "credit": "Fred Romero, CC BY 2.0, via Wikimedia Commons",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Beograd_-_Beton_Hala_(45033581361).jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -266,7 +276,17 @@
       "late-night",
       "summer"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/splavovi/houseboats-belgrade-serbia-1024.avif",
+        "width": 1024,
+        "height": 575,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAACAgMBAAAAAAAAAAAAAAAAAgEFAxIhMf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AJe0sN2mM6p3zWOAAiUP/9k=",
+        "credit": "Goran Anđelić, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Houseboats,_Belgrade,_Serbia.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -317,7 +337,17 @@
       "courtyard",
       "evening"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/cetinjska/cetinjska-beograd-1024.avif",
+        "width": 1024,
+        "height": 1360,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIDBBETQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ahl23XY3Cm5R3tPtNegAD/9k=",
+        "credit": "Андрей Романенко, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cetinjska,_Beograd.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -367,7 +397,17 @@
       "shopping",
       "people-watching"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/knez-mihailova/knez-mihailova-street-panoramio-1024.avif",
+        "width": 1024,
+        "height": 1656,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAcEAACAgIDAAAAAAAAAAAAAAAAAQMRAiESMUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhEDEQA/AI5LjS2uTxffm6AAYN//2Q==",
+        "credit": "Peiragmeno paidi, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Knez_Mihailova_street_-_panoramio.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -414,7 +454,17 @@
       "central",
       "meeting-point"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/republic-square/belgrade-republic-square-1024.avif",
+        "width": 1024,
+        "height": 779,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAdEAACAQQDAAAAAAAAAAAAAAAAAwECBBESITFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AKbq6a9LFaaRVGI5z72ABZqP/9k=",
+        "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Belgrade_Republic_Square.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -462,7 +512,17 @@
       "indoor",
       "rainy-day"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/national-museum/national-museum-of-serbia-dsc04612-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAaEAEBAAIDAAAAAAAAAAAAAAABAAIDITFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABcRAAMBAAAAAAAAAAAAAAAAAAACElH/2gAMAwEAAhEDEQA/AKGvBOMBDt8kkttErh//2Q==",
+        "credit": "Simon Legner, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Serbia_(DSC04612).jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -513,7 +573,17 @@
       "indoor",
       "kids"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/tesla-museum/genciceva-kuca-6-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIDBBESMWH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ALyLbnz3c2pJpQcu/AASX//Z",
+        "credit": "Dungodung, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Gen%C4%8Di%C4%87eva_ku%C4%87a_6.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
@@ -570,7 +640,17 @@
       "yugoslavia",
       "indoor"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/house-of-flowers/tito-s-mausoleum-1024.avif",
+        "width": 1024,
+        "height": 1365,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAdEAACAQQDAAAAAAAAAAAAAAAAAgQBAxESIUFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCSrUx4lFre2btc8Y8AAg//2Q==",
+        "credit": "Ferran Cornellà, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tito%27s_mausoleum.JPG"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -621,7 +701,17 @@
       "outdoor",
       "kids"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/ada-ciganlija/svjetlopis-ade-singalije-u-biogradu-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAABAwUAAAAAAAAAAAAAAAAAAQIDBCEzcrH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwCUtbE9MbUdvbgAFdGP/9k=",
+        "credit": "Andrija12345678, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B2%D1%98%D0%B5%D1%82%D0%BB%D0%BE%D0%BF%D0%B8%D1%81_%D0%90%D0%B4%D0%B5_%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BB%D0%B8%D1%98%D0%B5_%D1%83_%D0%91%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -668,7 +758,17 @@
       "viewpoint",
       "old-town"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/zemun-quay/zemun-panorama-from-gardos-tower-1024.avif",
+        "width": 1024,
+        "height": 379,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAaEAEAAQUAAAAAAAAAAAAAAAAAAQQSFTKC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAAMAAAAAAAAAAAAAAAAAAAABEv/aAAwDAQACEQMRAD8ArK1Ma2xyAFMco//Z",
+        "credit": "Petar Milošević, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Zemun_panorama_from_Gardo%C5%A1_tower.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -715,7 +815,17 @@
       "viewpoint",
       "sunset"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/gardos-tower/belgrad-zemun-kula-sibinjanin-janka-1024.avif",
+        "width": 1024,
+        "height": 1772,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAaEAACAgMAAAAAAAAAAAAAAAAAAREhAxNh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABkRAAIDAQAAAAAAAAAAAAAAAAABAhExcf/aAAwDAQACEQMRAD8AjW1mamnUdAAsHoE1VcP/2Q==",
+        "credit": "Stefan Didam, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Belgrad_(Zemun)_-_Kula_Sibinjanin_Janka.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
@@ -772,7 +882,17 @@
       "cake",
       "people-watching"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/hotel-moskva/hotel-moskva-belgrade-20180227-1024.avif",
+        "width": 1024,
+        "height": 683,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAbEAACAgMBAAAAAAAAAAAAAAAAAQIRBAUxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCSW0yJ+zSviVAAD//Z",
+        "credit": "Suicasmo, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hotel_Moskva_(Belgrade)_20180227.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -822,7 +942,17 @@
       "traditional",
       "historic"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/kafana-question-mark/kafana-znak-pitanja-1024.avif",
+        "width": 1024,
+        "height": 679,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAcEAEAAQQDAAAAAAAAAAAAAAACAAEDERIUImH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhEDEQA/AJ+QL1S1fSwutEsE+6xEQshv/9k=",
+        "credit": "Ranko, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kafana_znak_pitanja.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -923,7 +1053,17 @@
       "central",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/tasmajdan-park/tasmajdanski-park-u-beogradu-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAaEAADAAMBAAAAAAAAAAAAAAAAAREDEiGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAMAwEAAhEDEQA/AIZLY3s242l2egAZSv/Z",
+        "credit": "Andrija12345678, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%A2%D0%B0%D1%88%D0%BC%D0%B0%D1%98%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B8_%D0%BF%D0%B0%D1%80%D0%BA_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -970,7 +1110,17 @@
       "religious",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/saint-mark/crkva-svetog-marka-beograd-st-mark-s-church-belgrade-1024.avif",
+        "width": 1024,
+        "height": 846,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAACAQUBAAAAAAAAAAAAAAAAAQIDBBETQSH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABgRAAIDAAAAAAAAAAAAAAAAAAABAgNR/9oADAMBAAIRAxEAPwCNRu3eycNeI5a57wABWS0l1xw//9k=",
+        "credit": "Petar Milošević, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Crkva_svetog_Marka,_Beograd_(St._Mark%27s_Church,_Belgrade).jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1017,7 +1167,17 @@
       "religious",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/bajrakli-mosque/bajrakli-mosque-belgrade-1024.avif",
+        "width": 1024,
+        "height": 1262,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAaEAEAAgMBAAAAAAAAAAAAAAABAAQCAxES/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ9t/JrGFh3ewBeHGIiB/9k=",
+        "credit": "Ahmed Abouaiana, CC BY 4.0, via Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bajrakli_Mosque-_Belgrade.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1062,7 +1222,17 @@
       "indoor",
       "rainy-day"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/princess-ljubica/konak-knjeginje-ljubice-2-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIEBRESEzH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKq6hnluXWtfdkAiIkH/2Q==",
+        "credit": "Goldfinger, CC BY-SA 3.0 rs, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0 rs",
+        "source": "https://commons.wikimedia.org/wiki/File:Konak_knjeginje_Ljubice_2.JPG"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1112,7 +1282,17 @@
       "kids",
       "outdoor"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/zoo-belgrade/beli-lav-belgrade-zoo-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAcEAADAAEFAAAAAAAAAAAAAAAAAQIRAwQSEzH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Ap7nvi+c6V0lmWks+gAD/2Q==",
+        "credit": "Petar Milošević, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Beli_lav_Belgrade_zoo.JPG"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
@@ -1169,7 +1349,17 @@
       "viewpoint",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/ada-bridge/novi-most-1024.avif",
+        "width": 1024,
+        "height": 777,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAbEAADAAIDAAAAAAAAAAAAAAAAAQIDBBESUv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AJa0VcysfaqflcgAto//2Q==",
+        "credit": "Nikola, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Novi_most.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1216,7 +1406,17 @@
       "sunset",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/brankov-most/branko-s-bridge-in-belgrade-by-night-1024.avif",
+        "width": 1024,
+        "height": 741,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAbEAACAwADAAAAAAAAAAAAAAABAwACBCJB0f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAYEQADAQEAAAAAAAAAAAAAAAAAATEhIv/aAAwDAQACEQMRAD8AgS/IgizM7NFh0eNfTERD61iQ/9k=",
+        "credit": "Pudelek (Marcin Szala), CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Branko%27s_Bridge_in_Belgrade_by_night.JPG"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
@@ -1270,7 +1470,17 @@
       "riverside",
       "walking"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/belgrade-waterfront/belgrade-waterfront-beograd-na-vodi-1024.avif",
+        "width": 1024,
+        "height": 767,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABsQAQEAAQUAAAAAAAAAAAAAAAEAAgMEERJB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AGluu6JmL6LxJKdI/9k=",
+        "credit": "Petar Milošević, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Belgrade_Waterfront_(%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4_%D0%BD%D0%B0_%D0%B2%D0%BE%D0%B4%D0%B8).jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1318,7 +1528,17 @@
       "art",
       "evening"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/savamala/savamala-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERQxYf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC8+sm7y3wADF//2Q==",
+        "credit": "Mile Jovic, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Savamala.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1366,7 +1586,17 @@
       "indoor",
       "small"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/manaks-house/manakova-kuca-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAaEAACAwEBAAAAAAAAAAAAAAAAAQIDETES/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AIwnWq/LdqjzHc84AAP/2Q==",
+        "credit": "PedjaNbg, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BD%D0%B0%D0%BA%D0%BE%D0%B2%D0%B0_%D0%BA%D1%83%D1%9B%D0%B0.JPG"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1418,7 +1648,17 @@
       "kids",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/topcider-park/beograd-topcider-5-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAbEAACAQUAAAAAAAAAAAAAAAAAAQIDERMhUf/EABUBAQEAAAAAAAAAAAAAAAAAAAAD/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oADAMBAAIRAxEAPwCRp5XGaen12ABDUH//2Q==",
+        "credit": "Nemezis, CC BY-SA 3.0, via Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Beograd_Topcider_5.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1464,7 +1704,17 @@
       "viewpoint",
       "day-trip"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/avala-tower/avala-tower-1024.avif",
+        "width": 1024,
+        "height": 1365,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIDBBIiQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAwDAQACEQMRAD8Au+SjkRljvWzV8bO14ACtCP/Z",
+        "credit": "Vladimir Stanković, CC BY-SA 2.0, via Wikimedia Commons",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Avala_Tower.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
