@@ -16,8 +16,9 @@
     <a [routerLink]="['/itinerary', todaysPick().id]" class="block">
       <app-hero-card
         [eyebrow]="formatHourMeta(todaysPick().durationMinutes)"
-        [title]="todaysPick().title | i18nText"
-        [meta]="todaysPick().subtitle | i18nText" />
+        [title]="(todaysPick().title | i18nText) || ''"
+        [meta]="(todaysPick().subtitle | i18nText) || ''"
+        [asset]="todaysPickImage()" />
     </a>
   </section>
 
