@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import { readFileSync } from 'node:fs';
 
 // Pipeline core. Pure async functions + the runBuildImages orchestrator.
 // Helpers are added in subsequent tasks.
@@ -14,6 +15,27 @@ export async function jpegLqip(buffer) {
     .jpeg({ quality: 30 })
     .toBuffer();
   return `data:image/jpeg;base64,${out.toString('base64')}`;
+}
+
+/** Read + validate a curator file. Returns { images, fetchedAt }. Throws on
+ *  malformed input — the calling pipeline must surface the error, not skip. */
+export function loadCurator(path) {
+  const raw = JSON.parse(readFileSync(path, 'utf8'));
+  if (!raw.fetchedAt) throw new Error(`${path}: missing fetchedAt`);
+  if (!Array.isArray(raw.images) || raw.images.length === 0) {
+    throw new Error(`${path}: images must be a non-empty array`);
+  }
+  for (const img of raw.images) {
+    for (const key of ['commonsFile', 'credit', 'license', 'source']) {
+      if (typeof img[key] !== 'string' || !img[key]) {
+        throw new Error(`${path}: image missing required field "${key}"`);
+      }
+    }
+    if (!img.commonsFile.startsWith('File:')) {
+      throw new Error(`${path}: commonsFile must start with "File:" — got "${img.commonsFile}"`);
+    }
+  }
+  return raw;
 }
 
 /** Transcode a source buffer to AVIF at each requested width.

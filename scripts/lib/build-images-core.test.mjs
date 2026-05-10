@@ -1,7 +1,10 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator } from './build-images-core.mjs';
 import sharp from 'sharp';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 describe('build-images', () => {
   test('runBuildImages exists', () => {
@@ -36,5 +39,44 @@ describe('transcodeAvif', () => {
     }
     // 640 buffer must be smaller than 1600.
     assert.ok(out[640].length < out[1600].length);
+  });
+});
+
+describe('loadCurator', () => {
+  test('loadCurator returns parsed object on valid file', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    const file = join(dir, 'kalemegdan.json');
+    writeFileSync(file, JSON.stringify({
+      images: [{
+        commonsFile: 'File:Kalemegdan_Belgrade.jpg',
+        credit: 'Foo, CC BY-SA 4.0',
+        license: 'CC BY-SA 4.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg',
+      }],
+      fetchedAt: '2026-05-10',
+    }));
+    const c = loadCurator(file);
+    assert.equal(c.images.length, 1);
+    assert.equal(c.images[0].commonsFile, 'File:Kalemegdan_Belgrade.jpg');
+    rmSync(dir, { recursive: true });
+  });
+
+  test('loadCurator throws on missing required field', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    const file = join(dir, 'broken.json');
+    writeFileSync(file, JSON.stringify({ images: [{ commonsFile: 'File:X.jpg' }], fetchedAt: '2026-05-10' }));
+    assert.throws(() => loadCurator(file), /credit|license|source/);
+    rmSync(dir, { recursive: true });
+  });
+
+  test('loadCurator throws when commonsFile lacks File: prefix', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    const file = join(dir, 'bad.json');
+    writeFileSync(file, JSON.stringify({
+      images: [{ commonsFile: 'X.jpg', credit: 'a', license: 'b', source: 'c' }],
+      fetchedAt: '2026-05-10',
+    }));
+    assert.throws(() => loadCurator(file), /File:/);
+    rmSync(dir, { recursive: true });
   });
 });
