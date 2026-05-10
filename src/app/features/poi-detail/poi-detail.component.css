@@ -73,3 +73,5 @@
 .poi-tag { font-size: 11px; padding: 4px 9px; border-radius: var(--radius-pill); background: rgba(0,0,0,0.05); color: var(--ink-2); }
 
 .poi-verified { font-size: 11px; color: var(--ink-3); text-align: center; margin-top: 8px; }
+.poi-image-credit { font-size: 11px; color: var(--ink-3); margin: 4px 0 0; text-align: right; }
+.poi-image-credit a { color: var(--ink-3); text-decoration: underline; text-underline-offset: 2px; }

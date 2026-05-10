@@ -11,6 +11,7 @@
                    [asset]="img"
                    [alt]="(poi()!.name | i18nText) || ''"
                    [eager]="true"
+                   [showCredit]="false"
                    [fallbackIcon]="heroIcon()"
                    ratio="16 / 10" />
         <div class="poi-hero-scrim" aria-hidden="true"></div>
@@ -95,6 +96,16 @@
             <span class="poi-tag">#{{ tag }}</span>
           }
         </div>
+      }
+
+      @if (heroImage(); as img) {
+        <p class="poi-image-credit">
+          @if (img.source) {
+            <a [href]="img.source" target="_blank" rel="noopener noreferrer">{{ img.credit }}</a>
+          } @else {
+            {{ img.credit }}
+          }
+        </p>
       }
 
       <!-- Verified date -->
