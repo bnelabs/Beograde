@@ -1,13 +1,72 @@
 import sharp from 'sharp';
-import { readFileSync, mkdirSync, writeFileSync as writeFSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
 import { join as joinPath } from 'node:path';
 import { cyrlToLatn } from './translit.mjs';
 
 // Pipeline core. Pure async functions + the runBuildImages orchestrator.
 // Helpers are added in subsequent tasks.
 
-export async function runBuildImages() {
-  throw new Error('not implemented');
+const WIDTHS = [640, 1024, 1600];
+
+/** Decide whether outputs for a POI are fresh relative to its curator file.
+ *  Fresh = every expected AVIF exists, and the oldest AVIF is newer than
+ *  the curator file. Returns true if no work is needed. */
+function isFresh({ curatorPath, outDir, poiId, expectedSlugs, widths }) {
+  const curatorMtime = statSync(curatorPath).mtimeMs;
+  for (const slug of expectedSlugs) {
+    for (const w of widths) {
+      const p = joinPath(outDir, poiId, `${slug}-${w}.avif`);
+      if (!existsSync(p)) return false;
+      if (statSync(p).mtimeMs < curatorMtime) return false;
+    }
+  }
+  return true;
+}
+
+/** Pipeline orchestrator. Reads pois.compiled.json, walks per-POI curator
+ *  files in cacheDir, fetches Commons sources, transcodes to AVIF, writes
+ *  per-POI dirs under outDir, and merges ImageAsset[] back into
+ *  pois.compiled.json. Idempotent: skip if every output AVIF exists and is
+ *  newer than the curator file. `force: true` rebuilds every Tier-A POI. */
+export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force = false }) {
+  const compiled = JSON.parse(readFileSync(compiledPath, 'utf8'));
+  let curated = 0, skipped = 0, fresh = 0;
+
+  for (const poi of compiled) {
+    const curatorPath = joinPath(cacheDir, `${poi.id}.json`);
+    if (!existsSync(curatorPath)) {
+      skipped++;
+      continue; // Tier B — POI ships images: []
+    }
+    const curator = loadCurator(curatorPath);
+    const slugs = curator.images.map((img) => slugify(img.commonsFile.replace(/^File:/, '')));
+
+    if (!force && isFresh({ curatorPath, outDir, poiId: poi.id, expectedSlugs: slugs, widths: WIDTHS })) {
+      fresh++;
+      continue;
+    }
+
+    const perImage = [];
+    for (let i = 0; i < curator.images.length; i++) {
+      const c = curator.images[i];
+      const slug = slugs[i];
+      const { buffer, width: srcW, height: srcH } = await fetchCommonsFile(c.commonsFile, fetchFn);
+      const transcoded = await transcodeAvif(buffer, WIDTHS);
+      await writeAvifSet({ outDir, poiId: poi.id, slug, transcoded });
+      const lqip = await jpegLqip(buffer);
+      // 1024 variant dimensions: width=1024 (or smaller if source < 1024),
+      // height computed from source aspect ratio.
+      const width1024 = Math.min(1024, srcW);
+      const height1024 = Math.round((width1024 / srcW) * srcH);
+      perImage.push({ slug, lqip, width1024, height1024 });
+    }
+
+    poi.images = buildImageAssetEntries({ poiId: poi.id, curator, perImage });
+    curated++;
+  }
+
+  writeFileSync(compiledPath, JSON.stringify(compiled, null, 2) + '\n');
+  return { curated, skipped, fresh };
 }
 
 /** Produce a tiny base64 JPEG data-URI suitable for inline LQIP. */
@@ -109,7 +168,7 @@ export async function writeAvifSet({ outDir, poiId, slug, transcoded }) {
   const out = {};
   for (const [width, buf] of Object.entries(transcoded)) {
     const path = joinPath(poiDir, `${slug}-${width}.avif`);
-    writeFSync(path, buf);
+    writeFileSync(path, buf);
     out[width] = path;
   }
   return out;

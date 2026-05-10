@@ -2,7 +2,7 @@ import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
 import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
 import sharp from 'sharp';
-import { mkdtempSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -261,5 +261,99 @@ describe('buildImageAssetEntries', () => {
     assert.equal(out[0].height, 768);
     assert.equal(out[1].credit, 'b');
     assert.equal(out[1].height, 576);
+  });
+});
+
+async function setupFixture() {
+  const root = mkdtempSync(join(tmpdir(), 'build-images-'));
+  const compiledPath = join(root, 'pois.compiled.json');
+  const cacheDir = join(root, 'poi-images');
+  const outDir = join(root, 'poi-out');
+  mkdirSync(cacheDir, { recursive: true });
+  mkdirSync(outDir, { recursive: true });
+
+  const compiled = [
+    { id: 'kalemegdan', region: 'city', images: [] },
+    { id: 'no-images-here', region: 'city', images: [] },
+  ];
+  writeFileSync(compiledPath, JSON.stringify(compiled));
+
+  writeFileSync(join(cacheDir, 'kalemegdan.json'), JSON.stringify({
+    images: [{
+      commonsFile: 'File:Kalemegdan_Belgrade.jpg',
+      credit: 'Foo, CC BY-SA 4.0',
+      license: 'CC BY-SA 4.0',
+      source: 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg',
+    }],
+    fetchedAt: '2026-05-10',
+  }));
+
+  // 1200x800 PNG buffer, returned for any Commons fetch.
+  const fakeImage = await sharp({
+    create: { width: 1200, height: 800, channels: 3, background: { r: 80, g: 120, b: 160 } },
+  }).png().toBuffer();
+  const fetchFn = async () => ({
+    ok: true,
+    status: 200,
+    arrayBuffer: async () => fakeImage.buffer.slice(fakeImage.byteOffset, fakeImage.byteOffset + fakeImage.byteLength),
+  });
+
+  return { root, compiledPath, cacheDir, outDir, fetchFn };
+}
+
+describe('runBuildImages', () => {
+  test('writes AVIFs and merges ImageAsset[] into compiled.json', async () => {
+    const fx = await setupFixture();
+    try {
+      const result = await runBuildImages({
+        compiledPath: fx.compiledPath,
+        cacheDir: fx.cacheDir,
+        outDir: fx.outDir,
+        fetchFn: fx.fetchFn,
+        force: false,
+      });
+      assert.equal(result.curated, 1);
+      assert.equal(result.skipped, 1);
+      for (const w of [640, 1024, 1600]) {
+        assert.ok(existsSync(join(fx.outDir, 'kalemegdan', `kalemegdan-belgrade-${w}.avif`)));
+      }
+      const compiledAfter = JSON.parse(readFileSync(fx.compiledPath, 'utf8'));
+      const kale = compiledAfter.find((p) => p.id === 'kalemegdan');
+      assert.equal(kale.images.length, 1);
+      assert.match(kale.images[0].src, /\/assets\/poi\/kalemegdan\/kalemegdan-belgrade-1024\.avif$/);
+      assert.match(kale.images[0].lqip, /^data:image\/jpeg;base64,/);
+      const noImg = compiledAfter.find((p) => p.id === 'no-images-here');
+      assert.deepEqual(noImg.images, []);
+    } finally {
+      rmSync(fx.root, { recursive: true });
+    }
+  });
+
+  test('is idempotent — second run skips when fresh', async () => {
+    const fx = await setupFixture();
+    try {
+      await runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: fx.fetchFn, force: false });
+      let calls = 0;
+      const countingFetch = async (...args) => { calls++; return fx.fetchFn(...args); };
+      const result = await runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: countingFetch, force: false });
+      assert.equal(calls, 0, 'should not have fetched on second run');
+      assert.equal(result.curated, 0);
+      assert.equal(result.fresh, 1);
+    } finally {
+      rmSync(fx.root, { recursive: true });
+    }
+  });
+
+  test('with force re-fetches even when fresh', async () => {
+    const fx = await setupFixture();
+    try {
+      await runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: fx.fetchFn, force: false });
+      let calls = 0;
+      const countingFetch = async (...args) => { calls++; return fx.fetchFn(...args); };
+      await runBuildImages({ compiledPath: fx.compiledPath, cacheDir: fx.cacheDir, outDir: fx.outDir, fetchFn: countingFetch, force: true });
+      assert.equal(calls, 1);
+    } finally {
+      rmSync(fx.root, { recursive: true });
+    }
   });
 });
