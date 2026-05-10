@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile } from './build-images-core.mjs';
 import sharp from 'sharp';
 import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -112,5 +112,37 @@ describe('loadCurator', () => {
     } finally {
       rmSync(dir, { recursive: true });
     }
+  });
+});
+
+describe('fetchCommonsFile', () => {
+  test('fetchCommonsFile resolves Special:FilePath URL and returns buffer', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 1200, height: 800, channels: 3, background: { r: 10, g: 20, b: 30 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return {
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'image/jpeg' }),
+        arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength),
+      };
+    };
+    const { buffer, width, height } = await fetchCommonsFile('File:Foo_Bar.jpg', fetchFn);
+    assert.ok(Buffer.isBuffer(buffer));
+    assert.equal(width, 1200);
+    assert.equal(height, 800);
+    assert.equal(calls.length, 1);
+    assert.match(calls[0], /^https:\/\/commons\.wikimedia\.org\/wiki\/Special:FilePath\/Foo_Bar\.jpg/);
+  });
+
+  test('fetchCommonsFile throws on non-2xx', async () => {
+    const fetchFn = async () => ({ ok: false, status: 404, statusText: 'Not Found' });
+    await assert.rejects(
+      () => fetchCommonsFile('File:Missing.jpg', fetchFn),
+      /404/,
+    );
   });
 });

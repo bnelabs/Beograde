@@ -17,6 +17,24 @@ export async function jpegLqip(buffer) {
   return `data:image/jpeg;base64,${out.toString('base64')}`;
 }
 
+/** Fetch a Commons file via Special:FilePath, return Buffer + dimensions.
+ *  Caps source width at 2400px to keep transcode work bounded. */
+export async function fetchCommonsFile(commonsFile, fetchFn) {
+  if (!commonsFile.startsWith('File:')) {
+    throw new Error(`fetchCommonsFile: expected "File:" prefix, got "${commonsFile}"`);
+  }
+  const fileName = commonsFile.slice('File:'.length);
+  const url = `https://commons.wikimedia.org/wiki/Special:FilePath/${fileName}?width=2400`;
+  const res = await fetchFn(url);
+  if (!res.ok) {
+    throw new Error(`fetchCommonsFile: ${url} → ${res.status}${res.statusText ? ' ' + res.statusText : ''}`);
+  }
+  const ab = await res.arrayBuffer();
+  const buffer = Buffer.from(ab);
+  const meta = await sharp(buffer).metadata();
+  return { buffer, width: meta.width, height: meta.height };
+}
+
 /** Read + validate a curator file. Returns { images, fetchedAt }. Throws on
  *  malformed input — the calling pipeline must surface the error, not skip.
  *  All thrown errors are prefixed with `${path}: ` so the operator can
