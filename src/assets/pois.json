@@ -1570,5 +1570,1588 @@
       "translatedBy": "auto-draft",
       "lastReviewedAt": "2026-05-04"
     }
+  },
+  {
+    "id": "petrovaradin-fortress",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Petrovaradin Fortress",
+      "sr_lat": "Petrovaradinska tvrđava",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Vauban-style citadel above the Danube opposite Novi Sad, with a famous clock tower, casemate tunnels, and sweeping river views. Hosts the EXIT music festival each July.",
+      "sr_lat": "Tvrđava u Vobanovom stilu iznad Dunava, naspram Novog Sada. Poznata po toranjskom satu, kazamatskim tunelima i panoramskim pogledima na reku. Svakog jula domaćin je EXIT festivala.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Petrovaradin, 21131 Novi Sad",
+      "sr_lat": "Petrovaradin, 21131 Novi Sad",
+      "sr_cyr": ""
+    },
+    "lng": 19.8625,
+    "lat": 45.2525,
+    "tags": [
+      "fortress",
+      "viewpoint",
+      "history",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Petrovaradin Fortress",
+    "osmRef": "way/152795360",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "soko",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Novi Sad",
+          "sr_lat": "Novi Sad",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 36,
+        "departures": [
+          "05:55",
+          "07:34",
+          "10:05",
+          "14:05",
+          "16:30",
+          "18:03",
+          "20:05"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 660,
+          "max": 1296
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "From Novi Sad station ~15 min walk across the Varadin Bridge, or local bus 3/4 to Petrovaradin.",
+          "sr_lat": "Od železničke stanice Novi Sad ~15 min hoda preko Varadinskog mosta, ili autobus 3/4 do Petrovaradina.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "strand-novi-sad",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Štrand (Novi Sad Danube Beach)",
+      "sr_lat": "Štrand",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Half-kilometre city beach on the Danube in Novi Sad, with sand, sun loungers, river swimming, and summer cafés. Open and lifeguarded May through September.",
+      "sr_lat": "Gradska plaža na Dunavu u Novom Sadu, dugačka pola kilometra. Pesak, ležaljke, kupanje u reci i letnji kafići. Otvorena i pod nadzorom spasilaca od maja do septembra.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Štrand, 21000 Novi Sad",
+      "sr_lat": "Štrand, 21000 Novi Sad",
+      "sr_cyr": ""
+    },
+    "lng": 19.84805556,
+    "lat": 45.23611111,
+    "tags": [
+      "beach",
+      "river",
+      "summer",
+      "family",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Štrand",
+    "osmRef": "way/94937999",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "May-Sep 08:00-20:00; Oct-Apr off"
+    },
+    "transit": [
+      {
+        "mode": "soko",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Novi Sad",
+          "sr_lat": "Novi Sad",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 36,
+        "departures": [
+          "05:55",
+          "07:34",
+          "10:05",
+          "14:05",
+          "16:30",
+          "18:03",
+          "20:05"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 660,
+          "max": 1296
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "From Novi Sad station ~25 min walk south to the riverside, or city bus 4 toward Liman.",
+          "sr_lat": "Od železničke stanice Novi Sad ~25 min hoda na jug do obale, ili gradski autobus 4 ka Limanu.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "subotica-city-hall",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Subotica City Hall",
+      "sr_lat": "Gradska kuća Subotica",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Hungarian Art Nouveau masterpiece (Komor & Jakab, 1910) on the main square, with a stained-glass council chamber and a clock-tower observation deck.",
+      "sr_lat": "Remek-delo mađarske secesije (Komor i Jakab, 1910) na glavnom trgu. Veće sa vitražima i vidikovac na satnoj kuli.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg slobode 1, 24000 Subotica",
+      "sr_lat": "Trg slobode 1, 24000 Subotica",
+      "sr_cyr": ""
+    },
+    "lng": 19.66444444,
+    "lat": 46.09972222,
+    "tags": [
+      "architecture",
+      "art-nouveau",
+      "history",
+      "museum"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Subotica City Hall",
+    "osmRef": "relation/1180039",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Sa 10:00-18:00; Su 10:00-14:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "soko",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Subotica",
+          "sr_lat": "Subotica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 95,
+        "departures": [
+          "07:34",
+          "10:05",
+          "14:05",
+          "18:03"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 990,
+          "max": 1980
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "Not every Soko continues past Novi Sad; check the current PDF schedule at srbvoz.rs. From Subotica station ~15 min walk to Trg slobode.",
+          "sr_lat": "Ne nastavljaju svi Soko vozovi posle Novog Sada; proverite važeći red vožnje na srbvoz.rs. Od stanice ~15 min hoda do Trga slobode.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "subotica-synagogue",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Subotica Synagogue",
+      "sr_lat": "Subotička sinagoga",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Hungarian Art Nouveau synagogue from 1902, one of the most striking in Central Europe — restored 2018, with stained-glass cupolas and floral motifs.",
+      "sr_lat": "Mađarska secesijska sinagoga iz 1902, jedna od najupečatljivijih u srednjoj Evropi. Obnovljena 2018, sa vitražnim kupolama i cvetnim motivima.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg Sinagoge 2, 24000 Subotica",
+      "sr_lat": "Trg Sinagoge 2, 24000 Subotica",
+      "sr_cyr": ""
+    },
+    "lng": 19.66777778,
+    "lat": 46.10361111,
+    "tags": [
+      "architecture",
+      "art-nouveau",
+      "religion",
+      "history"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Subotica Synagogue",
+    "osmRef": "way/80904292",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Fr 10:00-17:00; Sa-Su 10:00-13:00"
+    },
+    "transit": [
+      {
+        "mode": "soko",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Subotica",
+          "sr_lat": "Subotica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 95,
+        "departures": [
+          "07:34",
+          "10:05",
+          "14:05",
+          "18:03"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 990,
+          "max": 1980
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "Same train as Subotica City Hall; from Subotica station ~10 min walk north.",
+          "sr_lat": "Isti voz kao za Gradsku kuću; od stanice ~10 min hoda na sever.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "sremski-karlovci-cathedral",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Saint Nicholas Cathedral, Sremski Karlovci",
+      "sr_lat": "Saborna crkva Svetog Nikole, Sremski Karlovci",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Serbian Orthodox cathedral on the main square of the wine-village Sremski Karlovci, seat of the historic Patriarchate, with a richly painted iconostasis from 1780.",
+      "sr_lat": "Srpska pravoslavna saborna crkva na glavnom trgu vinogradarskog mestašca Sremski Karlovci. Sedište istorijske Patrijaršije. Bogato oslikan ikonostas iz 1780. godine.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg Branka Radičevića, 21205 Sremski Karlovci",
+      "sr_lat": "Trg Branka Radičevića, 21205 Sremski Karlovci",
+      "sr_cyr": ""
+    },
+    "lng": 19.9344314,
+    "lat": 45.2028985,
+    "tags": [
+      "religion",
+      "history",
+      "architecture",
+      "wine"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Saint Nicholas Cathedral, Sremski Karlovci",
+    "osmRef": "way/200356985",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-19:00"
+    },
+    "transit": [
+      {
+        "mode": "regional-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Sremski Karlovci",
+          "sr_lat": "Sremski Karlovci",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 75,
+        "departures": [
+          "06:50",
+          "13:50",
+          "18:50"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 420,
+          "max": 420
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "Regional service via the legacy Belgrade-Novi Sad line (not the Soko corridor). Verify current departures at srbvoz.rs — service is limited compared to Soko, but the local train stops directly at Karlovci village. Alternative: take Soko to Novi Sad (36 min) then local bus 61 or taxi (15 min).",
+          "sr_lat": "Regionalna linija preko stare pruge Beograd-Novi Sad (ne preko brze Soko-pruge). Proverite važeći red vožnje na srbvoz.rs — broj polazaka je manji nego za Soko, ali ovaj voz staje u samim Karlovcima. Alternativa: Soko do Novog Sada (36 min) pa lokalni autobus 61 ili taksi (15 min).",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "smederevo-fortress",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Smederevo Fortress",
+      "sr_lat": "Smederevska tvrđava",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Medieval Serbian fortified capital on the Danube, 1430s — one of the largest plain fortresses in Europe, with 25 towers and an inner city of palaces in ruins.",
+      "sr_lat": "Srednjovekovna prestonica Srpske despotovine na Dunavu iz 1430-ih. Jedna od najvećih ravničarskih tvrđava u Evropi, sa 25 kula i unutrašnjim gradom palata u ruševinama.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Despota Đurđa, 11300 Smederevo",
+      "sr_lat": "Despota Đurđa, 11300 Smederevo",
+      "sr_cyr": ""
+    },
+    "lng": 20.9276958,
+    "lat": 44.6695928,
+    "tags": [
+      "fortress",
+      "history",
+      "river",
+      "unesco-tentative"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Smederevo Fortress",
+    "osmRef": "way/790521839",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Apr-Oct Mo-Su 09:00-19:00; Nov-Mar Mo-Su 09:00-16:00"
+    },
+    "transit": [
+      {
+        "mode": "regional-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Smederevo",
+          "sr_lat": "Smederevo",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 70,
+        "departures": [
+          "06:25",
+          "15:20"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 320,
+          "max": 320
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "Train service to Smederevo is limited as of 2026 — typically 1-2 daily departures, sometimes replaced by rail-bus. Verify on srbvoz.rs the morning of travel. Reliable fallback: intercity-bus from BAS (~1 h, departures every 30 min). From Smederevo station ~20 min walk to the fortress.",
+          "sr_lat": "Vozno povezivanje sa Smederevom je u 2026. ograničeno — obično 1-2 dnevna polaska, ponekad zamenjena železničkim autobusom. Proverite na srbvoz.rs ujutru pre puta. Pouzdana alternativa: međugradski autobus sa BAS (~1 h, polasci na svakih 30 min). Od železničke stanice ~20 min hoda do tvrđave.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "oplenac",
+    "region": "day-trip",
+    "category": "museum",
+    "name": {
+      "en": "St. George's Church, Oplenac (Karađorđević Mausoleum)",
+      "sr_lat": "Crkva Svetog Đorđa na Oplencu (Mauzolej Karađorđevića)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Royal mausoleum of the Karađorđević dynasty crowning Oplenac hill above Topola. Marble exterior, mosaic interior copying 60 medieval Serbian churches, and the crypt of King Petar I.",
+      "sr_lat": "Kraljevski mauzolej dinastije Karađorđević na vrhu brda Oplenac iznad Topole. Mermerna spoljašnjost, unutrašnji mozaici koji repliciraju 60 srednjovekovnih srpskih crkava, i kripta kralja Petra I.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Oplenac, 34310 Topola",
+      "sr_lat": "Oplenac, 34310 Topola",
+      "sr_cyr": ""
+    },
+    "lng": 20.6833,
+    "lat": 44.2472,
+    "tags": [
+      "mausoleum",
+      "history",
+      "religion",
+      "museum",
+      "royal"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Oplenac",
+    "osmRef": "relation/8768849",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 09:00-17:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Topola bus station",
+          "sr_lat": "Topola autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 90,
+        "departures": [
+          "09:00",
+          "10:30",
+          "13:00",
+          "16:00",
+          "17:45",
+          "18:30",
+          "22:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 800,
+          "max": 1000
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Sandžaktrans, Pupd Janjušević, Joe Travel. Times sourced 11 May 2026 from polazak.rs aggregator. From Topola station 15-20 min walk uphill to Oplenac or local taxi.",
+          "sr_lat": "Prevoznici: Sandžaktrans, Pupd Janjušević, Joe Travel. Vremena preuzeta 11. maja 2026. iz agregatora polazak.rs. Od autobuske stanice u Topoli 15-20 min hoda uzbrdo do Oplenca ili lokalni taksi.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "bukovicka-banja",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Bukovička Banja (Aranđelovac Spa)",
+      "sr_lat": "Bukovička banja",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Landscape park with mineral springs, the 19th-century Knez Mihailov konak, and the Bela Stena marble-sculpture park — anchor of the Aranđelovac spa town.",
+      "sr_lat": "Park sa mineralnim izvorima, konakom kneza Mihaila iz 19. veka, i parkom mermernih skulptura Bela Stena — centar banje Aranđelovac.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Mišarska, 34300 Aranđelovac",
+      "sr_lat": "Mišarska, 34300 Aranđelovac",
+      "sr_cyr": ""
+    },
+    "lng": 20.5520873,
+    "lat": 44.3086876,
+    "tags": [
+      "park",
+      "spa",
+      "sculpture",
+      "family",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Arandjelovac",
+    "osmRef": "relation/14686591",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Aranđelovac bus station",
+          "sr_lat": "Aranđelovac autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 80,
+        "departures": [
+          "07:15",
+          "08:00",
+          "10:00",
+          "12:00",
+          "13:15",
+          "14:00",
+          "14:30",
+          "15:30"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 670,
+          "max": 710
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Lasta, Transprodukt. 14 daily departures; fares 670-710 RSD one-way per polazak.rs (11 May 2026). From station ~10 min walk to the spa park.",
+          "sr_lat": "Prevoznici: Lasta, Transprodukt. 14 dnevnih polaska; cena 670-710 RSD jednosmerno po polazak.rs (11. maj 2026). Od stanice ~10 min hoda do banje.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "sabac-centre",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Šabac Old Town & Fortress",
+      "sr_lat": "Šabac — Stari grad i tvrđava",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Sava-river town with an Ottoman fortress, the 1865 Jefimija quay promenade, and the cathedral Crkva Svetih Apostola Petra i Pavla. Mačvanski Folk Museum on the main square.",
+      "sr_lat": "Grad na Savi sa osmanlijskom tvrđavom, šetalištem Jefimija iz 1865. i Crkvom Svetih Apostola Petra i Pavla. Mačvanski narodni muzej na glavnom trgu.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Gospodar Jevremova, 15000 Šabac",
+      "sr_lat": "Gospodar Jevremova, 15000 Šabac",
+      "sr_cyr": ""
+    },
+    "lng": 19.6953972,
+    "lat": 44.7571535,
+    "tags": [
+      "fortress",
+      "history",
+      "river",
+      "museum",
+      "walkable"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Šabac",
+    "osmRef": "relation/6923343",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Šabac bus station",
+          "sr_lat": "Šabac autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 90,
+        "departures": [
+          "06:00",
+          "07:00",
+          "07:40",
+          "08:30",
+          "09:30",
+          "11:15",
+          "11:45"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 600,
+          "max": 800
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Raketa AB, Lastra, Mačva Expres, Banbus. Verified 11 May 2026 via polazak.rs. Regional train (Srbijavoz) also serves this route at 09:50 daily.",
+          "sr_lat": "Prevoznici: Raketa AB, Lastra, Mačva Expres, Banbus. Provereno 11. maj 2026. preko polazak.rs. Regionalni voz (Srbijavoz) saobraća u 09:50 dnevno.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "banja-koviljaca",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Banja Koviljača",
+      "sr_lat": "Banja Koviljača",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Elegant Austro-Hungarian spa town in western Serbia near the Drina river — sulphur springs, the 1908 Royal Bathhouse, and a tree-lined promenade.",
+      "sr_lat": "Elegantna austrougarska banja u zapadnoj Srbiji pored Drine — sumporni izvori, Kraljevsko kupatilo iz 1908. i drvored za šetnju.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kralja Petra I 23, 15316 Banja Koviljača",
+      "sr_lat": "Kralja Petra I 23, 15316 Banja Koviljača",
+      "sr_cyr": ""
+    },
+    "lng": 19.1585984,
+    "lat": 44.5138269,
+    "tags": [
+      "spa",
+      "park",
+      "architecture",
+      "walkable"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Banja Koviljača",
+    "osmRef": "relation/8644230",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Loznica bus station",
+          "sr_lat": "Loznica autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 150,
+        "departures": [
+          "06:00",
+          "07:00",
+          "08:30",
+          "09:30",
+          "11:15",
+          "11:45",
+          "12:15",
+          "13:30"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 1100,
+          "max": 1400
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Raketa AB, Lastra, Banbus. 19 daily departures Belgrade→Loznica per polazak.rs (11 May 2026). From Loznica station local bus or 7 km taxi to Banja Koviljača (~10 min).",
+          "sr_lat": "Prevoznici: Raketa AB, Lastra, Banbus. 19 dnevnih polaska Beograd→Loznica po polazak.rs (11. maj 2026). Od stanice u Loznici lokalni autobus ili 7 km taksi do Banje Koviljače (~10 min).",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "mladenovac",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Mladenovac",
+      "sr_lat": "Mladenovac",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Belgrade-municipality town with the Selters Banja mineral park, the 1903 Saint Petka church, and the surrounding Kosmaj hills for hiking.",
+      "sr_lat": "Mestašce u Beogradskoj opštini sa parkom mineralne vode Selters Banja, Crkvom Svete Petke iz 1903. i obližnjim brdima Kosmaj za planinarenje.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg Gradskog Heroja, 11400 Mladenovac",
+      "sr_lat": "Trg Gradskog Heroja, 11400 Mladenovac",
+      "sr_cyr": ""
+    },
+    "lng": 20.6941535,
+    "lat": 44.4401166,
+    "tags": [
+      "town",
+      "hiking",
+      "spa",
+      "church",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Mladenovac",
+    "osmRef": "relation/8765703",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "suburban-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Mladenovac",
+          "sr_lat": "Mladenovac",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 55,
+        "departures": [
+          "06:25",
+          "08:25",
+          "12:25",
+          "14:25",
+          "17:25",
+          "19:25"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 150,
+          "max": 200
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "BG:Voz line 3 (Mladenovac—Ovča/Zemun via Belgrade Centre). Approximate times; verify current schedule at srbvoz.rs the day of travel.",
+          "sr_lat": "BG:Voz linija 3 (Mladenovac—Ovča/Zemun preko Beograda Centra). Vremena su približna; proverite važeći red vožnje na srbvoz.rs na dan putovanja.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "lazarevac",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Lazarevac",
+      "sr_lat": "Lazarevac",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Coal-country town south-west of Belgrade with the Saint Demetrius church-memorial complex commemorating the 1914 Kolubara Battle, and the Đorđe Andrejević Kun art collection.",
+      "sr_lat": "Mestašce jugozapadno od Beograda, centar rudarskog basena, sa crkvom-spomenikom Svetog Dimitrija u sećanje na Kolubarsku bitku 1914. i umetničkom zbirkom Đorđa Andrejevića Kuna.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Karađorđeva, 11550 Lazarevac",
+      "sr_lat": "Karađorđeva, 11550 Lazarevac",
+      "sr_cyr": ""
+    },
+    "lng": 20.261033,
+    "lat": 44.3815176,
+    "tags": [
+      "town",
+      "history",
+      "memorial",
+      "art"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Lazarevac",
+    "osmRef": "relation/8677484",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "suburban-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Lazarevac",
+          "sr_lat": "Lazarevac",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 75,
+        "departures": [
+          "06:10",
+          "12:10",
+          "16:10",
+          "19:10"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 180,
+          "max": 240
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "BG:Voz line 4 (Lazarevac—Ovča via Belgrade Centre). Approximate times — line 4 has fewer departures than line 3; verify at srbvoz.rs the day of travel.",
+          "sr_lat": "BG:Voz linija 4 (Lazarevac—Ovča preko Beograda Centra). Približna vremena — linija 4 ima manje polaska od linije 3; proverite na srbvoz.rs na dan putovanja.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "avala-tomb",
+    "region": "day-trip",
+    "category": "viewpoint",
+    "name": {
+      "en": "Tomb of the Unknown Hero (Avala)",
+      "sr_lat": "Spomenik neznanom junaku (Avala)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Meštrović's 1938 marble mausoleum on the summit of Avala, eight caryatids in regional dress flanking the crypt. Sweeping views toward Belgrade and the Šumadija hills.",
+      "sr_lat": "Mermerni mauzolej Ivana Meštrovića iz 1938. na vrhu Avale, sa osam karijatida u narodnim nošnjama oko kripte. Pogled na Beograd i šumadijska brda.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Avala summit, 11400 Belgrade",
+      "sr_lat": "Avala (vrh), 11400 Beograd",
+      "sr_cyr": ""
+    },
+    "lng": 20.51580556,
+    "lat": 44.68869444,
+    "tags": [
+      "memorial",
+      "viewpoint",
+      "history",
+      "sculpture"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Monument to the Unknown Hero",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "city-bus",
+        "fromStation": {
+          "en": "Voždovac (Trošarina)",
+          "sr_lat": "Voždovac (Trošarina)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Avala (terminus)",
+          "sr_lat": "Avala (terminus)",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 35,
+        "departures": [
+          "07:00",
+          "08:00",
+          "10:00",
+          "12:00",
+          "14:00",
+          "16:00",
+          "18:00",
+          "20:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 100,
+          "max": 150
+        },
+        "bookingUrl": "https://gsp.rs",
+        "notes": {
+          "en": "GSP line 401 (Voždovac—Avala) — approximate hourly through the day. BusPlus card or paper ticket at the entry. From the terminus 5-10 min walk uphill to the monument; the Avala Tower viewpoint is 400 m further.",
+          "sr_lat": "GSP linija 401 (Voždovac—Avala) — približno satnica tokom dana. BusPlus kartica ili papirna karta na ulazu. Od stanice 5-10 min hoda uzbrdo do spomenika; vidikovac Avala je 400 m dalje.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "vinca-archaeological",
+    "region": "day-trip",
+    "category": "museum",
+    "name": {
+      "en": "Vinča-Belo Brdo Archaeological Site",
+      "sr_lat": "Arheološki lokalitet Vinča-Belo Brdo",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "One of the largest Neolithic settlements in Europe (5700–4500 BC), excavated since 1908 — type site of the Vinča culture. Visitor centre with reconstructions and original artefacts.",
+      "sr_lat": "Jedno od najvećih neolitskih naselja u Evropi (5700–4500. p.n.e), istraživano od 1908. — tip-lokalitet vinčanske kulture. Posetilački centar sa rekonstrukcijama i originalnim nalazima.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Belo Brdo, 11051 Vinča",
+      "sr_lat": "Belo Brdo, 11051 Vinča",
+      "sr_cyr": ""
+    },
+    "lng": 20.6232963,
+    "lat": 44.7620957,
+    "tags": [
+      "archaeology",
+      "history",
+      "museum",
+      "unesco-tentative"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Vinča-Belo Brdo",
+    "osmRef": "way/744514274",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 10:00-17:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "city-bus",
+        "fromStation": {
+          "en": "Pančevački most (City bus terminus)",
+          "sr_lat": "Pančevački most (terminus)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Vinča",
+          "sr_lat": "Vinča",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 45,
+        "departures": [
+          "07:30",
+          "09:30",
+          "11:30",
+          "13:30",
+          "15:30",
+          "17:30"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 100,
+          "max": 150
+        },
+        "bookingUrl": "https://gsp.rs",
+        "notes": {
+          "en": "GSP lines 304E and 313 from Pančevački most or Trg Republike. From Vinča village ~10 min walk to the visitor centre. Schedule approximate — verify on gsp.rs day of travel.",
+          "sr_lat": "GSP linije 304E i 313 sa Pančevačkog mosta ili Trga Republike. Od Vinče ~10 min hoda do posetiteljskog centra. Raspored je približan — proverite na gsp.rs na dan putovanja.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "kosmaj",
+    "region": "day-trip",
+    "category": "viewpoint",
+    "name": {
+      "en": "Kosmaj Mountain",
+      "sr_lat": "Kosmaj",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Forested 626 m peak south of Belgrade, with the 1971 partisan memorial of five concrete spikes by Vojin Stojić — a Yugoslav modernist landmark. Marked hiking trails through oak and beech forest.",
+      "sr_lat": "Šumovit vrh od 626 m južno od Beograda, sa partizanskim spomenikom iz 1971. — pet betonskih šiljaka koje je projektovao Vojin Stojić, simbol jugoslovenskog modernizma. Obeležene staze kroz hrastovu i bukovu šumu.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kosmaj, 11450 Sopot",
+      "sr_lat": "Kosmaj, 11450 Sopot",
+      "sr_cyr": ""
+    },
+    "lng": 20.56555556,
+    "lat": 44.46555556,
+    "tags": [
+      "hiking",
+      "memorial",
+      "mountain",
+      "modernist",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Kosmaj",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "city-bus",
+        "fromStation": {
+          "en": "Voždovac (Trošarina)",
+          "sr_lat": "Voždovac (Trošarina)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Sopot (then trail to summit)",
+          "sr_lat": "Sopot (zatim staza ka vrhu)",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 70,
+        "departures": [
+          "07:00",
+          "09:00",
+          "12:00",
+          "15:00",
+          "18:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 200,
+          "max": 280
+        },
+        "bookingUrl": "https://gsp.rs",
+        "notes": {
+          "en": "GSP line 411 (Trošarina—Sopot). From Sopot bus station the marked Kosmaj trail is ~5 km / 90 min on foot to the summit and memorial. Allow a full day. Schedule approximate; verify on gsp.rs.",
+          "sr_lat": "GSP linija 411 (Trošarina—Sopot). Od autobuske stanice u Sopotu obeležena staza ka Kosmaju je ~5 km / 90 min hoda do vrha i spomenika. Računajte na ceo dan. Raspored je približan; proverite na gsp.rs.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "fruska-gora",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Fruška Gora National Park",
+      "sr_lat": "Nacionalni park Fruška gora",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Vojvodina ridgeline studded with 16 Serbian Orthodox monasteries (the \"Holy Mount\"), oak-and-linden forest, vineyard villages, and panoramic ridge roads.",
+      "sr_lat": "Planinski venac u Vojvodini sa 16 srpskih pravoslavnih manastira (Sveta gora Srbije), hrastovo-lipovim šumama, vinogradarskim selima i panoramskim putevima.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Iriški venac, 22406 Irig",
+      "sr_lat": "Iriški venac, 22406 Irig",
+      "sr_cyr": ""
+    },
+    "lng": 19.7625585,
+    "lat": 45.1593142,
+    "tags": [
+      "park",
+      "monastery",
+      "viewpoint",
+      "hiking",
+      "wine"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Fruška Gora",
+    "osmRef": "relation/9499039",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Irig (ridgeline base)",
+          "sr_lat": "Irig (podnožje grebena)",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 105,
+        "departures": [
+          "06:30",
+          "09:00",
+          "12:00",
+          "15:00",
+          "18:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 900,
+          "max": 1100
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Most travellers take Soko to Novi Sad (36 min) then local bus 53/74 to Irig village (40 min); the intercity bus listed above goes via Šid. Best monasteries (Krušedol, Velika Remeta) need a taxi or guided day-tour from Irig.",
+          "sr_lat": "Većina putnika ide Soko-vozom do Novog Sada (36 min) pa lokalnim autobusom 53/74 do Iriga (40 min); međugradski autobus iznad ide preko Šida. Najpoznatiji manastiri (Krušedol, Velika Remeta) zahtevaju taksi ili organizovanu turu iz Iriga.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "viminacium",
+    "region": "day-trip",
+    "category": "museum",
+    "name": {
+      "en": "Viminacium Roman Archaeological Park",
+      "sr_lat": "Arheološki park Viminacijum",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Capital of Roman Moesia Superior — amphitheatre, mausolea, baths, and a third-century mammoth-skeleton find. Onsite reconstructions and a visitor centre 12 km east of Požarevac.",
+      "sr_lat": "Prestonica rimske provincije Gornje Mezije — amfiteatar, mauzoleji, terme i nalaz mamutovog skeleta iz 3. veka. Rekonstrukcije i posetilački centar 12 km istočno od Požarevca.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Stari Kostolac, 12208 Požarevac",
+      "sr_lat": "Stari Kostolac, 12208 Požarevac",
+      "sr_cyr": ""
+    },
+    "lng": 21.2,
+    "lat": 44.74,
+    "tags": [
+      "archaeology",
+      "roman",
+      "museum",
+      "history"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Viminacium",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Apr-Oct Tu-Su 09:00-19:00; Nov-Mar Tu-Su 09:00-16:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Požarevac bus station",
+          "sr_lat": "Požarevac autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 90,
+        "departures": [
+          "06:00",
+          "08:00",
+          "10:00",
+          "12:00",
+          "14:00",
+          "16:00",
+          "18:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 700,
+          "max": 900
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Frequent BAS departures to Požarevac (Lasta, Sirius); from Požarevac a 12 km taxi to the Viminacium site (~15 min). Some operators run direct charter day-tours from Belgrade in season — check viminacium.org.rs.",
+          "sr_lat": "Česti polasci sa BAS-a ka Požarevcu (Lasta, Sirius); od Požarevca taksi 12 km do lokaliteta (~15 min). Pojedini prevoznici organizuju direktne dnevne ture iz Beograda u sezoni — proverite na viminacium.org.rs.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "kovacica-naive-art",
+    "region": "day-trip",
+    "category": "museum",
+    "name": {
+      "en": "Gallery of Naïve Art, Kovačica",
+      "sr_lat": "Galerija naivne umetnosti Kovačica",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "World-renowned Slovak naïve-painting tradition. Founded 1955, the Kovačica gallery shows 1,200+ works by self-taught village painters — Banat scenes, harvests, and folk dance.",
+      "sr_lat": "Svetski poznata tradicija slovačkog naivnog slikarstva. Osnovana 1955, kovačička galerija pokazuje preko 1.200 dela samoukih seoskih slikara — banatski pejzaži, žetve, folklor.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Masarikova 65, 26210 Kovačica",
+      "sr_lat": "Masarikova 65, 26210 Kovačica",
+      "sr_cyr": ""
+    },
+    "lng": 20.624059,
+    "lat": 45.1125168,
+    "tags": [
+      "art",
+      "museum",
+      "slovak-heritage",
+      "folk"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Kovačica",
+    "osmRef": "node/10989137845",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Sa 09:00-17:00; Su 10:00-14:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Kovačica bus station",
+          "sr_lat": "Kovačica autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 60,
+        "departures": [
+          "07:30",
+          "10:30",
+          "13:30",
+          "16:30",
+          "19:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 500,
+          "max": 700
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Lasta and APP Aleksinac. From the bus station ~5 min walk to the gallery on Masarikova.",
+          "sr_lat": "Prevoznici: Lasta, APP Aleksinac. Od autobuske stanice ~5 min hoda do galerije u Masarikovoj ulici.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
   }
 ]
