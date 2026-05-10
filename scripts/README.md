@@ -81,6 +81,44 @@ Operator workflow when adding a new POI with images:
 5. Commit `pois.json`, `pois.compiled.json`, `data/poi-images/<id>.json`,
    and `src/assets/poi/<id>/*.avif` together.
 
+### Curator file shape: Commons vs. direct URL
+
+The image pipeline accepts two curator-entry shapes:
+
+**Commons (default)** — fetched via `Special:FilePath`:
+
+```json
+{
+  "images": [{
+    "commonsFile": "File:Kalemegdan,_Belgrade_Fortress.jpg",
+    "credit": "BrankaVV, CC BY-SA 4.0, via Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kalemegdan,_Belgrade_Fortress.jpg"
+  }],
+  "fetchedAt": "2026-05-11"
+}
+```
+
+**Direct URL** — fetched verbatim. Use this for Flickr CC, Pexels-style hosts,
+venue press kits, or anywhere CC-licensed photography lives outside Commons:
+
+```json
+{
+  "images": [{
+    "sourceType": "direct-url",
+    "fetchUrl": "https://live.staticflickr.com/.../image_b.jpg",
+    "credit": "Alice (alicephotos), CC BY 2.0, via Flickr",
+    "license": "CC BY 2.0",
+    "source": "https://www.flickr.com/photos/alicephotos/123/"
+  }],
+  "fetchedAt": "2026-05-11"
+}
+```
+
+`sourceType: "direct-url"` enforces a license whitelist (CC0 / Public domain /
+CC BY 2-4 / CC BY-SA 2-4 / CC BY-SA 3.0 rs); non-whitelisted strings fail
+`loadCurator`. The on-disk slug becomes `<poi-id>-<8-char hash of source URL>`.
+
 > **Note on reliability-data churn:** `build-provenance.mjs` calls live Wikipedia
 > REST and OSM Overpass on every run. When those APIs are reachable, passing
 > POIs gain `wikipedia`/`osm` source entries; when they're rate-limited or down,

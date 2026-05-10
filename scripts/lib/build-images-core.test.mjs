@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, fetchDirectUrl, resolveSource, slugFor, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
 import sharp from 'sharp';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -301,6 +301,186 @@ async function setupFixture() {
   return { root, compiledPath, cacheDir, outDir, fetchFn };
 }
 
+describe('loadCurator direct-url variant', () => {
+  test('accepts sourceType=direct-url with fetchUrl and whitelisted license', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'ok.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          credit: 'Alice, CC BY 2.0',
+          license: 'CC BY 2.0',
+          source: 'https://www.flickr.com/photos/alice/123/',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      const c = loadCurator(file);
+      assert.equal(c.images[0].sourceType, 'direct-url');
+      assert.equal(c.images[0].fetchUrl, 'https://example.test/image.jpg');
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url with non-whitelisted license', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          credit: 'Bob, All Rights Reserved',
+          license: 'All Rights Reserved',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /not in the direct-url accepted list/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url missing fetchUrl', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          credit: 'Alice, CC BY 4.0',
+          license: 'CC BY 4.0',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /requires "fetchUrl"/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url carrying commonsFile', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          commonsFile: 'File:X.jpg',
+          credit: 'X, CC0',
+          license: 'CC0',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /must not carry commonsFile/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects unknown sourceType', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{ sourceType: 'flickr-api', credit: 'X', license: 'CC0', source: 'x' }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /unknown sourceType/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+});
+
+describe('fetchDirectUrl', () => {
+  test('fetches the URL verbatim and returns buffer + dimensions', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 800, height: 600, channels: 3, background: { r: 50, g: 100, b: 150 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url, opts) => {
+      calls.push({ url, opts });
+      return {
+        ok: true, status: 200,
+        arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength),
+      };
+    };
+    const { buffer, width, height } = await fetchDirectUrl('https://example.test/x.jpg', fetchFn);
+    assert.ok(Buffer.isBuffer(buffer));
+    assert.equal(width, 800);
+    assert.equal(height, 600);
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].url, 'https://example.test/x.jpg');
+    assert.match(calls[0].opts?.headers?.['User-Agent'] ?? '', /Beograde/);
+  });
+
+  test('throws on non-2xx', async () => {
+    const fetchFn = async () => ({ ok: false, status: 403, statusText: 'Forbidden' });
+    await assert.rejects(
+      () => fetchDirectUrl('https://example.test/x.jpg', fetchFn),
+      /403/,
+    );
+  });
+});
+
+describe('slugFor', () => {
+  test('Commons image (default sourceType) derives slug from commonsFile', () => {
+    assert.equal(
+      slugFor('kalemegdan', { commonsFile: 'File:Kalemegdan_Belgrade.jpg', source: 'x' }),
+      'kalemegdan-belgrade',
+    );
+  });
+
+  test('direct-url image derives slug from poiId + 8-char hash of source URL', () => {
+    const slug = slugFor('smokvica', {
+      sourceType: 'direct-url',
+      fetchUrl: 'https://example.test/image.jpg',
+      source: 'https://www.flickr.com/photos/alice/123/',
+    });
+    assert.match(slug, /^smokvica-[a-f0-9]{8}$/);
+  });
+
+  test('same source URL produces a stable hash slug', () => {
+    const img = { sourceType: 'direct-url', fetchUrl: 'x', source: 'https://stable.example/img' };
+    assert.equal(slugFor('p', img), slugFor('p', img));
+  });
+});
+
+describe('resolveSource', () => {
+  test('dispatches to fetchCommonsFile for default sourceType', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource({ commonsFile: 'File:X.jpg', source: 's' }, fetchFn);
+    assert.match(calls[0], /commons\.wikimedia\.org\/wiki\/Special:FilePath\/X\.jpg/);
+  });
+
+  test('dispatches to fetchDirectUrl for direct-url sourceType', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource({ sourceType: 'direct-url', fetchUrl: 'https://example.test/x.jpg', source: 's' }, fetchFn);
+    assert.equal(calls[0], 'https://example.test/x.jpg');
+  });
+});
+
 describe('runBuildImages', () => {
   test('writes AVIFs and merges ImageAsset[] into compiled.json', async () => {
     const fx = await setupFixture();
@@ -375,6 +555,58 @@ describe('runBuildImages', () => {
       );
     } finally {
       rmSync(fx.root, { recursive: true });
+    }
+  });
+
+  test('runBuildImages handles a direct-url curator entry end-to-end', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'build-images-direct-'));
+    try {
+      const compiledPath = join(root, 'pois.compiled.json');
+      const cacheDir = join(root, 'poi-images');
+      const outDir = join(root, 'poi-out');
+      mkdirSync(cacheDir, { recursive: true });
+      mkdirSync(outDir, { recursive: true });
+
+      writeFileSync(compiledPath, JSON.stringify([{ id: 'smokvica', region: 'city', images: [] }]));
+      writeFileSync(join(cacheDir, 'smokvica.json'), JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/cafe.jpg',
+          credit: 'Alice, CC BY 4.0, via Flickr',
+          license: 'CC BY 4.0',
+          source: 'https://www.flickr.com/photos/alice/123/',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+
+      const fakeImage = await sharp({
+        create: { width: 1200, height: 800, channels: 3, background: { r: 200, g: 80, b: 60 } },
+      }).jpeg().toBuffer();
+      const calls = [];
+      const fetchFn = async (url, opts) => {
+        calls.push({ url, opts });
+        return { ok: true, status: 200, arrayBuffer: async () => fakeImage.buffer.slice(fakeImage.byteOffset, fakeImage.byteOffset + fakeImage.byteLength) };
+      };
+
+      const result = await runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force: false });
+      assert.equal(result.curated, 1);
+      // Direct-URL: the fetch goes to the curator's fetchUrl verbatim, not to Commons.
+      assert.equal(calls[0].url, 'https://example.test/cafe.jpg');
+
+      const after = JSON.parse(readFileSync(compiledPath, 'utf8'));
+      const smok = after.find((p) => p.id === 'smokvica');
+      assert.equal(smok.images.length, 1);
+      assert.match(smok.images[0].src, /^\/assets\/poi\/smokvica\/smokvica-[a-f0-9]{8}-1024\.avif$/);
+      assert.equal(smok.images[0].credit, 'Alice, CC BY 4.0, via Flickr');
+      assert.equal(smok.images[0].license, 'CC BY 4.0');
+      assert.equal(smok.images[0].source, 'https://www.flickr.com/photos/alice/123/');
+      // All three widths land on disk.
+      const slug = smok.images[0].src.split('/').pop().replace('-1024.avif', '');
+      for (const w of [640, 1024, 1600]) {
+        assert.ok(existsSync(join(outDir, 'smokvica', `${slug}-${w}.avif`)));
+      }
+    } finally {
+      rmSync(root, { recursive: true });
     }
   });
 
