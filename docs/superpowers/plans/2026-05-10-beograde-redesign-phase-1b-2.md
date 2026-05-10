@@ -278,11 +278,15 @@ Append to `scripts/lib/build-images-core.mjs`:
 
 ```js
 /** Transcode a source buffer to AVIF at each requested width.
- *  Returns { [width]: Buffer }. Aspect ratio preserved (width-based resize). */
+ *  Returns { [width]: Buffer }. Aspect ratio preserved (width-based resize).
+ *  `withoutEnlargement: true` means a width larger than the source clamps
+ *  to source dimensions — caller must accept that the returned width may be
+ *  smaller than requested when the source is small. */
 export async function transcodeAvif(buffer, widths) {
+  const src = sharp(buffer); // decode once; .clone() per width to avoid N× decode.
   const out = {};
   for (const w of widths) {
-    out[w] = await sharp(buffer)
+    out[w] = await src.clone()
       .resize({ width: w, withoutEnlargement: true })
       .avif({ quality: 50, effort: 4 })
       .toBuffer();
