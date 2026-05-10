@@ -24,7 +24,10 @@ export async function fetchCommonsFile(commonsFile, fetchFn) {
     throw new Error(`fetchCommonsFile: expected "File:" prefix, got "${commonsFile}"`);
   }
   const fileName = commonsFile.slice('File:'.length);
-  const url = `https://commons.wikimedia.org/wiki/Special:FilePath/${fileName}?width=2400`;
+  // encodeURIComponent guards against `?`, `#`, spaces, apostrophes, and
+  // non-ASCII characters in real Commons file names (mirrors checkWikipedia
+  // in scripts/lib/provenance-checks.mjs).
+  const url = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=2400`;
   const res = await fetchFn(url);
   if (!res.ok) {
     throw new Error(`fetchCommonsFile: ${url} → ${res.status}${res.statusText ? ' ' + res.statusText : ''}`);

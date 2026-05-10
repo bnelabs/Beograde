@@ -145,4 +145,29 @@ describe('fetchCommonsFile', () => {
       /404/,
     );
   });
+
+  test('fetchCommonsFile percent-encodes file names with reserved or non-ASCII characters', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return {
+        ok: true,
+        status: 200,
+        arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength),
+      };
+    };
+    await fetchCommonsFile("File:Saint Sava's Temple ?.jpg", fetchFn);
+    // The space, apostrophe, and ? must all be percent-encoded so the path
+    // segment cannot be confused with the ?width=2400 query string.
+    assert.equal(calls.length, 1);
+    assert.ok(!calls[0].includes(' '), `URL should not contain literal spaces: ${calls[0]}`);
+    assert.ok(calls[0].includes('%20'), `URL should percent-encode spaces: ${calls[0]}`);
+    // The ? in the file name should be encoded as %3F so the only `?`
+    // remaining is the one introducing ?width=2400.
+    const queryStart = calls[0].lastIndexOf('?');
+    assert.ok(calls[0].slice(queryStart) === '?width=2400', `query string should be exactly ?width=2400, got: ${calls[0].slice(queryStart)}`);
+  });
 });
