@@ -5,10 +5,29 @@
 
 .poi-hero {
   position: relative;
-  height: 220px;
-  background: linear-gradient(135deg, var(--accent-soft), var(--fortress) 60%, var(--river-deep));
+  min-height: 220px;
   color: white;
   display: flex; align-items: flex-end; padding: 18px;
+  overflow: hidden;
+}
+.poi-hero--no-image {
+  background: linear-gradient(135deg, var(--accent-soft), var(--fortress) 60%, var(--river-deep));
+}
+.poi-hero-media {
+  position: absolute; inset: 0;
+  display: block;
+}
+.poi-hero-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.poi-hero-fg {
+  position: relative;
+  z-index: 2;
+  display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.45);
 }
 .poi-back, .poi-save {
   position: absolute; top: max(env(safe-area-inset-top), 14px);
@@ -19,8 +38,8 @@
 }
 .poi-back { left: 14px; }
 .poi-save { right: 14px; color: var(--accent); }
-.poi-hero-fg { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .poi-name { font-size: 28px; line-height: 1.05; margin: 0; }
+.poi-back, .poi-save { z-index: 3; }
 
 .poi-body { padding: 18px; display: flex; flex-direction: column; gap: 18px; }
 .poi-chips { display: flex; flex-wrap: wrap; gap: 6px; }

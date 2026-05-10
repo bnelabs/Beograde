@@ -5,7 +5,16 @@
       <a routerLink="/map" class="poi-empty-link">← {{ t().poi.back }}</a>
     </div>
   } @else {
-    <header class="poi-hero">
+    <header class="poi-hero" [class.poi-hero--no-image]="!heroImage()">
+      @if (heroImage(); as img) {
+        <app-image class="poi-hero-media"
+                   [asset]="img"
+                   [alt]="(poi()!.name | i18nText) || ''"
+                   [eager]="true"
+                   [fallbackIcon]="heroIcon()"
+                   ratio="16 / 10" />
+        <div class="poi-hero-scrim" aria-hidden="true"></div>
+      }
       <a routerLink="/map" class="poi-back" [attr.aria-label]="t().poi.back">
         <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
       </a>

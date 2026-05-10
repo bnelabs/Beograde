@@ -10,13 +10,14 @@ import { SavedService } from '../../core/saved/saved.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { ChipComponent } from '../../ui/chip/chip.component';
 import { HoursHeatmapComponent } from '../../ui/charts/hours-heatmap.component';
+import { AppImageComponent } from '../../ui/app-image/app-image.component';
 import { formatDistance, walkingMinutes } from '../../data/distance';
 import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-poi-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, I18nTextPipe, ChipComponent, HoursHeatmapComponent],
+  imports: [CommonModule, RouterLink, I18nTextPipe, ChipComponent, HoursHeatmapComponent, AppImageComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './poi-detail.component.html',
   styleUrl: './poi-detail.component.css',
@@ -36,6 +37,12 @@ export class PoiDetailComponent {
   protected readonly poi = computed(() => {
     const id = this.idSig().get('id');
     return id ? getPoi(id) : undefined;
+  });
+
+  protected readonly heroImage = computed(() => this.poi()?.images?.[0]);
+  protected readonly heroIcon = computed(() => {
+    const p = this.poi();
+    return p ? CATEGORY_ICONS[p.category] : undefined;
   });
 
   protected readonly distance = computed(() => {
