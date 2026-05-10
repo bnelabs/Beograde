@@ -1,0 +1,89 @@
+{
+  "tabs": {
+    "home": "Home",
+    "map": "Map",
+    "routes": "Routes",
+    "trips": "Trips",
+    "saved": "Saved"
+  },
+  "home": {
+    "greeting": "Hello, Beograd",
+    "todays_pick": "Today's pick",
+    "open_now": "Open now near you",
+    "day_trips": "Day trips",
+    "day_trips_coming_soon": "Day trips by train and bus arrive in the next update.",
+    "see_all": "See all"
+  },
+  "map": {
+    "all_places": "All places",
+    "download_pack": "Download Belgrade pack",
+    "downloading": "Downloading Belgrade…",
+    "download_failed": "Download failed",
+    "try_again": "Try again",
+    "recenter": "Recenter on my location",
+    "tracking_on": "Stop tracking",
+    "tracking_off": "Start tracking",
+    "min_walk": "{n} min walk"
+  },
+  "poi": {
+    "back": "Back",
+    "save": "Save",
+    "saved": "Saved",
+    "open_now": "Open now",
+    "closed": "Closed",
+    "verified_on": "Verified {date}",
+    "editor_pick": "Editor's pick",
+    "wikipedia": "Wikipedia",
+    "osm": "OpenStreetMap",
+    "official": "Official",
+    "reviews": "{n} reviews",
+    "no_image": "No image yet",
+    "not_found": "Not found",
+    "address": "Address",
+    "hours": "Hours",
+    "price": "Price",
+    "tags": "Tags"
+  },
+  "itinerary": {
+    "back": "Back",
+    "show_on_map": "Show on map",
+    "complete": "Itinerary complete",
+    "next_stop": "Next stop",
+    "stops": "{n} stops",
+    "route_unavailable": "Route geometry unavailable — the steps still work."
+  },
+  "saved": {
+    "empty_title": "Nothing saved yet",
+    "empty_body": "Tap the bookmark on a place to keep it here for later."
+  },
+  "trips": {
+    "empty_title": "Day trips coming soon",
+    "empty_body": "Novi Sad, Topola, Avala and more — with transit info — land in the next update."
+  },
+  "settings": {
+    "language": "Language",
+    "language_en": "English",
+    "language_sr": "Srpski",
+    "language_sr_cyr": "Srpski (Cyrillic)",
+    "currency": "Currency",
+    "currency_rsd": "RSD (Serbian dinar)",
+    "currency_rsd_eur": "RSD with EUR",
+    "offline_pack": "Offline pack",
+    "gps": "GPS",
+    "permission": "Permission",
+    "tracking": "tracking",
+    "start": "Start",
+    "stop": "Stop",
+    "install": "Install Beograde",
+    "install_ios": "Tap Share, then Add to Home Screen.",
+    "downloaded_today": "Today",
+    "downloaded_yesterday": "Yesterday",
+    "downloaded_days": "{n} days ago"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "loading": "Loading…"
+  }
+}

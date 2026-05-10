@@ -7,6 +7,7 @@ These produce the assets the runtime cannot generate itself.
 | `build-tiles.sh` | `src/assets/tiles/belgrade.pmtiles` (50–100 MB) | Once, then whenever you want fresher OSM data. |
 | `build-fonts.sh` | `src/assets/fonts/Noto Sans Regular/*.pbf` (~1 MB) | Once. |
 | `build-itineraries.mjs` | `src/assets/itineraries/*.geojson` (real walking routes) | Whenever you change `src/app/data/itineraries.ts`. |
+| `migrate-pois.mjs` | rewrites `src/assets/pois.json` to v2 schema (bilingual + structured hours + provenance) | One-shot, already run during Phase 1a; idempotent. |
 
 ## Quick start
 
@@ -38,3 +39,52 @@ and downloaded by the PWA on first run into IndexedDB.
 
 `build-itineraries.mjs` env vars:
 - `OSRM_BASE` — point at your own OSRM instance for production
+
+## Tests
+
+Build-script logic is tested via Node's built-in test runner:
+
+    npm run test:scripts
+
+The Angular unit tests are still:
+
+    npm test -- --watch=false
+
+## Content pipelines
+
+| Script | Inputs | Output | When to run |
+|---|---|---|---|
+| `build-provenance.mjs` | `src/assets/pois.json` + `data/provenance-cache/<id>.json` (optional) | `src/assets/pois.compiled.json` | Whenever POI source data changes. Fails on any unpublishable POI. |
+| `build-i18n.mjs` | `src/i18n/sr-Latn.json` + `src/i18n/sr-cyr-overrides.json` | `src/i18n/sr-Cyrl.json` | Whenever SR-Latin strings change. Fails on any non-clean round-trip without an override. |
+| `build-images.mjs` | `src/assets/pois.compiled.json` + `data/poi-images/<id>.json` (optional) | `src/assets/poi/<id>/*.avif` + ImageAsset[] merged into `pois.compiled.json` | Whenever a curator file is added/edited. **Manual only — not in prebuild.** Skip-if-fresh; pass `--force` to rebuild. |
+
+`build:provenance` and `build:i18n` run as part of `npm run build` via the
+`prebuild` lifecycle hook. `build:images` does **not**, intentionally: it
+fetches Wikimedia Commons live, and CI builds must not depend on Wikimedia
+uptime. Outputs are committed (the 6–15 MB AVIF set ships in the repo).
+
+Manual:
+
+    npm run build:provenance
+    npm run build:i18n
+    npm run build:images
+    npm run build:images -- --force
+    # provenance + i18n together:
+    npm run build:content
+
+Operator workflow when adding a new POI with images:
+
+1. Edit `src/assets/pois.json` (add the POI).
+2. `npm run build:content` (regenerates `pois.compiled.json`).
+3. Edit `data/poi-images/<id>.json` (curator file with Commons attribution).
+4. `npm run build:images` (fetches, transcodes, writes AVIFs, merges ImageAsset[]).
+5. Commit `pois.json`, `pois.compiled.json`, `data/poi-images/<id>.json`,
+   and `src/assets/poi/<id>/*.avif` together.
+
+> **Note on reliability-data churn:** `build-provenance.mjs` calls live Wikipedia
+> REST and OSM Overpass on every run. When those APIs are reachable, passing
+> POIs gain `wikipedia`/`osm` source entries; when they're rate-limited or down,
+> the same POIs flip to `pass: false`. The publish gate is unaffected (every POI
+> has `editorialConfidence: 'high'`), but `pois.compiled.json` will diff between
+> runs. Re-run the build until the diff stabilizes before committing if this
+> matters for the change you're making.

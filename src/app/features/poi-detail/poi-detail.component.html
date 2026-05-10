@@ -1,77 +1,95 @@
-<div class="min-h-full pb-24">
+<div class="poi-page">
   @if (!poi()) {
-    <div class="p-8 text-center">
-      <h1 class="text-2xl font-display mb-2">Not found</h1>
-      <p class="text-sm text-ink/60 mb-6">No place with that id.</p>
-      <a routerLink="/pois" class="text-primary text-sm font-medium">Back to places →</a>
+    <div class="poi-empty">
+      <h1>{{ t().poi.not_found }}</h1>
+      <a routerLink="/map" class="poi-empty-link">← {{ t().poi.back }}</a>
     </div>
   } @else {
-    <header class="relative h-56 bg-gradient-to-br from-primary/30 via-primary/10 to-ink/5">
-      <a routerLink="/pois" aria-label="Back" class="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center">
-        <span class="material-symbols-outlined">arrow_back</span>
+    <header class="poi-hero">
+      <a routerLink="/map" class="poi-back" [attr.aria-label]="t().poi.back">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
       </a>
-      <div class="absolute inset-0 flex items-end p-5">
-        <div>
-          <span class="inline-block px-2 py-1 bg-white/90 text-[10px] uppercase tracking-widest font-mono rounded-full text-ink mb-2">
-            {{ labels[poi()!.category] }}
-          </span>
-          <h1 class="text-3xl font-display text-ink leading-tight">{{ poi()!.name }}</h1>
-        </div>
+      <button type="button" class="poi-save" (click)="toggleSave()"
+              [attr.aria-label]="saved.isSaved(poi()!.id) ? t().poi.saved : t().poi.save">
+        <span class="material-symbols-outlined" aria-hidden="true">
+          {{ saved.isSaved(poi()!.id) ? 'bookmark' : 'bookmark_border' }}
+        </span>
+      </button>
+      <div class="poi-hero-fg">
+        <app-chip variant="filter-active">{{ labels[poi()!.category] }}</app-chip>
+        <h1 class="poi-name">{{ poi()!.name | i18nText }}</h1>
       </div>
     </header>
 
-    <div class="p-5 space-y-6">
+    <div class="poi-body">
+      <!-- Provenance chips -->
+      <div class="poi-chips">
+        @if (poi()!.reliability.checks.wikipedia) { <app-chip variant="verified">{{ t().poi.wikipedia }} ✓</app-chip> }
+        @if (poi()!.reliability.checks.osm) { <app-chip variant="verified">{{ t().poi.osm }} ✓</app-chip> }
+        @if (poi()!.reliability.checks.official) { <app-chip variant="verified">{{ t().poi.official }} ✓</app-chip> }
+        @if (poi()!.reliability.checks.crowdsourced && googleSource()) {
+          <app-chip variant="reviews">{{ googleSource()!.reviewCount.toLocaleString() }} reviews</app-chip>
+        }
+        @if (showEditorPick()) { <app-chip variant="editor-pick">{{ t().poi.editor_pick }}</app-chip> }
+        @if (openState() === 'open') { <app-chip variant="open-now">{{ t().poi.open_now }}</app-chip> }
+        @if (openState() === 'closed') { <app-chip variant="closed">{{ t().poi.closed }}</app-chip> }
+      </div>
+
+      <!-- Distance / map link -->
       @if (distance() !== null) {
-        <div class="flex items-center gap-3 p-3 rounded-2xl bg-ink/5">
-          <span class="material-symbols-outlined text-primary">near_me</span>
-          <div class="flex-1">
-            <div class="text-sm font-medium text-ink">{{ fmtDistance(distance()!) }} away</div>
-            <div class="text-xs text-ink/50">{{ fmtWalk(distance()!) }} from your location</div>
+        <div class="poi-distance">
+          <span class="material-symbols-outlined" aria-hidden="true">near_me</span>
+          <div class="poi-distance-body">
+            <strong>{{ fmtDistance(distance()!) }}</strong>
+            <span>{{ fmtWalk(distance()!) }}</span>
           </div>
-          <a [routerLink]="['/']" [queryParams]="{ focus: poi()!.id }" class="text-primary text-xs font-medium">Map →</a>
+          <a [routerLink]="['/map']" [queryParams]="{ focus: poi()!.id }" class="poi-distance-link">Map →</a>
         </div>
       } @else if (geo.permission() !== 'denied') {
-        <button
-          type="button"
-          (click)="geo.start()"
-          class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-ink text-white text-xs font-medium tracking-wide">
-          <span class="material-symbols-outlined" style="font-size: 16px;">my_location</span>
+        <button type="button" class="poi-gps-cta" (click)="geo.start()">
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">my_location</span>
           Show distance from me
         </button>
       }
 
-      <p class="text-base text-ink leading-relaxed">{{ poi()!.description }}</p>
+      <p class="poi-desc">{{ poi()!.description | i18nText }}</p>
 
-      <dl class="grid grid-cols-2 gap-4 text-sm">
-        <div>
-          <dt class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-1">Address</dt>
-          <dd class="text-ink">{{ poi()!.address }}</dd>
-        </div>
-        @if (poi()!.hours) {
-          <div>
-            <dt class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-1">Hours</dt>
-            <dd class="text-ink">{{ poi()!.hours }}</dd>
-          </div>
-        }
-        @if (poi()!.priceRange) {
-          <div>
-            <dt class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-1">Price</dt>
-            <dd class="text-ink">{{ poi()!.priceRange }}</dd>
-          </div>
-        }
-        <div>
-          <dt class="text-[10px] uppercase tracking-widest font-mono text-ink/40 mb-1">Coordinates</dt>
-          <dd class="text-ink font-mono text-xs">{{ poi()!.lat.toFixed(4) }}, {{ poi()!.lng.toFixed(4) }}</dd>
-        </div>
-      </dl>
-
-      @if (poi()!.tags.length) {
-        <div class="flex flex-wrap gap-1.5">
-          @for (tag of poi()!.tags; track tag) {
-            <span class="px-2.5 py-1 rounded-full bg-ink/5 text-[11px] text-ink/70 font-medium">#{{ tag }}</span>
+      <!-- Hours heatmap -->
+      @if (weeklyGrid()) {
+        <div class="poi-section">
+          <h3 class="poi-section-h">{{ t().poi.hours }}</h3>
+          <app-hours-heatmap [grid]="weeklyGrid()!" />
+          @if (poi()!.hours?.notes; as notes) {
+            <p class="poi-hours-notes">{{ notes | i18nText }}</p>
           }
         </div>
       }
+
+      <!-- Address / price -->
+      <dl class="poi-meta-grid">
+        <div>
+          <dt>{{ t().poi.address }}</dt>
+          <dd>{{ poi()!.address | i18nText }}</dd>
+        </div>
+        @if (poi()!.pricing) {
+          <div>
+            <dt>{{ t().poi.price }}</dt>
+            <dd>{{ poi()!.pricing!.tier }}</dd>
+          </div>
+        }
+      </dl>
+
+      <!-- Tags -->
+      @if (poi()!.tags.length) {
+        <div class="poi-tags">
+          @for (tag of poi()!.tags; track tag) {
+            <span class="poi-tag">#{{ tag }}</span>
+          }
+        </div>
+      }
+
+      <!-- Verified date -->
+      <p class="poi-verified">{{ t().poi.verified_on.replace('{date}', formatVerified(poi()!.verifiedAt)) }}</p>
     </div>
   }
 </div>

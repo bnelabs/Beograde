@@ -1,405 +1,1574 @@
 [
   {
     "id": "kalemegdan",
-    "name": "Kalemegdan Fortress",
+    "region": "city",
     "category": "sight",
-    "description": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
+    "name": {
+      "en": "Kalemegdan Fortress",
+      "sr_lat": "Beogradska tvrđava (Kalemegdan)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
+      "sr_lat": "Beogradska istorijska tvrđava na uzvisini gde se Sava uliva u Dunav. Prošetajte bedemima, pronađite Pobednika i posmatrajte zalazak sunca iz gornjeg grada.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kalemegdan Park",
+      "sr_lat": "Kalemegdanski park",
+      "sr_cyr": ""
+    },
     "lng": 20.4503,
     "lat": 44.8226,
-    "address": "Kalemegdan Park",
-    "hours": "Open 24h (museums 10:00–17:00)",
-    "tags": ["history", "viewpoint", "free", "outdoor"],
-    "images": []
+    "tags": [
+      "history",
+      "viewpoint",
+      "free",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Belgrade Fortress",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "saint-sava",
-    "name": "Temple of Saint Sava",
+    "region": "city",
     "category": "sight",
-    "description": "One of the largest Orthodox churches in the world. The interior mosaic, completed in 2020, is breathtaking — look up.",
+    "name": {
+      "en": "Temple of Saint Sava",
+      "sr_lat": "Hram Svetog Save",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "One of the largest Orthodox churches in the world. The interior mosaic, completed in 2020, is breathtaking — look up.",
+      "sr_lat": "Jedna od najvećih pravoslavnih crkava na svetu. Unutrašnji mozaik, završen 2020. godine, oduzima dah — pogledajte gore.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Krušedolska 2a, Vračar",
+      "sr_lat": "Krušedolska 2a, Vračar",
+      "sr_cyr": ""
+    },
     "lng": 20.4691,
     "lat": 44.7975,
-    "address": "Krušedolska 2a, Vračar",
-    "hours": "07:00–22:00",
-    "tags": ["history", "religious", "free"],
-    "images": []
+    "tags": [
+      "history",
+      "religious",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 07:00-22:00"
+    },
+    "wikipediaTitle": "Church of Saint Sava",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "skadarlija",
-    "name": "Skadarlija (Bohemian Quarter)",
+    "region": "city",
     "category": "cuisine",
-    "description": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
+    "name": {
+      "en": "Skadarlija (Bohemian Quarter)",
+      "sr_lat": "Skadarlija (boemska četvrt)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
+      "sr_lat": "Kaldrmisom popločana, fenjerima osvetljena ulica tradicionalnih kafana. Živa tamburica skoro svake večeri. Turistički nastrojena, ali šarmantna.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Skadarska Street",
+      "sr_lat": "Skadarska ulica",
+      "sr_cyr": ""
+    },
     "lng": 20.4661,
-    "lat": 44.8190,
-    "address": "Skadarska Street",
-    "hours": "Restaurants typically 11:00–01:00",
-    "priceRange": "€€",
-    "tags": ["traditional", "live-music", "evening"],
-    "images": []
+    "lat": 44.819,
+    "tags": [
+      "traditional",
+      "live-music",
+      "evening"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 11:00-01:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "wikipediaTitle": "Skadarlija",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "beton-hala",
-    "name": "Beton Hala",
+    "region": "city",
     "category": "cuisine",
-    "description": "Former concrete warehouse on the Sava waterfront, now a row of upmarket restaurants. Best for a long sunset dinner.",
+    "name": {
+      "en": "Beton Hala",
+      "sr_lat": "Beton hala",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Former concrete warehouse on the Sava waterfront, now a row of upmarket restaurants. Best for a long sunset dinner.",
+      "sr_lat": "Bivše betonsko skladište na savskom keju, danas niz restorana visokog nivoa. Idealno za dugi obrok uz zalazak sunca.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Karađorđeva 2–4",
+      "sr_lat": "Karađorđeva 2–4",
+      "sr_cyr": ""
+    },
     "lng": 20.4495,
     "lat": 44.8175,
-    "address": "Karađorđeva 2–4",
-    "hours": "12:00–00:00",
-    "priceRange": "€€€",
-    "tags": ["riverside", "modern", "date"],
-    "images": []
+    "tags": [
+      "riverside",
+      "modern",
+      "date"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 12:00-24:00"
+    },
+    "pricing": {
+      "tier": "€€€"
+    },
+    "wikipediaTitle": "Beton Hala",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "splavovi",
-    "name": "Splavovi (River Clubs)",
+    "region": "city",
     "category": "nightlife",
-    "description": "Belgrade's legendary floating clubs along the Sava and Danube. Genres run from techno to turbofolk; pick your splav by the music.",
-    "lng": 20.4350,
-    "lat": 44.8120,
-    "address": "Sava and Danube banks",
-    "hours": "23:00–05:00",
-    "priceRange": "€€",
-    "tags": ["riverside", "late-night", "summer"],
-    "images": []
+    "name": {
+      "en": "Splavovi (River Clubs)",
+      "sr_lat": "Splavovi (rečni klubovi)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Belgrade's legendary floating clubs along the Sava and Danube. Genres run from techno to turbofolk; pick your splav by the music.",
+      "sr_lat": "Legendarni beogradski splavovi duž Save i Dunava. Muzika se kreće od tehna do turbofolka — izaberite splav po zvuku.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Sava and Danube banks",
+      "sr_lat": "Obale Save i Dunava",
+      "sr_cyr": ""
+    },
+    "lng": 20.435,
+    "lat": 44.812,
+    "tags": [
+      "riverside",
+      "late-night",
+      "summer"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 23:00-05:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "wikipediaTitle": "Splav (boat)",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "cetinjska",
-    "name": "Cetinjska Street",
+    "region": "city",
     "category": "nightlife",
-    "description": "A ramshackle former brewery courtyard hosting a dozen bars. The local alternative-scene heart, busy from Thursday on.",
+    "name": {
+      "en": "Cetinjska Street",
+      "sr_lat": "Cetinjska ulica",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "A ramshackle former brewery courtyard hosting a dozen bars. The local alternative-scene heart, busy from Thursday on.",
+      "sr_lat": "Zapušteno dvorište nekadašnje pivare u kom se smestilo desetak barova. Srce beogradske alternativne scene, gužva od četvrtka nadalje.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Cetinjska 15, Dorćol",
+      "sr_lat": "Cetinjska 15, Dorćol",
+      "sr_cyr": ""
+    },
     "lng": 20.4626,
     "lat": 44.8195,
-    "address": "Cetinjska 15, Dorćol",
-    "hours": "18:00–02:00",
-    "priceRange": "€",
-    "tags": ["alternative", "courtyard", "evening"],
-    "images": []
+    "tags": [
+      "alternative",
+      "courtyard",
+      "evening"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 18:00-02:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "knez-mihailova",
-    "name": "Knez Mihailova",
+    "region": "city",
     "category": "sight",
-    "description": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
+    "name": {
+      "en": "Knez Mihailova",
+      "sr_lat": "Knez Mihailova",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
+      "sr_lat": "Pešačka kičma starog grada. Knjižare, sladoled, ulični svirači i veličanstvene fasade iz 19. veka.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Knez Mihailova",
+      "sr_lat": "Knez Mihailova",
+      "sr_cyr": ""
+    },
     "lng": 20.4582,
     "lat": 44.8175,
-    "address": "Knez Mihailova",
-    "hours": "Always open",
-    "tags": ["pedestrian", "shopping", "people-watching"],
-    "images": []
+    "tags": [
+      "pedestrian",
+      "shopping",
+      "people-watching"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Knez Mihailova Street",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "republic-square",
-    "name": "Trg Republike (Republic Square)",
+    "region": "city",
     "category": "sight",
-    "description": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
+    "name": {
+      "en": "Trg Republike (Republic Square)",
+      "sr_lat": "Trg Republike",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
+      "sr_lat": "Centralno gradsko okupljalište — \"kod konja\". Omeđen Narodnim muzejom i Narodnim pozorištem.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg Republike",
+      "sr_lat": "Trg Republike",
+      "sr_cyr": ""
+    },
     "lng": 20.4604,
     "lat": 44.8167,
-    "address": "Trg Republike",
-    "hours": "Always open",
-    "tags": ["central", "meeting-point"],
-    "images": []
+    "tags": [
+      "central",
+      "meeting-point"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Republic Square, Belgrade",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "national-museum",
-    "name": "National Museum of Serbia",
+    "region": "city",
     "category": "museum",
-    "description": "Reopened in 2018 after a 15-year renovation. Strong on medieval Serbian art and a small but real Impressionist collection.",
+    "name": {
+      "en": "National Museum of Serbia",
+      "sr_lat": "Narodni muzej Srbije",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Reopened in 2018 after a 15-year renovation. Strong on medieval Serbian art and a small but real Impressionist collection.",
+      "sr_lat": "Otvoren ponovo 2018. godine nakon petnaestogodišnje rekonstrukcije. Bogata zbirka srednjovekovne srpske umetnosti i manja, ali autentična impresionistička kolekcija.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Trg Republike 1a",
+      "sr_lat": "Trg Republike 1a",
+      "sr_cyr": ""
+    },
     "lng": 20.4604,
-    "lat": 44.8170,
-    "address": "Trg Republike 1a",
-    "hours": "Tue–Sun 10:00–18:00 (Thu until 20:00)",
-    "priceRange": "€",
-    "tags": ["art", "indoor", "rainy-day"],
-    "images": []
+    "lat": 44.817,
+    "tags": [
+      "art",
+      "indoor",
+      "rainy-day"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 10:00-18:00; Th 10:00-20:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "National Museum of Serbia",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "tesla-museum",
-    "name": "Nikola Tesla Museum",
+    "region": "city",
     "category": "museum",
-    "description": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
-    "lng": 20.4710,
-    "lat": 44.8060,
-    "address": "Krunska 51",
-    "hours": "Tue–Sun 10:00–18:00",
-    "priceRange": "€",
-    "tags": ["science", "indoor", "kids"],
-    "images": []
+    "name": {
+      "en": "Nikola Tesla Museum",
+      "sr_lat": "Muzej Nikole Tesle",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
+      "sr_lat": "Kompaktan muzej u vili iz dvadesetih godina sa originalnim Teslinim uređajima i živim demonstracijama kalemova. U leto rezervišite unapred.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Krunska 51",
+      "sr_lat": "Krunska 51",
+      "sr_cyr": ""
+    },
+    "lng": 20.471,
+    "lat": 44.806,
+    "tags": [
+      "science",
+      "indoor",
+      "kids"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 10:00-18:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "Nikola Tesla Museum",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "house-of-flowers",
-    "name": "House of Flowers (Tito's Mausoleum)",
+    "region": "city",
     "category": "museum",
-    "description": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
+    "name": {
+      "en": "House of Flowers (Tito's Mausoleum)",
+      "sr_lat": "Kuća cveća (Titov mauzolej)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
+      "sr_lat": "Titovo počivalište unutar kompleksa Muzeja Jugoslavije. Kombinujte s glavnim muzejom za celo popodne posvećeno jugoslovenskom dobu.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Botićeva 6, Dedinje",
+      "sr_lat": "Botićeva 6, Dedinje",
+      "sr_cyr": ""
+    },
     "lng": 20.4486,
     "lat": 44.7875,
-    "address": "Botićeva 6, Dedinje",
-    "hours": "Tue–Sun 10:00–18:00",
-    "priceRange": "€",
-    "tags": ["history", "yugoslavia", "indoor"],
-    "images": []
+    "tags": [
+      "history",
+      "yugoslavia",
+      "indoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 10:00-18:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "ada-ciganlija",
-    "name": "Ada Ciganlija",
+    "region": "city",
     "category": "park",
-    "description": "Belgrade's \"Sea\" — a river island turned summer beach. Swimming, kayaking, beachside cafes, and 8 km of walking paths.",
-    "lng": 20.4080,
-    "lat": 44.7870,
-    "address": "Ada Ciganlija",
-    "hours": "Always open",
-    "tags": ["summer", "swimming", "outdoor", "kids"],
-    "images": []
+    "name": {
+      "en": "Ada Ciganlija",
+      "sr_lat": "Ada Ciganlija",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Belgrade's \"Sea\" — a river island turned summer beach. Swimming, kayaking, beachside cafes, and 8 km of walking paths.",
+      "sr_lat": "Beogradsko \"more\" — rečno ostrvo pretvoreno u letnju plažu. Kupanje, kajaking, kafići uz vodu i 8 km pešačkih staza.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Ada Ciganlija",
+      "sr_lat": "Ada Ciganlija",
+      "sr_cyr": ""
+    },
+    "lng": 20.408,
+    "lat": 44.787,
+    "tags": [
+      "summer",
+      "swimming",
+      "outdoor",
+      "kids"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "zemun-quay",
-    "name": "Zemun Quay & Gardoš Tower",
+    "region": "city",
     "category": "viewpoint",
-    "description": "Walk the Danube quay through old Zemun, then climb to Gardoš Tower for the postcard view back over the rooftops.",
-    "lng": 20.4050,
-    "lat": 44.8460,
-    "address": "Zemunski kej",
-    "hours": "Always open",
-    "tags": ["riverside", "viewpoint", "old-town"],
-    "images": []
+    "name": {
+      "en": "Zemun Quay & Gardoš Tower",
+      "sr_lat": "Zemunski kej i Kula na Gardošu",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Walk the Danube quay through old Zemun, then climb to Gardoš Tower for the postcard view back over the rooftops.",
+      "sr_lat": "Prošetajte dunavskim kejem kroz stari Zemun, pa se popnite do Kule na Gardošu za panoramski pogled na krovove.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Zemunski kej",
+      "sr_lat": "Zemunski kej",
+      "sr_cyr": ""
+    },
+    "lng": 20.405,
+    "lat": 44.846,
+    "tags": [
+      "riverside",
+      "viewpoint",
+      "old-town"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Zemun",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "gardos-tower",
-    "name": "Gardoš (Millennium) Tower",
+    "region": "city",
     "category": "viewpoint",
-    "description": "Hilltop tower above Zemun built in 1896. Best sunset viewpoint in greater Belgrade.",
-    "lng": 20.3980,
-    "lat": 44.8470,
-    "address": "Grobljanska, Zemun",
-    "hours": "10:00–22:00 (summer)",
-    "priceRange": "€",
-    "tags": ["viewpoint", "sunset"],
-    "images": []
+    "name": {
+      "en": "Gardoš (Millennium) Tower",
+      "sr_lat": "Kula na Gardošu (Milenijumska kula)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Hilltop tower above Zemun built in 1896. Best sunset viewpoint in greater Belgrade.",
+      "sr_lat": "Kula na brdu iznad Zemuna, podignuta 1896. Najbolje mesto za gledanje zalaska sunca u široj okolini Beograda.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Grobljanska, Zemun",
+      "sr_lat": "Grobljanska, Zemun",
+      "sr_cyr": ""
+    },
+    "lng": 20.398,
+    "lat": 44.847,
+    "tags": [
+      "viewpoint",
+      "sunset"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 10:00-22:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "Gardoš Tower",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "hotel-moskva",
-    "name": "Hotel Moskva (Café)",
+    "region": "city",
     "category": "cafe",
-    "description": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
+    "name": {
+      "en": "Hotel Moskva (Café)",
+      "sr_lat": "Hotel Moskva (kafe)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
+      "sr_lat": "Secesijska znamenitost iz 1908. godine. Naručite Moskva Šnit uz kafu i posmatrajte kako pola Beograda prolazi.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Balkanska 1",
+      "sr_lat": "Balkanska 1",
+      "sr_cyr": ""
+    },
     "lng": 20.4593,
     "lat": 44.8131,
-    "address": "Balkanska 1",
-    "hours": "08:00–23:00",
-    "priceRange": "€€",
-    "tags": ["historic", "cake", "people-watching"],
-    "images": []
+    "tags": [
+      "historic",
+      "cake",
+      "people-watching"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-23:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "wikipediaTitle": "Hotel Moskva",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "kafana-question-mark",
-    "name": "Kafana ?",
+    "region": "city",
     "category": "cuisine",
-    "description": "Belgrade's oldest kafana (1823), opposite the cathedral. The name is the literal punctuation — long story involving the church.",
+    "name": {
+      "en": "Kafana ?",
+      "sr_lat": "Kafana ?",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Belgrade's oldest kafana (1823), opposite the cathedral. The name is the literal punctuation — long story involving the church.",
+      "sr_lat": "Najstarija beogradska kafana (1823), nasuprot katedrale. Ime je bukvalno interpunkcijski znak — duga priča u kojoj učestvuje crkva.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kralja Petra 6",
+      "sr_lat": "Kralja Petra 6",
+      "sr_cyr": ""
+    },
     "lng": 20.4525,
     "lat": 44.8181,
-    "address": "Kralja Petra 6",
-    "hours": "07:00–00:00",
-    "priceRange": "€€",
-    "tags": ["traditional", "historic"],
-    "images": []
+    "tags": [
+      "traditional",
+      "historic"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 07:00-24:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "wikipediaTitle": "? (kafana)",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "smokvica",
-    "name": "Smokvica",
+    "region": "city",
     "category": "cafe",
-    "description": "Hidden courtyard café with a fig tree at the centre. Brunch and shaded tables; arrive early on weekends.",
+    "name": {
+      "en": "Smokvica",
+      "sr_lat": "Smokvica",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Hidden courtyard café with a fig tree at the centre. Brunch and shaded tables; arrive early on weekends.",
+      "sr_lat": "Skriveni dvorišni kafić sa smokvom u centru. Brunch i stolovi u hladovini — vikendom dođite ranije.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kralja Petra 73",
+      "sr_lat": "Kralja Petra 73",
+      "sr_cyr": ""
+    },
     "lng": 20.4605,
-    "lat": 44.8120,
-    "address": "Kralja Petra 73",
-    "hours": "08:00–00:00",
-    "priceRange": "€€",
-    "tags": ["brunch", "courtyard", "instagram"],
-    "images": []
+    "lat": 44.812,
+    "tags": [
+      "brunch",
+      "courtyard",
+      "instagram"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-24:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "tasmajdan-park",
-    "name": "Tašmajdan Park",
+    "region": "city",
     "category": "park",
-    "description": "Central park around Saint Mark's Church. Locals jog here; in summer, open-air concerts.",
-    "lng": 20.4730,
+    "name": {
+      "en": "Tašmajdan Park",
+      "sr_lat": "Tašmajdanski park",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Central park around Saint Mark's Church. Locals jog here; in summer, open-air concerts.",
+      "sr_lat": "Centralni park oko Crkve Svetog Marka. Meštani trče ovde; leti se održavaju koncerti na otvorenom.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Bulevar kralja Aleksandra",
+      "sr_lat": "Bulevar kralja Aleksandra",
+      "sr_cyr": ""
+    },
+    "lng": 20.473,
     "lat": 44.8083,
-    "address": "Bulevar kralja Aleksandra",
-    "hours": "Always open",
-    "tags": ["park", "central", "free"],
-    "images": []
+    "tags": [
+      "park",
+      "central",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Tašmajdan Park",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "saint-mark",
-    "name": "Saint Mark's Church",
+    "region": "city",
     "category": "sight",
-    "description": "Serbo-Byzantine red-and-yellow brick church holding the tomb of Tsar Dušan. Quieter than Saint Sava, often overlooked.",
+    "name": {
+      "en": "Saint Mark's Church",
+      "sr_lat": "Crkva Svetog Marka",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Serbo-Byzantine red-and-yellow brick church holding the tomb of Tsar Dušan. Quieter than Saint Sava, often overlooked.",
+      "sr_lat": "Srpsko-vizantijska crkva od crvene i žute opeke u kojoj se čuva grob cara Dušana. Mirnija od Hrama Svetog Save, često previđena.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Bulevar kralja Aleksandra 17",
+      "sr_lat": "Bulevar kralja Aleksandra 17",
+      "sr_cyr": ""
+    },
     "lng": 20.4732,
     "lat": 44.8088,
-    "address": "Bulevar kralja Aleksandra 17",
-    "hours": "08:00–19:00",
-    "tags": ["religious", "free"],
-    "images": []
+    "tags": [
+      "religious",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-19:00"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "bajrakli-mosque",
-    "name": "Bajrakli Mosque",
+    "region": "city",
     "category": "sight",
-    "description": "The only surviving Ottoman mosque in Belgrade, dating to the 1570s. Tucked into a narrow Dorćol street.",
+    "name": {
+      "en": "Bajrakli Mosque",
+      "sr_lat": "Bajrakli džamija",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "The only surviving Ottoman mosque in Belgrade, dating to the 1570s. Tucked into a narrow Dorćol street.",
+      "sr_lat": "Jedina preživela osmanska džamija u Beogradu, iz 1570-ih godina. Sakriven u uskoj dorćolskoj ulici.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Gospodar Jevremova 11",
+      "sr_lat": "Gospodar Jevremova 11",
+      "sr_cyr": ""
+    },
     "lng": 20.4598,
-    "lat": 44.8210,
-    "address": "Gospodar Jevremova 11",
-    "hours": "Outside prayer times",
-    "tags": ["history", "religious", "free"],
-    "images": []
+    "lat": 44.821,
+    "tags": [
+      "history",
+      "religious",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "wikipediaTitle": "Bajrakli Mosque",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "princess-ljubica",
-    "name": "Residence of Princess Ljubica",
+    "region": "city",
     "category": "museum",
-    "description": "1830s Balkan-Ottoman townhouse, fully furnished. The smallest, most personal museum in town.",
+    "name": {
+      "en": "Residence of Princess Ljubica",
+      "sr_lat": "Konak kneginje Ljubice",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "1830s Balkan-Ottoman townhouse, fully furnished. The smallest, most personal museum in town.",
+      "sr_lat": "Balkansko-osmanska gradska kuća iz 1830-ih, potpuno nameštena. Najmanji i najintimniji muzej u gradu.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Kneza Sime Markovića 8",
+      "sr_lat": "Kneza Sime Markovića 8",
+      "sr_cyr": ""
+    },
     "lng": 20.4525,
-    "lat": 44.8190,
-    "address": "Kneza Sime Markovića 8",
-    "hours": "Tue–Sat 10:00–17:00, Sun 10:00–14:00",
-    "priceRange": "€",
-    "tags": ["history", "indoor", "rainy-day"],
-    "images": []
+    "lat": 44.819,
+    "tags": [
+      "history",
+      "indoor",
+      "rainy-day"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Sa 10:00-17:00; Su 10:00-14:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "Residence of Princess Ljubica",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "zoo-belgrade",
-    "name": "Belgrade Zoo (Vrt dobre nade)",
+    "region": "city",
     "category": "park",
-    "description": "Inside the Kalemegdan walls — strange and atmospheric, white tigers among the ramparts. Conditions are modest; bring perspective.",
-    "lng": 20.4510,
+    "name": {
+      "en": "Belgrade Zoo (Vrt dobre nade)",
+      "sr_lat": "Zoološki vrt Beograd (Vrt dobre nade)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Inside the Kalemegdan walls — strange and atmospheric, white tigers among the ramparts. Conditions are modest; bring perspective.",
+      "sr_lat": "Unutar kalemegdanskih bedema — neobično i atmosferično, beli tigrovi među zidinama. Uslovi su skromni; dođite sa razumevanjem.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Mali Kalemegdan 8",
+      "sr_lat": "Mali Kalemegdan 8",
+      "sr_cyr": ""
+    },
+    "lng": 20.451,
     "lat": 44.8235,
-    "address": "Mali Kalemegdan 8",
-    "hours": "08:00–20:00 (summer)",
-    "priceRange": "€",
-    "tags": ["kids", "outdoor"],
-    "images": []
+    "tags": [
+      "kids",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-20:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "Belgrade Zoo",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "ada-bridge",
-    "name": "Ada Bridge",
+    "region": "city",
     "category": "viewpoint",
-    "description": "The 200-m pylon cable-stayed bridge that defines the modern skyline. Walk the pedestrian deck for river views.",
-    "lng": 20.4310,
-    "lat": 44.7990,
-    "address": "Most na Adi",
-    "hours": "Always open",
-    "tags": ["modern", "viewpoint", "free"],
-    "images": []
+    "name": {
+      "en": "Ada Bridge",
+      "sr_lat": "Most na Adi",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "The 200-m pylon cable-stayed bridge that defines the modern skyline. Walk the pedestrian deck for river views.",
+      "sr_lat": "Viseći most sa 200-metarskim pilonom koji definiše savremenu siluetu grada. Prošetajte pešačkom stazom za pogled na reku.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Most na Adi",
+      "sr_lat": "Most na Adi",
+      "sr_cyr": ""
+    },
+    "lng": 20.431,
+    "lat": 44.799,
+    "tags": [
+      "modern",
+      "viewpoint",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "brankov-most",
-    "name": "Brankov Most",
+    "region": "city",
     "category": "viewpoint",
-    "description": "The walking deck across the Sava, between Old Belgrade and Novi Beograd. Best at blue hour.",
-    "lng": 20.4520,
+    "name": {
+      "en": "Brankov Most",
+      "sr_lat": "Brankov most",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "The walking deck across the Sava, between Old Belgrade and Novi Beograd. Best at blue hour.",
+      "sr_lat": "Pešačka staza preko Save, između starog Beograda i Novog Beograda. Najlepše u plavi sat.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Brankov most",
+      "sr_lat": "Brankov most",
+      "sr_cyr": ""
+    },
+    "lng": 20.452,
     "lat": 44.8155,
-    "address": "Brankov most",
-    "hours": "Always open",
-    "tags": ["viewpoint", "sunset", "free"],
-    "images": []
+    "tags": [
+      "viewpoint",
+      "sunset",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Branko's Bridge",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "belgrade-waterfront",
-    "name": "Belgrade Waterfront Promenade",
+    "region": "city",
     "category": "park",
-    "description": "Polished new riverside promenade running south from Beton Hala. Controversial development, pleasant walk.",
+    "name": {
+      "en": "Belgrade Waterfront Promenade",
+      "sr_lat": "Šetalište Beograd na vodi",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Polished new riverside promenade running south from Beton Hala. Controversial development, pleasant walk.",
+      "sr_lat": "Uređena nova savska promenada koja se proteže južno od Beton hale. Kontroverzni projekat, prijatna šetnja.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Sava Promenade",
+      "sr_lat": "Savska promenada",
+      "sr_cyr": ""
+    },
     "lng": 20.4435,
-    "lat": 44.8100,
-    "address": "Sava Promenade",
-    "hours": "Always open",
-    "tags": ["modern", "riverside", "walking"],
-    "images": []
+    "lat": 44.81,
+    "tags": [
+      "modern",
+      "riverside",
+      "walking"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "wikipediaTitle": "Belgrade Waterfront",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "savamala",
-    "name": "Savamala",
+    "region": "city",
     "category": "nightlife",
-    "description": "Industrial-chic neighbourhood between the train tracks and the river. Galleries by day, bars by night.",
-    "lng": 20.4540,
+    "name": {
+      "en": "Savamala",
+      "sr_lat": "Savamala",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Industrial-chic neighbourhood between the train tracks and the river. Galleries by day, bars by night.",
+      "sr_lat": "Industrijsko-šik četvrt između pruge i reke. Galerije danju, barovi noću.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Savamala",
+      "sr_lat": "Savamala",
+      "sr_cyr": ""
+    },
+    "lng": 20.454,
     "lat": 44.8125,
-    "address": "Savamala",
-    "hours": "Variable",
-    "priceRange": "€€",
-    "tags": ["alternative", "art", "evening"],
-    "images": []
+    "tags": [
+      "alternative",
+      "art",
+      "evening"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "pricing": {
+      "tier": "€€"
+    },
+    "wikipediaTitle": "Savamala",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "manaks-house",
-    "name": "Manak's House (Ethnographic)",
+    "region": "city",
     "category": "museum",
-    "description": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
+    "name": {
+      "en": "Manak's House (Ethnographic)",
+      "sr_lat": "Manakova kuća (Etnografski muzej)",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
+      "sr_lat": "Mala balkanska kuća pretvorena u etnografski muzej. Nošnje, tekstil i stare fotografije Beograda.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Gavrila Principa 5",
+      "sr_lat": "Gavrila Principa 5",
+      "sr_cyr": ""
+    },
     "lng": 20.4567,
     "lat": 44.8141,
-    "address": "Gavrila Principa 5",
-    "hours": "Tue–Sat 10:00–17:00",
-    "priceRange": "€",
-    "tags": ["history", "indoor", "small"],
-    "images": []
+    "tags": [
+      "history",
+      "indoor",
+      "small"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Sa 10:00-17:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "wikipediaTitle": "Manak's House",
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "topcider-park",
-    "name": "Topčider Park",
+    "region": "city",
     "category": "park",
-    "description": "Royal-residence park with one of Europe's oldest plane trees (over 180 years). Picnic-perfect.",
-    "lng": 20.4630,
-    "lat": 44.7780,
-    "address": "Topčider",
-    "hours": "Always open",
-    "tags": ["park", "outdoor", "kids", "free"],
-    "images": []
+    "name": {
+      "en": "Topčider Park",
+      "sr_lat": "Topčiderski park",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Royal-residence park with one of Europe's oldest plane trees (over 180 years). Picnic-perfect.",
+      "sr_lat": "Park kraljevske rezidencije sa jednim od najstarijih platana u Evropi (stariji od 180 godina). Idealno za piknik.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Topčider",
+      "sr_lat": "Topčider",
+      "sr_cyr": ""
+    },
+    "lng": 20.463,
+    "lat": 44.778,
+    "tags": [
+      "park",
+      "outdoor",
+      "kids",
+      "free"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "24/7"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "avala-tower",
-    "name": "Avala Tower",
+    "region": "city",
     "category": "viewpoint",
-    "description": "204-m TV tower on Avala mountain, 16 km out of town. Clear-day views to the Pannonian plain. Bus 401 from Voždovac.",
-    "lng": 20.5150,
-    "lat": 44.6940,
-    "address": "Avala",
-    "hours": "09:00–20:00",
-    "priceRange": "€",
-    "tags": ["viewpoint", "day-trip"],
-    "images": []
+    "name": {
+      "en": "Avala Tower",
+      "sr_lat": "Avalski toranj",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "204-m TV tower on Avala mountain, 16 km out of town. Clear-day views to the Pannonian plain. Bus 401 from Voždovac.",
+      "sr_lat": "TV toranj visok 204 m na planini Avali, 16 km od centra. Po vedrom vremenu pogled seže do Panonske nizije. Autobus 401 iz Voždovca.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Avala",
+      "sr_lat": "Avala",
+      "sr_cyr": ""
+    },
+    "lng": 20.515,
+    "lat": 44.694,
+    "tags": [
+      "viewpoint",
+      "day-trip"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 09:00-20:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "drugstore",
-    "name": "Drugstore",
+    "region": "city",
     "category": "nightlife",
-    "description": "Industrial techno club inside a former slaughterhouse. Friday/Saturday only, open late.",
-    "lng": 20.4720,
-    "lat": 44.8260,
-    "address": "Bulevar despota Stefana 115",
-    "hours": "Fri–Sat 23:00–08:00",
-    "priceRange": "€€",
-    "tags": ["techno", "late-night", "alternative"],
-    "images": []
+    "name": {
+      "en": "Drugstore",
+      "sr_lat": "Drugstore",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Industrial techno club inside a former slaughterhouse. Friday/Saturday only, open late.",
+      "sr_lat": "Industrijski tehno klub u nekadašnjoj klanici. Radi samo petkom i subotom, do dugo u noć.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Bulevar despota Stefana 115",
+      "sr_lat": "Bulevar despota Stefana 115",
+      "sr_cyr": ""
+    },
+    "lng": 20.472,
+    "lat": 44.826,
+    "tags": [
+      "techno",
+      "late-night",
+      "alternative"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Fr-Sa 23:00-08:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "magistrala",
-    "name": "Magistrala",
+    "region": "city",
     "category": "cafe",
-    "description": "Specialty-coffee shop in Dorćol with consistent flat whites and an industrial fit-out. Take it to the river.",
-    "lng": 20.4640,
+    "name": {
+      "en": "Magistrala",
+      "sr_lat": "Magistrala",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Specialty-coffee shop in Dorćol with consistent flat whites and an industrial fit-out. Take it to the river.",
+      "sr_lat": "Specijalna kafeterija u Dorćolu sa pouzdanim flat whiteom i industrijskim enterijerom. Ponesite kafu do reke.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Cara Uroša 38",
+      "sr_lat": "Cara Uroša 38",
+      "sr_cyr": ""
+    },
+    "lng": 20.464,
     "lat": 44.8217,
-    "address": "Cara Uroša 38",
-    "hours": "08:00–20:00",
-    "priceRange": "€",
-    "tags": ["coffee", "specialty"],
-    "images": []
+    "tags": [
+      "coffee",
+      "specialty"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 08:00-20:00"
+    },
+    "pricing": {
+      "tier": "€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   },
   {
     "id": "supermarket-dorcol",
-    "name": "Supermarket Concept Store",
+    "region": "city",
     "category": "cafe",
-    "description": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
+    "name": {
+      "en": "Supermarket Concept Store",
+      "sr_lat": "Supermarket Concept Store",
+      "sr_cyr": ""
+    },
+    "description": {
+      "en": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
+      "sr_lat": "Dorćolski concept store sa brunchom tokom celog dana i dvorištem. Vegetarijancima prijatan, publika iz sveta dizajna.",
+      "sr_cyr": ""
+    },
+    "address": {
+      "en": "Višnjićeva 10",
+      "sr_lat": "Višnjićeva 10",
+      "sr_cyr": ""
+    },
     "lng": 20.4628,
     "lat": 44.8208,
-    "address": "Višnjićeva 10",
-    "hours": "09:00–23:00",
-    "priceRange": "€€",
-    "tags": ["brunch", "design", "vegetarian"],
-    "images": []
+    "tags": [
+      "brunch",
+      "design",
+      "vegetarian"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-04",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 09:00-23:00"
+    },
+    "pricing": {
+      "tier": "€€"
+    },
+    "provenance": {
+      "translatedBy": "auto-draft",
+      "lastReviewedAt": "2026-05-04"
+    }
   }
 ]

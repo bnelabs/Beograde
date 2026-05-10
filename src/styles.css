@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './styles/soft-modern.css';
+@import './styles/belgrade-tokens.css';
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-primary: #FF6321;
-  --color-bg-dark: #0A0A0A;
-  --color-ink: #1A1A1A;
+  /* Bridge to Tailwind — these names are referenced by templates as bg-accent etc. */
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-river: var(--river);
+  --color-fortress: var(--fortress);
+  --color-transit: var(--transit-red);
+  --color-concrete: var(--concrete);
 }
 
 @layer base {
@@ -18,11 +29,16 @@
     margin: 0;
   }
   body {
-    @apply font-sans bg-[#F5F2ED] text-ink antialiased;
+    font-family: var(--font-sans);
+    background: linear-gradient(180deg, var(--bg-warm-1) 0%, var(--bg-warm-2) 100%);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
+    font-feature-settings: "tnum";
   }
   h1, h2, h3, h4 {
-    @apply font-display;
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -32,5 +48,6 @@
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
-  .glass { @apply bg-white/10 backdrop-blur-md border border-white/20; }
+  .pill { border-radius: var(--radius-pill); }
+  .card-shadow { box-shadow: var(--shadow-card); }
 }

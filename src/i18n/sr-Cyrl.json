@@ -1,0 +1,89 @@
+{
+  "tabs": {
+    "home": "Почетна",
+    "map": "Мапа",
+    "routes": "Руте",
+    "trips": "Излети",
+    "saved": "Сачувано"
+  },
+  "home": {
+    "greeting": "Здраво, Београде",
+    "todays_pick": "Данас препоручујемо",
+    "open_now": "Отворено близу тебе",
+    "day_trips": "Излети из града",
+    "day_trips_coming_soon": "Излети возом и аутобусом стижу у следећем ажурирању.",
+    "see_all": "Погледај све"
+  },
+  "map": {
+    "all_places": "Сва места",
+    "download_pack": "Преузми пакет за Београд",
+    "downloading": "Преузимање Београда…",
+    "download_failed": "Преузимање није успело",
+    "try_again": "Покушај поново",
+    "recenter": "Центрирај на моју локацију",
+    "tracking_on": "Заустави праћење",
+    "tracking_off": "Покрени праћење",
+    "min_walk": "{n} мин пешака"
+  },
+  "poi": {
+    "back": "Назад",
+    "save": "Сачувај",
+    "saved": "Сачувано",
+    "open_now": "Отворено",
+    "closed": "Затворено",
+    "verified_on": "Проверено {date}",
+    "editor_pick": "Избор уредника",
+    "wikipedia": "Википедија",
+    "osm": "OpenStreetMap",
+    "official": "Званично",
+    "reviews": "{n} рецензија",
+    "no_image": "Нема фотографије",
+    "not_found": "Није пронађено",
+    "address": "Адреса",
+    "hours": "Радно време",
+    "price": "Цена",
+    "tags": "Ознаке"
+  },
+  "itinerary": {
+    "back": "Назад",
+    "show_on_map": "Прикажи на мапи",
+    "complete": "Рута завршена",
+    "next_stop": "Следећа станица",
+    "stops": "{n} станица",
+    "route_unavailable": "Геометрија руте није доступна — кораци и даље раде."
+  },
+  "saved": {
+    "empty_title": "Још ништа није сачувано",
+    "empty_body": "Додирни ознаку на месту да би га сачувао овде."
+  },
+  "trips": {
+    "empty_title": "Излети ускоро",
+    "empty_body": "Нови Сад, Топола, Авала и још много тога — са инфо о превозу — стижу у следећем ажурирању."
+  },
+  "settings": {
+    "language": "Језик",
+    "language_en": "English",
+    "language_sr": "Српски",
+    "language_sr_cyr": "Српски (ћирилица)",
+    "currency": "Валута",
+    "currency_rsd": "РСД (српски динар)",
+    "currency_rsd_eur": "РСД са ЕУР",
+    "offline_pack": "Пакет за рад без интернета",
+    "gps": "ГПС",
+    "permission": "Дозвола",
+    "tracking": "праћење",
+    "start": "Покрени",
+    "stop": "Заустави",
+    "install": "Инсталирај Београд водич",
+    "install_ios": "Додирни Подели, па Додај на почетни екран.",
+    "downloaded_today": "Данас",
+    "downloaded_yesterday": "Јуче",
+    "downloaded_days": "Пре {n} дана"
+  },
+  "common": {
+    "close": "Затвори",
+    "cancel": "Откажи",
+    "confirm": "Потврди",
+    "loading": "Учитавање…"
+  }
+}

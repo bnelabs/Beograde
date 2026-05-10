@@ -1,14 +1,6 @@
 import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  OnDestroy,
-  ViewChild,
-  computed,
-  effect,
-  inject,
-  signal,
+  AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy,
+  ViewChild, computed, effect, inject, signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -19,13 +11,15 @@ import { TilePackService } from '../../core/tile-pack.service';
 import { POIS, CATEGORY_LABELS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
+import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
+import { StringsService } from '../../core/i18n/strings.service';
 
 const BELGRADE_CENTER: [number, number] = [20.4612, 44.8125];
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, I18nTextPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './map.component.html',
   styleUrl: './map.component.css',
@@ -38,6 +32,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   readonly proximity = inject(ProximityService);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
+  private readonly strings = inject(StringsService);
 
   readonly itineraries = ITINERARIES;
   readonly activeItineraryId = signal<string | null>(null);
@@ -48,8 +43,8 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   );
   readonly nearestThree = computed(() => this.proximity.ranked().slice(0, 3));
 
-  // Deep-link query params from /poi/:id ("Map →" with focus=<id>) and
-  // /itinerary/:id ("Show on map" with itinerary=<id>).
+  readonly t = this.strings.t;
+
   private readonly queryParams = toSignal(this.route.queryParamMap, { requireSync: true });
   private readonly intendedItinerary = computed(() => this.queryParams().get('itinerary'));
   private readonly focusedPoiId = computed(() => this.queryParams().get('focus'));
@@ -60,38 +55,25 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   private lastFocusedPoiId: string | null = null;
 
   constructor() {
-    // Re-create the map any time the tile pack becomes ready.
     effect(() => {
       if (this.tilePack.status() === 'ready' && !this.map && this.mapHost) {
         void this.bootMap();
       }
     });
-
-    // Track user position with a marker.
     effect(() => {
       const pos = this.geo.position();
       if (!this.map || !pos) return;
       void this.ensureUserMarker(pos.lng, pos.lat, pos.accuracy);
     });
-
-    // Render the active itinerary route.
     effect(() => {
       const id = this.activeItineraryId();
       if (!this.map) return;
       void this.renderItinerary(id);
     });
-
-    // Adopt ?itinerary=<id> from the URL once on entry / whenever it changes.
     effect(() => {
       const id = this.intendedItinerary();
-      if (id && id !== this.activeItineraryId()) {
-        this.activeItineraryId.set(id);
-      }
+      if (id && id !== this.activeItineraryId()) this.activeItineraryId.set(id);
     });
-
-    // Fly to ?focus=<poiId> once the map is ready. Tracks the last value so
-    // re-entering the route with the same id doesn't snap the camera again
-    // mid-pan.
     effect(() => {
       const id = this.focusedPoiId();
       if (!id || !this.mapReady() || !this.map) return;
@@ -117,11 +99,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   }
 
   async startDownload(): Promise<void> {
-    try {
-      await this.tilePack.download();
-    } catch {
-      // Surface in template via tilePack.error()
-    }
+    try { await this.tilePack.download(); } catch { /* tilePack.error surfaced in template */ }
   }
 
   toggleGps(): void {
@@ -132,12 +110,17 @@ export class MapComponent implements AfterViewInit, OnDestroy {
     this.geo.start();
   }
 
+  /**
+   * Recenter on user. If no watch is active, start one — otherwise the marker
+   * freezes after a single fix, which is what the legacy behaviour did.
+   */
   async recenterOnUser(): Promise<void> {
     try {
       const pos = this.geo.position() ?? (await this.geo.requestOnce());
+      if (!this.geo.isWatching()) this.geo.start();
       this.map?.flyTo({ center: [pos.lng, pos.lat], zoom: 16, speed: 1.4 });
     } catch {
-      // Permission likely denied; the UI surfaces geo.error.
+      // Permission denied — geo.error surfaces in the template.
     }
   }
 
@@ -164,7 +147,6 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       const protocol = new pmtilesLib.Protocol();
       maplibregl.addProtocol('pmtiles', protocol.tile);
 
-      // Structural source — reads byte ranges out of the IndexedDB-cached Blob.
       const blobSource = {
         getKey: () => 'belgrade',
         getBytes: async (offset: number, length: number) => {
@@ -172,8 +154,6 @@ export class MapComponent implements AfterViewInit, OnDestroy {
           return { data: await slice.arrayBuffer() };
         },
       };
-      // pmtiles.PMTiles accepts any Source-shaped object; cast to keep TS happy
-      // without dragging in the full type from a dynamic import.
       const pm = new pmtilesLib.PMTiles(blobSource as unknown as ConstructorParameters<typeof pmtilesLib.PMTiles>[0]);
       protocol.add(pm);
 
@@ -196,8 +176,6 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       });
 
       this.map.on('error', (e) => {
-        // Don't surface tile 404s as fatal; just log.
-        // eslint-disable-next-line no-console
         console.warn('MapLibre error', e?.error);
       });
     } catch (e) {
@@ -210,19 +188,16 @@ export class MapComponent implements AfterViewInit, OnDestroy {
     const features = POIS.map((p) => ({
       type: 'Feature' as const,
       geometry: { type: 'Point' as const, coordinates: [p.lng, p.lat] },
-      properties: { id: p.id, name: p.name, category: p.category },
+      properties: { id: p.id, name: p.name.en, category: p.category },
     }));
-    this.map.addSource('pois', {
-      type: 'geojson',
-      data: { type: 'FeatureCollection', features },
-    });
+    this.map.addSource('pois', { type: 'geojson', data: { type: 'FeatureCollection', features } });
     this.map.addLayer({
       id: 'poi-circles',
       type: 'circle',
       source: 'pois',
       paint: {
-        'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 4, 16, 9],
-        'circle-color': '#FF6321',
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 5, 16, 11],
+        'circle-color': '#B8540C',
         'circle-stroke-color': '#FFFFFF',
         'circle-stroke-width': 2,
       },
@@ -241,14 +216,14 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         'text-optional': true,
       },
       paint: {
-        'text-color': '#1A1A1A',
+        'text-color': '#2A2018',
         'text-halo-color': '#FFFFFF',
         'text-halo-width': 1.5,
       },
     });
     this.map.on('click', 'poi-circles', (e) => {
       const id = e.features?.[0]?.properties?.['id'] as string | undefined;
-      if (id) this.router.navigate(['/poi', id]);
+      if (id) void this.router.navigate(['/poi', id]);
     });
     this.map.on('mouseenter', 'poi-circles', () => {
       if (this.map) this.map.getCanvas().style.cursor = 'pointer';
@@ -268,8 +243,6 @@ export class MapComponent implements AfterViewInit, OnDestroy {
     } else {
       this.userMarker.setLngLat([lng, lat]);
     }
-
-    // Accuracy circle (rough, in degrees — fine for a halo).
     const accuracyDegrees = accuracy / 111_320;
     const data = this.makeCircle(lng, lat, accuracyDegrees);
     const src = this.map.getSource(this.accuracyCircleId) as
@@ -279,15 +252,12 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       src.setData(data);
     } else {
       this.map.addSource(this.accuracyCircleId, { type: 'geojson', data });
-      this.map.addLayer(
-        {
-          id: this.accuracyCircleId,
-          type: 'fill',
-          source: this.accuracyCircleId,
-          paint: { 'fill-color': '#3B82F6', 'fill-opacity': 0.15 },
-        },
-        'poi-circles',
-      );
+      this.map.addLayer({
+        id: this.accuracyCircleId,
+        type: 'fill',
+        source: this.accuracyCircleId,
+        paint: { 'fill-color': '#3B82F6', 'fill-opacity': 0.15 },
+      }, 'poi-circles');
     }
   }
 
@@ -299,21 +269,15 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       coords.push([lng + radiusDegrees * Math.cos(angle), lat + radiusDegrees * Math.sin(angle)]);
     }
     coords.push(coords[0]);
-    return {
-      type: 'Feature',
-      geometry: { type: 'Polygon', coordinates: [coords] },
-      properties: {},
-    };
+    return { type: 'Feature', geometry: { type: 'Polygon', coordinates: [coords] }, properties: {} };
   }
 
   private async renderItinerary(id: string | null): Promise<void> {
     if (!this.map) return;
     const sourceId = 'active-itinerary';
     const layerId = 'active-itinerary-line';
-
     if (this.map.getLayer(layerId)) this.map.removeLayer(layerId);
     if (this.map.getSource(sourceId)) this.map.removeSource(sourceId);
-
     if (!id) return;
     const itinerary = getItinerary(id);
     if (!itinerary) return;
@@ -322,32 +286,25 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       if (!resp.ok) return;
       const geojson = await resp.json();
       this.map.addSource(sourceId, { type: 'geojson', data: geojson });
-      this.map.addLayer(
-        {
-          id: layerId,
-          type: 'line',
-          source: sourceId,
-          layout: { 'line-cap': 'round', 'line-join': 'round' },
-          paint: {
-            'line-color': '#FF6321',
-            'line-width': ['interpolate', ['linear'], ['zoom'], 10, 2, 16, 5],
-            'line-dasharray': [0, 2, 4],
-          },
+      this.map.addLayer({
+        id: layerId,
+        type: 'line',
+        source: sourceId,
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: {
+          'line-color': '#B8540C',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 10, 2, 16, 5],
+          'line-dasharray': [0, 2, 4],
         },
-        'poi-circles',
-      );
-      // Fit bounds to the route.
+      }, 'poi-circles');
       const coords = (geojson.features?.[0]?.geometry?.coordinates ?? []) as [number, number][];
       if (coords.length) {
         const { LngLatBounds } = await import('maplibre-gl');
-        const bounds = coords.reduce(
-          (b, c) => b.extend(c),
-          new LngLatBounds(coords[0], coords[0]),
-        );
+        const bounds = coords.reduce((b, c) => b.extend(c), new LngLatBounds(coords[0], coords[0]));
         this.map.fitBounds(bounds, { padding: 60, duration: 600 });
       }
     } catch {
-      // Silently ignore — itinerary geometry is optional.
+      // Silently ignore; route is optional.
     }
   }
 }

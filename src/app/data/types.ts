@@ -1,35 +1,115 @@
 export type Category = 'sight' | 'cuisine' | 'nightlife' | 'cafe' | 'museum' | 'viewpoint' | 'park';
 
+export type Locale = 'en' | 'sr';
+export type Script = 'Latn' | 'Cyrl';
+
+/** Bilingual content. sr_cyr is auto-transliterated from sr_lat at build time
+ * (Phase 1b enables the Cyrillic UI toggle once the override file is reviewed). */
+export interface Bilingual {
+  en: string;
+  sr_lat: string;
+  sr_cyr: string;
+}
+
+/** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
+export interface ProvenanceMeta {
+  translatedBy: 'auto-draft' | 'curator';
+  lastReviewedAt: string;
+}
+
+export interface OpeningHours {
+  /** OSM opening_hours grammar — the canonical form. Parsed at runtime by HoursService. */
+  raw: string;
+  notes?: Bilingual;
+}
+
+export interface ImageAsset {
+  src: string;
+  width: number;
+  height: number;
+  /** Base64-inlined 8x8 JPEG, ~150 bytes. Renders instantly while the real image loads. */
+  lqip: string;
+  credit: string;
+  license: string;
+  source?: string;
+}
+
+export type SourceRef =
+  | { kind: 'wikipedia'; url: string; lang: 'en' | 'sr' }
+  | { kind: 'osm'; ref: string }
+  | { kind: 'official'; url: string; org: string }
+  | { kind: 'google-places'; placeId: string; reviewCount: number; rating: number; checkedAt: string }
+  | { kind: 'tripadvisor'; url: string; reviewCount: number; rating: number; checkedAt: string };
+
+export interface ReliabilityScore {
+  /** 0..100, transparency only — never a publish gate. */
+  score: number;
+  checks: {
+    wikipedia: boolean;
+    osm: boolean;
+    official: boolean;
+    crowdsourced: boolean;
+  };
+}
+
+export interface TransitInfo {
+  mode: 'soko' | 'regional-train' | 'suburban-train' | 'intercity-bus' | 'city-bus';
+  fromStation: Bilingual;
+  toStation: Bilingual;
+  durationMinutes: number;
+  /** Local-time HH:MM departure list, weekday/typical. */
+  departures: string[];
+  weekendDepartures?: string[];
+  validity: { from: string; to: string };
+  lastReturnLocal?: string;
+  fareRSD: { min: number; max: number };
+  bookingUrl?: string;
+  notes?: Bilingual;
+}
+
 export interface POI {
   id: string;
-  name: string;
+  region: 'city' | 'metro' | 'day-trip';
   category: Category;
-  description: string;
+  name: Bilingual;
+  description: Bilingual;
+  address: Bilingual;
   lng: number;
   lat: number;
-  address: string;
-  hours?: string;
-  priceRange?: '€' | '€€' | '€€€';
+  hours?: OpeningHours;
+  pricing?: { tier: '€' | '€€' | '€€€'; rsd?: { min: number; max: number } };
   tags: string[];
-  images: string[];
+  images: ImageAsset[];
+  transit?: TransitInfo[];
+  verifiedAt: string;
+  /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */
+  wikipediaTitle?: string;
+  /** Optional OSM ref like 'relation/8645819' or 'way/123'. */
+  osmRef?: string;
+  sources: SourceRef[];
+  reliability: ReliabilityScore;
+  editorialConfidence: 'high' | 'medium' | 'low';
+  provenance: ProvenanceMeta;
 }
 
 export interface ItineraryStop {
   poiId: string;
   arrivalOffsetMinutes: number;
   durationMinutes: number;
-  notes?: string;
+  notes?: Bilingual;
 }
 
 export interface Itinerary {
   id: string;
-  title: string;
-  subtitle: string;
+  title: Bilingual;
+  subtitle: Bilingual;
   durationMinutes: number;
   vibe: string[];
   stops: ItineraryStop[];
-  /** GeoJSON FeatureCollection with one LineString feature for the walking path. */
   geometryUrl: string;
+  elevationProfileUrl?: string;
+  bestStartHourLocal?: number;
+  provenance: ProvenanceMeta;
 }
 
 export interface UserPosition {
@@ -39,4 +119,17 @@ export interface UserPosition {
   heading: number | null;
   speed: number | null;
   timestamp: number;
+}
+
+export interface SavedPlace {
+  poiId: string;
+  savedAt: number;
+  note?: string;
+}
+
+export interface ItineraryProgress {
+  itineraryId: string;
+  startedAt: number;
+  reachedStopIds: string[];
+  lastUpdatedAt: number;
 }

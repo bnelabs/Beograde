@@ -1,0 +1,23 @@
+/*
+ * Belgrade-specific identity — layered on top of Soft Modern.
+ * Only colours and motifs that are deliberately not part of the global Soft
+ * Modern palette belong here.
+ */
+
+:root {
+  /* River — Sava + Danube blue, deeper than --map-water for foreground use */
+  --river: #6BA3CC;
+  --river-deep: #3F7FAA;
+
+  /* Sandstone — Kalemegdan walls; old-town moments */
+  --fortress: #C7A879;
+  --fortress-deep: #8E7448;
+
+  /* Transit — GSP livery red; reserved for transit elements only */
+  --transit-red: #C8302C;
+  --transit-red-soft: #FBE0DF;
+
+  /* Concrete — brutalist accents (Beton Hala, New Belgrade, Drugstore) */
+  --concrete: #8A8579;
+  --concrete-deep: #4F4C45;
+}

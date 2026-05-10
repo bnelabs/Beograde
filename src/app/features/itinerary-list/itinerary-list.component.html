@@ -1,32 +1,48 @@
-<div class="min-h-full pb-24">
-  <header class="px-5 pt-8 pb-4">
-    <h1 class="text-3xl font-display tracking-tighter mb-1">Itineraries</h1>
-    <p class="text-sm text-ink/60">Hand-curated routes through Belgrade.</p>
+<div class="rl">
+  <header class="rl-head">
+    <span class="rl-eyebrow">Belgrade · curated</span>
+    <h1 class="rl-title">Routes</h1>
+    <p class="rl-sub">Hand-curated walks through the city.</p>
   </header>
 
-  <div class="px-5 space-y-3">
-    @for (it of itineraries; track it.id) {
-      <a
-        [routerLink]="['/itinerary', it.id]"
-        class="block bg-white rounded-3xl shadow-sm p-5 active:scale-[0.99] transition border border-ink/5">
-        <div class="flex items-baseline justify-between mb-2">
-          <h2 class="text-lg font-display text-ink">{{ it.title }}</h2>
-          <span class="text-[10px] uppercase tracking-widest font-mono text-ink/40">
-            {{ hours(it.durationMinutes) }}
-          </span>
-        </div>
-        <p class="text-sm text-ink/60 mb-3">{{ it.subtitle }}</p>
-        <div class="flex flex-wrap gap-1.5">
-          @for (v of it.vibe; track v) {
-            <span class="px-2 py-0.5 rounded-full bg-primary/10 text-[10px] font-medium text-primary uppercase tracking-wider">
-              {{ v }}
-            </span>
-          }
-          <span class="px-2 py-0.5 rounded-full bg-ink/5 text-[10px] font-medium text-ink/60 uppercase tracking-wider">
-            {{ it.stops.length }} stops
-          </span>
-        </div>
+  @if (activeItinerary(); as it) {
+    <section class="rl-active">
+      <span class="rl-active-label">In progress</span>
+      <a [routerLink]="['/itinerary', it.id]" class="block">
+        <app-card variant="elevated">
+          <div class="rl-active-body">
+            <h2 class="rl-active-title">{{ it.title | i18nText }}</h2>
+            <p class="rl-active-sub">{{ it.subtitle | i18nText }}</p>
+            <app-distance-progress
+              [walkedMeters]="reachedRatio(it.id).walked"
+              [totalMeters]="reachedRatio(it.id).total" />
+          </div>
+        </app-card>
       </a>
+    </section>
+  }
+
+  <ul class="rl-list">
+    @for (it of inactiveItineraries(); track it.id) {
+      <li>
+        <a [routerLink]="['/itinerary', it.id]" class="block">
+          <app-card>
+            <div class="rl-card-body">
+              <div class="rl-card-h">
+                <h2 class="rl-card-title">{{ it.title | i18nText }}</h2>
+                <span class="rl-card-meta">{{ hours(it.durationMinutes) }}</span>
+              </div>
+              <p class="rl-card-sub">{{ it.subtitle | i18nText }}</p>
+              <div class="rl-card-vibes">
+                @for (v of it.vibe; track v) {
+                  <span class="rl-vibe">{{ v }}</span>
+                }
+                <span class="rl-vibe rl-vibe-stops">{{ it.stops.length }} stops</span>
+              </div>
+            </div>
+          </app-card>
+        </a>
+      </li>
     }
-  </div>
+  </ul>
 </div>

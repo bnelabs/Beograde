@@ -4,18 +4,13 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs/operators';
 import { PwaInstallService } from './core/pwa-install.service';
-
-interface NavTab {
-  id: 'map' | 'pois' | 'itineraries' | 'settings';
-  label: string;
-  icon: string;
-  route: string;
-}
+import { StringsService } from './core/i18n/strings.service';
+import { BottomNavComponent, NavTab } from './ui/bottom-nav/bottom-nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, BottomNavComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -23,13 +18,17 @@ interface NavTab {
 export class App {
   private router = inject(Router);
   protected readonly pwa = inject(PwaInstallService);
-
-  protected readonly tabs: NavTab[] = [
-    { id: 'map', label: 'Map', icon: 'map', route: '/' },
-    { id: 'pois', label: 'Places', icon: 'explore', route: '/pois' },
-    { id: 'itineraries', label: 'Routes', icon: 'route', route: '/itineraries' },
-    { id: 'settings', label: 'Settings', icon: 'settings', route: '/settings' },
-  ];
+  private readonly strings = inject(StringsService);
+  protected readonly tabs = computed<NavTab[]>(() => {
+    const t = this.strings.t().tabs;
+    return [
+      { id: 'home', label: t.home, icon: 'home', route: '/home' },
+      { id: 'map', label: t.map, icon: 'map', route: '/map' },
+      { id: 'routes', label: t.routes, icon: 'route', route: '/routes' },
+      { id: 'trips', label: t.trips, icon: 'directions_train', route: '/trips' },
+      { id: 'saved', label: t.saved, icon: 'bookmark', route: '/saved' },
+    ];
+  });
 
   protected readonly dismissedInstallTip = signal(false);
 
@@ -38,10 +37,9 @@ export class App {
   );
 
   protected readonly activeTab = computed<NavTab['id']>(() => {
-    // Recompute on every NavigationEnd.
     this.navEnd();
     const child = this.deepestChild(this.router.routerState.root.snapshot);
-    return (child?.data?.['tab'] as NavTab['id']) ?? 'map';
+    return (child?.data?.['tab'] as NavTab['id']) ?? 'home';
   });
 
   protected readonly showIosInstallTip = computed(

@@ -10,8 +10,14 @@
     "build:tiles": "bash scripts/build-tiles.sh",
     "build:fonts": "bash scripts/build-fonts.sh",
     "build:itineraries": "node scripts/build-itineraries.mjs",
+    "build:provenance": "node scripts/build-provenance.mjs",
+    "build:i18n": "node scripts/build-i18n.mjs",
+    "build:images": "node scripts/build-images.mjs",
+    "build:content": "npm run build:provenance && npm run build:i18n",
+    "prebuild": "npm run build:content",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:scripts": "node scripts/run-tests.mjs",
     "lint": "ng lint"
   },
   "dependencies": {
@@ -26,6 +32,7 @@
     "@angular/service-worker": "^21.0.0",
     "idb-keyval": "^6.2.1",
     "maplibre-gl": "^5.5.0",
+    "opening_hours": "^3.12.0",
     "pmtiles": "^4.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -38,8 +45,10 @@
     "@types/node": "^20.17.19",
     "angular-eslint": "21.1.0",
     "eslint": "^9.39.1",
+    "fake-indexeddb": "^6.2.5",
     "jsdom": "^27.0.0",
     "postcss": "^8.5.3",
+    "sharp": "^0.33.5",
     "tailwindcss": "^4.1.12",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.47.0",

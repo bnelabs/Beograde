@@ -10,8 +10,11 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('should create the app shell', () => {
+  it('creates the app shell with bottom nav', () => {
     const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
     expect(fixture.componentInstance).toBeTruthy();
+    const nav = fixture.nativeElement.querySelector('app-bottom-nav');
+    expect(nav).toBeTruthy();
   });
 });
