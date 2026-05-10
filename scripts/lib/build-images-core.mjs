@@ -1,5 +1,6 @@
 import sharp from 'sharp';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, writeFileSync as writeFSync } from 'node:fs';
+import { join as joinPath } from 'node:path';
 
 // Pipeline core. Pure async functions + the runBuildImages orchestrator.
 // Helpers are added in subsequent tasks.
@@ -82,6 +83,30 @@ export async function transcodeAvif(buffer, widths) {
       .resize({ width: w, withoutEnlargement: true })
       .avif({ quality: 50, effort: 4 })
       .toBuffer();
+  }
+  return out;
+}
+
+/** Filesystem-safe slug from a Commons file name or human title. */
+export function slugify(s) {
+  return s
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')   // strip combining marks
+    .replace(/\.[a-z0-9]+$/i, '')                        // drop extension
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/** Write each AVIF buffer under <outDir>/<poiId>/<slug>-<width>.avif.
+ *  Returns { [width]: absolutePath }. Creates the per-POI dir as needed. */
+export async function writeAvifSet({ outDir, poiId, slug, transcoded }) {
+  const poiDir = joinPath(outDir, poiId);
+  mkdirSync(poiDir, { recursive: true });
+  const out = {};
+  for (const [width, buf] of Object.entries(transcoded)) {
+    const path = joinPath(poiDir, `${slug}-${width}.avif`);
+    writeFSync(path, buf);
+    out[width] = path;
   }
   return out;
 }

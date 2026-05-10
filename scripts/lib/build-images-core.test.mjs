@@ -1,8 +1,8 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet } from './build-images-core.mjs';
 import sharp from 'sharp';
-import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -169,5 +169,41 @@ describe('fetchCommonsFile', () => {
     // remaining is the one introducing ?width=2400.
     const queryStart = calls[0].lastIndexOf('?');
     assert.ok(calls[0].slice(queryStart) === '?width=2400', `query string should be exactly ?width=2400, got: ${calls[0].slice(queryStart)}`);
+  });
+});
+
+describe('slugify', () => {
+  test('slugify lowercases, strips diacritics, and joins with -', () => {
+    assert.equal(slugify('Tara_National_Park_Tara_View.jpg'), 'tara-national-park-tara-view');
+    assert.equal(slugify('Saint Sava Cathedral (interior).JPG'), 'saint-sava-cathedral-interior');
+    assert.equal(slugify('Beograd_–_Kalemegdan.jpeg'), 'beograd-kalemegdan');
+  });
+});
+
+describe('writeAvifSet', () => {
+  test('writeAvifSet writes one file per width with correct naming', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'avifout-'));
+    try {
+      const transcoded = {
+        640: Buffer.from([0x00, 0x01]),
+        1024: Buffer.from([0x00, 0x02, 0x03]),
+        1600: Buffer.from([0x00, 0x04, 0x05, 0x06]),
+      };
+      const paths = await writeAvifSet({
+        outDir: dir,
+        poiId: 'kalemegdan',
+        slug: 'kalemegdan-belgrade',
+        transcoded,
+      });
+      assert.equal(paths[640].endsWith('/kalemegdan/kalemegdan-belgrade-640.avif'), true);
+      assert.equal(paths[1024].endsWith('/kalemegdan/kalemegdan-belgrade-1024.avif'), true);
+      assert.equal(paths[1600].endsWith('/kalemegdan/kalemegdan-belgrade-1600.avif'), true);
+      for (const w of [640, 1024, 1600]) {
+        assert.ok(existsSync(paths[w]));
+        assert.equal(readFileSync(paths[w]).length, transcoded[w].length);
+      }
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
   });
 });
