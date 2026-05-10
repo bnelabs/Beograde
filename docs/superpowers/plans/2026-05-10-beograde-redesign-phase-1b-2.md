@@ -883,6 +883,19 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
     // (see the Task 6 slugify test that pins this behavior on raw input).
     const slugs = curator.images.map((img) => slugify(img.commonsFile.replace(/^File:/, '')));
 
+    // Collision guard: two commonsFile names that differ only in punctuation
+    // ("Beograd_view_1.jpg" vs "Beograd-view-1.jpg") slugify to the same
+    // string and would silently overwrite each other on disk. Detect and fail
+    // loudly — the curator must rename one of the files.
+    const seen = new Map();
+    for (let i = 0; i < slugs.length; i++) {
+      if (seen.has(slugs[i])) {
+        const j = seen.get(slugs[i]);
+        throw new Error(`runBuildImages: ${poi.id} curator has two images that slugify to "${slugs[i]}": "${curator.images[j].commonsFile}" and "${curator.images[i].commonsFile}" — rename one`);
+      }
+      seen.set(slugs[i], i);
+    }
+
     if (!force && isFresh({ curatorPath, outDir, poiId: poi.id, expectedSlugs: slugs, widths: WIDTHS })) {
       fresh++;
       continue;
@@ -905,8 +918,15 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
 
     poi.images = buildImageAssetEntries({ poiId: poi.id, curator, perImage });
     curated++;
+    // Persist after each successful POI so a mid-run failure on POI N+1
+    // does not strand POIs 1..N with on-disk AVIFs but no ImageAsset[]
+    // entries in compiled.json (which would make them appear fresh on
+    // re-run and never get their entries written).
+    writeF(compiledPath, JSON.stringify(compiled, null, 2) + '\n');
   }
 
+  // Final write covers the all-fresh / all-skipped path (and is a no-op
+  // re-write when per-POI persistence already ran).
   writeF(compiledPath, JSON.stringify(compiled, null, 2) + '\n');
   return { curated, skipped, fresh };
 }
