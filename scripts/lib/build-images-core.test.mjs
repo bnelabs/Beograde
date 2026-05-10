@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
 import sharp from 'sharp';
 import { mkdtempSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -212,5 +212,54 @@ describe('writeAvifSet', () => {
     } finally {
       rmSync(dir, { recursive: true });
     }
+  });
+});
+
+describe('buildImageAssetEntries', () => {
+  test('buildImageAssetEntries emits ImageAsset[] in correct shape', () => {
+    const curator = {
+      images: [{
+        commonsFile: 'File:Kalemegdan_Belgrade.jpg',
+        credit: 'Foo, CC BY-SA 4.0',
+        license: 'CC BY-SA 4.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg',
+      }],
+      fetchedAt: '2026-05-10',
+    };
+    const perImage = [{
+      slug: 'kalemegdan-belgrade',
+      lqip: 'data:image/jpeg;base64,AAA',
+      width1024: 1024,
+      height1024: 683,
+    }];
+    const out = buildImageAssetEntries({ poiId: 'kalemegdan', curator, perImage });
+    assert.equal(out.length, 1);
+    assert.equal(out[0].src, '/assets/poi/kalemegdan/kalemegdan-belgrade-1024.avif');
+    assert.equal(out[0].width, 1024);
+    assert.equal(out[0].height, 683);
+    assert.equal(out[0].lqip, 'data:image/jpeg;base64,AAA');
+    assert.equal(out[0].credit, 'Foo, CC BY-SA 4.0');
+    assert.equal(out[0].license, 'CC BY-SA 4.0');
+    assert.equal(out[0].source, 'https://commons.wikimedia.org/wiki/File:Kalemegdan_Belgrade.jpg');
+  });
+
+  test('buildImageAssetEntries pairs curator images with per-image data by index', () => {
+    const curator = {
+      images: [
+        { commonsFile: 'File:A.jpg', credit: 'a', license: 'a', source: 'a' },
+        { commonsFile: 'File:B.jpg', credit: 'b', license: 'b', source: 'b' },
+      ],
+      fetchedAt: '2026-05-10',
+    };
+    const perImage = [
+      { slug: 'a', lqip: 'data:image/jpeg;base64,A', width1024: 1024, height1024: 768 },
+      { slug: 'b', lqip: 'data:image/jpeg;base64,B', width1024: 1024, height1024: 576 },
+    ];
+    const out = buildImageAssetEntries({ poiId: 'tara', curator, perImage });
+    assert.equal(out.length, 2);
+    assert.equal(out[0].credit, 'a');
+    assert.equal(out[0].height, 768);
+    assert.equal(out[1].credit, 'b');
+    assert.equal(out[1].height, 576);
   });
 });

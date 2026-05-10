@@ -114,3 +114,23 @@ export async function writeAvifSet({ outDir, poiId, slug, transcoded }) {
   }
   return out;
 }
+
+/** Pair curator entries with per-image transcode results to produce
+ *  ImageAsset[] (matches src/app/data/types.ts:26). */
+export function buildImageAssetEntries({ poiId, curator, perImage }) {
+  if (curator.images.length !== perImage.length) {
+    throw new Error(`buildImageAssetEntries: ${poiId} curator has ${curator.images.length} images but received ${perImage.length} transcode results`);
+  }
+  return curator.images.map((c, i) => {
+    const p = perImage[i];
+    return {
+      src: `/assets/poi/${poiId}/${p.slug}-1024.avif`,
+      width: p.width1024,
+      height: p.height1024,
+      lqip: p.lqip,
+      credit: c.credit,
+      license: c.license,
+      source: c.source,
+    };
+  });
+}
