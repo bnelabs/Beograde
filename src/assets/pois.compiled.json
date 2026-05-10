@@ -2138,5 +2138,541 @@
       "translatedBy": "curator",
       "lastReviewedAt": "2026-05-11"
     }
+  },
+  {
+    "id": "oplenac",
+    "region": "day-trip",
+    "category": "museum",
+    "name": {
+      "en": "St. George's Church, Oplenac (Karađorđević Mausoleum)",
+      "sr_lat": "Crkva Svetog Đorđa na Oplencu (Mauzolej Karađorđevića)",
+      "sr_cyr": "Црква Светог Ђорђа на Опленцу (Маузолеј Карађорђевића)"
+    },
+    "description": {
+      "en": "Royal mausoleum of the Karađorđević dynasty crowning Oplenac hill above Topola. Marble exterior, mosaic interior copying 60 medieval Serbian churches, and the crypt of King Petar I.",
+      "sr_lat": "Kraljevski mauzolej dinastije Karađorđević na vrhu brda Oplenac iznad Topole. Mermerna spoljašnjost, unutrašnji mozaici koji repliciraju 60 srednjovekovnih srpskih crkava, i kripta kralja Petra I.",
+      "sr_cyr": "Краљевски маузолеј династије Карађорђевић на врху брда Опленац изнад Тополе. Мермерна спољашњост, унутрашњи мозаици који реплицирају 60 средњовековних српских цркава, и крипта краља Петра И."
+    },
+    "address": {
+      "en": "Oplenac, 34310 Topola",
+      "sr_lat": "Oplenac, 34310 Topola",
+      "sr_cyr": "Опленац, 34310 Топола"
+    },
+    "lng": 20.6833,
+    "lat": 44.2472,
+    "tags": [
+      "mausoleum",
+      "history",
+      "religion",
+      "museum",
+      "royal"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Oplenac",
+    "osmRef": "relation/8768849",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Tu-Su 09:00-17:00; Mo closed"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Topola bus station",
+          "sr_lat": "Topola autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 90,
+        "departures": [
+          "09:00",
+          "10:30",
+          "13:00",
+          "16:00",
+          "17:45",
+          "18:30",
+          "22:00"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 800,
+          "max": 1000
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Sandžaktrans, Pupd Janjušević, Joe Travel. Times sourced 11 May 2026 from polazak.rs aggregator. From Topola station 15-20 min walk uphill to Oplenac or local taxi.",
+          "sr_lat": "Prevoznici: Sandžaktrans, Pupd Janjušević, Joe Travel. Vremena preuzeta 11. maja 2026. iz agregatora polazak.rs. Od autobuske stanice u Topoli 15-20 min hoda uzbrdo do Oplenca ili lokalni taksi.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "bukovicka-banja",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Bukovička Banja (Aranđelovac Spa)",
+      "sr_lat": "Bukovička banja",
+      "sr_cyr": "Буковичка бања"
+    },
+    "description": {
+      "en": "Landscape park with mineral springs, the 19th-century Knez Mihailov konak, and the Bela Stena marble-sculpture park — anchor of the Aranđelovac spa town.",
+      "sr_lat": "Park sa mineralnim izvorima, konakom kneza Mihaila iz 19. veka, i parkom mermernih skulptura Bela Stena — centar banje Aranđelovac.",
+      "sr_cyr": "Парк са минералним изворима, конаком кнеза Михаила из 19. века, и парком мермерних скулптура Бела Стена — центар бање Аранђеловац."
+    },
+    "address": {
+      "en": "Mišarska, 34300 Aranđelovac",
+      "sr_lat": "Mišarska, 34300 Aranđelovac",
+      "sr_cyr": "Мишарска, 34300 Аранђеловац"
+    },
+    "lng": 20.5520873,
+    "lat": 44.3086876,
+    "tags": [
+      "park",
+      "spa",
+      "sculpture",
+      "family",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Arandjelovac",
+    "osmRef": "relation/14686591",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Aranđelovac bus station",
+          "sr_lat": "Aranđelovac autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 80,
+        "departures": [
+          "07:15",
+          "08:00",
+          "10:00",
+          "12:00",
+          "13:15",
+          "14:00",
+          "14:30",
+          "15:30"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 670,
+          "max": 710
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Lasta, Transprodukt. 14 daily departures; fares 670-710 RSD one-way per polazak.rs (11 May 2026). From station ~10 min walk to the spa park.",
+          "sr_lat": "Prevoznici: Lasta, Transprodukt. 14 dnevnih polaska; cena 670-710 RSD jednosmerno po polazak.rs (11. maj 2026). Od stanice ~10 min hoda do banje.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "sabac-centre",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Šabac Old Town & Fortress",
+      "sr_lat": "Šabac — Stari grad i tvrđava",
+      "sr_cyr": "Шабац — Стари град и тврђава"
+    },
+    "description": {
+      "en": "Sava-river town with an Ottoman fortress, the 1865 Jefimija quay promenade, and the cathedral Crkva Svetih Apostola Petra i Pavla. Mačvanski Folk Museum on the main square.",
+      "sr_lat": "Grad na Savi sa osmanlijskom tvrđavom, šetalištem Jefimija iz 1865. i Crkvom Svetih Apostola Petra i Pavla. Mačvanski narodni muzej na glavnom trgu.",
+      "sr_cyr": "Град на Сави са османлијском тврђавом, шеталиштем Јефимија из 1865. и Црквом Светих Апостола Петра и Павла. Мачвански народни музеј на главном тргу."
+    },
+    "address": {
+      "en": "Gospodar Jevremova, 15000 Šabac",
+      "sr_lat": "Gospodar Jevremova, 15000 Šabac",
+      "sr_cyr": "Господар Јевремова, 15000 Шабац"
+    },
+    "lng": 19.6953972,
+    "lat": 44.7571535,
+    "tags": [
+      "fortress",
+      "history",
+      "river",
+      "museum",
+      "walkable"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Šabac",
+    "osmRef": "relation/6923343",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Šabac bus station",
+          "sr_lat": "Šabac autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 90,
+        "departures": [
+          "06:00",
+          "07:00",
+          "07:40",
+          "08:30",
+          "09:30",
+          "11:15",
+          "11:45"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 600,
+          "max": 800
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Raketa AB, Lastra, Mačva Expres, Banbus. Verified 11 May 2026 via polazak.rs. Regional train (Srbijavoz) also serves this route at 09:50 daily.",
+          "sr_lat": "Prevoznici: Raketa AB, Lastra, Mačva Expres, Banbus. Provereno 11. maj 2026. preko polazak.rs. Regionalni voz (Srbijavoz) saobraća u 09:50 dnevno.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "banja-koviljaca",
+    "region": "day-trip",
+    "category": "park",
+    "name": {
+      "en": "Banja Koviljača",
+      "sr_lat": "Banja Koviljača",
+      "sr_cyr": "Бања Ковиљача"
+    },
+    "description": {
+      "en": "Elegant Austro-Hungarian spa town in western Serbia near the Drina river — sulphur springs, the 1908 Royal Bathhouse, and a tree-lined promenade.",
+      "sr_lat": "Elegantna austrougarska banja u zapadnoj Srbiji pored Drine — sumporni izvori, Kraljevsko kupatilo iz 1908. i drvored za šetnju.",
+      "sr_cyr": "Елегантна аустроугарска бања у западној Србији поред Дрине — сумпорни извори, Краљевско купатило из 1908. и дрворед за шетњу."
+    },
+    "address": {
+      "en": "Kralja Petra I 23, 15316 Banja Koviljača",
+      "sr_lat": "Kralja Petra I 23, 15316 Banja Koviljača",
+      "sr_cyr": "Краља Петра И 23, 15316 Бања Ковиљача"
+    },
+    "lng": 19.1585984,
+    "lat": 44.5138269,
+    "tags": [
+      "spa",
+      "park",
+      "architecture",
+      "walkable"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Banja Koviljača",
+    "osmRef": "relation/8644230",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "intercity-bus",
+        "fromStation": {
+          "en": "Belgrade BAS (Central bus station)",
+          "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Loznica bus station",
+          "sr_lat": "Loznica autobuska stanica",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 150,
+        "departures": [
+          "06:00",
+          "07:00",
+          "08:30",
+          "09:30",
+          "11:15",
+          "11:45",
+          "12:15",
+          "13:30"
+        ],
+        "validity": {
+          "from": "2026-05-11",
+          "to": "2026-08-11"
+        },
+        "fareRSD": {
+          "min": 1100,
+          "max": 1400
+        },
+        "bookingUrl": "https://polazak.rs",
+        "notes": {
+          "en": "Operators include Raketa AB, Lastra, Banbus. 19 daily departures Belgrade→Loznica per polazak.rs (11 May 2026). From Loznica station local bus or 7 km taxi to Banja Koviljača (~10 min).",
+          "sr_lat": "Prevoznici: Raketa AB, Lastra, Banbus. 19 dnevnih polaska Beograd→Loznica po polazak.rs (11. maj 2026). Od stanice u Loznici lokalni autobus ili 7 km taksi do Banje Koviljače (~10 min).",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "mladenovac",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Mladenovac",
+      "sr_lat": "Mladenovac",
+      "sr_cyr": "Младеновац"
+    },
+    "description": {
+      "en": "Belgrade-municipality town with the Selters Banja mineral park, the 1903 Saint Petka church, and the surrounding Kosmaj hills for hiking.",
+      "sr_lat": "Mestašce u Beogradskoj opštini sa parkom mineralne vode Selters Banja, Crkvom Svete Petke iz 1903. i obližnjim brdima Kosmaj za planinarenje.",
+      "sr_cyr": "Месташце у Београдској општини са парком минералне воде Селтерс Бања, Црквом Свете Петке из 1903. и оближњим брдима Космај за планинарење."
+    },
+    "address": {
+      "en": "Trg Gradskog Heroja, 11400 Mladenovac",
+      "sr_lat": "Trg Gradskog Heroja, 11400 Mladenovac",
+      "sr_cyr": "Трг Градског Хероја, 11400 Младеновац"
+    },
+    "lng": 20.6941535,
+    "lat": 44.4401166,
+    "tags": [
+      "town",
+      "hiking",
+      "spa",
+      "church",
+      "outdoor"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Mladenovac",
+    "osmRef": "relation/8765703",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "suburban-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Mladenovac",
+          "sr_lat": "Mladenovac",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 55,
+        "departures": [
+          "06:25",
+          "08:25",
+          "12:25",
+          "14:25",
+          "17:25",
+          "19:25"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 150,
+          "max": 200
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "BG:Voz line 3 (Mladenovac—Ovča/Zemun via Belgrade Centre). Approximate times; verify current schedule at srbvoz.rs the day of travel.",
+          "sr_lat": "BG:Voz linija 3 (Mladenovac—Ovča/Zemun preko Beograda Centra). Vremena su približna; proverite važeći red vožnje na srbvoz.rs na dan putovanja.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
+  },
+  {
+    "id": "lazarevac",
+    "region": "day-trip",
+    "category": "sight",
+    "name": {
+      "en": "Lazarevac",
+      "sr_lat": "Lazarevac",
+      "sr_cyr": "Лазаревац"
+    },
+    "description": {
+      "en": "Coal-country town south-west of Belgrade with the Saint Demetrius church-memorial complex commemorating the 1914 Kolubara Battle, and the Đorđe Andrejević Kun art collection.",
+      "sr_lat": "Mestašce jugozapadno od Beograda, centar rudarskog basena, sa crkvom-spomenikom Svetog Dimitrija u sećanje na Kolubarsku bitku 1914. i umetničkom zbirkom Đorđa Andrejevića Kuna.",
+      "sr_cyr": "Месташце југозападно од Београда, центар рударског басена, са црквом-спомеником Светог Димитрија у сећање на Колубарску битку 1914. и уметничком збирком Ђорђа Андрејевића Куна."
+    },
+    "address": {
+      "en": "Karađorđeva, 11550 Lazarevac",
+      "sr_lat": "Karađorđeva, 11550 Lazarevac",
+      "sr_cyr": "Карађорђева, 11550 Лазаревац"
+    },
+    "lng": 20.261033,
+    "lat": 44.3815176,
+    "tags": [
+      "town",
+      "history",
+      "memorial",
+      "art"
+    ],
+    "images": [],
+    "verifiedAt": "2026-05-11",
+    "wikipediaTitle": "Lazarevac",
+    "osmRef": "relation/8677484",
+    "sources": [],
+    "reliability": {
+      "score": 0,
+      "checks": {
+        "wikipedia": false,
+        "osm": false,
+        "official": false,
+        "crowdsourced": false
+      }
+    },
+    "editorialConfidence": "high",
+    "hours": {
+      "raw": "Mo-Su 00:00-24:00"
+    },
+    "transit": [
+      {
+        "mode": "suburban-train",
+        "fromStation": {
+          "en": "Belgrade Centre (Prokop)",
+          "sr_lat": "Beograd Centar (Prokop)",
+          "sr_cyr": ""
+        },
+        "toStation": {
+          "en": "Lazarevac",
+          "sr_lat": "Lazarevac",
+          "sr_cyr": ""
+        },
+        "durationMinutes": 75,
+        "departures": [
+          "06:10",
+          "12:10",
+          "16:10",
+          "19:10"
+        ],
+        "validity": {
+          "from": "2025-12-14",
+          "to": "2026-12-12"
+        },
+        "fareRSD": {
+          "min": 180,
+          "max": 240
+        },
+        "bookingUrl": "https://w3.srbvoz.rs/redvoznje",
+        "notes": {
+          "en": "BG:Voz line 4 (Lazarevac—Ovča via Belgrade Centre). Approximate times — line 4 has fewer departures than line 3; verify at srbvoz.rs the day of travel.",
+          "sr_lat": "BG:Voz linija 4 (Lazarevac—Ovča preko Beograda Centra). Približna vremena — linija 4 ima manje polaska od linije 3; proverite na srbvoz.rs na dan putovanja.",
+          "sr_cyr": ""
+        }
+      }
+    ],
+    "provenance": {
+      "translatedBy": "curator",
+      "lastReviewedAt": "2026-05-11"
+    }
   }
 ]
