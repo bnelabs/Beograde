@@ -31,9 +31,13 @@
         @for (item of nearestOpen(); track item.poi.id) {
           <a [routerLink]="['/poi', item.poi.id]" class="home-tile">
             <app-card>
-              <div class="home-tile-thumb">
-                <span class="material-symbols-outlined" aria-hidden="true">{{ icons[item.poi.category] }}</span>
-              </div>
+              <app-image class="home-tile-thumb"
+                         [asset]="item.poi.images?.[0]"
+                         [alt]="(item.poi.name | i18nText) || ''"
+                         [fallbackIcon]="icons[item.poi.category]"
+                         [showCredit]="false"
+                         kind="tile"
+                         ratio="4 / 3" />
               <div class="home-tile-body">
                 <span class="home-tile-name">{{ item.poi.name | i18nText }}</span>
                 <span class="home-tile-meta">{{ fmtDistance(item.meters) }}</span>

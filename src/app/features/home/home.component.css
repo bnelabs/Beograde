@@ -17,11 +17,10 @@
 .home-row::-webkit-scrollbar { display: none; }
 .home-tile { min-width: 160px; max-width: 160px; scroll-snap-align: start; text-decoration: none; color: inherit; }
 .home-tile-thumb {
-  aspect-ratio: 1 / 1;
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, var(--accent-soft), var(--fortress));
-  color: var(--accent);
-  font-size: 36px;
+  display: block;
+  width: 100%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 .home-tile-body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 4px; }
 .home-tile-name { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.2; }
