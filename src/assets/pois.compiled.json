@@ -26,7 +26,17 @@
       "free",
       "outdoor"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/kalemegdan/kalemegdan-belgrade-fortress-1024.avif",
+        "width": 1024,
+        "height": 615,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAZEAEAAwEBAAAAAAAAAAAAAAABAAIRBDH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEBAAMAAAAAAAAAAAAAAAAAAQACUf/aAAwDAQACEQMRAD8AodYjt6VVww8iIgNrbEAyf//Z",
+        "credit": "BrankaVV, CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kalemegdan,_Belgrade_Fortress.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
@@ -80,7 +90,17 @@
       "religious",
       "free"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/saint-sava/the-temple-of-saint-sava-from-the-north-west-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAACAgIDAAAAAAAAAAAAAAABEQACAwUSITH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AL49tfIa3IqQlxHjXZcREKH/2Q==",
+        "credit": "Aleksandr Petukhov (Skelanard), CC BY-SA 4.0, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Temple_of_Saint_Sava_from_the_North-West.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -128,7 +148,17 @@
       "live-music",
       "evening"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/skadarlija/skadarska-street-belgrade-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAaEAADAAMBAAAAAAAAAAAAAAAAAQIDBEGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/ALzb9VqyrxtX1rwABrzkS//Z",
+        "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Skadarska_street,_Belgrade.jpg"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [
       {
