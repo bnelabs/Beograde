@@ -2,11 +2,13 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
+import { getPoi, CATEGORY_ICONS } from '../../data/pois';
 import { ItineraryProgressService } from '../../core/itinerary-progress/itinerary-progress.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { CardComponent } from '../../ui/card/card.component';
 import { DistanceProgressComponent } from '../../ui/charts/distance-progress.component';
 import { StringsService } from '../../core/i18n/strings.service';
+import type { Itinerary } from '../../data/types';
 
 @Component({
   selector: 'app-itinerary-list',
@@ -20,8 +22,24 @@ export class ItineraryListComponent {
   protected readonly itineraries = ITINERARIES;
   protected readonly progress = inject(ItineraryProgressService);
   private readonly strings = inject(StringsService);
+  protected readonly icons = CATEGORY_ICONS;
 
   protected readonly t = this.strings.t;
+
+  mosaicTiles(it: Itinerary): { src?: string; alt: string; icon: string }[] {
+    const tiles: { src?: string; alt: string; icon: string }[] = [];
+    for (const stop of it.stops) {
+      if (tiles.length >= 3) break;
+      const poi = getPoi(stop.poiId);
+      if (!poi) continue;
+      tiles.push({
+        src: poi.images[0]?.src,
+        alt: poi.name.en,
+        icon: this.icons[poi.category] ?? 'place',
+      });
+    }
+    return tiles;
+  }
 
   protected readonly activeItinerary = computed(() => {
     const id = this.progress.activeId();

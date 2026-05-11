@@ -5,6 +5,20 @@
       "credit": "Jglozik, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:200_years_of_Kovacica.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "3302237553243250",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=3302237553243250"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1168918843556602",
+      "credit": "milicahere (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1168918843556602"
     }
   ],
   "fetchedAt": "2026-05-11"

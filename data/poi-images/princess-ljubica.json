@@ -5,6 +5,20 @@
       "credit": "Goldfinger, CC BY-SA 3.0 rs, via Wikimedia Commons",
       "license": "CC BY-SA 3.0 rs",
       "source": "https://commons.wikimedia.org/wiki/File:Konak_knjeginje_Ljubice_2.JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1623535398790425",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1623535398790425"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1171781314835449",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1171781314835449"
     }
   ],
   "fetchedAt": "2026-05-11"

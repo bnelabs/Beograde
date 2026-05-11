@@ -33,7 +33,7 @@
           <a [routerLink]="['/poi', item.poi.id]" class="home-tile">
             <app-card>
               <app-image class="home-tile-thumb"
-                         [asset]="item.poi.images?.[0]"
+                         [asset]="item.poi.images[0]"
                          [alt]="(item.poi.name | i18nText) || ''"
                          [fallbackIcon]="icons[item.poi.category]"
                          [showCredit]="false"
@@ -53,15 +53,57 @@
     </section>
   }
 
-  <section class="home-section">
-    <div class="home-section-h">
-      <span class="home-section-l">{{ t().home.day_trips }}</span>
-    </div>
-    <app-card variant="concrete">
-      <div class="home-trips-soon">
-        <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 28px;">directions_train</span>
-        <p>{{ t().home.day_trips_coming_soon }}</p>
+  @if (highlights().length) {
+    <section class="home-section">
+      <div class="home-section-h">
+        <span class="home-section-l">{{ t().home.highlights }}</span>
+        <a routerLink="/map" class="home-section-r">{{ t().home.see_all }} →</a>
       </div>
-    </app-card>
-  </section>
+      <div class="home-row">
+        @for (poi of highlights(); track poi.id) {
+          <a [routerLink]="['/poi', poi.id]" class="home-tile">
+            <app-card>
+              <app-image class="home-tile-thumb"
+                         [asset]="poi.images[0]"
+                         [alt]="(poi.name | i18nText) || ''"
+                         [fallbackIcon]="icons[poi.category]"
+                         [showCredit]="false"
+                         kind="tile"
+                         ratio="4 / 3" />
+              <div class="home-tile-body">
+                <span class="home-tile-name">{{ poi.name | i18nText }}</span>
+              </div>
+            </app-card>
+          </a>
+        }
+      </div>
+    </section>
+  }
+
+  @if (dayTrips().length) {
+    <section class="home-section">
+      <div class="home-section-h">
+        <span class="home-section-l">{{ t().home.day_trips }}</span>
+        <a routerLink="/map" class="home-section-r">{{ t().home.see_all }} →</a>
+      </div>
+      <div class="home-row">
+        @for (poi of dayTrips(); track poi.id) {
+          <a [routerLink]="['/poi', poi.id]" class="home-tile home-tile-wide">
+            <app-card>
+              <app-image class="home-tile-thumb"
+                         [asset]="poi.images[0]"
+                         [alt]="(poi.name | i18nText) || ''"
+                         [fallbackIcon]="icons[poi.category]"
+                         [showCredit]="false"
+                         kind="tile"
+                         ratio="4 / 3" />
+              <div class="home-tile-body">
+                <span class="home-tile-name">{{ poi.name | i18nText }}</span>
+              </div>
+            </app-card>
+          </a>
+        }
+      </div>
+    </section>
+  }
 </div>

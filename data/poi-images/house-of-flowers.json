@@ -5,6 +5,20 @@
       "credit": "Ferran Cornellà, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Tito%27s_mausoleum.JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "4123144314410085",
+      "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=4123144314410085"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "466014968006227",
+      "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=466014968006227"
     }
   ],
   "fetchedAt": "2026-05-11"

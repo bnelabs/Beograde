@@ -5,6 +5,20 @@
       "credit": "Fred Romero, CC BY 2.0, via Wikimedia Commons",
       "license": "CC BY 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Beograd_-_Beton_Hala_(45033581361).jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1151733655874811",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1151733655874811"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "187026126654088",
+      "credit": "brackone (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=187026126654088"
     }
   ],
   "fetchedAt": "2026-05-11"

@@ -5,6 +5,20 @@
       "credit": "Stefan Didam, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Belgrad_(Zemun)_-_Kula_Sibinjanin_Janka.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "25237065732638151",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=25237065732638151"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1485453025173938",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1485453025173938"
     }
   ],
   "fetchedAt": "2026-05-11"

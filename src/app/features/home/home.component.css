@@ -16,6 +16,7 @@
 .home-row { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 4px; margin: 0 -4px; padding-inline: 4px; }
 .home-row::-webkit-scrollbar { display: none; }
 .home-tile { min-width: 160px; max-width: 160px; scroll-snap-align: start; text-decoration: none; color: inherit; }
+.home-tile-wide { min-width: 200px; max-width: 200px; }
 .home-tile-thumb {
   display: block;
   width: 100%;
@@ -25,5 +26,3 @@
 .home-tile-body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 4px; }
 .home-tile-name { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.2; }
 .home-tile-meta { font-size: 11px; color: var(--ink-3); }
-.home-trips-soon { padding: 18px 16px; display: flex; align-items: center; gap: 14px; color: white; }
-.home-trips-soon p { margin: 0; font-size: 13px; line-height: 1.5; opacity: 0.9; }

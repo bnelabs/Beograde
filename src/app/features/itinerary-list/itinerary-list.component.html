@@ -10,6 +10,17 @@
       <span class="rl-active-label">In progress</span>
       <a [routerLink]="['/itinerary', it.id]" class="block">
         <app-card variant="elevated">
+          <div class="rl-mosaic rl-mosaic-active">
+            @for (tile of mosaicTiles(it); track $index) {
+              <div class="rl-mosaic-cell">
+                @if (tile.src) {
+                  <img class="rl-mosaic-img" [src]="tile.src" [alt]="tile.alt" loading="lazy" decoding="async" />
+                } @else {
+                  <span class="material-symbols-outlined rl-mosaic-icon">{{ tile.icon }}</span>
+                }
+              </div>
+            }
+          </div>
           <div class="rl-active-body">
             <h2 class="rl-active-title">{{ it.title | i18nText }}</h2>
             <p class="rl-active-sub">{{ it.subtitle | i18nText }}</p>
@@ -27,6 +38,17 @@
       <li>
         <a [routerLink]="['/itinerary', it.id]" class="block">
           <app-card>
+            <div class="rl-mosaic">
+              @for (tile of mosaicTiles(it); track $index) {
+                <div class="rl-mosaic-cell">
+                  @if (tile.src) {
+                    <img class="rl-mosaic-img" [src]="tile.src" [alt]="tile.alt" loading="lazy" decoding="async" />
+                  } @else {
+                    <span class="material-symbols-outlined rl-mosaic-icon">{{ tile.icon }}</span>
+                  }
+                </div>
+              }
+            </div>
             <div class="rl-card-body">
               <div class="rl-card-h">
                 <h2 class="rl-card-title">{{ it.title | i18nText }}</h2>

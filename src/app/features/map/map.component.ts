@@ -8,7 +8,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
 import { TilePackService } from '../../core/tile-pack.service';
-import { POIS, CATEGORY_LABELS, getPoi } from '../../data/pois';
+import { POIS, CATEGORY_LABELS, CATEGORY_ICONS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
@@ -35,6 +35,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   private readonly strings = inject(StringsService);
 
   readonly itineraries = ITINERARIES;
+  readonly icons = CATEGORY_ICONS;
   readonly activeItineraryId = signal<string | null>(null);
   readonly mapReady = signal(false);
   readonly mapError = signal<string | null>(null);

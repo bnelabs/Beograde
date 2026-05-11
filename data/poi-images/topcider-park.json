@@ -5,6 +5,20 @@
       "credit": "Nemezis, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Beograd_Topcider_5.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "330421311779497",
+      "credit": "misa_zumba (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=330421311779497"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "854775721775512",
+      "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=854775721775512"
     }
   ],
   "fetchedAt": "2026-05-11"
