@@ -80,6 +80,14 @@ export interface POI {
   pricing?: { tier: '€' | '€€' | '€€€'; rsd?: { min: number; max: number } };
   tags: string[];
   images: ImageAsset[];
+  /** 3–5 concrete, factual nuggets that signal why this place matters. Surfaces as photo-led cards. */
+  highlights?: Bilingual[];
+  /** Pros/cons pair to set honest expectations before a visit. */
+  whatToExpect?: { pros: Bilingual[]; cons: Bilingual[] };
+  /** 1–3 practical visit tips (best time, sneaky entrance, dress code, etc.). */
+  tips?: Bilingual[];
+  /** Short verifiable background paragraph — only present where the curator was confident. */
+  history?: Bilingual;
   transit?: TransitInfo[];
   verifiedAt: string;
   /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */

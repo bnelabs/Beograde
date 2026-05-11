@@ -28,47 +28,124 @@
     </div>
 
     <div class="poi-body">
-      <!-- Provenance chips -->
-      <div class="poi-chips">
-        @if (poi()!.reliability.checks.wikipedia) { <app-chip variant="verified">{{ t().poi.wikipedia }} ✓</app-chip> }
-        @if (poi()!.reliability.checks.osm) { <app-chip variant="verified">{{ t().poi.osm }} ✓</app-chip> }
-        @if (poi()!.reliability.checks.official) { <app-chip variant="verified">{{ t().poi.official }} ✓</app-chip> }
-        @if (poi()!.reliability.checks.crowdsourced && googleSource()) {
-          <app-chip variant="reviews">{{ googleSource()!.reviewCount.toLocaleString() }} reviews</app-chip>
+      <!-- Compact status row: distance + open-now in one bar -->
+      <div class="poi-status">
+        @if (hoursStatusLabel(); as label) {
+          <div class="poi-status-cell" [class.is-open]="openState() === 'open'" [class.is-closed]="openState() === 'closed'">
+            <span class="poi-status-dot" aria-hidden="true"></span>
+            <span class="poi-status-text">{{ label }}</span>
+            @if (weeklyGrid()) {
+              <button type="button" class="poi-status-more" (click)="toggleWeek()" [attr.aria-expanded]="weekExpanded()">
+                {{ weekExpanded() ? t().poi.hide_full_week : t().poi.see_full_week }}
+              </button>
+            }
+          </div>
         }
-        @if (showEditorPick()) { <app-chip variant="editor-pick">{{ t().poi.editor_pick }}</app-chip> }
-        @if (openState() === 'open') { <app-chip variant="open-now">{{ t().poi.open_now }}</app-chip> }
-        @if (openState() === 'closed') { <app-chip variant="closed">{{ t().poi.closed }}</app-chip> }
+        @if (distance() !== null) {
+          <a [routerLink]="['/map']" [queryParams]="{ focus: poi()!.id }" class="poi-status-cell poi-status-distance">
+            <span class="material-symbols-outlined" aria-hidden="true">near_me</span>
+            <span class="poi-status-text">{{ fmtDistance(distance()!) }} · {{ fmtWalk(distance()!) }}</span>
+          </a>
+        } @else if (geo.permission() !== 'denied') {
+          <button type="button" class="poi-status-cell poi-status-gps" (click)="geo.start()">
+            <span class="material-symbols-outlined" aria-hidden="true">my_location</span>
+            <span class="poi-status-text">Show distance</span>
+          </button>
+        }
       </div>
 
-      <!-- Distance / map link -->
-      @if (distance() !== null) {
-        <div class="poi-distance">
-          <span class="material-symbols-outlined" aria-hidden="true">near_me</span>
-          <div class="poi-distance-body">
-            <strong>{{ fmtDistance(distance()!) }}</strong>
-            <span>{{ fmtWalk(distance()!) }}</span>
-          </div>
-          <a [routerLink]="['/map']" [queryParams]="{ focus: poi()!.id }" class="poi-distance-link">Map →</a>
-        </div>
-      } @else if (geo.permission() !== 'denied') {
-        <button type="button" class="poi-gps-cta" (click)="geo.start()">
-          <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">my_location</span>
-          Show distance from me
-        </button>
-      }
-
-      <p class="poi-desc">{{ poi()!.description | i18nText }}</p>
-
-      <!-- Hours heatmap -->
-      @if (weeklyGrid()) {
-        <div class="poi-section">
-          <h3 class="poi-section-h">{{ t().poi.hours }}</h3>
+      <!-- Expanded weekly hours (collapsed by default) -->
+      @if (weekExpanded() && weeklyGrid()) {
+        <div class="poi-week">
           <app-hours-heatmap [grid]="weeklyGrid()!" />
           @if (poi()!.hours?.notes; as notes) {
             <p class="poi-hours-notes">{{ notes | i18nText }}</p>
           }
         </div>
+      }
+
+      <!-- Editorial chips -->
+      @if (showEditorPick() || (googleSource() && poi()!.reliability.checks.crowdsourced)) {
+        <div class="poi-chips">
+          @if (poi()!.reliability.checks.crowdsourced && googleSource()) {
+            <app-chip variant="reviews">{{ googleSource()!.reviewCount.toLocaleString() }} reviews</app-chip>
+          }
+          @if (showEditorPick()) { <app-chip variant="editor-pick">{{ t().poi.editor_pick }}</app-chip> }
+        </div>
+      }
+
+      <p class="poi-desc">{{ poi()!.description | i18nText }}</p>
+
+      <!-- Highlights: photo-led cards -->
+      @if (poi()!.highlights?.length) {
+        <section class="poi-section">
+          <h3 class="poi-section-h">{{ t().poi.highlights }}</h3>
+          <div class="poi-hl-grid">
+            @for (h of poi()!.highlights!; track $index; let i = $index) {
+              <div class="poi-hl-card">
+                @if (imageForHighlight(i); as img) {
+                  <div class="poi-hl-back" [style.background-image]="'url(' + img.lqip + '), url(' + img.src + ')'"></div>
+                }
+                <div class="poi-hl-scrim" aria-hidden="true"></div>
+                <span class="material-symbols-outlined poi-hl-icon" aria-hidden="true">{{ iconForHighlight(i) }}</span>
+                <span class="poi-hl-text">{{ h | i18nText }}</span>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
+      <!-- What to expect: pros vs cons -->
+      @if (poi()!.whatToExpect; as we) {
+        <section class="poi-section">
+          <h3 class="poi-section-h">{{ t().poi.what_to_expect }}</h3>
+          <div class="poi-we">
+            @if (we.pros.length) {
+              <div class="poi-we-col">
+                <span class="poi-we-h"><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>{{ t().poi.pros }}</span>
+                <ul class="poi-we-list">
+                  @for (p of we.pros; track $index) { <li>{{ p | i18nText }}</li> }
+                </ul>
+              </div>
+            }
+            @if (we.cons.length) {
+              <div class="poi-we-col poi-we-col-cons">
+                <span class="poi-we-h"><span class="material-symbols-outlined" aria-hidden="true">error</span>{{ t().poi.cons }}</span>
+                <ul class="poi-we-list">
+                  @for (c of we.cons; track $index) { <li>{{ c | i18nText }}</li> }
+                </ul>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
+      <!-- Inline body photo (image[1] when we have 2+ images) for visual emphasis -->
+      @if (inlineImage(); as img) {
+        <figure class="poi-inline-photo">
+          <div class="poi-inline-back" [style.background-image]="'url(' + img.lqip + ')'"></div>
+          <img class="poi-inline-img" [src]="img.src" [alt]="(poi()!.name | i18nText) || ''" loading="lazy" decoding="async" />
+        </figure>
+      }
+
+      <!-- Insider tips -->
+      @if (poi()!.tips?.length) {
+        <section class="poi-section poi-tips-section">
+          <h3 class="poi-section-h"><span class="material-symbols-outlined" aria-hidden="true">tips_and_updates</span>{{ t().poi.tips }}</h3>
+          <ul class="poi-tips-list">
+            @for (tip of poi()!.tips!; track $index) {
+              <li>{{ tip | i18nText }}</li>
+            }
+          </ul>
+        </section>
+      }
+
+      <!-- Background / history -->
+      @if (poi()!.history; as h) {
+        <section class="poi-section">
+          <h3 class="poi-section-h">{{ t().poi.history }}</h3>
+          <p class="poi-history">{{ h | i18nText }}</p>
+        </section>
       }
 
       <!-- Address / price -->
@@ -94,20 +171,29 @@
         </div>
       }
 
-      @if (uniqueCredits().length) {
-        <p class="poi-image-credit">
-          @for (c of uniqueCredits(); track c.credit; let last = $last) {
-            @if (c.source) {
-              <a [href]="c.source" target="_blank" rel="noopener noreferrer">{{ c.credit }}</a>
-            } @else {
-              <span>{{ c.credit }}</span>
-            }@if (!last) {<span> · </span>}
-          }
-        </p>
-      }
-
-      <!-- Verified date -->
-      <p class="poi-verified">{{ t().poi.verified_on.replace('{date}', formatVerified(poi()!.verifiedAt)) }}</p>
+      <!-- Provenance footer -->
+      <footer class="poi-foot">
+        <div class="poi-foot-chips">
+          @if (poi()!.reliability.checks.wikipedia) { <app-chip variant="verified">{{ t().poi.wikipedia }} ✓</app-chip> }
+          @if (poi()!.reliability.checks.osm) { <app-chip variant="verified">{{ t().poi.osm }} ✓</app-chip> }
+          @if (poi()!.reliability.checks.official) { <app-chip variant="verified">{{ t().poi.official }} ✓</app-chip> }
+        </div>
+        <p class="poi-verified">{{ t().poi.verified_on.replace('{date}', formatVerified(poi()!.verifiedAt)) }}</p>
+        @if (uniqueCredits().length) {
+          <details class="poi-credits">
+            <summary>{{ t().poi.photo_credits }}</summary>
+            <p>
+              @for (c of uniqueCredits(); track c.credit; let last = $last) {
+                @if (c.source) {
+                  <a [href]="c.source" target="_blank" rel="noopener noreferrer">{{ c.credit }}</a>
+                } @else {
+                  <span>{{ c.credit }}</span>
+                }@if (!last) {<span> · </span>}
+              }
+            </p>
+          </details>
+        }
+      </footer>
     </div>
   }
 </div>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -42,8 +42,7 @@ export class PoiDetailComponent {
   });
 
   protected readonly images = computed(() => this.poi()?.images ?? []);
-  protected readonly heroImage = computed(() => this.images()[0]);
-  /** Unique credit/source pairs across all photos — shown at the bottom for license compliance. */
+  /** Per-photo credit is shown in the gallery lightbox; this list backs the collapsed footer fallback. */
   protected readonly uniqueCredits = computed(() => {
     const seen = new Set<string>();
     const out: { credit: string; source?: string }[] = [];
@@ -59,6 +58,8 @@ export class PoiDetailComponent {
     const p = this.poi();
     return p ? CATEGORY_ICONS[p.category] : undefined;
   });
+  /** Second hero image, surfaced as an in-body break to keep visuals on every screen. */
+  protected readonly inlineImage = computed(() => this.images()[1] ?? null);
 
   protected readonly distance = computed(() => {
     const p = this.poi();
@@ -68,16 +69,55 @@ export class PoiDetailComponent {
 
   protected readonly t = this.strings.t;
 
-  protected readonly openState = computed(() => {
+  /** Open / closed evaluation and its "until" boundary, computed every render. */
+  protected readonly hoursStatus = computed(() => {
     const p = this.poi();
     if (!p?.hours) return null;
-    return this.hours.isOpenAt(p.hours.raw, new Date()).state;
+    return this.hours.isOpenAt(p.hours.raw, new Date());
   });
+
+  protected readonly openState = computed(() => this.hoursStatus()?.state ?? null);
 
   protected readonly weeklyGrid = computed(() => {
     const p = this.poi();
     if (!p?.hours) return null;
     return this.hours.weeklyGrid(p.hours.raw);
+  });
+
+  /** UI toggle for the full-week heatmap; collapsed by default to keep the screen clean. */
+  protected readonly weekExpanded = signal(false);
+  toggleWeek(): void {
+    this.weekExpanded.update(v => !v);
+  }
+
+  /**
+   * Compact status line: "Open · until 22:00" or "Closed · opens Tue 09:00".
+   * Day prefix is added when the boundary crosses midnight to avoid the
+   * "Closes at 02:00" ambiguity flagged by review.
+   */
+  protected readonly hoursStatusLabel = computed(() => {
+    const p = this.poi();
+    const status = this.hoursStatus();
+    if (!p?.hours) return null;
+    if (!status || status.state === 'unknown') return this.t().poi.hours_unknown;
+
+    const until = status.until;
+    if (!until) {
+      return status.state === 'open' ? this.t().poi.open_now : this.t().poi.closed;
+    }
+
+    const now = new Date();
+    const sameDay =
+      until.getFullYear() === now.getFullYear() &&
+      until.getMonth() === now.getMonth() &&
+      until.getDate() === now.getDate();
+    const time = `${String(until.getHours()).padStart(2, '0')}:${String(until.getMinutes()).padStart(2, '0')}`;
+    const dayPrefix = sameDay
+      ? ''
+      : `${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][until.getDay()]} `;
+
+    const key = status.state === 'open' ? 'open_until' : 'closed_opens';
+    return this.t().poi[key].replace('{time}', dayPrefix + time);
   });
 
   /** EDITOR'S PICK chip rule: high editorial confidence AND fewer than two automated checks pass. */
@@ -92,6 +132,34 @@ export class PoiDetailComponent {
   protected readonly googleSource = computed(() =>
     this.poi()?.sources.find(s => s.kind === 'google-places') as { reviewCount: number; rating: number } | undefined
   );
+
+  /**
+   * Map of POI category → set of three Material symbol icons used for the
+   * highlight cards in round-robin. Keeps highlight cards visually distinct
+   * without needing per-highlight icon authoring.
+   */
+  private readonly HIGHLIGHT_ICONS: Record<string, string[]> = {
+    sight: ['account_balance', 'photo_camera', 'history_edu'],
+    cuisine: ['restaurant', 'local_dining', 'ramen_dining'],
+    nightlife: ['nightlife', 'local_bar', 'music_note'],
+    cafe: ['local_cafe', 'coffee', 'bakery_dining'],
+    museum: ['museum', 'auto_stories', 'palette'],
+    viewpoint: ['visibility', 'landscape', 'binoculars'],
+    park: ['park', 'forest', 'nature_people'],
+  };
+
+  iconForHighlight(index: number): string {
+    const cat = this.poi()?.category ?? 'sight';
+    const set = this.HIGHLIGHT_ICONS[cat] ?? this.HIGHLIGHT_ICONS['sight'];
+    return set[index % set.length];
+  }
+
+  /** Cycle gallery images across highlight cards so each card carries a photo backdrop. */
+  imageForHighlight(index: number) {
+    const imgs = this.images();
+    if (imgs.length === 0) return null;
+    return imgs[index % imgs.length];
+  }
 
   protected fmtDistance = formatDistance;
   protected fmtWalk(meters: number): string {

@@ -42,7 +42,19 @@
     "address": "Address",
     "hours": "Hours",
     "price": "Price",
-    "tags": "Tags"
+    "tags": "Tags",
+    "highlights": "Highlights",
+    "what_to_expect": "What to expect",
+    "pros": "Worth it for",
+    "cons": "Mind that",
+    "tips": "Insider tips",
+    "history": "Background",
+    "open_until": "Open · until {time}",
+    "closed_opens": "Closed · opens {time}",
+    "hours_unknown": "Hours unconfirmed",
+    "see_full_week": "See full week",
+    "hide_full_week": "Hide full week",
+    "photo_credits": "Photo credits"
   },
   "itinerary": {
     "back": "Back",

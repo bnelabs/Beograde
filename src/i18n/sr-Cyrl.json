@@ -42,7 +42,19 @@
     "address": "Адреса",
     "hours": "Радно време",
     "price": "Цена",
-    "tags": "Ознаке"
+    "tags": "Ознаке",
+    "highlights": "Најважније",
+    "what_to_expect": "Шта да очекујеш",
+    "pros": "Вредно због",
+    "cons": "Имај на уму",
+    "tips": "Савети изнутра",
+    "history": "Позадина",
+    "open_until": "Отворено · до {time}",
+    "closed_opens": "Затворено · отвара {time}",
+    "hours_unknown": "Радно време непознато",
+    "see_full_week": "Види целу недељу",
+    "hide_full_week": "Сакриј целу недељу",
+    "photo_credits": "Заслуге за фотографије"
   },
   "itinerary": {
     "back": "Назад",
