@@ -1,6 +1,6 @@
 :host { display: block; position: absolute; inset: 0; }
 .map-wrap { position: relative; width: 100%; height: 100%; }
-.map-host { position: absolute; inset: 0; background: var(--bg-warm-2); }
+.map-host { position: absolute; inset: 0; background: #f3ead6; }
 
 .map-overlay { position: absolute; inset: 0; z-index: 30; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(245, 242, 237, 0.95); backdrop-filter: blur(4px); }
 .map-card {

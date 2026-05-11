@@ -54,7 +54,18 @@
     "hours_unknown": "Radno vreme nepoznato",
     "see_full_week": "Vidi celu nedelju",
     "hide_full_week": "Sakrij celu nedelju",
-    "photo_credits": "Zasluge za fotografije"
+    "photo_credits": "Zasluge za fotografije",
+    "activities": "Šta da radiš",
+    "duration_min": "{n} min",
+    "duration_hr": "{n} h",
+    "intensity_easy": "Lagano",
+    "intensity_moderate": "Umereno",
+    "intensity_active": "Aktivno",
+    "budget_free": "Besplatno",
+    "budget_low": "Sitan trošak",
+    "budget_mid": "Srednje",
+    "budget_high": "Premium",
+    "show_distance": "Prikaži udaljenost"
   },
   "itinerary": {
     "back": "Nazad",

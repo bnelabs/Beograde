@@ -89,6 +89,13 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
         cons: fillCyrList(poi.whatToExpect.cons ?? []),
       };
     }
+    if (Array.isArray(poi.activities)) {
+      poi.activities = poi.activities.map(a => ({
+        ...a,
+        title: fillCyr(a.title),
+        summary: fillCyr(a.summary),
+      }));
+    }
     const enriched = { ...poi, sources, reliability };
     if (priorImages.has(poi.id)) {
       enriched.images = priorImages.get(poi.id);

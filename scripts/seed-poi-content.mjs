@@ -16,6 +16,18 @@ import { resolve } from 'node:path';
 function b(en, sr_lat) { return { en, sr_lat, sr_cyr: '' }; }
 function blist(pairs) { return pairs.map(([en, sr]) => b(en, sr)); }
 
+/**
+ * Build an activity card. Required: title (en+sr), summary (en+sr), icon,
+ * durationMin, budget, intensity. sr_cyr is auto-filled by build-provenance.
+ */
+function act({ title, summary, icon, durationMin, budget, intensity }) {
+  return {
+    title: b(title[0], title[1]),
+    summary: b(summary[0], summary[1]),
+    icon, durationMin, budget, intensity,
+  };
+}
+
 /** Each value: { highlights, whatToExpect, tips, history? }. */
 const CONTENT = {
   'kalemegdan': {
@@ -99,6 +111,52 @@ const CONTENT = {
       ['Book Tri Šešira or Šešir Moj a day ahead in season', 'Rezervišite Tri Šešira ili Šešir Moj dan ranije u sezoni'],
       ['Order šljivovica before, never with, the meat course', 'Šljivovicu pijte pre — nikad uz jelo s mesom'],
       ['Sundays are quieter and 30% cheaper at most places', 'Nedeljom je tiše i 30% jeftinije u većini kafana'],
+    ]),
+  },
+
+  'saint-mark': {
+    highlights: blist([
+      ['Serbian-Byzantine revival church (1940)', 'Crkva u srpsko-vizantijskom stilu (1940)'],
+      ['Holds the sarcophagus of medieval Tsar Dušan', 'Čuva sarkofag srednjovekovnog cara Dušana'],
+      ['Free entry — open daily', 'Besplatan ulaz — otvoreno svakog dana'],
+      ['Anchors the south edge of Tašmajdan Park', 'Stoji na južnoj ivici Tašmajdana'],
+    ]),
+    whatToExpect: {
+      pros: blist([
+        ['Cool, hushed interior — good summer break', 'Hladan, miran enterijer — dobro za odmor leti'],
+        ['Five-domed silhouette photographs well from the park', 'Pet kupola — efektna silueta iz parka'],
+      ]),
+      cons: blist([
+        ['Modest dress expected', 'Pristojno odevanje obavezno'],
+        ['No formal tours — interpretation is light', 'Bez vodiča — natpisa malo'],
+      ]),
+    },
+    tips: blist([
+      ['Combine with Tašmajdan park in a single 60-minute loop', 'Spojite sa Tašmajdanom u 60-minutnu šetnju'],
+      ['Sunday choir starts ~10:00 — arrive 10 min early', 'Nedeljom hor počinje oko 10h — stignite ranije'],
+    ]),
+  },
+
+  'bajrakli-mosque': {
+    highlights: blist([
+      ['Belgrade\'s only surviving Ottoman mosque (1575)', 'Jedina sačuvana osmanska džamija u Beogradu (1575)'],
+      ['Hidden inside the old Dorćol quarter', 'Sakrivena u starom Dorćolu'],
+      ['Free, quiet outside prayer times', 'Besplatno, mirno van vremena namaza'],
+      ['One of the oldest buildings in central Belgrade', 'Jedno od najstarijih zdanja u centru Beograda'],
+    ]),
+    whatToExpect: {
+      pros: blist([
+        ['Tranquil courtyard — rare quiet in the centre', 'Mirno dvorište — retka tišina u centru'],
+        ['Friendly community will let you peek inside', 'Zajednica je gostoljubiva — pustiće vas unutra'],
+      ]),
+      cons: blist([
+        ['Closed to non-Muslim visitors during prayer', 'Zatvoreno za posetioce tokom namaza'],
+        ['Shoes off; women cover hair inside', 'Skidanje obuće; žene prekriju kosu unutra'],
+      ]),
+    },
+    tips: blist([
+      ['Visit late morning between prayers — usually 10–11:30', 'Posetite kasno jutro između namaza — obično 10–11:30'],
+      ['Combine with a walk through old Dorćol', 'Spojite sa šetnjom kroz stari Dorćol'],
     ]),
   },
 
@@ -333,17 +391,115 @@ const CONTENT = {
   },
 };
 
+/**
+ * Activity lists — the "what will I actually DO here?" cards on the POI page.
+ * Hand-curated for the deeply-enriched POIs above. Other POIs get default
+ * activities via the sister script `fill-default-activities.mjs`.
+ */
+const ACTIVITIES = {
+  'kalemegdan': [
+    act({ title: ['Walk the ramparts to Pobednik', 'Šetnja bedemima do Pobednika'], summary: ['Loop the upper terraces, ending at the Victor statue for the river-confluence view.', 'Obilazak gornjih terasa do Pobednika — pogled na ušće.'], icon: 'directions_walk', durationMin: 60, budget: 'free', intensity: 'moderate' }),
+    act({ title: ['Sunset on the upper terrace', 'Zalazak sa gornje terase'], summary: ['Arrive ~45 min before sunset for the best ramparts light over the Sava–Danube.', 'Dođite oko 45 min pre zalaska — najlepša svetla iznad ušća.'], icon: 'wb_twilight', durationMin: 45, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Spot Roman, Ottoman and Habsburg layers', 'Rimski, osmanski i habzburški slojevi'], summary: ['Singidunum-era stones sit beneath 18th-century Habsburg walls — look for the inscriptions.', 'Singidunumski kamen ispod habzburških bedema — tražite natpise.'], icon: 'history_edu', durationMin: 60, budget: 'free', intensity: 'moderate' }),
+    act({ title: ['Military Museum', 'Vojni muzej'], summary: ['WWI cannons, Yugoslav-wars exhibits and medieval arms in a 19th-c. arsenal.', 'Topovi I sv. rata, izložba jugoslovenskih ratova, srednjovekovno oružje.'], icon: 'museum', durationMin: 90, budget: 'low', intensity: 'easy' }),
+  ],
+
+  'saint-sava': [
+    act({ title: ['Look up at the dome mosaic', 'Pogledajte mozaik kupole'], summary: ['Stand directly under the central dome to take in 4,000 m² of gold-tessera ceiling.', 'Stanite pod centralnu kupolu — 4.000 m² zlatne smalte.'], icon: 'visibility', durationMin: 15, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Descend to the crypt', 'Spustite se u kriptu'], summary: ['Quieter than the upper church — Serbian-Byzantine fresco work and tomb of Patriarch Pavle.', 'Tiše nego gore — srpsko-vizantijske freske i grob patrijarha Pavla.'], icon: 'stairs', durationMin: 30, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Museum of Saint Sava', 'Muzej Svetog Save'], summary: ['Icons, vestments and the long story of the church\'s construction (1935–2020).', 'Ikone, ruho i istorija gradnje hrama (1935–2020).'], icon: 'auto_stories', durationMin: 40, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Attend 17:00 vespers', 'Večernje u 17h'], summary: ['Hear the choir during evening service — sit at the back; modest dress required.', 'Hor uz večernje bogosluženje — sedite pozadi, pristojna odeća.'], icon: 'music_note', durationMin: 45, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'skadarlija': [
+    act({ title: ['Dine at Tri Šešira', 'Večera u Tri Šešira'], summary: ['The most-famous old kafana. Order ćevapi or jagnjeća pečenja; mains 15–25 €.', 'Najpoznatija stara kafana. Ćevapi ili jagnjeća pečenja; glavna jela 15–25 €.'], icon: 'restaurant', durationMin: 90, budget: 'mid', intensity: 'easy' }),
+    act({ title: ['Šljivovica & sarma at Šešir Moj', 'Šljivovica i sarma u Šešir Moj'], summary: ['Plum brandy before — never with — the meat. Live tamburaši most evenings.', 'Šljivovica pre, ne uz, jelo. Tamburaši uveče.'], icon: 'local_bar', durationMin: 75, budget: 'mid', intensity: 'easy' }),
+    act({ title: ['Coffee on Đure Jakšića steps', 'Kafa na stepenicama Đure Jakšića'], summary: ['Open-air café terraces under old plane trees — cheaper than the main strip.', 'Letnje bašte ispod platana — jeftinije nego u glavnoj ulici.'], icon: 'local_cafe', durationMin: 30, budget: 'low', intensity: 'easy' }),
+  ],
+
+  'knez-mihailova': [
+    act({ title: ['Walk Republic Square → Kalemegdan', 'Šetnja od Trga do Kalemegdana'], summary: ['Full pedestrian length, ~1 km, cafés and bookstores every block.', 'Cela pešačka deonica, ~1 km, kafići i knjižare na svakih nekoliko koraka.'], icon: 'directions_walk', durationMin: 45, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Detour onto Čika Ljubina', 'Skretanje u Čika Ljubinu'], summary: ['Side street with independent shops, design studios and indie bookstores.', 'Ulica s nezavisnim radnjama, dizajn-studiima i knjižarama.'], icon: 'storefront', durationMin: 30, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Chess tables in front of the Albania Palace', 'Šahovski stolovi pred Palatom Albanija'], summary: ['Stop and watch the regulars at the south end — a free Belgrade ritual.', 'Posmatrajte stalne igrače na južnom kraju — besplatan beogradski ritual.'], icon: 'extension', durationMin: 20, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'republic-square': [
+    act({ title: ['Meet "at the horse"', 'Sastanak "kod konja"'], summary: ['Set this as your start/end pin — every Belgrader does.', 'Postavite ga kao početak/kraj svake šetnje — svaki Beograđanin tako.'], icon: 'group', durationMin: 10, budget: 'free', intensity: 'easy' }),
+    act({ title: ['National Museum visit', 'Narodni muzej'], summary: ['Three floors of Serbian art from medieval frescoes to 20th-century painting.', 'Tri sprata srpske umetnosti — od srednjovekovnih fresaka do XX veka.'], icon: 'museum', durationMin: 90, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Evening at the National Theatre', 'Veče u Narodnom pozorištu'], summary: ['Opera, ballet or drama — tickets cheap by Western standards.', 'Opera, balet, drama — pristupačne cene.'], icon: 'theaters', durationMin: 150, budget: 'mid', intensity: 'easy' }),
+  ],
+
+  'hotel-moskva': [
+    act({ title: ['Order Moskva šnit & Turkish coffee', 'Naručite Moskva šnit i tursku kafu'], summary: ['Signature 1970s pastry. Sit INSIDE — marble, brass, mosaic floors. ~6 €.', 'Slastica iz 1970-ih. Sedite UNUTRA — mermer, mesing, mozaik. ~6 €.'], icon: 'cake', durationMin: 45, budget: 'mid', intensity: 'easy' }),
+    act({ title: ['Photo of the Secession facade', 'Fotka secesijske fasade'], summary: ['Cross to the south side of Terazije for the full 1908 Russian Art Nouveau frontage.', 'Pređite na južnu stranu Terazija za celu ruskosesionsku fasadu.'], icon: 'photo_camera', durationMin: 10, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'beton-hala': [
+    act({ title: ['Sunset dinner at Iva New Balkan Cuisine', 'Zalazak uz večeru u Ivi'], summary: ['Modern Balkan tasting menus with Sava views — reserve a terrace table for 19:00.', 'Moderni balkanski meni s pogledom na Savu — rezervišite terasu za 19h.'], icon: 'restaurant_menu', durationMin: 120, budget: 'high', intensity: 'easy' }),
+    act({ title: ['Drinks at Toro', 'Piće u Toru'], summary: ['Riverside lounge, smart-casual. Best for bridge-light reflections after dark.', 'Lounge na obali, smart-casual. Najbolje uveče za odraz mostovskih svetla.'], icon: 'wine_bar', durationMin: 60, budget: 'mid', intensity: 'easy' }),
+    act({ title: ['Walk the Sava promenade', 'Šetnja savskim šetalištem'], summary: ['Free riverside walk along the warehouses; bridges light up at dusk.', 'Besplatna šetnja duž magacina; mostovi se pale uveče.'], icon: 'directions_walk', durationMin: 30, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'tasmajdan-park': [
+    act({ title: ['Loop the perimeter at dusk', 'Krug parkom predveče'], summary: ['Locals jog the 1.2 km path under mature plane trees.', 'Lokalci trče 1,2 km krug ispod platana.'], icon: 'directions_run', durationMin: 20, budget: 'free', intensity: 'moderate' }),
+    act({ title: ['Swim at Tašmajdan pool', 'Plivanje na Tašmajdanu'], summary: ['Cheapest swim in central Belgrade; day pass at the entrance.', 'Najjeftiniji bazen u centru — dnevna karta na ulazu.'], icon: 'pool', durationMin: 90, budget: 'low', intensity: 'moderate' }),
+    act({ title: ['Saint Mark\'s Church visit', 'Crkva Svetog Marka'], summary: ['Free entry; Serbian-Byzantine revival; on the park\'s south edge.', 'Besplatan ulaz; srpsko-vizantijski stil; južni rub parka.'], icon: 'church', durationMin: 20, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'kafana-question-mark': [
+    act({ title: ['Order ćevapi or sarma', 'Naručite ćevape ili sarmu'], summary: ['Classic Serbian comfort food in Belgrade\'s oldest kafana. Cash preferred.', 'Klasična srpska kuhinja u najstarijoj kafani. Gotovina poželjna.'], icon: 'restaurant', durationMin: 60, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Try the rakija flight', 'Probajte flajt rakije'], summary: ['Three small pours — quince, plum, apricot — before the meal, never during.', 'Tri male čaše — dunja, šljiva, kajsija — pre jela, ne uz njega.'], icon: 'local_bar', durationMin: 20, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Pair with Princess Ljubica Residence', 'Spajanje s Konakom kneginje Ljubice'], summary: ['The princess\'s 19th-c. residence is across the street — a natural lunch+museum pairing.', 'Konak je preko ulice — prirodno se spaja ručak + muzej.'], icon: 'castle', durationMin: 60, budget: 'low', intensity: 'easy' }),
+  ],
+
+  'cetinjska': [
+    act({ title: ['Bar crawl Polet → Krafter → Dim', 'Krug Polet → Krafter → Dim'], summary: ['Three vibes — students, indie crowd, late-night techno — all in one yard.', 'Tri ambijenta — studenti, indie, kasnonoćni techno — u istom dvorištu.'], icon: 'celebration', durationMin: 180, budget: 'mid', intensity: 'active' }),
+    act({ title: ['Live gig at Krafter', 'Koncert u Krafteru'], summary: ['Indie shows Thursday onward; standing-only, doors ~21:00.', 'Indie koncerti od četvrtka; stojeća, ulaz oko 21h.'], icon: 'music_note', durationMin: 90, budget: 'low', intensity: 'moderate' }),
+  ],
+
+  'avala-tower': [
+    act({ title: ['Glass-floor elevator to the deck', 'Lift sa staklenim podom'], summary: ['205 m up — 360° panorama of Belgrade and Šumadija. Bring a wide lens.', 'Na visini 205 m — panorama Beograda i Šumadije. Ponesite širokougaoni objektiv.'], icon: 'elevator', durationMin: 40, budget: 'low', intensity: 'easy' }),
+    act({ title: ['Hike to the Unknown Hero Monument', 'Šetnja do Spomenika Neznanom junaku'], summary: ['1 km shaded forest path from the tower base.', '1 km šumske staze od podnožja tornja.'], icon: 'hiking', durationMin: 30, budget: 'free', intensity: 'moderate' }),
+  ],
+
+  'petrovaradin-fortress': [
+    act({ title: ['Climb the cobbled ramp at golden hour', 'Uspon kaldrmom u zlatni sat'], summary: ['Steep but short — Novi Sad lights up below the upper plateau.', 'Strmo ali kratko — Novi Sad se pali ispod platoa.'], icon: 'directions_walk', durationMin: 40, budget: 'free', intensity: 'moderate' }),
+    act({ title: ['Underground tunnel tour', 'Tura kroz tunele'], summary: ['16 km of military tunnels — guided only, book ahead, limited weekly slots.', '16 km vojnih tunela — samo s vodičem, rezervacija obavezna.'], icon: 'tour', durationMin: 90, budget: 'low', intensity: 'moderate' }),
+    act({ title: ['Spot the upside-down clock', 'Naopaki sat'], summary: ['Minute hand longer than the hour hand — built so sailors could read time from the Danube.', 'Minutara duža od kazaljke — da bi mornari videli sat sa Dunava.'], icon: 'schedule', durationMin: 10, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'ada-ciganlija': [
+    act({ title: ['Swim at Beach 3', 'Plivanje na Plaži 3'], summary: ['Shallowest section — best for kids; lifeguarded in season.', 'Najplića plaža — najbolja za decu; spasilac u sezoni.'], icon: 'pool', durationMin: 120, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Rent a bike at the entrance', 'Iznajmite bicikl na ulazu'], summary: ['Peninsula is bigger than it looks — 8 km forest loop around the lake.', 'Poluostrvo je veće nego što izgleda — 8 km šumske petlje oko jezera.'], icon: 'pedal_bike', durationMin: 90, budget: 'low', intensity: 'active' }),
+    act({ title: ['Grilled lunch at a splav', 'Roštilj na splavu'], summary: ['Cheap meat-and-side plates along the lakeshore. Cash preferred.', 'Jeftin roštilj duž obale jezera. Gotovina poželjna.'], icon: 'outdoor_grill', durationMin: 60, budget: 'low', intensity: 'easy' }),
+  ],
+
+  'saint-mark': [
+    act({ title: ['Look up at the iconostasis', 'Pogledajte ikonostas'], summary: ['Serbian-Byzantine revival icons on a tall iconostasis — free, no booking.', 'Ikone u srpsko-vizantijskom maniru na visokom ikonostasu — besplatno.'], icon: 'visibility', durationMin: 15, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Tsar Dušan\'s sarcophagus', 'Sarkofag cara Dušana'], summary: ['Medieval Serbian emperor — tomb sits to the right of the altar.', 'Srednjovekovni srpski car — sarkofag desno od oltara.'], icon: 'history_edu', durationMin: 10, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Sunday choir at 10:00', 'Hor nedeljom u 10h'], summary: ['Liturgy with a strong choir; arrive 10 min early; dress modestly.', 'Liturgija s jakim horom; stignite ranije, pristojna odeća.'], icon: 'music_note', durationMin: 60, budget: 'free', intensity: 'easy' }),
+  ],
+
+  'bajrakli-mosque': [
+    act({ title: ['Quiet visit between prayer times', 'Tihi obilazak van vremena namaza'], summary: ['Belgrade\'s only Ottoman mosque (1575). Shoes off, modest dress, women cover hair.', 'Jedina osmanska džamija (1575). Skinite obuću, pristojna odeća, žene prekrivaju kosu.'], icon: 'mosque', durationMin: 20, budget: 'free', intensity: 'easy' }),
+    act({ title: ['See the mihrab and minbar', 'Mihrab i minber'], summary: ['Carved-wood Ottoman calligraphy framing the prayer niche.', 'Rezbarena drvena osmanska kaligrafija oko mihraba.'], icon: 'visibility', durationMin: 10, budget: 'free', intensity: 'easy' }),
+    act({ title: ['Stroll old Dorćol afterwards', 'Šetnja kroz stari Dorćol'], summary: ['Walk the surrounding Ottoman/Jewish quarter — kafanas, antique shops, synagogue site.', 'Šetnja kroz staru osmansko-jevrejsku četvrt — kafane, antikvarnice, sinagoga.'], icon: 'directions_walk', durationMin: 45, budget: 'free', intensity: 'easy' }),
+  ],
+};
+
 const path = resolve('src/assets/pois.json');
 const list = JSON.parse(readFileSync(path, 'utf8'));
 
 let touched = 0;
 for (const poi of list) {
   const c = CONTENT[poi.id];
-  if (!c) continue;
-  if (c.highlights) poi.highlights = c.highlights;
-  if (c.whatToExpect) poi.whatToExpect = c.whatToExpect;
-  if (c.tips) poi.tips = c.tips;
-  if (c.history) poi.history = c.history;
+  const acts = ACTIVITIES[poi.id];
+  if (!c && !acts) continue;
+  if (c?.highlights) poi.highlights = c.highlights;
+  if (c?.whatToExpect) poi.whatToExpect = c.whatToExpect;
+  if (c?.tips) poi.tips = c.tips;
+  if (c?.history) poi.history = c.history;
+  if (acts) poi.activities = acts;
   touched++;
 }
 

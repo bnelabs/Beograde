@@ -8,6 +8,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
 import { TilePackService } from '../../core/tile-pack.service';
+import { HoursService } from '../../core/hours/hours.service';
+import { SavedService } from '../../core/saved/saved.service';
 import { POIS, CATEGORY_LABELS, CATEGORY_ICONS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
@@ -15,6 +17,20 @@ import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { StringsService } from '../../core/i18n/strings.service';
 
 const BELGRADE_CENTER: [number, number] = [20.4612, 44.8125];
+
+/**
+ * Per-category fill colour for POI markers — matches the Warm Belgrade palette
+ * approved 2026-05-11. Anything not in this map falls back to the accent (sight) colour.
+ */
+const CATEGORY_COLOR: Record<string, string> = {
+  sight: '#c14e6a',     // rose
+  cuisine: '#d97706',   // amber
+  cafe: '#92400e',      // coffee
+  nightlife: '#6b21a8', // purple
+  museum: '#1e3a8a',    // deep navy
+  viewpoint: '#3f6212', // forest
+  park: '#3f6212',      // forest
+};
 
 @Component({
   selector: 'app-map',
@@ -33,6 +49,8 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private readonly strings = inject(StringsService);
+  private readonly hours = inject(HoursService);
+  private readonly saved = inject(SavedService);
 
   readonly itineraries = ITINERARIES;
   readonly icons = CATEGORY_ICONS;
@@ -186,23 +204,59 @@ export class MapComponent implements AfterViewInit, OnDestroy {
 
   private addPoiLayer(): void {
     if (!this.map) return;
-    const features = POIS.map((p) => ({
-      type: 'Feature' as const,
-      geometry: { type: 'Point' as const, coordinates: [p.lng, p.lat] },
-      properties: { id: p.id, name: p.name.en, category: p.category },
-    }));
+    const now = new Date();
+    const features = POIS.map((p) => {
+      const openState = p.hours ? this.hours.isOpenAt(p.hours.raw, now).state : 'unknown';
+      return {
+        type: 'Feature' as const,
+        geometry: { type: 'Point' as const, coordinates: [p.lng, p.lat] },
+        properties: {
+          id: p.id,
+          name: p.name.en,
+          category: p.category,
+          color: CATEGORY_COLOR[p.category] ?? CATEGORY_COLOR['sight'],
+          isOpen: openState === 'open' ? 1 : 0,
+          isClosed: openState === 'closed' ? 1 : 0,
+          isSaved: this.saved.isSaved(p.id) ? 1 : 0,
+        },
+      };
+    });
     this.map.addSource('pois', { type: 'geojson', data: { type: 'FeatureCollection', features } });
+
+    // Outer "halo" — green for open-now, faint for closed/unknown.
+    this.map.addLayer({
+      id: 'poi-halo',
+      type: 'circle',
+      source: 'pois',
+      paint: {
+        'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 8, 16, 16],
+        'circle-color': [
+          'case',
+          ['==', ['get', 'isOpen'], 1], '#2ea043',
+          'transparent',
+        ],
+        'circle-opacity': 0.32,
+        'circle-stroke-color': '#ffffff',
+        'circle-stroke-width': 0,
+      },
+    });
+
+    // Filled category-coloured pin.
     this.map.addLayer({
       id: 'poi-circles',
       type: 'circle',
       source: 'pois',
       paint: {
         'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 5, 16, 11],
-        'circle-color': '#B8540C',
-        'circle-stroke-color': '#FFFFFF',
-        'circle-stroke-width': 2,
+        'circle-color': ['get', 'color'],
+        // Saved POIs get a bolder stroke so they pop on a busy map.
+        'circle-stroke-color': '#ffffff',
+        'circle-stroke-width': ['case', ['==', ['get', 'isSaved'], 1], 3, 2],
+        // Closed places desaturate.
+        'circle-opacity': ['case', ['==', ['get', 'isClosed'], 1], 0.55, 1],
       },
     });
+
     this.map.addLayer({
       id: 'poi-labels',
       type: 'symbol',
@@ -212,14 +266,14 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         'text-field': ['get', 'name'],
         'text-font': ['Noto Sans Regular'],
         'text-size': 12,
-        'text-offset': [0, 1.2],
+        'text-offset': [0, 1.4],
         'text-anchor': 'top',
         'text-optional': true,
       },
       paint: {
-        'text-color': '#2A2018',
-        'text-halo-color': '#FFFFFF',
-        'text-halo-width': 1.5,
+        'text-color': '#3b2a17',
+        'text-halo-color': '#f3ead6',
+        'text-halo-width': 1.6,
       },
     });
     this.map.on('click', 'poi-circles', (e) => {
@@ -257,8 +311,8 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         id: this.accuracyCircleId,
         type: 'fill',
         source: this.accuracyCircleId,
-        paint: { 'fill-color': '#3B82F6', 'fill-opacity': 0.15 },
-      }, 'poi-circles');
+        paint: { 'fill-color': '#2b5d8a', 'fill-opacity': 0.16 },
+      }, 'poi-halo');
     }
   }
 
@@ -293,11 +347,11 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         source: sourceId,
         layout: { 'line-cap': 'round', 'line-join': 'round' },
         paint: {
-          'line-color': '#B8540C',
+          'line-color': '#c14e6a',
           'line-width': ['interpolate', ['linear'], ['zoom'], 10, 2, 16, 5],
           'line-dasharray': [0, 2, 4],
         },
-      }, 'poi-circles');
+      }, 'poi-halo');
       const coords = (geojson.features?.[0]?.geometry?.coordinates ?? []) as [number, number][];
       if (coords.length) {
         const { LngLatBounds } = await import('maplibre-gl');

@@ -3,6 +3,7 @@ import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { getPoi, CATEGORY_LABELS, CATEGORY_ICONS } from '../../data/pois';
+import type { BudgetTier, PoiActivity } from '../../data/types';
 import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { HoursService } from '../../core/hours/hours.service';
@@ -160,6 +161,72 @@ export class PoiDetailComponent {
     if (imgs.length === 0) return null;
     return imgs[index % imgs.length];
   }
+
+  /** Cycle gallery images across activity cards. Offsets by +highlights.length so
+   * activities don't reuse the exact same image as the highlight above them. */
+  imageForActivity(index: number) {
+    const imgs = this.images();
+    if (imgs.length === 0) return null;
+    const offset = this.poi()?.highlights?.length ?? 0;
+    return imgs[(index + offset) % imgs.length];
+  }
+
+  /** 4-dot budget bar: 1 dot = Free, 2 = Light, 3 = Mid, 4 = Premium. */
+  budgetDots(tier: BudgetTier): boolean[] {
+    const filled = tier === 'free' ? 1 : tier === 'low' ? 2 : tier === 'mid' ? 3 : 4;
+    return [0, 1, 2, 3].map(i => i < filled);
+  }
+
+  /** Map pricing tier (€ / €€ / €€€) to the 4-dot budget scale. */
+  pricingDots(tier: '€' | '€€' | '€€€'): boolean[] {
+    const filled = tier === '€' ? 1 : tier === '€€' ? 2 : 3;
+    return [0, 1, 2, 3].map(i => i < filled);
+  }
+
+  /** Localised label for an activity's intensity rating. */
+  intensityLabel(activity: PoiActivity): string {
+    const poi = this.t().poi;
+    switch (activity.intensity) {
+      case 'easy': return poi.intensity_easy;
+      case 'moderate': return poi.intensity_moderate;
+      case 'active': return poi.intensity_active;
+    }
+  }
+
+  /** Localised label for a budget tier. */
+  budgetLabel(tier: BudgetTier): string {
+    const poi = this.t().poi;
+    switch (tier) {
+      case 'free': return poi.budget_free;
+      case 'low': return poi.budget_low;
+      case 'mid': return poi.budget_mid;
+      case 'high': return poi.budget_high;
+    }
+  }
+
+  /** Human-readable duration: "30 min" or "1 h 30 min" / "2 h". */
+  formatDuration(min: number): string {
+    if (min < 60) return this.t().poi.duration_min.replace('{n}', min.toString());
+    const h = Math.floor(min / 60);
+    const m = min % 60;
+    const hStr = this.t().poi.duration_hr.replace('{n}', h.toString());
+    if (m === 0) return hStr;
+    return `${hStr} ${this.t().poi.duration_min.replace('{n}', m.toString())}`;
+  }
+
+  /** 7-dot busy strip: one dot per weekday (Mon..Sun in JS order Sun=0).
+   * "filled" = has any open block that day; "today" = highlighted. */
+  protected readonly weeklyBusyDots = computed(() => {
+    const grid = this.weeklyGrid();
+    if (!grid) return null;
+    const todayIdx = new Date().getDay();
+    // grid is 7 rows × 24 cols of booleans. Order: 0=Sun..6=Sat.
+    return grid.map((row, dayIdx) => ({
+      open: row.some(Boolean),
+      isToday: dayIdx === todayIdx,
+      dayLabel: ['S', 'M', 'T', 'W', 'T', 'F', 'S'][dayIdx],
+    }));
+  });
 
   protected fmtDistance = formatDistance;
   protected fmtWalk(meters: number): string {

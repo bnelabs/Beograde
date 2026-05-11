@@ -28,7 +28,7 @@
     </div>
 
     <div class="poi-body">
-      <!-- Compact status row: distance + open-now in one bar -->
+      <!-- Compact status row: open-state + distance + 7-dot weekly busy strip -->
       <div class="poi-status">
         @if (hoursStatusLabel(); as label) {
           <div class="poi-status-cell" [class.is-open]="openState() === 'open'" [class.is-closed]="openState() === 'closed'">
@@ -49,10 +49,22 @@
         } @else if (geo.permission() !== 'denied') {
           <button type="button" class="poi-status-cell poi-status-gps" (click)="geo.start()">
             <span class="material-symbols-outlined" aria-hidden="true">my_location</span>
-            <span class="poi-status-text">Show distance</span>
+            <span class="poi-status-text">{{ t().poi.show_distance }}</span>
           </button>
         }
       </div>
+
+      <!-- Tiny 7-dot weekly busy strip (today highlighted). Tap any dot to expand. -->
+      @if (weeklyBusyDots(); as dots) {
+        <button type="button" class="poi-busy-strip" (click)="toggleWeek()" [attr.aria-label]="t().poi.see_full_week">
+          @for (d of dots; track $index) {
+            <span class="poi-busy-cell" [class.is-open]="d.open" [class.is-today]="d.isToday" [attr.aria-hidden]="true">
+              <span class="poi-busy-day">{{ d.dayLabel }}</span>
+              <span class="poi-busy-dot"></span>
+            </span>
+          }
+        </button>
+      }
 
       <!-- Expanded weekly hours (collapsed by default) -->
       @if (weekExpanded() && weeklyGrid()) {
@@ -128,6 +140,48 @@
         </figure>
       }
 
+      <!-- Activities: photo-led "what you'll DO here" cards -->
+      @if (poi()!.activities?.length) {
+        <section class="poi-section">
+          <h3 class="poi-section-h"><span class="material-symbols-outlined" aria-hidden="true">explore</span>{{ t().poi.activities }}</h3>
+          <div class="poi-act-grid">
+            @for (a of poi()!.activities!; track $index; let i = $index) {
+              <article class="poi-act-card" [attr.data-cat]="poi()!.category">
+                @if (imageForActivity(i); as img) {
+                  <div class="poi-act-photo">
+                    <div class="poi-act-photo-back" [style.background-image]="'url(' + img.lqip + ')'"></div>
+                    <img class="poi-act-photo-img" [src]="img.src" [alt]="(a.title | i18nText) || ''" loading="lazy" decoding="async" />
+                    <span class="material-symbols-outlined poi-act-icon" aria-hidden="true">{{ a.icon }}</span>
+                  </div>
+                } @else {
+                  <div class="poi-act-photo poi-act-photo--noimg">
+                    <span class="material-symbols-outlined poi-act-icon" aria-hidden="true">{{ a.icon }}</span>
+                  </div>
+                }
+                <div class="poi-act-body">
+                  <h4 class="poi-act-title">{{ a.title | i18nText }}</h4>
+                  <p class="poi-act-summary">{{ a.summary | i18nText }}</p>
+                  <div class="poi-act-meta">
+                    <span class="poi-act-pill">
+                      <span class="material-symbols-outlined" aria-hidden="true">schedule</span>{{ formatDuration(a.durationMin) }}
+                    </span>
+                    <span class="poi-act-pill poi-act-pill--budget">
+                      @for (dot of budgetDots(a.budget); track $index) {
+                        <span class="poi-act-dot" [class.is-on]="dot" aria-hidden="true"></span>
+                      }
+                      <span class="poi-act-budget-label">{{ budgetLabel(a.budget) }}</span>
+                    </span>
+                    <span class="poi-act-pill poi-act-pill--intensity poi-act-intensity-{{ a.intensity }}">
+                      {{ intensityLabel(a) }}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            }
+          </div>
+        </section>
+      }
+
       <!-- Insider tips -->
       @if (poi()!.tips?.length) {
         <section class="poi-section poi-tips-section">
@@ -148,28 +202,28 @@
         </section>
       }
 
-      <!-- Address / price -->
+      <!-- Address / price (price renders as a 4-dot bar — no more naked €€) -->
       <dl class="poi-meta-grid">
         <div>
           <dt>{{ t().poi.address }}</dt>
           <dd>{{ poi()!.address | i18nText }}</dd>
         </div>
-        @if (poi()!.pricing) {
+        @if (poi()!.pricing; as pricing) {
           <div>
             <dt>{{ t().poi.price }}</dt>
-            <dd>{{ poi()!.pricing!.tier }}</dd>
+            <dd class="poi-price-cell">
+              <span class="poi-price-bar" aria-hidden="true">
+                @for (dot of pricingDots(pricing.tier); track $index) {
+                  <span class="poi-price-dot" [class.is-on]="dot"></span>
+                }
+              </span>
+              @if (pricing.rsd) {
+                <span class="poi-price-range">{{ pricing.rsd.min.toLocaleString() }}–{{ pricing.rsd.max.toLocaleString() }} RSD</span>
+              }
+            </dd>
           </div>
         }
       </dl>
-
-      <!-- Tags -->
-      @if (poi()!.tags.length) {
-        <div class="poi-tags">
-          @for (tag of poi()!.tags; track tag) {
-            <span class="poi-tag">#{{ tag }}</span>
-          }
-        </div>
-      }
 
       <!-- Provenance footer -->
       <footer class="poi-foot">

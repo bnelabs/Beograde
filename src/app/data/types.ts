@@ -67,6 +67,24 @@ export interface TransitInfo {
   notes?: Bilingual;
 }
 
+export type BudgetTier = 'free' | 'low' | 'mid' | 'high';
+export type Intensity = 'easy' | 'moderate' | 'active';
+
+export interface PoiActivity {
+  /** Action verb + object: "Walk the ramparts", "Order Moskva šnit", "Descend to the crypt". */
+  title: Bilingual;
+  /** Material symbol name (e.g., 'directions_walk', 'restaurant'). */
+  icon: string;
+  /** Typical time commitment in minutes — used for the duration pill. */
+  durationMin: number;
+  /** Free | low (<10 €) | mid (10–30 €) | high (>30 €) — renders as a 4-dot bar. */
+  budget: BudgetTier;
+  /** Physical effort: easy (sit / stroll), moderate (stairs / 30+ min walk), active (climb / 1h+). */
+  intensity: Intensity;
+  /** One short line of what to expect: what you'll do, see, taste. */
+  summary: Bilingual;
+}
+
 export interface POI {
   id: string;
   region: 'city' | 'metro' | 'day-trip';
@@ -88,6 +106,8 @@ export interface POI {
   tips?: Bilingual[];
   /** Short verifiable background paragraph — only present where the curator was confident. */
   history?: Bilingual;
+  /** Concrete things to DO at this POI. Surfaces as photo-led cards with time + budget + intensity hints. */
+  activities?: PoiActivity[];
   transit?: TransitInfo[];
   verifiedAt: string;
   /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */
