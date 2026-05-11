@@ -52,6 +52,10 @@ src/assets/fonts/
 
 # Tile build workspace
 .tilebuild/
+# Planetiler downloads + tile-build inputs (multi-GB OSM extracts, lake centerlines, natural-earth)
+data/sources/
+data/tile_weights.tsv.gz
+data/tmp/
 
 # Superpowers brainstorming (mockups + server state)
 .superpowers/

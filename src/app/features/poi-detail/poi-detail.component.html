@@ -5,31 +5,27 @@
       <a routerLink="/map" class="poi-empty-link">← {{ t().poi.back }}</a>
     </div>
   } @else {
-    <header class="poi-hero" [class.poi-hero--no-image]="!heroImage()">
-      @if (heroImage(); as img) {
-        <app-image class="poi-hero-media"
-                   [asset]="img"
-                   [alt]="(poi()!.name | i18nText) || ''"
-                   [eager]="true"
-                   [showCredit]="false"
-                   [fallbackIcon]="heroIcon()"
-                   ratio="16 / 10" />
-        <div class="poi-hero-scrim" aria-hidden="true"></div>
-      }
-      <a routerLink="/map" class="poi-back" [attr.aria-label]="t().poi.back">
+    <header class="poi-hero" [class.poi-hero--no-image]="images().length === 0">
+      <app-photo-gallery class="poi-hero-gallery"
+                         [assets]="images()"
+                         [alt]="(poi()!.name | i18nText) || ''"
+                         [fallbackIcon]="heroIcon()" />
+      <div class="poi-hero-scrim" aria-hidden="true"></div>
+      <button type="button" class="poi-back" (click)="goBack()" [attr.aria-label]="t().poi.back">
         <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
-      </a>
+      </button>
       <button type="button" class="poi-save" (click)="toggleSave()"
               [attr.aria-label]="saved.isSaved(poi()!.id) ? t().poi.saved : t().poi.save">
         <span class="material-symbols-outlined" aria-hidden="true">
           {{ saved.isSaved(poi()!.id) ? 'bookmark' : 'bookmark_border' }}
         </span>
       </button>
-      <div class="poi-hero-fg">
-        <app-chip variant="filter-active">{{ labels[poi()!.category] }}</app-chip>
-        <h1 class="poi-name">{{ poi()!.name | i18nText }}</h1>
-      </div>
     </header>
+
+    <div class="poi-title-block">
+      <app-chip variant="filter-active">{{ labels[poi()!.category] }}</app-chip>
+      <h1 class="poi-name">{{ poi()!.name | i18nText }}</h1>
+    </div>
 
     <div class="poi-body">
       <!-- Provenance chips -->
@@ -98,12 +94,14 @@
         </div>
       }
 
-      @if (heroImage(); as img) {
+      @if (uniqueCredits().length) {
         <p class="poi-image-credit">
-          @if (img.source) {
-            <a [href]="img.source" target="_blank" rel="noopener noreferrer">{{ img.credit }}</a>
-          } @else {
-            {{ img.credit }}
+          @for (c of uniqueCredits(); track c.credit; let last = $last) {
+            @if (c.source) {
+              <a [href]="c.source" target="_blank" rel="noopener noreferrer">{{ c.credit }}</a>
+            } @else {
+              <span>{{ c.credit }}</span>
+            }@if (!last) {<span> · </span>}
           }
         </p>
       }

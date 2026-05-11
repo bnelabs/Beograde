@@ -5,6 +5,20 @@
       "credit": "Peiragmeno paidi, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Knez_Mihailova_street_-_panoramio.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1237504234738047",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1237504234738047"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "141113731341709",
+      "credit": "brackone (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=141113731341709"
     }
   ],
   "fetchedAt": "2026-05-11"

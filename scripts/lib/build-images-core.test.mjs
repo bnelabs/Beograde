@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, fetchDirectUrl, resolveSource, slugFor, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, fetchDirectUrl, fetchMapillary, resolveSource, slugFor, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
 import sharp from 'sharp';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -478,6 +478,130 @@ describe('resolveSource', () => {
     };
     await resolveSource({ sourceType: 'direct-url', fetchUrl: 'https://example.test/x.jpg', source: 's' }, fetchFn);
     assert.equal(calls[0], 'https://example.test/x.jpg');
+  });
+
+  test('dispatches to fetchMapillary for mapillary sourceType, threads token', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const fetchCalls = [];
+    const fetchFn = async (url, init) => {
+      fetchCalls.push({ url, headers: init?.headers ?? {} });
+      if (url.startsWith('https://graph.mapillary.com/')) {
+        return { ok: true, status: 200, json: async () => ({ thumb_2048_url: 'https://cdn.mapillary.test/abc.jpg' }) };
+      }
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource(
+      { sourceType: 'mapillary', mapillaryId: '12345', source: 'https://www.mapillary.com/app/?focus=photo&pKey=12345' },
+      fetchFn,
+      { mapillaryToken: 'MLY|fake|token' },
+    );
+    assert.equal(fetchCalls.length, 2);
+    assert.match(fetchCalls[0].url, /graph\.mapillary\.com\/12345/);
+    assert.equal(fetchCalls[0].headers.Authorization, 'OAuth MLY|fake|token');
+    assert.equal(fetchCalls[1].url, 'https://cdn.mapillary.test/abc.jpg');
+  });
+});
+
+describe('fetchMapillary', () => {
+  test('throws when no access token is provided', async () => {
+    await assert.rejects(
+      () => fetchMapillary('12345', async () => ({ ok: true }), undefined),
+      /MAPILLARY_TOKEN is required/,
+    );
+  });
+
+  test('two-step fetch: Graph API → CDN URL → buffer + dimensions', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 200, height: 150, channels: 3, background: { r: 100, g: 100, b: 100 } },
+    }).jpeg().toBuffer();
+    const fetchFn = async (url) => {
+      if (url.startsWith('https://graph.mapillary.com/')) {
+        return { ok: true, status: 200, json: async () => ({ thumb_2048_url: 'https://cdn.mapillary.test/x.jpg' }) };
+      }
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    const result = await fetchMapillary('999', fetchFn, 'MLY|t|t');
+    assert.equal(result.width, 200);
+    assert.equal(result.height, 150);
+    assert.ok(Buffer.isBuffer(result.buffer));
+  });
+
+  test('throws on Graph API non-ok response', async () => {
+    const fetchFn = async () => ({ ok: false, status: 401, statusText: 'Unauthorized' });
+    await assert.rejects(
+      () => fetchMapillary('1', fetchFn, 'token'),
+      /fetchMapillary:.*401/,
+    );
+  });
+
+  test('throws when Graph API response is missing thumb_2048_url', async () => {
+    const fetchFn = async () => ({ ok: true, status: 200, json: async () => ({}) });
+    await assert.rejects(
+      () => fetchMapillary('1', fetchFn, 'token'),
+      /missing thumb_2048_url/,
+    );
+  });
+});
+
+describe('loadCurator mapillary variant', () => {
+  let tmpDir;
+  const writeFixture = (obj) => {
+    const p = join(tmpDir, 'p.json');
+    writeFileSync(p, JSON.stringify(obj));
+    return p;
+  };
+
+  test.before(() => { tmpDir = mkdtempSync(join(tmpdir(), 'curator-mly-')); });
+  test.after(() => { rmSync(tmpDir, { recursive: true, force: true }); });
+
+  test('accepts valid mapillary entry', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{
+        sourceType: 'mapillary',
+        mapillaryId: '498763181449570',
+        credit: 'username (Mapillary), CC BY-SA 4.0',
+        license: 'CC BY-SA 4.0',
+        source: 'https://www.mapillary.com/app/?focus=photo&pKey=498763181449570',
+      }],
+    });
+    const raw = loadCurator(p);
+    assert.equal(raw.images[0].sourceType, 'mapillary');
+  });
+
+  test('rejects non-numeric mapillaryId', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: 'abc-not-numeric', credit: 'c', license: 'CC BY-SA 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(p), /mapillaryId.*numeric string/);
+  });
+
+  test('rejects wrong license for mapillary', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: '1', credit: 'c', license: 'CC BY 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(p), /license must be exactly "CC BY-SA 4.0"/);
+  });
+
+  test('rejects mapillary entry that carries commonsFile or fetchUrl', () => {
+    const a = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: '1', commonsFile: 'File:X.jpg', credit: 'c', license: 'CC BY-SA 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(a), /must not carry commonsFile/);
+  });
+});
+
+describe('slugFor mapillary', () => {
+  test('mapillary slug is deterministic and bounded to 12 chars of id', () => {
+    const a = slugFor('kalemegdan', { sourceType: 'mapillary', mapillaryId: '498763181449570', source: 's' });
+    const b = slugFor('kalemegdan', { sourceType: 'mapillary', mapillaryId: '498763181449570', source: 's' });
+    assert.equal(a, b);
+    assert.equal(a, 'kalemegdan-mly-498763181449');
   });
 });
 

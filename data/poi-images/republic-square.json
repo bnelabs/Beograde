@@ -5,6 +5,20 @@
       "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
       "license": "CC0",
       "source": "https://commons.wikimedia.org/wiki/File:Belgrade_Republic_Square.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1248827960262961",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1248827960262961"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "2252546588540116",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=2252546588540116"
     }
   ],
   "fetchedAt": "2026-05-11"

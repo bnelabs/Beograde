@@ -5,6 +5,20 @@
       "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
       "license": "CC0",
       "source": "https://commons.wikimedia.org/wiki/File:Skadarska_street,_Belgrade.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1240319301504563",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1240319301504563"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1935344813723717",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1935344813723717"
     }
   ],
   "fetchedAt": "2026-05-11"

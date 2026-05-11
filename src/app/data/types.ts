@@ -106,9 +106,11 @@ export interface Itinerary {
   durationMinutes: number;
   vibe: string[];
   stops: ItineraryStop[];
-  geometryUrl: string;
+  geometryUrl?: string;
   elevationProfileUrl?: string;
   bestStartHourLocal?: number;
+  /** Public-transport / driving guidance for non-walking legs of the route. */
+  gettingThere?: Bilingual;
   provenance: ProvenanceMeta;
 }
 

@@ -1,0 +1,26 @@
+{
+  "images": [
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "488328820653696",
+      "credit": "gamecentar (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=488328820653696"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1194906189129790",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1194906189129790"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1593666528420184",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1593666528420184"
+    }
+  ],
+  "fetchedAt": "2026-05-11"
+}

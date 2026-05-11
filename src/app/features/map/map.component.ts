@@ -280,7 +280,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
     if (this.map.getSource(sourceId)) this.map.removeSource(sourceId);
     if (!id) return;
     const itinerary = getItinerary(id);
-    if (!itinerary) return;
+    if (!itinerary?.geometryUrl) return;
     try {
       const resp = await fetch(itinerary.geometryUrl);
       if (!resp.ok) return;

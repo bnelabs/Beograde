@@ -35,6 +35,24 @@
         "credit": "BrankaVV, CC BY-SA 4.0, via Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Kalemegdan,_Belgrade_Fortress.jpg"
+      },
+      {
+        "src": "/assets/poi/kalemegdan/kalemegdan-mly-106433644861-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIDBBEiYf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQACIf/aAAwDAQACEQMRAD8AiO7ZVuszmoncgAg6ZvL/2Q==",
+        "credit": "km2bp (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1064336448610953"
+      },
+      {
+        "src": "/assets/poi/kalemegdan/kalemegdan-mly-147172968421-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAdEAABAwUBAAAAAAAAAAAAAAAAAQISAwQTITFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIR/9oADAMBAAIRAxEAPwCeW5a2KVHRTzuwARVMWn//2Q==",
+        "credit": "km2bp (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1471729684213135"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -99,6 +117,24 @@
         "credit": "Aleksandr Petukhov (Skelanard), CC BY-SA 4.0, via Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:The_Temple_of_Saint_Sava_from_the_North-West.jpg"
+      },
+      {
+        "src": "/assets/poi/saint-sava/saint-sava-mly-494512171698-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIDBCExMv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AJXw2XS5qy7VeQAImv/Z",
+        "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=494512171698560"
+      },
+      {
+        "src": "/assets/poi/saint-sava/saint-sava-mly-152704126808-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAaEAACAwEBAAAAAAAAAAAAAAACAwABEQQS/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AkpfWCAE1tEvV3eVsRERK/9k=",
+        "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=152704126808683"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -157,6 +193,24 @@
         "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Skadarska_street,_Belgrade.jpg"
+      },
+      {
+        "src": "/assets/poi/skadarlija/skadarlija-mly-124031930150-1024.avif",
+        "width": 1024,
+        "height": 896,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAZEAACAwEAAAAAAAAAAAAAAAAAAwECBBH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABIf/aAAwDAQACEQMRAD8Ahs3LZmqpcT2bdsACrof/2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1240319301504563"
+      },
+      {
+        "src": "/assets/poi/skadarlija/skadarlija-mly-193534481372-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABwQAAICAgMAAAAAAAAAAAAAAAABAhEDEgUhsf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwA+VTxwWlSvvX0ADWTEf//Z",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1935344813723717"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -406,6 +460,24 @@
         "credit": "Peiragmeno paidi, CC BY-SA 3.0, via Wikimedia Commons",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Knez_Mihailova_street_-_panoramio.jpg"
+      },
+      {
+        "src": "/assets/poi/knez-mihailova/knez-mihailova-mly-123750423473-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAbEAACAwADAAAAAAAAAAAAAAAAAQIDEQQSQf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AtyLZ2qPZxxLzQAFf/9k=",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1237504234738047"
+      },
+      {
+        "src": "/assets/poi/knez-mihailova/knez-mihailova-mly-141113731341-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAcEAACAgIDAAAAAAAAAAAAAAAAAQIDERIEIZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJq+VCFC0zvlt9eAAK//2Q==",
+        "credit": "brackone (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=141113731341709"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -463,6 +535,24 @@
         "credit": "Imeao, CC0 (public domain), via Wikimedia Commons",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Belgrade_Republic_Square.jpg"
+      },
+      {
+        "src": "/assets/poi/republic-square/republic-square-mly-124882796026-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAcEAACAQUBAAAAAAAAAAAAAAAAAgEDBRESQUL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AncniXqM+N2XzHQAB/9k=",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1248827960262961"
+      },
+      {
+        "src": "/assets/poi/republic-square/republic-square-mly-225254658854-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAADAAIDAAAAAAAAAAAAAAAAAQIEEQMSM//EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ArIyOZzHnXWUlvbABR//Z",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=2252546588540116"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -582,6 +672,24 @@
         "credit": "Dungodung, CC BY-SA 3.0, via Wikimedia Commons",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Gen%C4%8Di%C4%87eva_ku%C4%87a_6.jpg"
+      },
+      {
+        "src": "/assets/poi/tesla-museum/tesla-museum-mly-647395744469-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAaEAADAAMBAAAAAAAAAAAAAAAAAQMCESKB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCG1aUjLBtcLXgAFI//2Q==",
+        "credit": "puky (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=647395744469745"
+      },
+      {
+        "src": "/assets/poi/tesla-museum/tesla-museum-mly-152399493827-1024.avif",
+        "width": 1024,
+        "height": 576,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAcEAABBAMBAAAAAAAAAAAAAAAAAgMSIQQRMRP/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AJza3UYnlupS7ygANEf/2Q==",
+        "credit": "puky (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1523994938270372"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -891,6 +999,24 @@
         "credit": "Suicasmo, CC BY-SA 4.0, via Wikimedia Commons",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hotel_Moskva_(Belgrade)_20180227.jpg"
+      },
+      {
+        "src": "/assets/poi/hotel-moskva/hotel-moskva-mly-137037982181-1024.avif",
+        "width": 1024,
+        "height": 896,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAbEAACAwADAAAAAAAAAAAAAAAAAQIDBBJBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAMAwEAAhEDEQA/AIb9KstjGty4LztgAdCY/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1370379821811073"
+      },
+      {
+        "src": "/assets/poi/hotel-moskva/hotel-moskva-mly-127745810076-1024.avif",
+        "width": 1024,
+        "height": 896,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAbEAACAgMBAAAAAAAAAAAAAAAAEQIDAQQhIv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAEh/9oADAMBAAIRAxEAPwCfa3Lb41cUl66nkAFOgof/2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1277458100762740"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -1003,7 +1129,35 @@
       "courtyard",
       "instagram"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/smokvica/smokvica-mly-488328820653-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAaEAADAQADAAAAAAAAAAAAAAABAgMAESFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEQMRAD8AlaTJeJZwFWgbkno+ZmaayC//2Q==",
+        "credit": "gamecentar (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=488328820653696"
+      },
+      {
+        "src": "/assets/poi/smokvica/smokvica-mly-119490618912-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAADAAIDAAAAAAAAAAAAAAAAAQIEEQMSwf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8ArmyrrEaqFPbS2n4AAj//2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1194906189129790"
+      },
+      {
+        "src": "/assets/poi/smokvica/smokvica-mly-159366652842-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAbEAACAgMBAAAAAAAAAAAAAAAAAQIDBBESMf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCrrrnjRjynJPfqAAH/2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1593666528420184"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1169,13 +1323,31 @@
     ],
     "images": [
       {
-        "src": "/assets/poi/bajrakli-mosque/bajrakli-mosque-belgrade-1024.avif",
+        "src": "/assets/poi/bajrakli-mosque/bajrakli-mosque-mly-127630465121-1024.avif",
         "width": 1024,
-        "height": 1262,
-        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAT/xAAaEAEAAgMBAAAAAAAAAAAAAAABAAQCAxES/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ9t/JrGFh3ewBeHGIiB/9k=",
-        "credit": "Ahmed Abouaiana, CC BY 4.0, via Wikimedia Commons",
-        "license": "CC BY 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Bajrakli_Mosque-_Belgrade.jpg"
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAdEAACAQQDAAAAAAAAAAAAAAAAAhEBAwQSEzFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABgRAAIDAAAAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwCUzV4WZrdNvI6gACd6FKD/2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1276304651216108"
+      },
+      {
+        "src": "/assets/poi/bajrakli-mosque/bajrakli-mosque-mly-115877325976-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAbEAACAgMBAAAAAAAAAAAAAAAAAQIRBRIhQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCLJS0inVr1PoAA/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1158773259765227"
+      },
+      {
+        "src": "/assets/poi/bajrakli-mosque/bajrakli-mosque-mly-109433586929-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EAB0QAAEDBQEAAAAAAAAAAAAAAAABAgQDERIUIkH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AUZsl7l2Xc+YrYAAf/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1094335869294718"
       }
     ],
     "verifiedAt": "2026-05-04",
@@ -1764,7 +1936,35 @@
       "late-night",
       "alternative"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/drugstore/drugstore-mly-903831765596-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAdEAADAAAHAAAAAAAAAAAAAAAAAQIDBAUREiFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAwDAQACEQMRAD8Ak6s8snwwYrb110AAVnL/2Q==",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=903831765596371"
+      },
+      {
+        "src": "/assets/poi/drugstore/drugstore-mly-927637766518-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAcEAACAQUBAAAAAAAAAAAAAAAAARECAwQFEkH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABcRAQADAAAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AJkbJuebqpjxJAAatQ//2Q==",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=927637766518108"
+      },
+      {
+        "src": "/assets/poi/drugstore/drugstore-mly-168680492268-1024.avif",
+        "width": 1024,
+        "height": 771,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAL/xAAaEAADAQADAAAAAAAAAAAAAAAAAQIDBTFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ALrkrzluYyXr6ABaxEf/2Q==",
+        "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1686804922684645"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1813,7 +2013,35 @@
       "coffee",
       "specialty"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/magistrala/magistrala-mly-169576386464-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAcEAACAgIDAAAAAAAAAAAAAAAAAgEDBDEREnH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AJZkZjVpHHVl20Nv0ACj/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1695763864640108"
+      },
+      {
+        "src": "/assets/poi/magistrala/magistrala-mly-918700191085-1024.avif",
+        "width": 1024,
+        "height": 896,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAdEAACAgEFAAAAAAAAAAAAAAAAAgEDBAURIVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEQMRAD8Ahmagr4y1VrO8zz70ACsC/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=918700191085535"
+      },
+      {
+        "src": "/assets/poi/magistrala/magistrala-mly-205082761578-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAeEAACAQMFAAAAAAAAAAAAAAAAAQIDBAUREhMhQf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCvIVY2uyGnI+nJvwAAf//Z",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=2050827615782674"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {
@@ -1863,7 +2091,35 @@
       "design",
       "vegetarian"
     ],
-    "images": [],
+    "images": [
+      {
+        "src": "/assets/poi/supermarket-dorcol/supermarket-dorcol-mly-121955565369-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABsQAAIBBQAAAAAAAAAAAAAAAAACAQMEERJh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AEXsPSRWnXuAAB//2Q==",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1219555653698862"
+      },
+      {
+        "src": "/assets/poi/supermarket-dorcol/supermarket-dorcol-mly-125089510049-1024.avif",
+        "width": 1024,
+        "height": 896,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABsQAAMAAgMAAAAAAAAAAAAAAAABAgMEEjFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAYEQACAwAAAAAAAAAAAAAAAAAAEgECUf/aAAwDAQACEQMRAD8AYtvWyqqd8aXSfoAKPbQrB//Z",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1250895100494940"
+      },
+      {
+        "src": "/assets/poi/supermarket-dorcol/supermarket-dorcol-mly-127197005817-1024.avif",
+        "width": 1024,
+        "height": 768,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAIAAgDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAAAP/EABoQAAICAwAAAAAAAAAAAAAAAAABAgQSMdH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AXbc5V0sG5LbXAAIf/9k=",
+        "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "source": "https://www.mapillary.com/app/?focus=photo&pKey=1271970058175696"
+      }
+    ],
     "verifiedAt": "2026-05-04",
     "sources": [],
     "reliability": {

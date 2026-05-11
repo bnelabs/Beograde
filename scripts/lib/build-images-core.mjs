@@ -31,8 +31,10 @@ function isFresh({ curatorPath, outDir, poiId, expectedSlugs, widths }) {
  *  newer than the curator file. `force: true` rebuilds every Tier-A POI.
  *  `interPoiDelayMs` throttles requests between curated POIs to stay under
  *  Wikimedia's anonymous rate limit (~30 req/min). Default 0 keeps unit tests
- *  fast; the CLI passes a higher value for live runs. */
-export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force = false, interPoiDelayMs = 0 }) {
+ *  fast; the CLI passes a higher value for live runs.
+ *  `mapillaryToken` is required if any curator file declares
+ *  `sourceType: "mapillary"`; omitted when no Mapillary entries exist. */
+export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force = false, interPoiDelayMs = 0, mapillaryToken }) {
   const compiled = JSON.parse(readFileSync(compiledPath, 'utf8'));
   let curated = 0, skipped = 0, fresh = 0;
 
@@ -53,7 +55,9 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
     for (let i = 0; i < slugs.length; i++) {
       if (seen.has(slugs[i])) {
         const j = seen.get(slugs[i]);
-        throw new Error(`runBuildImages: ${poi.id} curator has two images that slugify to "${slugs[i]}": "${curator.images[j].commonsFile}" and "${curator.images[i].commonsFile}" — rename one`);
+        const idA = curator.images[j].commonsFile ?? curator.images[j].mapillaryId ?? curator.images[j].source;
+        const idB = curator.images[i].commonsFile ?? curator.images[i].mapillaryId ?? curator.images[i].source;
+        throw new Error(`runBuildImages: ${poi.id} curator has two images that slugify to "${slugs[i]}": "${idA}" and "${idB}" — rename / re-source one`);
       }
       seen.set(slugs[i], i);
     }
@@ -67,7 +71,7 @@ export async function runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, 
     for (let i = 0; i < curator.images.length; i++) {
       const c = curator.images[i];
       const slug = slugs[i];
-      const { buffer, width: srcW, height: srcH } = await resolveSource(c, fetchFn);
+      const { buffer, width: srcW, height: srcH } = await resolveSource(c, fetchFn, { mapillaryToken });
       const transcoded = await transcodeAvif(buffer, WIDTHS);
       await writeAvifSet({ outDir, poiId: poi.id, slug, transcoded });
       const lqip = await jpegLqip(buffer);
@@ -149,10 +153,13 @@ const ACCEPTED_DIRECT_LICENSES = new Set([
  *  All thrown errors are prefixed with `${path}: ` so the operator can
  *  identify the offending file.
  *
- *  Two image shapes are accepted:
+ *  Three image shapes are accepted:
  *  - `sourceType: "commons"` (default when omitted): requires commonsFile.
  *  - `sourceType: "direct-url"`: requires fetchUrl, forbids commonsFile,
- *    and license must be in ACCEPTED_DIRECT_LICENSES. */
+ *    and license must be in ACCEPTED_DIRECT_LICENSES.
+ *  - `sourceType: "mapillary"`: requires numeric mapillaryId; license must
+ *    be "CC BY-SA 4.0" (Mapillary's only license); forbids commonsFile and
+ *    fetchUrl. */
 export function loadCurator(path) {
   const raw = JSON.parse(readFileSync(path, 'utf8'));
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) {
@@ -169,8 +176,8 @@ export function loadCurator(path) {
       throw new Error(`${path}: each images entry must be an object`);
     }
     const sourceType = img.sourceType ?? 'commons';
-    if (sourceType !== 'commons' && sourceType !== 'direct-url') {
-      throw new Error(`${path}: unknown sourceType "${sourceType}" (expected "commons" or "direct-url")`);
+    if (sourceType !== 'commons' && sourceType !== 'direct-url' && sourceType !== 'mapillary') {
+      throw new Error(`${path}: unknown sourceType "${sourceType}" (expected "commons", "direct-url", or "mapillary")`);
     }
     for (const key of ['credit', 'license', 'source']) {
       if (typeof img[key] !== 'string' || !img[key]) {
@@ -187,15 +194,34 @@ export function loadCurator(path) {
       if (img.fetchUrl) {
         throw new Error(`${path}: sourceType=commons must not carry fetchUrl`);
       }
-    } else {
+      if (img.mapillaryId) {
+        throw new Error(`${path}: sourceType=commons must not carry mapillaryId`);
+      }
+    } else if (sourceType === 'direct-url') {
       if (typeof img.fetchUrl !== 'string' || !img.fetchUrl) {
         throw new Error(`${path}: sourceType=direct-url requires "fetchUrl"`);
       }
       if (img.commonsFile) {
         throw new Error(`${path}: sourceType=direct-url must not carry commonsFile`);
       }
+      if (img.mapillaryId) {
+        throw new Error(`${path}: sourceType=direct-url must not carry mapillaryId`);
+      }
       if (!ACCEPTED_DIRECT_LICENSES.has(img.license.toLowerCase())) {
         throw new Error(`${path}: license "${img.license}" not in the direct-url accepted list (${[...ACCEPTED_DIRECT_LICENSES].join(', ')})`);
+      }
+    } else {
+      if (typeof img.mapillaryId !== 'string' || !/^\d+$/.test(img.mapillaryId)) {
+        throw new Error(`${path}: sourceType=mapillary requires "mapillaryId" as a numeric string`);
+      }
+      if (img.commonsFile) {
+        throw new Error(`${path}: sourceType=mapillary must not carry commonsFile`);
+      }
+      if (img.fetchUrl) {
+        throw new Error(`${path}: sourceType=mapillary must not carry fetchUrl`);
+      }
+      if (img.license.toLowerCase() !== 'cc by-sa 4.0') {
+        throw new Error(`${path}: sourceType=mapillary license must be exactly "CC BY-SA 4.0" — got "${img.license}"`);
       }
     }
   }
@@ -215,23 +241,59 @@ export async function fetchDirectUrl(fetchUrl, fetchFn) {
   return { buffer, width: meta.width, height: meta.height };
 }
 
+/** Fetch a Mapillary image by ID. Two-step: (1) GET the Graph API to discover
+ *  the CDN URL of the 2048-wide thumbnail; (2) GET the CDN URL for binary
+ *  bytes. Token is sent only on step 1 (CDN URLs are pre-signed and reject
+ *  Authorization headers). Returns Buffer + dimensions. */
+export async function fetchMapillary(mapillaryId, fetchFn, accessToken) {
+  if (!accessToken) {
+    throw new Error('fetchMapillary: MAPILLARY_TOKEN is required for sourceType=mapillary entries');
+  }
+  const metaUrl = `https://graph.mapillary.com/${encodeURIComponent(mapillaryId)}?fields=thumb_2048_url`;
+  const metaRes = await fetchFn(metaUrl, {
+    headers: { Authorization: `OAuth ${accessToken}`, 'User-Agent': COMMONS_USER_AGENT },
+  });
+  if (!metaRes.ok) {
+    throw new Error(`fetchMapillary: ${metaUrl} → ${metaRes.status}${metaRes.statusText ? ' ' + metaRes.statusText : ''}`);
+  }
+  const meta = await metaRes.json();
+  if (!meta?.thumb_2048_url || typeof meta.thumb_2048_url !== 'string') {
+    throw new Error(`fetchMapillary: ${mapillaryId} response missing thumb_2048_url`);
+  }
+  const imgRes = await fetchFn(meta.thumb_2048_url, { headers: { 'User-Agent': COMMONS_USER_AGENT } });
+  if (!imgRes.ok) {
+    throw new Error(`fetchMapillary: CDN ${meta.thumb_2048_url} → ${imgRes.status}${imgRes.statusText ? ' ' + imgRes.statusText : ''}`);
+  }
+  const ab = await imgRes.arrayBuffer();
+  const buffer = Buffer.from(ab);
+  const sharpMeta = await sharp(buffer).metadata();
+  return { buffer, width: sharpMeta.width, height: sharpMeta.height };
+}
+
 /** Dispatch a curator image to the right fetcher based on sourceType. */
-export async function resolveSource(image, fetchFn) {
+export async function resolveSource(image, fetchFn, { mapillaryToken } = {}) {
   const sourceType = image.sourceType ?? 'commons';
   if (sourceType === 'direct-url') {
     return fetchDirectUrl(image.fetchUrl, fetchFn);
+  }
+  if (sourceType === 'mapillary') {
+    return fetchMapillary(image.mapillaryId, fetchFn, mapillaryToken);
   }
   return fetchCommonsFile(image.commonsFile, fetchFn);
 }
 
 /** Compute the on-disk slug for a curator image. Commons entries derive
  *  the slug from commonsFile (existing behavior); direct-url entries hash
- *  the source URL into a stable 8-char suffix on the poi id. */
+ *  the source URL into a stable 8-char suffix on the poi id; mapillary
+ *  entries use a deterministic "mly-<first 8 digits of id>" suffix. */
 export function slugFor(poiId, image) {
   const sourceType = image.sourceType ?? 'commons';
   if (sourceType === 'direct-url') {
     const hash = createHash('sha1').update(image.source).digest('hex').slice(0, 8);
     return `${poiId}-${hash}`;
+  }
+  if (sourceType === 'mapillary') {
+    return `${poiId}-mly-${image.mapillaryId.slice(0, 12)}`;
   }
   return slugify(image.commonsFile.replace(/^File:/, ''));
 }

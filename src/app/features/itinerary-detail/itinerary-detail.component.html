@@ -10,7 +10,7 @@
         <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
       </a>
       <div class="it-hero-fg">
-        <span class="it-eyebrow">{{ t().itinerary.stops.replace('{n}', enrichedStops().length.toString()) }} · {{ hours(itinerary()!.durationMinutes) }}</span>
+        <span class="it-eyebrow">{{ t().itinerary.stops.replace('{n}', enrichedStops().length.toString()) }} · {{ hours(itinerary()!.durationMinutes) }}@if (totalWalkMeters() > 0) { · {{ fmtDistance(totalWalkMeters()) }} walk · {{ totalWalkMinutes() }} min }@if (hasTransitLegs()) { · transit }</span>
         <h1 class="it-title">{{ itinerary()!.title | i18nText }}</h1>
         <p class="it-sub">{{ itinerary()!.subtitle | i18nText }}</p>
         <div class="it-actions">
@@ -35,9 +35,15 @@
       </div>
     }
 
-    <section class="it-section">
-      <app-itinerary-timeline [nodes]="timelineNodes()" />
-    </section>
+    @if (itinerary()!.gettingThere; as gt) {
+      <section class="it-section it-transport">
+        <h3 class="it-transport-h">
+          <span class="material-symbols-outlined" aria-hidden="true">directions_bus</span>
+          Getting there &amp; around
+        </h3>
+        <p class="it-transport-body">{{ gt | i18nText }}</p>
+      </section>
+    }
 
     @if (progress.activeId() === itinerary()!.id) {
       <section class="it-section it-progress">
@@ -56,15 +62,32 @@
              class="it-stop"
              [class.is-next]="i === nextStopIndex() && !isComplete()"
              [class.is-reached]="s.reached">
-            <div class="it-stop-rail">
-              <div class="it-stop-num">{{ i + 1 }}</div>
-              @if (i < enrichedStops().length - 1) { <div class="it-stop-line"></div> }
+            <div class="it-stop-thumb">
+              @if (s.poi?.images?.[0]; as img) {
+                <img class="it-stop-thumb-img"
+                     [src]="img.src"
+                     [alt]="(s.poi!.name | i18nText) || ''"
+                     loading="lazy"
+                     decoding="async" />
+              } @else {
+                <span class="material-symbols-outlined it-stop-thumb-icon" aria-hidden="true">
+                  {{ s.poi ? icons[s.poi.category] : 'place' }}
+                </span>
+              }
+              <span class="it-stop-num">{{ i + 1 }}</span>
             </div>
             <div class="it-stop-body">
               <div class="it-stop-meta">
                 <span>{{ offset(s.stop.arrivalOffsetMinutes) }}</span>
+                @if (i > 0 && s.legMeters > 0) {
+                  @if (s.legIsTransit) {
+                    <span class="it-stop-leg it-stop-leg-transit">↳ {{ fmtDistance(s.legMeters) }} · transit</span>
+                  } @else {
+                    <span class="it-stop-leg">↳ {{ fmtDistance(s.legMeters) }} · {{ s.legMinutes }} min walk</span>
+                  }
+                }
                 @if (s.distance !== null) {
-                  <span class="it-stop-dist">· {{ fmtDistance(s.distance) }}</span>
+                  <span class="it-stop-dist">· {{ fmtDistance(s.distance) }} away</span>
                 }
               </div>
               <div class="it-stop-name">{{ s.poi ? (s.poi.name | i18nText) : s.stop.poiId }}</div>

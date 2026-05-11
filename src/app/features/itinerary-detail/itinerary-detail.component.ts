@@ -7,17 +7,15 @@ import { getPoi, CATEGORY_ICONS } from '../../data/pois';
 import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ItineraryProgressService } from '../../core/itinerary-progress/itinerary-progress.service';
-import { I18nService } from '../../core/i18n/i18n.service';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
-import { ItineraryTimelineComponent, TimelineNode } from '../../ui/charts/itinerary-timeline.component';
 import { DistanceProgressComponent } from '../../ui/charts/distance-progress.component';
-import { formatDistance, haversineMeters } from '../../data/distance';
+import { formatDistance, haversineMeters, walkingMinutes } from '../../data/distance';
 import { StringsService } from '../../core/i18n/strings.service';
 
 @Component({
   selector: 'app-itinerary-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, I18nTextPipe, ItineraryTimelineComponent, DistanceProgressComponent],
+  imports: [CommonModule, RouterLink, I18nTextPipe, DistanceProgressComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './itinerary-detail.component.html',
   styleUrl: './itinerary-detail.component.css',
@@ -25,7 +23,6 @@ import { StringsService } from '../../core/i18n/strings.service';
 export class ItineraryDetailComponent {
   private route = inject(ActivatedRoute);
   private proximity = inject(ProximityService);
-  private i18n = inject(I18nService);
   private readonly strings = inject(StringsService);
   protected readonly geo = inject(GeolocationService);
   protected readonly progress = inject(ItineraryProgressService);
@@ -44,13 +41,24 @@ export class ItineraryDetailComponent {
   protected readonly enrichedStops = computed(() => {
     const it = this.itinerary();
     if (!it) return [];
-    return it.stops.map((s) => {
+    const reachedIds = this.progress.progressFor(it.id)?.reachedStopIds ?? [];
+    const enriched = it.stops.map((s) => {
       const poi = getPoi(s.poiId);
       const distance = poi ? this.proximity.distanceTo(poi) : null;
-      const reachedIds = it ? this.progress.progressFor(it.id)?.reachedStopIds ?? [] : [];
       const reached = reachedIds.includes(s.poiId) || (distance !== null && distance <= 100);
-      return { stop: s, poi, distance, reached };
+      return { stop: s, poi, distance, reached, legMeters: 0, legMinutes: 0, legIsTransit: false };
     });
+    for (let i = 1; i < enriched.length; i++) {
+      const prev = enriched[i - 1].poi;
+      const curr = enriched[i].poi;
+      if (prev && curr) {
+        const m = haversineMeters(prev, curr);
+        enriched[i].legMeters = m;
+        enriched[i].legMinutes = walkingMinutes(m);
+        enriched[i].legIsTransit = m > 3000;
+      }
+    }
+    return enriched;
   });
 
   /** Index of the next not-yet-reached stop. Returns enrichedStops.length when complete. */
@@ -65,27 +73,31 @@ export class ItineraryDetailComponent {
     return stops.length > 0 && this.nextStopIndex() === stops.length;
   });
 
-  protected readonly timelineNodes = computed<TimelineNode[]>(() => {
-    const stops = this.enrichedStops();
-    const nextIdx = this.nextStopIndex();
-    return stops.map((s, i) => ({
-      label: s.poi ? this.pickName(s.poi.name) : s.stop.poiId,
-      arrivalOffsetMinutes: s.stop.arrivalOffsetMinutes,
-      reached: s.reached,
-      isNext: i === nextIdx,
-    }));
-  });
-
-  /** Total walking distance in meters between successive stops with known POIs. */
+  /** Total distance in meters across all legs (used by progress bar). */
   protected readonly totalMeters = computed(() => {
     const stops = this.enrichedStops();
     let total = 0;
-    for (let i = 0; i + 1 < stops.length; i++) {
-      const a = stops[i].poi, b = stops[i + 1].poi;
-      if (a && b) total += haversineMeters(a, b);
-    }
+    for (let i = 1; i < stops.length; i++) total += stops[i].legMeters;
     return Math.max(total, 1);
   });
+
+  /** Total walking-only distance — excludes long transit legs (>3 km). */
+  protected readonly totalWalkMeters = computed(() => {
+    const stops = this.enrichedStops();
+    let total = 0;
+    for (let i = 1; i < stops.length; i++) {
+      if (!stops[i].legIsTransit) total += stops[i].legMeters;
+    }
+    return total;
+  });
+
+  /** Total walking minutes summed across walking legs only. */
+  protected readonly totalWalkMinutes = computed(() => walkingMinutes(this.totalWalkMeters()));
+
+  /** Whether the route has any transit (>3 km) legs. */
+  protected readonly hasTransitLegs = computed(() =>
+    this.enrichedStops().some(s => s.legIsTransit),
+  );
 
   protected readonly walkedMeters = computed(() => {
     const stops = this.enrichedStops();
@@ -121,11 +133,5 @@ export class ItineraryDetailComponent {
   resetItinerary(): void {
     const it = this.itinerary();
     if (it) void this.progress.clear(it.id);
-  }
-
-  private pickName(b: { en: string; sr_lat: string; sr_cyr: string }): string {
-    const loc = this.i18n.locale();
-    if (loc.locale === 'sr' && b.sr_lat) return b.sr_lat;
-    return b.en;
   }
 }
