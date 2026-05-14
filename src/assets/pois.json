@@ -13,7 +13,7 @@
       "en": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
       "sr_lat": "Beogradska istorijska tvrđava na uzvisini gde se Sava uliva u Dunav. Prošetajte bedemima, pronađite Pobednika i posmatrajte zalazak sunca iz gornjeg grada.",
       "sr_cyr": "",
-      "tr": "Belgrad'ın tarihi kalesi, Sava'nın Tuna'ya kavuştuğu yerdeki yamaçta yer alır. Surlarda yürüyün, Pobednik (Galip) anıtını bulun ve gün batımını yukarı şehirden izleyin."
+      "tr": "Belgrad'ın tarihi kalesi; Sava ile Tuna'nın birleştiği yüksek burunda yer alır. Surlarda yürüyün, Pobednik (Galip) anıtını görün ve gün batımını yukarı şehirden izleyin."
     },
     "address": {
       "en": "Kalemegdan Park",
@@ -58,7 +58,7 @@
         "en": "Walk the ramparts where the Sava meets the Danube",
         "sr_lat": "Šetnja bedemima na ušću Save u Dunav",
         "sr_cyr": "",
-        "tr": "Sava'nın Tuna'ya kavuştuğu yerdeki surlarda yürüyün"
+        "tr": "Sava ile Tuna'nın birleştiği surlarda yürüyün"
       },
       {
         "en": "Pobednik (Victor) statue — Belgrade's most-photographed monument",
@@ -70,7 +70,7 @@
         "en": "Free admission, open 24/7 — sunset on the upper terrace is the move",
         "sr_lat": "Besplatan ulaz, otvoreno 0–24 — najlepše uveče sa gornje terase",
         "sr_cyr": "",
-        "tr": "Ücretsiz giriş, 24 saat açık — yukarı terastaki gün batımı tam zamanı"
+        "tr": "Ücretsiz giriş, 24 saat açık — yukarı terasta gün batımı kaçırılmaz"
       },
       {
         "en": "Roman, Byzantine, Ottoman and Habsburg layers in one fortress",
@@ -97,7 +97,7 @@
           "en": "Multiple small museums and a clock tower",
           "sr_lat": "Više malih muzeja i sahat-kula",
           "sr_cyr": "",
-          "tr": "Birden fazla küçük müze ve bir saat kulesi"
+          "tr": "Birkaç küçük müze ve bir saat kulesi"
         }
       ],
       "cons": [
@@ -105,7 +105,7 @@
           "en": "Cobblestones — pack flat shoes",
           "sr_lat": "Kaldrma — obujte ravne cipele",
           "sr_cyr": "",
-          "tr": "Arnavut kaldırımı — düz ayakkabı götürün"
+          "tr": "Arnavut kaldırımı — düz ayakkabı giyin"
         },
         {
           "en": "Crowded on summer weekends",
@@ -132,14 +132,14 @@
         "en": "Use the Kalemegdan park entrance from Knez Mihailova, not the river side",
         "sr_lat": "Uđite iz Knez Mihailove, ne sa rečne strane",
         "sr_cyr": "",
-        "tr": "Nehir tarafından değil, Knez Mihailova'dan Kalemegdan parkı girişini kullanın"
+        "tr": "Kalemegdan parkına nehir tarafından değil, Knez Mihailova'dan girin"
       }
     ],
     "history": {
       "en": "Fortified since Roman Singidunum in the 1st century, the bastions you see today are largely Habsburg works from the 18th century. The site changed hands more than 40 times before becoming a public park in 1869.",
       "sr_lat": "Utvrđenje od rimskog Singidunuma u 1. veku; današnji bedemi su uglavnom habzburški iz 18. veka. Mesto je menjalo vladare više od 40 puta pre nego što je 1869. postalo javni park.",
       "sr_cyr": "",
-      "tr": "1. yüzyılda Roma dönemi Singidunum'dan beri tahkim edilmiş; bugün gördüğünüz tabyalar büyük ölçüde 18. yüzyıl Habsburg yapısıdır. Mekân, 1869'da halka açık park olmadan önce 40'tan fazla kez el değiştirdi."
+      "tr": "1. yüzyıldan beri Roma'nın Singidunum'u olarak tahkim edilen alanda bugün gördüğünüz tabyalar büyük ölçüde 18. yüzyıl Habsburg yapısıdır. Burası, 1869'da halka açık bir parka dönüşmeden önce 40'tan fazla kez el değiştirdi."
     },
     "activities": [
       {
@@ -153,7 +153,7 @@
           "en": "Loop the upper terraces, ending at the Victor statue for the river-confluence view.",
           "sr_lat": "Obilazak gornjih terasa do Pobednika — pogled na ušće.",
           "sr_cyr": "",
-          "tr": "Yukarı terasları dolaşın; iki nehrin kavuştuğu manzara için Galip heykelinde bitirin."
+          "tr": "Yukarı terasları dolaşın; iki nehrin birleştiği manzara için Galip heykelinde bitirin."
         },
         "icon": "directions_walk",
         "durationMin": 60,
@@ -280,13 +280,13 @@
         "en": "Interior mosaic completed 2020 — over 15,000 m² of gold tesserae",
         "sr_lat": "Unutrašnji mozaik dovršen 2020 — preko 15.000 m² zlatne smalte",
         "sr_cyr": "",
-        "tr": "2020'de tamamlanan iç mozaik — 15.000 m²'yi aşan altın taş işçiliği"
+        "tr": "2020'de tamamlanan iç mozaik — 15.000 m²'yi aşan altın mozaik işçiliği"
       },
       {
         "en": "Free entry to the church and crypt below",
         "sr_lat": "Besplatan ulaz u hram i kriptu ispod",
         "sr_cyr": "",
-        "tr": "Kiliseye ve alttaki kripta'ya ücretsiz giriş"
+        "tr": "Kiliseye ve alttaki kriptaya ücretsiz giriş"
       },
       {
         "en": "Visible from across Belgrade — the dome is 70 m high",
@@ -336,7 +336,7 @@
         "en": "Visit the crypt — fewer tourists and gorgeous Serbian-Byzantine fresco work",
         "sr_lat": "Posetite kriptu — manje turista i prelep srpsko-vizantijski fresko-zid",
         "sr_cyr": "",
-        "tr": "Kripta'yı görün — daha az turist ve harika Sırp-Bizans fresk işçiliği"
+        "tr": "Kriptayı görün — daha az turist ve etkileyici Sırp-Bizans fresk işçiliği"
       },
       {
         "en": "Skip Sunday liturgy if you want a quiet visit",
@@ -348,7 +348,7 @@
         "en": "Combine with the National Library next door",
         "sr_lat": "Spojite sa Narodnom bibliotekom u istom kompleksu",
         "sr_cyr": "",
-        "tr": "Hemen yanındaki Ulusal Kütüphane ile birleştirin"
+        "tr": "Hemen yanındaki Ulusal Kütüphane ile birlikte gezin"
       }
     ],
     "history": {
@@ -369,7 +369,7 @@
           "en": "Stand directly under the central dome to take in 4,000 m² of gold-tessera ceiling.",
           "sr_lat": "Stanite pod centralnu kupolu — 4.000 m² zlatne smalte.",
           "sr_cyr": "",
-          "tr": "Merkez kubbenin tam altında durun — 4.000 m² altın taş tavanı görün."
+          "tr": "Merkezi kubbenin tam altında durun — 4.000 m² altın mozaik tavanı görün."
         },
         "icon": "visibility",
         "durationMin": 15,
@@ -381,7 +381,7 @@
           "en": "Descend to the crypt",
           "sr_lat": "Spustite se u kriptu",
           "sr_cyr": "",
-          "tr": "Kripta'ya inin"
+          "tr": "Kriptaya inin"
         },
         "summary": {
           "en": "Quieter than the upper church — Serbian-Byzantine fresco work and tomb of Patriarch Pavle.",
@@ -505,7 +505,7 @@
         "en": "Old kafanas serving traditional Serbian dishes",
         "sr_lat": "Stare kafane sa tradicionalnom srpskom kuhinjom",
         "sr_cyr": "",
-        "tr": "Geleneksel Sırp yemekleri sunan eski kafanalar"
+        "tr": "Geleneksel Sırp mutfağı sunan eski kafanalar"
       },
       {
         "en": "Statues of Đura Jakšić, Branislav Nušić and other writers",
@@ -1139,7 +1139,7 @@
         "en": "19th-century facades from Republic Square to Kalemegdan",
         "sr_lat": "Fasade iz 19. veka od Trga republike do Kalemegdana",
         "sr_cyr": "",
-        "tr": "Trg Republike'den Kalemegdan'a uzanan 19. yüzyıl cepheleri"
+        "tr": "Trg Republike'den (Cumhuriyet Meydanı) Kalemegdan'a uzanan 19. yüzyıl cepheleri"
       },
       {
         "en": "Open-air street performers and chess tables",
@@ -1195,7 +1195,7 @@
         "en": "The Albania Palace tower at the south end is a good orientation landmark",
         "sr_lat": "Palata \"Albanija\" na južnom kraju je dobar orijentir",
         "sr_cyr": "",
-        "tr": "Güney uçtaki Albanija Sarayı kulesi iyi bir yön bulma noktasıdır"
+        "tr": "Güney uçtaki Albanija Sarayı kulesi iyi bir referans noktasıdır"
       }
     ],
     "activities": [
@@ -1210,7 +1210,7 @@
           "en": "Full pedestrian length, ~1 km, cafés and bookstores every block.",
           "sr_lat": "Cela pešačka deonica, ~1 km, kafići i knjižare na svakih nekoliko koraka.",
           "sr_cyr": "",
-          "tr": "Tüm yaya güzergâhı, ~1 km; her sokakta kafeler ve kitapçılar."
+          "tr": "Tüm yaya bölgesi boyunca ~1 km; her blokta kafe ve kitapçı."
         },
         "icon": "directions_walk",
         "durationMin": 45,
@@ -1228,7 +1228,7 @@
           "en": "Side street with independent shops, design studios and indie bookstores.",
           "sr_lat": "Ulica s nezavisnim radnjama, dizajn-studiima i knjižarama.",
           "sr_cyr": "",
-          "tr": "Bağımsız dükkânlar, tasarım stüdyoları ve bağımsız kitapçılarla dolu yan sokak."
+          "tr": "Butik dükkânlar, tasarım stüdyoları ve bağımsız kitapçılarla dolu yan sokak."
         },
         "icon": "storefront",
         "durationMin": 30,
@@ -1240,7 +1240,7 @@
           "en": "Chess tables in front of the Albania Palace",
           "sr_lat": "Šahovski stolovi pred Palatom Albanija",
           "sr_cyr": "",
-          "tr": "Albanija Sarayı önündeki satranç masaları"
+          "tr": "Palata Albanija önündeki satranç masaları"
         },
         "summary": {
           "en": "Stop and watch the regulars at the south end — a free Belgrade ritual.",
@@ -1543,7 +1543,7 @@
       "en": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
       "sr_lat": "Kompaktan muzej u vili iz dvadesetih godina sa originalnim Teslinim uređajima i živim demonstracijama kalemova. U leto rezervišite unapred.",
       "sr_cyr": "",
-      "tr": "1920'lerden kalma bir villada, orijinal Tesla cihazları ve canlı bobin gösterileri olan kompakt müze. Yazın önceden rezervasyon yaptırın."
+      "tr": "1920'lerden kalma bir villada, orijinal Tesla cihazları ve canlı Tesla bobini gösterileri olan kompakt müze. Yazın önceden rezervasyon yaptırın."
     },
     "address": {
       "en": "Krunska 51",
@@ -1615,7 +1615,7 @@
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
           "sr_cyr": "",
-          "tr": "Kontrol etmeye değer — Belgrad müzeleri her birkaç ayda bir konuk koleksiyonları döndürür."
+          "tr": "Kontrol etmeye değer — Belgrad müzeleri birkaç ayda bir konuk koleksiyonlarını değiştirir."
         },
         "icon": "palette",
         "durationMin": 45,
