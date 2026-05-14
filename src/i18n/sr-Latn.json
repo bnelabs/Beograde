@@ -90,7 +90,8 @@
     "budget_low": "Sitan trošak",
     "budget_mid": "Srednje",
     "budget_high": "Premium",
-    "show_distance": "Prikaži udaljenost"
+    "show_distance": "Prikaži udaljenost",
+    "open_in_maps": "Otvori u Mapama"
   },
   "itinerary": {
     "back": "Nazad",

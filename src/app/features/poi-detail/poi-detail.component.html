@@ -52,6 +52,10 @@
             <span class="poi-status-text">{{ t().poi.show_distance }}</span>
           </button>
         }
+        <button type="button" class="poi-status-cell poi-status-maps" (click)="openInMaps()" [attr.aria-label]="t().poi.open_in_maps">
+          <span class="material-symbols-outlined" aria-hidden="true">map</span>
+          <span class="poi-status-text">{{ t().poi.open_in_maps }}</span>
+        </button>
       </div>
 
       <!-- Tiny 7-dot weekly busy strip (today highlighted). Tap any dot to expand. -->

@@ -65,7 +65,8 @@
   background: transparent; border: none; padding: 0; cursor: pointer;
 }
 .poi-status-distance .material-symbols-outlined,
-.poi-status-gps .material-symbols-outlined {
+.poi-status-gps .material-symbols-outlined,
+.poi-status-maps .material-symbols-outlined {
   font-size: 18px; color: var(--accent); flex-shrink: 0;
 }
 

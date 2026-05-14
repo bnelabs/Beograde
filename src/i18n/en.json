@@ -90,7 +90,8 @@
     "budget_low": "Light spend",
     "budget_mid": "Mid spend",
     "budget_high": "Premium",
-    "show_distance": "Show distance"
+    "show_distance": "Show distance",
+    "open_in_maps": "Open in Maps"
   },
   "itinerary": {
     "back": "Back",

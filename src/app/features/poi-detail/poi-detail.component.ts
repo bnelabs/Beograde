@@ -256,4 +256,12 @@ export class PoiDetailComponent {
       void this.saved.add(p.id);
     }
   }
+
+  openInMaps(): void {
+    const p = this.poi();
+    if (!p) return;
+    const query = encodeURIComponent(`${p.name.en} ${p.lat},${p.lng}`);
+    const url = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
 }

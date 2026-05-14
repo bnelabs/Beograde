@@ -90,7 +90,8 @@
     "budget_low": "Az harcama",
     "budget_mid": "Orta harcama",
     "budget_high": "Yüksek harcama",
-    "show_distance": "Mesafeyi göster"
+    "show_distance": "Mesafeyi göster",
+    "open_in_maps": "Haritada Aç"
   },
   "itinerary": {
     "back": "Geri",
