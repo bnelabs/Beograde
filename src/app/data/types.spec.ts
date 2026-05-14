@@ -37,6 +37,7 @@ describe('types', () => {
     const stop: ItineraryStop = { poiId: 'x', arrivalOffsetMinutes: 0, durationMinutes: 30 };
     const it: Itinerary = {
       id: 'i',
+      kind: 'city',
       title: bg,
       subtitle: bg,
       durationMinutes: 60,

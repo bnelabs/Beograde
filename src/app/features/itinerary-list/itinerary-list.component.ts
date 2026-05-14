@@ -19,7 +19,8 @@ import type { Itinerary } from '../../data/types';
   styleUrl: './itinerary-list.component.css',
 })
 export class ItineraryListComponent {
-  protected readonly itineraries = ITINERARIES;
+  /** /routes renders in-city walks. Day-trip itineraries surface on /trips instead. */
+  protected readonly itineraries = ITINERARIES.filter(i => i.kind === 'city');
   protected readonly progress = inject(ItineraryProgressService);
   private readonly strings = inject(StringsService);
   protected readonly icons = CATEGORY_ICONS;
@@ -43,12 +44,13 @@ export class ItineraryListComponent {
 
   protected readonly activeItinerary = computed(() => {
     const id = this.progress.activeId();
-    return id ? getItinerary(id) : null;
+    const it = id ? getItinerary(id) : null;
+    return it && it.kind === 'city' ? it : null;
   });
 
   protected readonly inactiveItineraries = computed(() => {
     const activeId = this.progress.activeId();
-    return ITINERARIES.filter(i => i.id !== activeId);
+    return this.itineraries.filter(i => i.id !== activeId);
   });
 
   hours(min: number): string {

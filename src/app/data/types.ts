@@ -135,6 +135,8 @@ export interface ItineraryStop {
 
 export interface Itinerary {
   id: string;
+  /** 'city' renders on /routes (in-Belgrade walks); 'day-trip' on /trips (full-day excursions outside Belgrade). */
+  kind: 'city' | 'day-trip';
   title: Bilingual;
   subtitle: Bilingual;
   durationMinutes: number;
