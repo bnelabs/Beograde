@@ -111,18 +111,24 @@ export class ItineraryDetailComponent {
   });
 
   hours(min: number): string {
-    if (min < 60) return `${min} min`;
+    const poi = this.t().poi;
+    if (min < 60) return poi.duration_min.replace('{n}', min.toString());
     const h = Math.floor(min / 60);
     const m = min % 60;
-    return m === 0 ? `${h} h` : `${h} h ${m} min`;
+    const hStr = poi.duration_hr.replace('{n}', h.toString());
+    if (m === 0) return hStr;
+    return `${hStr} ${poi.duration_min.replace('{n}', m.toString())}`;
   }
 
   offset(min: number): string {
-    if (min === 0) return 'Start';
-    if (min < 60) return `+${min} min`;
+    if (min === 0) return this.t().itinerary.offset_start;
+    const poi = this.t().poi;
+    if (min < 60) return `+${poi.duration_min.replace('{n}', min.toString())}`;
     const h = Math.floor(min / 60);
     const m = min % 60;
-    return m === 0 ? `+${h} h` : `+${h} h ${m} min`;
+    const hStr = `+${poi.duration_hr.replace('{n}', h.toString())}`;
+    if (m === 0) return hStr;
+    return `${hStr} ${poi.duration_min.replace('{n}', m.toString())}`;
   }
 
   startItinerary(): void {

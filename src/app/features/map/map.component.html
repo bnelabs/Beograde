@@ -5,10 +5,10 @@
     <div class="map-overlay">
       <div class="map-card">
         <div class="map-icon"><span class="material-symbols-outlined" aria-hidden="true">cloud_download</span></div>
-        <h2>Get ready for offline</h2>
-        <p>Beograde needs to download the Belgrade map pack once. After this, the app works in airplane mode.</p>
+        <h2>{{ t().map.offline_intro_title }}</h2>
+        <p>{{ t().map.offline_intro_body }}</p>
         <button type="button" (click)="startDownload()" class="map-btn map-btn-primary">{{ t().map.download_pack }}</button>
-        <p class="map-meta">One-time · Wi-Fi recommended</p>
+        <p class="map-meta">{{ t().map.one_time_wifi }}</p>
       </div>
     </div>
   }
@@ -81,7 +81,7 @@
               }
             </div>
             <div class="map-near-body">
-              <span class="map-near-eyebrow">{{ categoryLabel(item.poi.category) }} · {{ formatDistance(item.meters) }}</span>
+              <span class="map-near-eyebrow">{{ t().categories[item.poi.category] }} · {{ formatDistance(item.meters) }}</span>
               <span class="map-near-name">{{ item.poi.name | i18nText }}</span>
               <span class="map-near-walk">{{ t().map.min_walk.replace('{n}', item.walkMinutes.toString()) }}</span>
             </div>

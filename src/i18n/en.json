@@ -8,6 +8,7 @@
   },
   "home": {
     "greeting": "Hello, Beograd",
+    "city_name": "Belgrade",
     "todays_pick": "Today's pick",
     "open_now": "Open now near you",
     "highlights": "Belgrade highlights",
@@ -23,7 +24,31 @@
     "recenter": "Recenter on my location",
     "tracking_on": "Stop tracking",
     "tracking_off": "Start tracking",
-    "min_walk": "{n} min walk"
+    "min_walk": "{n} min walk",
+    "offline_intro_title": "Get ready for offline",
+    "offline_intro_body": "Beograde needs to download the Belgrade map pack once. After this, the app works in airplane mode.",
+    "one_time_wifi": "One-time · Wi-Fi recommended"
+  },
+  "categories": {
+    "sight": "Sights",
+    "cuisine": "Cuisine",
+    "nightlife": "Nightlife",
+    "cafe": "Cafés",
+    "museum": "Museums",
+    "viewpoint": "Viewpoints",
+    "park": "Parks"
+  },
+  "places": {
+    "title": "Places",
+    "found": "{n} found",
+    "enable_gps": "Enable GPS to sort by distance",
+    "filter_all": "All"
+  },
+  "routes": {
+    "title": "Routes",
+    "subtitle": "Hand-curated walks through the city.",
+    "in_progress": "In progress",
+    "eyebrow": "Belgrade · curated"
   },
   "poi": {
     "back": "Back",
@@ -73,7 +98,16 @@
     "complete": "Itinerary complete",
     "next_stop": "Next stop",
     "stops": "{n} stops",
-    "route_unavailable": "Route geometry unavailable — the steps still work."
+    "route_unavailable": "Route geometry unavailable — the steps still work.",
+    "not_found": "Not found",
+    "start_button": "Start",
+    "reset_button": "Reset",
+    "offset_start": "Start",
+    "back_to_routes": "Back to routes",
+    "transport_section": "Getting there & around",
+    "transit_short": "transit",
+    "away": "{distance} away",
+    "min_walk": "{n} min walk"
   },
   "saved": {
     "empty_title": "Nothing saved yet",
@@ -81,9 +115,16 @@
   },
   "trips": {
     "empty_title": "Day trips coming soon",
-    "empty_body": "Novi Sad, Topola, Avala and more — with transit info — land in the next update."
+    "empty_body": "Novi Sad, Topola, Avala and more — with transit info — land in the next update.",
+    "eyebrow": "Beyond Belgrade"
   },
   "settings": {
+    "title": "Settings",
+    "eur_in_parens": "EUR shown in parentheses",
+    "belgrade_map_pack": "Belgrade map pack",
+    "download": "Download",
+    "clear_pack": "Clear pack",
+    "redownload": "Re-download",
     "language": "Language",
     "language_en": "English",
     "language_sr": "Srpski",
@@ -102,12 +143,18 @@
     "install_ios": "Tap Share, then Add to Home Screen.",
     "downloaded_today": "Today",
     "downloaded_yesterday": "Yesterday",
-    "downloaded_days": "{n} days ago"
+    "downloaded_days": "{n} days ago",
+    "not_downloaded": "Not downloaded",
+    "downloading_short": "Downloading…",
+    "status_unknown": "Status unknown",
+    "foot": "Beograde · offline-first"
   },
   "common": {
     "close": "Close",
     "cancel": "Cancel",
     "confirm": "Confirm",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "dismiss": "Dismiss",
+    "settings_aria": "Settings"
   }
 }

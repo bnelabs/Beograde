@@ -19,6 +19,7 @@ export class App {
   private router = inject(Router);
   protected readonly pwa = inject(PwaInstallService);
   private readonly strings = inject(StringsService);
+  protected readonly t = this.strings.t;
   protected readonly tabs = computed<NavTab[]>(() => {
     const t = this.strings.t().tabs;
     return [

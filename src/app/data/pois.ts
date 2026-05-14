@@ -10,16 +10,6 @@ export function getPoi(id: string): POI | undefined {
   return POI_BY_ID.get(id);
 }
 
-export const CATEGORY_LABELS: Record<POI['category'], string> = {
-  sight: 'Sights',
-  cuisine: 'Cuisine',
-  nightlife: 'Nightlife',
-  cafe: 'Cafés',
-  museum: 'Museums',
-  viewpoint: 'Viewpoints',
-  park: 'Parks',
-};
-
 export const CATEGORY_ICONS: Record<POI['category'], string> = {
   sight: 'account_balance',
   cuisine: 'restaurant',

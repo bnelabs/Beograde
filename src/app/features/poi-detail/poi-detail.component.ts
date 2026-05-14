@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { CommonModule, Location } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { getPoi, CATEGORY_LABELS, CATEGORY_ICONS } from '../../data/pois';
+import { getPoi, CATEGORY_ICONS } from '../../data/pois';
 import type { BudgetTier, PoiActivity } from '../../data/types';
 import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
@@ -33,7 +33,6 @@ export class PoiDetailComponent {
   protected readonly geo = inject(GeolocationService);
   protected readonly saved = inject(SavedService);
 
-  protected readonly labels = CATEGORY_LABELS;
   protected readonly icons = CATEGORY_ICONS;
 
   private idSig = toSignal(this.route.paramMap, { requireSync: true });
@@ -230,7 +229,7 @@ export class PoiDetailComponent {
 
   protected fmtDistance = formatDistance;
   protected fmtWalk(meters: number): string {
-    return `${walkingMinutes(meters)} min walk`;
+    return this.t().map.min_walk.replace('{n}', walkingMinutes(meters).toString());
   }
 
   formatVerified(iso: string): string {

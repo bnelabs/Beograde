@@ -86,9 +86,12 @@ export class HomeComponent {
   });
 
   formatHourMeta(durationMinutes: number): string {
-    if (durationMinutes < 60) return `${durationMinutes} min`;
+    const poi = this.t().poi;
+    if (durationMinutes < 60) return poi.duration_min.replace('{n}', durationMinutes.toString());
     const h = Math.floor(durationMinutes / 60);
     const m = durationMinutes % 60;
-    return m === 0 ? `${h} h` : `${h} h ${m} min`;
+    const hStr = poi.duration_hr.replace('{n}', h.toString());
+    if (m === 0) return hStr;
+    return `${hStr} ${poi.duration_min.replace('{n}', m.toString())}`;
   }
 }

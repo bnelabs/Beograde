@@ -1,6 +1,6 @@
 <div class="st">
   <header class="st-head">
-    <h1 class="st-title">Settings</h1>
+    <h1 class="st-title">{{ t().settings.title }}</h1>
   </header>
 
   <section>
@@ -16,7 +16,7 @@
     <h2 class="st-section">{{ t().settings.currency }}</h2>
     <div class="st-card st-card-info">
       <strong>{{ t().settings.currency_rsd }}</strong>
-      <span>EUR shown in parentheses</span>
+      <span>{{ t().settings.eur_in_parens }}</span>
     </div>
   </section>
 
@@ -25,16 +25,16 @@
     <div class="st-card">
       <div class="st-card-row st-card-row-info">
         <div>
-          <strong>Belgrade map pack</strong>
+          <strong>{{ t().settings.belgrade_map_pack }}</strong>
           <span>
             @if (tilePack.status() === 'ready') {
               {{ tilePackSize() }} · {{ tilePackAge() }}
             } @else if (tilePack.status() === 'missing') {
-              Not downloaded
+              {{ t().settings.not_downloaded }}
             } @else if (tilePack.status() === 'downloading') {
-              Downloading…
+              {{ t().settings.downloading_short }}
             } @else {
-              {{ tilePack.error() ?? 'Status unknown' }}
+              {{ tilePack.error() ?? t().settings.status_unknown }}
             }
           </span>
         </div>
@@ -45,12 +45,12 @@
       </div>
       <div class="st-card-actions">
         @if (tilePack.status() === 'missing' || tilePack.status() === 'error') {
-          <button type="button" (click)="tilePack.download()" class="st-btn st-btn-primary">Download</button>
+          <button type="button" (click)="tilePack.download()" class="st-btn st-btn-primary">{{ t().settings.download }}</button>
         }
         @if (tilePack.status() === 'ready') {
           @if (!confirmingClear()) {
-            <button type="button" (click)="confirmingClear.set(true)" class="st-btn st-btn-secondary">Clear pack</button>
-            <button type="button" (click)="tilePack.download()" class="st-btn st-btn-secondary">Re-download</button>
+            <button type="button" (click)="confirmingClear.set(true)" class="st-btn st-btn-secondary">{{ t().settings.clear_pack }}</button>
+            <button type="button" (click)="tilePack.download()" class="st-btn st-btn-secondary">{{ t().settings.redownload }}</button>
           } @else {
             <button type="button" (click)="confirmingClear.set(false)" class="st-btn st-btn-secondary">{{ t().common.cancel }}</button>
             <button type="button" (click)="clearPack()" class="st-btn st-btn-danger">{{ t().common.confirm }}</button>
@@ -84,5 +84,5 @@
     <button type="button" (click)="install()" class="st-btn st-btn-primary st-install">{{ t().settings.install }}</button>
   }
 
-  <p class="st-foot">Beograde · offline-first</p>
+  <p class="st-foot">{{ t().settings.foot }}</p>
 </div>

@@ -10,7 +10,7 @@ import { ProximityService } from '../../core/proximity.service';
 import { TilePackService } from '../../core/tile-pack.service';
 import { HoursService } from '../../core/hours/hours.service';
 import { SavedService } from '../../core/saved/saved.service';
-import { POIS, CATEGORY_LABELS, CATEGORY_ICONS, getPoi } from '../../data/pois';
+import { POIS, CATEGORY_ICONS, getPoi } from '../../data/pois';
 import { ITINERARIES, getItinerary } from '../../data/itineraries';
 import { formatDistance } from '../../data/distance';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
@@ -148,9 +148,6 @@ export class MapComponent implements AfterViewInit, OnDestroy {
   }
 
   formatDistance = formatDistance;
-  categoryLabel(category: keyof typeof CATEGORY_LABELS): string {
-    return CATEGORY_LABELS[category];
-  }
 
   private async bootMap(): Promise<void> {
     if (this.map) return;

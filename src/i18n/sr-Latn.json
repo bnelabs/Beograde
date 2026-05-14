@@ -8,6 +8,7 @@
   },
   "home": {
     "greeting": "Zdravo, Beograde",
+    "city_name": "Beograd",
     "todays_pick": "Danas preporučujemo",
     "open_now": "Otvoreno blizu tebe",
     "highlights": "Beogradski biseri",
@@ -23,7 +24,31 @@
     "recenter": "Centriraj na moju lokaciju",
     "tracking_on": "Zaustavi praćenje",
     "tracking_off": "Pokreni praćenje",
-    "min_walk": "{n} min pešaka"
+    "min_walk": "{n} min pešaka",
+    "offline_intro_title": "Pripremi se za rad bez interneta",
+    "offline_intro_body": "Beograd vodič treba jednom da preuzme paket karte za Beograd. Posle toga aplikacija radi i u avionskom režimu.",
+    "one_time_wifi": "Jednokratno · preporučuje se Wi-Fi"
+  },
+  "categories": {
+    "sight": "Znamenitosti",
+    "cuisine": "Restorani",
+    "nightlife": "Noćni provod",
+    "cafe": "Kafići",
+    "museum": "Muzeji",
+    "viewpoint": "Vidikovci",
+    "park": "Parkovi"
+  },
+  "places": {
+    "title": "Mesta",
+    "found": "{n} pronađeno",
+    "enable_gps": "Uključi GPS za sortiranje po udaljenosti",
+    "filter_all": "Sve"
+  },
+  "routes": {
+    "title": "Rute",
+    "subtitle": "Ručno odabrane šetnje kroz grad.",
+    "in_progress": "U toku",
+    "eyebrow": "Beograd · selekcija"
   },
   "poi": {
     "back": "Nazad",
@@ -73,7 +98,16 @@
     "complete": "Ruta završena",
     "next_stop": "Sledeća stanica",
     "stops": "{n} stanica",
-    "route_unavailable": "Geometrija rute nije dostupna — koraci i dalje rade."
+    "route_unavailable": "Geometrija rute nije dostupna — koraci i dalje rade.",
+    "not_found": "Nije pronađeno",
+    "start_button": "Pokreni",
+    "reset_button": "Resetuj",
+    "offset_start": "Početak",
+    "back_to_routes": "Nazad na rute",
+    "transport_section": "Kako da stigneš",
+    "transit_short": "prevoz",
+    "away": "{distance} udaljeno",
+    "min_walk": "{n} min pešaka"
   },
   "saved": {
     "empty_title": "Još ništa nije sačuvano",
@@ -81,9 +115,16 @@
   },
   "trips": {
     "empty_title": "Izleti uskoro",
-    "empty_body": "Novi Sad, Topola, Avala i još mnogo toga — sa info o prevozu — stižu u sledećem ažuriranju."
+    "empty_body": "Novi Sad, Topola, Avala i još mnogo toga — sa info o prevozu — stižu u sledećem ažuriranju.",
+    "eyebrow": "Van Beograda"
   },
   "settings": {
+    "title": "Podešavanja",
+    "eur_in_parens": "EUR je prikazan u zagradama",
+    "belgrade_map_pack": "Paket karte Beograda",
+    "download": "Preuzmi",
+    "clear_pack": "Obriši paket",
+    "redownload": "Preuzmi ponovo",
     "language": "Jezik",
     "language_en": "English",
     "language_sr": "Srpski",
@@ -102,12 +143,18 @@
     "install_ios": "Dodirni Podeli, pa Dodaj na početni ekran.",
     "downloaded_today": "Danas",
     "downloaded_yesterday": "Juče",
-    "downloaded_days": "Pre {n} dana"
+    "downloaded_days": "Pre {n} dana",
+    "not_downloaded": "Nije preuzeto",
+    "downloading_short": "Preuzimanje…",
+    "status_unknown": "Status nepoznat",
+    "foot": "Beograd · radi i offline"
   },
   "common": {
     "close": "Zatvori",
     "cancel": "Otkaži",
     "confirm": "Potvrdi",
-    "loading": "Učitavanje…"
+    "loading": "Učitavanje…",
+    "dismiss": "Odbaci",
+    "settings_aria": "Podešavanja"
   }
 }

@@ -8,6 +8,7 @@
   },
   "home": {
     "greeting": "Merhaba, Belgrad",
+    "city_name": "Belgrad",
     "todays_pick": "Bugünün seçimi",
     "open_now": "Yakınında şu an açık",
     "highlights": "Belgrad'ın öne çıkanları",
@@ -23,7 +24,31 @@
     "recenter": "Konumuma odakla",
     "tracking_on": "Takibi durdur",
     "tracking_off": "Takibi başlat",
-    "min_walk": "{n} dk yürüyüş"
+    "min_walk": "{n} dk yürüyüş",
+    "offline_intro_title": "Çevrimdışı kullanım için hazırlan",
+    "offline_intro_body": "Beograde, Belgrad harita paketini bir kez indirmeli. Sonrasında uygulama uçak modunda da çalışır.",
+    "one_time_wifi": "Tek seferlik · Wi-Fi önerilir"
+  },
+  "categories": {
+    "sight": "Görülecek yerler",
+    "cuisine": "Mutfak",
+    "nightlife": "Gece hayatı",
+    "cafe": "Kafeler",
+    "museum": "Müzeler",
+    "viewpoint": "Manzara noktaları",
+    "park": "Parklar"
+  },
+  "places": {
+    "title": "Yerler",
+    "found": "{n} bulundu",
+    "enable_gps": "Mesafeye göre sıralamak için GPS'i aç",
+    "filter_all": "Tümü"
+  },
+  "routes": {
+    "title": "Rotalar",
+    "subtitle": "Şehir içinde elden seçilmiş yürüyüşler.",
+    "in_progress": "Devam ediyor",
+    "eyebrow": "Belgrad · seçki"
   },
   "poi": {
     "back": "Geri",
@@ -73,7 +98,16 @@
     "complete": "Rota tamamlandı",
     "next_stop": "Sonraki durak",
     "stops": "{n} durak",
-    "route_unavailable": "Rota geometrisi yok — adımlar yine de geçerli."
+    "route_unavailable": "Rota geometrisi yok — adımlar yine de geçerli.",
+    "not_found": "Bulunamadı",
+    "start_button": "Başlat",
+    "reset_button": "Sıfırla",
+    "offset_start": "Başlangıç",
+    "back_to_routes": "Rotalara dön",
+    "transport_section": "Ulaşım & çevre",
+    "transit_short": "ulaşım",
+    "away": "{distance} uzakta",
+    "min_walk": "{n} dk yürüyüş"
   },
   "saved": {
     "empty_title": "Henüz kaydedilen yok",
@@ -81,9 +115,16 @@
   },
   "trips": {
     "empty_title": "Günlük geziler yakında",
-    "empty_body": "Novi Sad, Topola, Avala ve daha fazlası — ulaşım bilgisiyle — bir sonraki güncellemede."
+    "empty_body": "Novi Sad, Topola, Avala ve daha fazlası — ulaşım bilgisiyle — bir sonraki güncellemede.",
+    "eyebrow": "Belgrad'ın ötesi"
   },
   "settings": {
+    "title": "Ayarlar",
+    "eur_in_parens": "EUR parantez içinde gösterilir",
+    "belgrade_map_pack": "Belgrad harita paketi",
+    "download": "İndir",
+    "clear_pack": "Paketi temizle",
+    "redownload": "Yeniden indir",
     "language": "Dil",
     "language_en": "English",
     "language_sr": "Srpski",
@@ -102,12 +143,18 @@
     "install_ios": "Paylaş'a, sonra Ana Ekrana Ekle'ye dokun.",
     "downloaded_today": "Bugün",
     "downloaded_yesterday": "Dün",
-    "downloaded_days": "{n} gün önce"
+    "downloaded_days": "{n} gün önce",
+    "not_downloaded": "İndirilmedi",
+    "downloading_short": "İndiriliyor…",
+    "status_unknown": "Durum bilinmiyor",
+    "foot": "Beograde · önce çevrimdışı"
   },
   "common": {
     "close": "Kapat",
     "cancel": "İptal",
     "confirm": "Onayla",
-    "loading": "Yükleniyor…"
+    "loading": "Yükleniyor…",
+    "dismiss": "Kapat",
+    "settings_aria": "Ayarlar"
   }
 }
