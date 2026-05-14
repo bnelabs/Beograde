@@ -22,7 +22,7 @@ describe('build-provenance', () => {
         ],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
       },
     ];
     const srcPath = join(dir, 'pois.json');
@@ -55,7 +55,7 @@ describe('build-provenance', () => {
         verifiedAt: '2026-05-04', sources: [],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'low',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
       },
     ];
     writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
@@ -81,7 +81,7 @@ describe('build-provenance', () => {
         verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
       },
     ];
     writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
@@ -110,7 +110,7 @@ describe('build-provenance', () => {
         sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
         activities: [{
           title: { en: 'Walk the ramparts', sr_lat: 'Šetnja bedemima', sr_cyr: '' },
           icon: 'directions_walk', durationMin: 45, budget: 'free', intensity: 'easy',
@@ -149,7 +149,7 @@ describe('build-provenance', () => {
         sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
         highlights: [{ en: 'Old wall', sr_lat: 'Stari zid', sr_cyr: '' }],
         tips: [{ en: 'Go at sunset', sr_lat: 'Idite u sumrak', sr_cyr: '' }],
         history: { en: 'Built in 1521.', sr_lat: 'Sagrađen 1521.', sr_cyr: '' },
@@ -187,7 +187,7 @@ describe('build-provenance', () => {
         verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
       },
     ];
     const srcPath = join(dir, 'pois.json');
@@ -224,7 +224,7 @@ describe('build-provenance', () => {
       verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
       reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
       editorialConfidence: 'high',
-      provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+      provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
     }];
     writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
     writeFileSync(join(dir, 'pois.compiled.json'), JSON.stringify([
@@ -257,7 +257,7 @@ describe('build-provenance', () => {
         verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
         reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
         editorialConfidence: 'high',
-        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        provenance: { translatedBy: { sr: 'auto-draft', tr: 'auto-draft' }, lastReviewedAt: '2026-05-04' },
       },
     ];
     writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
