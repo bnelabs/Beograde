@@ -251,12 +251,12 @@ class StubTilePackService {
 class StubGeolocationService {
   position = signal(null);
   permission = signal('prompt');
-  tracking = signal(false);
+  isWatching = signal(false);
   start() {}
   stop() {}
 }
 class StubPwaInstallService {
-  canInstall = signal(false);
+  canPrompt = signal(false);
   isStandalone = signal(false);
   isIos = signal(false);
   async promptInstall() {}
