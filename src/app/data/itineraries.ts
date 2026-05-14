@@ -192,6 +192,92 @@ export const ITINERARIES: Itinerary[] = [
     },
   },
   {
+    id: 'topola-oplenac-day',
+    kind: 'day-trip',
+    title: bg('Topola & Oplenac — Karađorđević Royal Trail', 'Topola i Oplenac — kraljevskim stazama Karađorđevića'),
+    subtitle: bg('Mosaics in a mausoleum, a spa park, a roadside stop. Car or bus 261.', 'Mozaici u mauzoleju, banjski park, usputna stanica. Auto ili autobus 261.'),
+    durationMinutes: 600,
+    vibe: ['history', 'royal', 'architecture', 'day-trip'],
+    gettingThere: bg(
+      'Belgrade → Topola (75 km): By car, 1h15 via E-75 then road 11 through Mladenovac. By bus, Lasta line 261 from BAS to Topola hourly, 1h15-1h30, 700 RSD one way; from Topola to Aranđelovac (Bukovička Banja) bus 22 runs every 30 min, 20 min ride, 200 RSD. Walking from Topola bus station to Oplenac: 25 min uphill or local taxi (~400 RSD). Last bus back to BG ~19:30. CarGo not available outside Belgrade — return rideshare from Aranđelovac is tricky; plan to leave by 18:30. Bring cash — card terminals are inconsistent in smaller cafés.',
+      'Beograd → Topola (75 km): Autom, 1h15 preko E-75 pa magistrala 11 kroz Mladenovac. Autobusom, Lasta 261 iz BAS-a svakih sat vremena, 1h15-1h30, 700 RSD u jednom smeru; iz Topole do Aranđelovca (Bukovička Banja) autobus 22 svakih 30 min, 20 min vožnje, 200 RSD. Peške od autobuske stanice Topola do Oplenca: 25 min uzbrdo ili lokalni taksi (~400 RSD). Poslednji autobus za BG oko 19:30. CarGo ne radi van Beograda — povratak iz Aranđelovca je komplikovan; planiraj polazak do 18:30. Ponesi keš — kartični terminali su neuredni u manjim kafićima.',
+    ),
+    stops: [
+      { poiId: 'mladenovac', arrivalOffsetMinutes: 0, durationMinutes: 45, notes: bg('Quick stop en route — climb to the Hill of Heroes. Coffee on the main square.', 'Brza pauza usput — popni se na Brdo Heroja. Kafa na glavnom trgu.') },
+      { poiId: 'oplenac', arrivalOffsetMinutes: 75, durationMinutes: 150, notes: bg('The crypt mosaics — over 40 million tiles copying medieval Serbian frescoes — are why people come. Spend time in Petar I\'s chapel.', 'Mozaici u kripti — preko 40 miliona pločica koje kopiraju srednjovekovne srpske freske — su razlog dolaska. Provedi vreme u kapeli Petra I.') },
+      { poiId: 'bukovicka-banja', arrivalOffsetMinutes: 270, durationMinutes: 105, notes: bg('Walk the spa park through the open-air sculpture gallery. Drink the mineral water at the source pavilion.', 'Šetnja banjskim parkom kroz galeriju skulptura na otvorenom. Mineralna voda na izvoru u paviljonu.') },
+      { poiId: 'skadarlija', arrivalOffsetMinutes: 510, durationMinutes: 75, notes: bg('Earned dinner back in Belgrade. Tamburica at sunset.', 'Zaslužena večera nazad u Beogradu. Tamburica u sumrak.') },
+    ],
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-14',
+    },
+  },
+  {
+    id: 'smederevo-viminacium-day',
+    kind: 'day-trip',
+    title: bg('Eastern Danube — Vinča to Viminacium', 'Istočni Dunav — od Vinče do Viminacijuma'),
+    subtitle: bg('Three archaeological capitals along the river. Car day; Smederevo by train possible.', 'Tri arheološke prestonice uz reku. Dan za auto; do Smedereva može i voz.'),
+    durationMinutes: 660,
+    vibe: ['archaeology', 'history', 'unesco-tentative', 'day-trip'],
+    gettingThere: bg(
+      'Belgrade → Vinča (14 km): city bus 307 from Banjica II terminus or 308 from Slavija, 35 min, 80 RSD city ticket. Belgrade → Smederevo (45 km): Soko regional train from Beograd Centar (Prokop), 40 min, 230 RSD one way; or bus 8 from BAS hourly, 1h, 350 RSD; or car via E-75, 45 min. Smederevo → Viminacium (45 km): no public transport — car or rideshare from Smederevo (~3500 RSD), or join an organised tour from Belgrade (€40-60 incl. lunch). Viminacium is 9 km from Kostolac, 12 km from Požarevac centre. Most efficient: rent a car for the day (~€40 + fuel). Return from Viminacium to BG: 1h15 by car via E-75.',
+      'Beograd → Vinča (14 km): gradski autobus 307 sa terminala Banjica II ili 308 sa Slavije, 35 min, gradska karta 80 RSD. Beograd → Smederevo (45 km): Soko regionalni voz iz Beograd Centar (Prokop), 40 min, 230 RSD u jednom smeru; ili autobus 8 iz BAS-a na sat, 1h, 350 RSD; ili auto preko E-75, 45 min. Smederevo → Viminacijum (45 km): bez javnog prevoza — auto ili rideshare iz Smedereva (~3500 RSD), ili organizovana tura iz Beograda (€40-60 sa ručkom). Viminacijum je 9 km od Kostolca, 12 km od centra Požarevca. Najefikasnije: iznajmi auto za dan (~€40 + gorivo). Povratak iz Viminacijuma u BG: 1h15 autom preko E-75.',
+    ),
+    stops: [
+      { poiId: 'vinca-archaeological', arrivalOffsetMinutes: 0, durationMinutes: 75, notes: bg('8000-year-old Neolithic settlement. Above-ground museum is small; the open dig pit is what gives the goosebumps.', 'Neolitsko naselje staro 8000 godina. Muzej iznad zemlje je mali; otvorena jama daje jezu.') },
+      { poiId: 'smederevo-fortress', arrivalOffsetMinutes: 105, durationMinutes: 120, notes: bg('Largest medieval lowland fortress in Europe. Walk the Danube wall, climb the small tower for the river view.', 'Najveća srednjovekovna ravničarska tvrđava u Evropi. Pređi dunavski bedem, popni se na malu kulu za pogled na reku.') },
+      { poiId: 'viminacium', arrivalOffsetMinutes: 270, durationMinutes: 180, notes: bg('Roman provincial capital. The amphitheatre and Mammoth Park share a ticket — book ahead in summer; the guided tomb tour is worth the extra fee.', 'Rimska provincijska prestonica. Amfiteatar i Park mamuta dele kartu — rezerviši unapred leti; obilazak grobnice sa vodičem vredi dodatne karte.') },
+      { poiId: 'kafana-question-mark', arrivalOffsetMinutes: 600, durationMinutes: 60, notes: bg('Long dinner back in Belgrade. The riverside fortress views earned ćevapi.', 'Duga večera nazad u Beogradu. Pogledi sa tvrđave kraj reke zaslužili su ćevape.') },
+    ],
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-14',
+    },
+  },
+  {
+    id: 'sabac-koviljaca-day',
+    kind: 'day-trip',
+    title: bg('Šabac & Banja Koviljača — Sava to Drina', 'Šabac i Banja Koviljača — od Save do Drine'),
+    subtitle: bg('An old fortress town and a 19th-century spa park on the Drina. Slow pace.', 'Stari utvrđeni gradić i banjski park iz 19. veka na Drini. Lagan tempo.'),
+    durationMinutes: 540,
+    vibe: ['nature', 'spa', 'river', 'history', 'day-trip'],
+    gettingThere: bg(
+      'Belgrade → Šabac (80 km): Bus from BAS every 30 min, 1h15, 600-800 RSD; or car via M-21, 1h. Šabac → Banja Koviljača (55 km): Bus to Loznica every 1-2 h (45 min, 400 RSD), then local bus to Banja Koviljača (15 min, 100 RSD); or direct local bus 4 times a day (1h, 500 RSD). Car is 45 min via M-19. Banja Koviljača is the last stop before Bosnia — the border post is 2 km further. Return to BG from Banja Koviljača: bus to Loznica then BG bus, allow 3 h total; last BG bus departs Loznica ~19:00. Lunch idea: any of the spa villa terraces; cash preferred outside Šabac centre.',
+      'Beograd → Šabac (80 km): Autobus iz BAS-a svakih 30 min, 1h15, 600-800 RSD; ili auto preko M-21, 1h. Šabac → Banja Koviljača (55 km): Autobus za Loznicu svakih 1-2 h (45 min, 400 RSD), pa lokalni autobus do Banje Koviljače (15 min, 100 RSD); ili direktni lokalni autobus 4 puta dnevno (1h, 500 RSD). Autom 45 min preko M-19. Banja Koviljača je poslednje stajalište pre Bosne — granični prelaz je 2 km dalje. Povratak: autobus do Loznice pa za BG, računaj 3 h ukupno; poslednji autobus za BG iz Loznice oko 19:00. Ručak: terase banjskih vila; van centra Šapca poželjan je keš.',
+    ),
+    stops: [
+      { poiId: 'sabac-centre', arrivalOffsetMinutes: 0, durationMinutes: 90, notes: bg('Walk the Sava promenade and the fortress remains. The 1814 battlefield is signposted from the centre.', 'Prošetaj savskom promenadom i ostacima tvrđave. Bojište iz 1814. je obeleženo iz centra.') },
+      { poiId: 'banja-koviljaca', arrivalOffsetMinutes: 150, durationMinutes: 210, notes: bg('The park is bigger than it looks — allow 90 min for the central walk alone. Drina view from the upper terrace. Lunch at one of the historic villa cafés.', 'Park je veći nego što izgleda — računaj 90 min samo za centralnu šetnju. Pogled na Drinu sa gornje terase. Ručak u jednom od istorijskih vila-kafića.') },
+      { poiId: 'skadarlija', arrivalOffsetMinutes: 450, durationMinutes: 75, notes: bg('Late dinner back in Belgrade. Friday return traffic on M-21 can add an hour — leave early.', 'Kasna večera nazad u Beogradu. Petkom gužva na M-21 zna dodati sat — kreni ranije.') },
+    ],
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-14',
+    },
+  },
+  {
+    id: 'subotica-day',
+    kind: 'day-trip',
+    title: bg('Subotica & the Art-Nouveau North', 'Subotica i secesijski sever'),
+    subtitle: bg('Two Hungarian-era jewels, restored to glow. Fast train and a long lunch.', 'Dva bisera mađarskog doba, obnovljena u sjaju. Brzi voz i dug ručak.'),
+    durationMinutes: 540,
+    vibe: ['architecture', 'art-nouveau', 'history', 'day-trip'],
+    gettingThere: bg(
+      'Belgrade → Subotica (180 km): Soko fast train from Beograd Centar (Prokop) runs every 2-3 hours, 1h35 ride, ~1100 RSD one way — the fastest option. Or buses from BAS hourly, 3h ride, 900-1200 RSD. From Subotica train station: 10 min walk south to Trg slobode (City Hall). Walking between City Hall and Synagogue is 8 min. Lunch idea: Boss Caffe in the old town for Vojvodina cuisine, or Stari Hrast for fish soup. Last train back ~20:30; last bus ~22:00 — plan return early to allow Belgrade dinner.',
+      'Beograd → Subotica (180 km): Soko brzi voz iz Beograd Centar (Prokop) polazi svakih 2-3 h, 1h35 vožnje, ~1100 RSD u jednom smeru — najbrža opcija. Ili autobusi iz BAS-a na sat, 3 h vožnje, 900-1200 RSD. Od železničke stanice Subotica: 10 min peške do Trga slobode (Gradska kuća). Između Gradske kuće i Sinagoge: 8 min peške. Ručak: Boss Caffe za vojvođansku kuhinju ili Stari Hrast za riblju čorbu. Poslednji voz nazad oko 20:30; poslednji autobus oko 22:00 — planiraj rani povratak za večeru u Beogradu.',
+    ),
+    stops: [
+      { poiId: 'subotica-city-hall', arrivalOffsetMinutes: 0, durationMinutes: 105, notes: bg('Climb the clock tower for the Pannonian-plain view. Book the interior tour at the tourist info kiosk on Trg slobode.', 'Popni se na sat-kulu za pogled na Panonsku ravnicu. Rezerviši unutrašnji obilazak u info-kiosku na Trgu slobode.') },
+      { poiId: 'subotica-synagogue', arrivalOffsetMinutes: 120, durationMinutes: 75, notes: bg('Restored 2018. The painted vault is the showstopper — sit on the bench and look up.', 'Obnovljena 2018. Oslikani svod je glavni utisak — sedi na klupu i pogledaj gore.') },
+      { poiId: 'skadarlija', arrivalOffsetMinutes: 480, durationMinutes: 60, notes: bg('Late dinner back in Belgrade after the 16:00 train.', 'Kasna večera u Beogradu posle voza u 16h.') },
+    ],
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-14',
+    },
+  },
+  {
     id: 'ada-watersports-day',
     kind: 'city',
     title: bg('Ada Ciganlija All-Day Adventure', 'Ada Ciganlija — celodnevna avantura'),
