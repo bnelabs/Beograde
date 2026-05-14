@@ -1,7 +1,7 @@
 import { defaultLocaleFromBrowser, pick } from './i18n';
 import type { Bilingual } from '../../data/types';
 
-const sample: Bilingual = { en: 'Hello', sr_lat: 'Zdravo', sr_cyr: 'Здраво', tr: '' };
+const sample: Bilingual = { en: 'Hello', sr_lat: 'Zdravo', sr_cyr: 'Здраво', tr: 'Merhaba' };
 
 describe('i18n helpers', () => {
   describe('pick', () => {
@@ -21,6 +21,15 @@ describe('i18n helpers', () => {
       const partial: Bilingual = { en: 'Only', sr_lat: '', sr_cyr: '', tr: '' };
       expect(pick(partial, { locale: 'sr', script: 'Latn' })).toBe('Only');
     });
+
+    it('picks Turkish when locale is tr', () => {
+      expect(pick(sample, { locale: 'tr', script: 'Latn' })).toBe('Merhaba');
+    });
+
+    it('falls back to English when tr field is empty', () => {
+      const partial: Bilingual = { en: 'Only', sr_lat: '', sr_cyr: '', tr: '' };
+      expect(pick(partial, { locale: 'tr', script: 'Latn' })).toBe('Only');
+    });
   });
 
   describe('defaultLocaleFromBrowser', () => {
@@ -35,6 +44,11 @@ describe('i18n helpers', () => {
 
     it('handles undefined gracefully', () => {
       expect(defaultLocaleFromBrowser(undefined)).toEqual({ locale: 'en', script: 'Latn' });
+    });
+
+    it('returns tr-Latn when navigator language starts with tr', () => {
+      expect(defaultLocaleFromBrowser('tr-TR')).toEqual({ locale: 'tr', script: 'Latn' });
+      expect(defaultLocaleFromBrowser('tr')).toEqual({ locale: 'tr', script: 'Latn' });
     });
   });
 });
