@@ -5,16 +5,27 @@ import srLatStrings from '../../../i18n/sr-Latn.json';
 import srCyrStrings from '../../../i18n/sr-Cyrl.json';
 import trStrings from '../../../i18n/tr.json';
 
-type StringsBundle = typeof enStrings;
+type DeepWiden<T> = T extends string
+  ? string
+  : T extends readonly (infer U)[]
+    ? readonly DeepWiden<U>[]
+    : { [K in keyof T]: DeepWiden<T[K]> };
+
+type StringsBundle = DeepWiden<typeof enStrings>;
+
+const en: StringsBundle = enStrings;
+const srLat: StringsBundle = srLatStrings;
+const srCyr: StringsBundle = srCyrStrings;
+const tr: StringsBundle = trStrings;
 
 @Injectable({ providedIn: 'root' })
 export class StringsService {
   private readonly i18n = inject(I18nService);
   readonly t = computed<StringsBundle>(() => {
     const loc = this.i18n.locale();
-    if (loc.locale === 'tr') return trStrings as StringsBundle;
-    if (loc.locale !== 'sr') return enStrings;
-    if (loc.script === 'Cyrl' && this.i18n.cyrillicEnabled()) return srCyrStrings as StringsBundle;
-    return srLatStrings;
+    if (loc.locale === 'tr') return tr;
+    if (loc.locale !== 'sr') return en;
+    if (loc.script === 'Cyrl' && this.i18n.cyrillicEnabled()) return srCyr;
+    return srLat;
   });
 }

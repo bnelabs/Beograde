@@ -10,23 +10,11 @@ import {
 } from './provenance-checks.mjs';
 import { latnToCyrl } from './translit.mjs';
 
-function fillCyr(b) {
-  if (b.sr_cyr) return b;
-  return { ...b, sr_cyr: latnToCyrl(b.sr_lat || b.en || '') };
-}
-
-function fillCyrList(list) {
-  if (!Array.isArray(list)) return list;
-  return list.map(fillCyr);
-}
-
-function fillTr(b) {
-  if (b.tr) return b;
-  return { ...b, tr: b.en || '' };
-}
-
 function fillBoth(b) {
-  return fillTr(fillCyr(b));
+  const out = { ...b };
+  if (!out.sr_cyr) out.sr_cyr = latnToCyrl(out.sr_lat || out.en || '');
+  if (!out.tr) out.tr = out.en || '';
+  return out;
 }
 
 function fillBothList(list) {
