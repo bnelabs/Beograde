@@ -6,17 +6,20 @@
     "name": {
       "en": "Kalemegdan Fortress",
       "sr_lat": "Beogradska tvrđava (Kalemegdan)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Belgrade's historic citadel, set on the bluff where the Sava meets the Danube. Walk the ramparts, find the Victor monument, and watch sunset from the upper town.",
       "sr_lat": "Beogradska istorijska tvrđava na uzvisini gde se Sava uliva u Dunav. Prošetajte bedemima, pronađite Pobednika i posmatrajte zalazak sunca iz gornjeg grada.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kalemegdan Park",
       "sr_lat": "Kalemegdanski park",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4503,
     "lat": 44.8226,
@@ -51,22 +54,26 @@
       {
         "en": "Walk the ramparts where the Sava meets the Danube",
         "sr_lat": "Šetnja bedemima na ušću Save u Dunav",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Pobednik (Victor) statue — Belgrade's most-photographed monument",
         "sr_lat": "Pobednik — najfotografisaniji spomenik Beograda",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Free admission, open 24/7 — sunset on the upper terrace is the move",
         "sr_lat": "Besplatan ulaz, otvoreno 0–24 — najlepše uveče sa gornje terase",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Roman, Byzantine, Ottoman and Habsburg layers in one fortress",
         "sr_lat": "Rimski, vizantijski, osmanski i habzburški slojevi na istom mestu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -74,29 +81,34 @@
         {
           "en": "Best free viewpoint in the city",
           "sr_lat": "Najbolji besplatan vidikovac u gradu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Vast park space with shaded paths",
           "sr_lat": "Velik park sa zasenčenim stazama",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Multiple small museums and a clock tower",
           "sr_lat": "Više malih muzeja i sahat-kula",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Cobblestones — pack flat shoes",
           "sr_lat": "Kaldrma — obujte ravne cipele",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Crowded on summer weekends",
           "sr_lat": "Gužva leti vikendom",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -104,35 +116,41 @@
       {
         "en": "Arrive 45 minutes before sunset for the best ramparts light",
         "sr_lat": "Stignite 45 min pre zalaska — najlepša svetla na bedemima",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Skip the paid tower and walk to the Pobednik for the same view",
         "sr_lat": "Preskočite naplatu kule — sa Pobednika je isti vidik besplatno",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Use the Kalemegdan park entrance from Knez Mihailova, not the river side",
         "sr_lat": "Uđite iz Knez Mihailove, ne sa rečne strane",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "history": {
       "en": "Fortified since Roman Singidunum in the 1st century, the bastions you see today are largely Habsburg works from the 18th century. The site changed hands more than 40 times before becoming a public park in 1869.",
       "sr_lat": "Utvrđenje od rimskog Singidunuma u 1. veku; današnji bedemi su uglavnom habzburški iz 18. veka. Mesto je menjalo vladare više od 40 puta pre nego što je 1869. postalo javni park.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "activities": [
       {
         "title": {
           "en": "Walk the ramparts to Pobednik",
           "sr_lat": "Šetnja bedemima do Pobednika",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Loop the upper terraces, ending at the Victor statue for the river-confluence view.",
           "sr_lat": "Obilazak gornjih terasa do Pobednika — pogled na ušće.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 60,
@@ -143,12 +161,14 @@
         "title": {
           "en": "Sunset on the upper terrace",
           "sr_lat": "Zalazak sa gornje terase",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive ~45 min before sunset for the best ramparts light over the Sava–Danube.",
           "sr_lat": "Dođite oko 45 min pre zalaska — najlepša svetla iznad ušća.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -159,12 +179,14 @@
         "title": {
           "en": "Spot Roman, Ottoman and Habsburg layers",
           "sr_lat": "Rimski, osmanski i habzburški slojevi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Singidunum-era stones sit beneath 18th-century Habsburg walls — look for the inscriptions.",
           "sr_lat": "Singidunumski kamen ispod habzburških bedema — tražite natpise.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "history_edu",
         "durationMin": 60,
@@ -175,12 +197,14 @@
         "title": {
           "en": "Military Museum",
           "sr_lat": "Vojni muzej",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "WWI cannons, Yugoslav-wars exhibits and medieval arms in a 19th-c. arsenal.",
           "sr_lat": "Topovi I sv. rata, izložba jugoslovenskih ratova, srednjovekovno oružje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -196,17 +220,20 @@
     "name": {
       "en": "Temple of Saint Sava",
       "sr_lat": "Hram Svetog Save",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "One of the largest Orthodox churches in the world. The interior mosaic, completed in 2020, is breathtaking — look up.",
       "sr_lat": "Jedna od najvećih pravoslavnih crkava na svetu. Unutrašnji mozaik, završen 2020. godine, oduzima dah — pogledajte gore.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Krušedolska 2a, Vračar",
       "sr_lat": "Krušedolska 2a, Vračar",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4691,
     "lat": 44.7975,
@@ -240,22 +267,26 @@
       {
         "en": "One of the largest Orthodox churches in the world",
         "sr_lat": "Jedna od najvećih pravoslavnih crkava na svetu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Interior mosaic completed 2020 — over 15,000 m² of gold tesserae",
         "sr_lat": "Unutrašnji mozaik dovršen 2020 — preko 15.000 m² zlatne smalte",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Free entry to the church and crypt below",
         "sr_lat": "Besplatan ulaz u hram i kriptu ispod",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Visible from across Belgrade — the dome is 70 m high",
         "sr_lat": "Vidi se iz cele varoši — kupola je visoka 70 m",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -263,29 +294,34 @@
         {
           "en": "Spectacular dome mosaic — look straight up",
           "sr_lat": "Veličanstvena kupolna mozaika — pogledajte pravo gore",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Cool, quiet refuge in summer heat",
           "sr_lat": "Hladovina i tišina po letnjoj žezi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Excellent for photos in soft afternoon light",
           "sr_lat": "Sjajno za fotografije u popodnevnoj svetlosti",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Modest dress expected — shoulders and knees covered",
           "sr_lat": "Pristojna odeća — pokrivena ramena i kolena",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Ongoing decorative works in side chapels",
           "sr_lat": "Dekorativni radovi i dalje u sporednim kapelama",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -293,35 +329,41 @@
       {
         "en": "Visit the crypt — fewer tourists and gorgeous Serbian-Byzantine fresco work",
         "sr_lat": "Posetite kriptu — manje turista i prelep srpsko-vizantijski fresko-zid",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Skip Sunday liturgy if you want a quiet visit",
         "sr_lat": "Izbegavajte nedeljnu liturgiju ako želite tišinu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Combine with the National Library next door",
         "sr_lat": "Spojite sa Narodnom bibliotekom u istom kompleksu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "history": {
       "en": "Construction began in 1935 on the site where Ottoman vizier Sinan Pasha is said to have burned the relics of Saint Sava in 1595. Halted twice by wars, the exterior was finished in 1989; the interior mosaic was unveiled in 2020.",
       "sr_lat": "Gradnja je počela 1935. na mestu gde je, prema predanju, vezir Sinan-paša 1595. spalio mošti Svetog Save. Dva rata su prekidala radove; spoljašnjost je dovršena 1989, a unutrašnji mozaik otkriven 2020.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "activities": [
       {
         "title": {
           "en": "Look up at the dome mosaic",
           "sr_lat": "Pogledajte mozaik kupole",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Stand directly under the central dome to take in 4,000 m² of gold-tessera ceiling.",
           "sr_lat": "Stanite pod centralnu kupolu — 4.000 m² zlatne smalte.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "visibility",
         "durationMin": 15,
@@ -332,12 +374,14 @@
         "title": {
           "en": "Descend to the crypt",
           "sr_lat": "Spustite se u kriptu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Quieter than the upper church — Serbian-Byzantine fresco work and tomb of Patriarch Pavle.",
           "sr_lat": "Tiše nego gore — srpsko-vizantijske freske i grob patrijarha Pavla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "stairs",
         "durationMin": 30,
@@ -348,12 +392,14 @@
         "title": {
           "en": "Museum of Saint Sava",
           "sr_lat": "Muzej Svetog Save",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Icons, vestments and the long story of the church's construction (1935–2020).",
           "sr_lat": "Ikone, ruho i istorija gradnje hrama (1935–2020).",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "auto_stories",
         "durationMin": 40,
@@ -364,12 +410,14 @@
         "title": {
           "en": "Attend 17:00 vespers",
           "sr_lat": "Večernje u 17h",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Hear the choir during evening service — sit at the back; modest dress required.",
           "sr_lat": "Hor uz večernje bogosluženje — sedite pozadi, pristojna odeća.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "music_note",
         "durationMin": 45,
@@ -385,17 +433,20 @@
     "name": {
       "en": "Skadarlija (Bohemian Quarter)",
       "sr_lat": "Skadarlija (boemska četvrt)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Cobblestoned, lantern-lit street of traditional kafanas. Live tamburica music most nights. Tourist-leaning but charming.",
       "sr_lat": "Kaldrmisom popločana, fenjerima osvetljena ulica tradicionalnih kafana. Živa tamburica skoro svake večeri. Turistički nastrojena, ali šarmantna.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Skadarska Street",
       "sr_lat": "Skadarska ulica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4661,
     "lat": 44.819,
@@ -432,22 +483,26 @@
       {
         "en": "Cobblestone bohemian quarter — Belgrade's \"Montmartre\"",
         "sr_lat": "Bohemska kaldrmana četvrt — beogradski \"Monmartr\"",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Live tamburaši (string-band) music most evenings",
         "sr_lat": "Tamburaši uveče, gotovo svake večeri",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Old kafanas serving traditional Serbian dishes",
         "sr_lat": "Stare kafane sa tradicionalnom srpskom kuhinjom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Statues of Đura Jakšić, Branislav Nušić and other writers",
         "sr_lat": "Spomenici Đure Jakšića, Branislava Nušića i drugih književnika",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -455,34 +510,40 @@
         {
           "en": "Atmosphere unmatched anywhere else in town",
           "sr_lat": "Atmosfera kakvu nećete naći nigde drugde u gradu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Vegetarian options at most kafanas now",
           "sr_lat": "Vegetarijanske opcije u većini kafana",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Walking distance from Republic Square",
           "sr_lat": "Samo nekoliko minuta od Trga republike",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Tourist-priced — mains 15–25 €",
           "sr_lat": "Cene su za turiste — glavna jela 15–25 €",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Cobblestones tough for heels and strollers",
           "sr_lat": "Kaldrma teška za štikle i kolica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Loud after 21:00 if you want a quiet meal",
           "sr_lat": "Bučno posle 21h ako želite mir uz jelo",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -490,17 +551,20 @@
       {
         "en": "Book Tri Šešira or Šešir Moj a day ahead in season",
         "sr_lat": "Rezervišite Tri Šešira ili Šešir Moj dan ranije u sezoni",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Order šljivovica before, never with, the meat course",
         "sr_lat": "Šljivovicu pijte pre — nikad uz jelo s mesom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Sundays are quieter and 30% cheaper at most places",
         "sr_lat": "Nedeljom je tiše i 30% jeftinije u većini kafana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -508,12 +572,14 @@
         "title": {
           "en": "Dine at Tri Šešira",
           "sr_lat": "Večera u Tri Šešira",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "The most-famous old kafana. Order ćevapi or jagnjeća pečenja; mains 15–25 €.",
           "sr_lat": "Najpoznatija stara kafana. Ćevapi ili jagnjeća pečenja; glavna jela 15–25 €.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "restaurant",
         "durationMin": 90,
@@ -524,12 +590,14 @@
         "title": {
           "en": "Šljivovica & sarma at Šešir Moj",
           "sr_lat": "Šljivovica i sarma u Šešir Moj",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Plum brandy before — never with — the meat. Live tamburaši most evenings.",
           "sr_lat": "Šljivovica pre, ne uz, jelo. Tamburaši uveče.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_bar",
         "durationMin": 75,
@@ -540,12 +608,14 @@
         "title": {
           "en": "Coffee on Đure Jakšića steps",
           "sr_lat": "Kafa na stepenicama Đure Jakšića",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Open-air café terraces under old plane trees — cheaper than the main strip.",
           "sr_lat": "Letnje bašte ispod platana — jeftinije nego u glavnoj ulici.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_cafe",
         "durationMin": 30,
@@ -561,17 +631,20 @@
     "name": {
       "en": "Beton Hala",
       "sr_lat": "Beton hala",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Former concrete warehouse on the Sava waterfront, now a row of upmarket restaurants. Best for a long sunset dinner.",
       "sr_lat": "Bivše betonsko skladište na savskom keju, danas niz restorana visokog nivoa. Idealno za dugi obrok uz zalazak sunca.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Karađorđeva 2–4",
       "sr_lat": "Karađorđeva 2–4",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4495,
     "lat": 44.8175,
@@ -608,22 +681,26 @@
       {
         "en": "Riverside row of converted concrete warehouses",
         "sr_lat": "Rečna obala preuređenih betonskih magacina",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Sava-facing terraces — sunset reflects off Branko's Bridge",
         "sr_lat": "Terase ka Savi — zalazak se ogleda na Brankovom mostu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Cluster of acclaimed restaurants and lounge bars",
         "sr_lat": "Niz cenjenih restorana i lounge barova",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Walking distance from Kalemegdan and Branko's Bridge",
         "sr_lat": "Pešačka razdaljina od Kalemegdana i Brankovog mosta",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -631,24 +708,28 @@
         {
           "en": "Best riverfront dining in central Belgrade",
           "sr_lat": "Najbolja rečna trpeza u centru",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Live electronic DJs from Thursday onward",
           "sr_lat": "Elektronski DJ-evi od četvrtka nadalje",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Restaurant prices among the highest in the city",
           "sr_lat": "Cene među najvišim u gradu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Wind off the river — bring a layer year-round",
           "sr_lat": "Vetar sa reke — ponesite jaknu i leti",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -656,12 +737,14 @@
       {
         "en": "Reserve a terrace table for 19:00 to catch sunset over the Sava",
         "sr_lat": "Rezervišite terasu za 19h — zalazak nad Savom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Iva New Balkan Cuisine for tasting menus; Toro for the view",
         "sr_lat": "Iva za degustacioni meni; Toro za vidik",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -669,12 +752,14 @@
         "title": {
           "en": "Sunset dinner at Iva New Balkan Cuisine",
           "sr_lat": "Zalazak uz večeru u Ivi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Modern Balkan tasting menus with Sava views — reserve a terrace table for 19:00.",
           "sr_lat": "Moderni balkanski meni s pogledom na Savu — rezervišite terasu za 19h.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "restaurant_menu",
         "durationMin": 120,
@@ -685,12 +770,14 @@
         "title": {
           "en": "Drinks at Toro",
           "sr_lat": "Piće u Toru",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Riverside lounge, smart-casual. Best for bridge-light reflections after dark.",
           "sr_lat": "Lounge na obali, smart-casual. Najbolje uveče za odraz mostovskih svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wine_bar",
         "durationMin": 60,
@@ -701,12 +788,14 @@
         "title": {
           "en": "Walk the Sava promenade",
           "sr_lat": "Šetnja savskim šetalištem",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Free riverside walk along the warehouses; bridges light up at dusk.",
           "sr_lat": "Besplatna šetnja duž magacina; mostovi se pale uveče.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -722,17 +811,20 @@
     "name": {
       "en": "Splavovi (River Clubs)",
       "sr_lat": "Splavovi (rečni klubovi)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Belgrade's legendary floating clubs along the Sava and Danube. Genres run from techno to turbofolk; pick your splav by the music.",
       "sr_lat": "Legendarni beogradski splavovi duž Save i Dunava. Muzika se kreće od tehna do turbofolka — izaberite splav po zvuku.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Sava and Danube banks",
       "sr_lat": "Obale Save i Dunava",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.435,
     "lat": 44.812,
@@ -770,12 +862,14 @@
         "title": {
           "en": "Late-night session at Splavovi (River Clubs)",
           "sr_lat": "Noćni izlazak u Splavovi (rečni klubovi)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Doors usually 22:00; the crowd arrives after midnight — pace yourself.",
           "sr_lat": "Vrata oko 22h; gužva posle ponoći — krećite polako.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "nightlife",
         "durationMin": 180,
@@ -786,12 +880,14 @@
         "title": {
           "en": "Check the DJ schedule",
           "sr_lat": "Pogledajte raspored DJ-eva",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Different rooms / nights vary widely — Instagram is the authoritative source.",
           "sr_lat": "Sale i večeri se razlikuju — Instagram je glavni izvor.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "queue_music",
         "durationMin": 10,
@@ -807,17 +903,20 @@
     "name": {
       "en": "Cetinjska Street",
       "sr_lat": "Cetinjska ulica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "A ramshackle former brewery courtyard hosting a dozen bars. The local alternative-scene heart, busy from Thursday on.",
       "sr_lat": "Zapušteno dvorište nekadašnje pivare u kom se smestilo desetak barova. Srce beogradske alternativne scene, gužva od četvrtka nadalje.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Cetinjska 15, Dorćol",
       "sr_lat": "Cetinjska 15, Dorćol",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4626,
     "lat": 44.8195,
@@ -853,22 +952,26 @@
       {
         "en": "Former brewery yard turned creative quarter",
         "sr_lat": "Bivše dvorište pivare pretvoreno u kreativnu četvrt",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Half a dozen indie bars sharing one industrial courtyard",
         "sr_lat": "Pola tuceta indie barova u jednom industrijskom dvorištu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Belgrade's nightlife heart for under-35s on weekends",
         "sr_lat": "Srce beogradskog noćnog života vikendom za mlade",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Walking distance from Skadarlija and Republic Square",
         "sr_lat": "Pešački do Skadarlije i Trga republike",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -876,24 +979,28 @@
         {
           "en": "No cover at any bar — café-priced drinks",
           "sr_lat": "Nema ulaznice ni u jedan bar — pića po cenama kafića",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "DJ rotation and live shows most weekends",
           "sr_lat": "DJ-evi i koncerti većinu vikenda",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Loud and dense after midnight Friday/Saturday",
           "sr_lat": "Veoma bučno i prepuno posle ponoći petkom i subotom",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Limited seating — most of it is standing crowds",
           "sr_lat": "Malo mesta za sedenje — uglavnom stojeća publika",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -901,12 +1008,14 @@
       {
         "en": "Start at Polet, drift to Krafter, end the night at Dim",
         "sr_lat": "Krenite od Poleta, skoknite u Krafter, završite u Dimu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Weeknight visits get the same vibe with half the crowd",
         "sr_lat": "Radnim danom uveče — ista atmosfera, upola manja gužva",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -914,12 +1023,14 @@
         "title": {
           "en": "Bar crawl Polet → Krafter → Dim",
           "sr_lat": "Krug Polet → Krafter → Dim",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Three vibes — students, indie crowd, late-night techno — all in one yard.",
           "sr_lat": "Tri ambijenta — studenti, indie, kasnonoćni techno — u istom dvorištu.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "celebration",
         "durationMin": 180,
@@ -930,12 +1041,14 @@
         "title": {
           "en": "Live gig at Krafter",
           "sr_lat": "Koncert u Krafteru",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Indie shows Thursday onward; standing-only, doors ~21:00.",
           "sr_lat": "Indie koncerti od četvrtka; stojeća, ulaz oko 21h.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "music_note",
         "durationMin": 90,
@@ -951,17 +1064,20 @@
     "name": {
       "en": "Knez Mihailova",
       "sr_lat": "Knez Mihailova",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "The pedestrian spine of the old town. Bookshops, ice cream, street performers, and grand 19th-century facades.",
       "sr_lat": "Pešačka kičma starog grada. Knjižare, sladoled, ulični svirači i veličanstvene fasade iz 19. veka.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Knez Mihailova",
       "sr_lat": "Knez Mihailova",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4582,
     "lat": 44.8175,
@@ -995,22 +1111,26 @@
       {
         "en": "Belgrade's main pedestrian shopping street",
         "sr_lat": "Glavna pešačka i šoping ulica Beograda",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "19th-century facades from Republic Square to Kalemegdan",
         "sr_lat": "Fasade iz 19. veka od Trga republike do Kalemegdana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Open-air street performers and chess tables",
         "sr_lat": "Ulični muzičari i šahovski stolovi pod otvorenim nebom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Anchors the historic core — most landmarks branch off it",
         "sr_lat": "Kičma istorijskog jezgra — sve znamenitosti se granaju odavde",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -1018,24 +1138,28 @@
         {
           "en": "Free, lively and central — perfect for a first walk",
           "sr_lat": "Besplatno, živo i u centru — savršeno za prvu šetnju",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Cafés, bookstores and gelato every 20 metres",
           "sr_lat": "Kafići, knjižare i sladoled na svakih 20 metara",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Chain stores dominate — local craft is in side streets",
           "sr_lat": "Lanci dominiraju — domaći zanat je u sporednim ulicama",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Pickpockets work the busy summer evenings",
           "sr_lat": "Džeparoši rade gusto leti uveče",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -1043,12 +1167,14 @@
       {
         "en": "Detour onto Čika Ljubina for independent shops",
         "sr_lat": "Skrenite u Čika Ljubinu za nezavisne radnje",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "The Albania Palace tower at the south end is a good orientation landmark",
         "sr_lat": "Palata \"Albanija\" na južnom kraju je dobar orijentir",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -1056,12 +1182,14 @@
         "title": {
           "en": "Walk Republic Square → Kalemegdan",
           "sr_lat": "Šetnja od Trga do Kalemegdana",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Full pedestrian length, ~1 km, cafés and bookstores every block.",
           "sr_lat": "Cela pešačka deonica, ~1 km, kafići i knjižare na svakih nekoliko koraka.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 45,
@@ -1072,12 +1200,14 @@
         "title": {
           "en": "Detour onto Čika Ljubina",
           "sr_lat": "Skretanje u Čika Ljubinu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Side street with independent shops, design studios and indie bookstores.",
           "sr_lat": "Ulica s nezavisnim radnjama, dizajn-studiima i knjižarama.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "storefront",
         "durationMin": 30,
@@ -1088,12 +1218,14 @@
         "title": {
           "en": "Chess tables in front of the Albania Palace",
           "sr_lat": "Šahovski stolovi pred Palatom Albanija",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Stop and watch the regulars at the south end — a free Belgrade ritual.",
           "sr_lat": "Posmatrajte stalne igrače na južnom kraju — besplatan beogradski ritual.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "extension",
         "durationMin": 20,
@@ -1109,17 +1241,20 @@
     "name": {
       "en": "Trg Republike (Republic Square)",
       "sr_lat": "Trg Republike",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
       "sr_lat": "Centralno gradsko okupljalište — \"kod konja\". Omeđen Narodnim muzejom i Narodnim pozorištem.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg Republike",
       "sr_lat": "Trg Republike",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4604,
     "lat": 44.8167,
@@ -1152,22 +1287,26 @@
       {
         "en": "\"At the Horse\" — Belgrade's universal meeting point",
         "sr_lat": "\"Kod konja\" — opšte mesto sastanka Beograđana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Equestrian statue of Prince Mihailo (1882)",
         "sr_lat": "Konjički spomenik knezu Mihailu (1882)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "National Museum and National Theatre flank the square",
         "sr_lat": "Narodni muzej i Narodno pozorište okružuju trg",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Pedestrian since the 2019–2020 redesign",
         "sr_lat": "Pešačka zona od rekonstrukcije 2019–2020",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -1175,24 +1314,28 @@
         {
           "en": "Central — every tram and many buses pass nearby",
           "sr_lat": "Centralno — tu prolaze tramvaji i mnoge autobuske linije",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Good people-watching with seating along the edges",
           "sr_lat": "Sjajno za posmatranje ljudi, s klupama na ivicama",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Limited shade in summer",
           "sr_lat": "Malo hladovine leti",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Crowded during protests and demonstrations",
           "sr_lat": "Gusto tokom protesta i okupljanja",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -1200,12 +1343,14 @@
       {
         "en": "Use it as the start/end pin for every walking tour",
         "sr_lat": "Postavite ga kao početak/kraj svake šetnje",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "The \"M\" Komunalac branch on the square stays open late",
         "sr_lat": "Lokal \"M\" Komunalac na trgu radi do kasno",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -1213,12 +1358,14 @@
         "title": {
           "en": "Meet \"at the horse\"",
           "sr_lat": "Sastanak \"kod konja\"",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Set this as your start/end pin — every Belgrader does.",
           "sr_lat": "Postavite ga kao početak/kraj svake šetnje — svaki Beograđanin tako.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "group",
         "durationMin": 10,
@@ -1229,12 +1376,14 @@
         "title": {
           "en": "National Museum visit",
           "sr_lat": "Narodni muzej",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Three floors of Serbian art from medieval frescoes to 20th-century painting.",
           "sr_lat": "Tri sprata srpske umetnosti — od srednjovekovnih fresaka do XX veka.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -1245,12 +1394,14 @@
         "title": {
           "en": "Evening at the National Theatre",
           "sr_lat": "Veče u Narodnom pozorištu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Opera, ballet or drama — tickets cheap by Western standards.",
           "sr_lat": "Opera, balet, drama — pristupačne cene.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "theaters",
         "durationMin": 150,
@@ -1266,17 +1417,20 @@
     "name": {
       "en": "National Museum of Serbia",
       "sr_lat": "Narodni muzej Srbije",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Reopened in 2018 after a 15-year renovation. Strong on medieval Serbian art and a small but real Impressionist collection.",
       "sr_lat": "Otvoren ponovo 2018. godine nakon petnaestogodišnje rekonstrukcije. Bogata zbirka srednjovekovne srpske umetnosti i manja, ali autentična impresionistička kolekcija.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg Republike 1a",
       "sr_lat": "Trg Republike 1a",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4604,
     "lat": 44.817,
@@ -1314,12 +1468,14 @@
         "title": {
           "en": "Self-guided visit to National Museum of Serbia",
           "sr_lat": "Samostalni obilazak Narodni muzej Srbije",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -1330,12 +1486,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -1351,17 +1509,20 @@
     "name": {
       "en": "Nikola Tesla Museum",
       "sr_lat": "Muzej Nikole Tesle",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Compact museum in a 1920s villa with original Tesla devices and live coil demonstrations. Book ahead in summer.",
       "sr_lat": "Kompaktan muzej u vili iz dvadesetih godina sa originalnim Teslinim uređajima i živim demonstracijama kalemova. U leto rezervišite unapred.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Krunska 51",
       "sr_lat": "Krunska 51",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.471,
     "lat": 44.806,
@@ -1399,12 +1560,14 @@
         "title": {
           "en": "Self-guided visit to Nikola Tesla Museum",
           "sr_lat": "Samostalni obilazak Muzej Nikole Tesle",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -1415,12 +1578,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -1436,17 +1601,20 @@
     "name": {
       "en": "House of Flowers (Tito's Mausoleum)",
       "sr_lat": "Kuća cveća (Titov mauzolej)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
       "sr_lat": "Titovo počivalište unutar kompleksa Muzeja Jugoslavije. Kombinujte s glavnim muzejom za celo popodne posvećeno jugoslovenskom dobu.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Botićeva 6, Dedinje",
       "sr_lat": "Botićeva 6, Dedinje",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4486,
     "lat": 44.7875,
@@ -1483,12 +1651,14 @@
         "title": {
           "en": "Self-guided visit to House of Flowers (Tito's Mausoleum)",
           "sr_lat": "Samostalni obilazak Kuća cveća (Titov mauzolej)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -1499,12 +1669,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -1520,17 +1692,20 @@
     "name": {
       "en": "Ada Ciganlija",
       "sr_lat": "Ada Ciganlija",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Belgrade's \"Sea\" — a river island turned summer beach. Swimming, kayaking, beachside cafes, and 8 km of walking paths.",
       "sr_lat": "Beogradsko \"more\" — rečno ostrvo pretvoreno u letnju plažu. Kupanje, kajaking, kafići uz vodu i 8 km pešačkih staza.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Ada Ciganlija",
       "sr_lat": "Ada Ciganlija",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.408,
     "lat": 44.787,
@@ -1564,22 +1739,26 @@
       {
         "en": "Artificial lake on a Sava-side peninsula — Belgrade's urban beach",
         "sr_lat": "Veštačko jezero na savskom poluostrvu — gradska plaža Beograda",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "7 km of swimming beaches, sandy and grassy",
         "sr_lat": "7 km plaža za kupanje — peščane i travnate",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Free entry; rentable kayaks, paddle boats and bikes",
         "sr_lat": "Besplatan ulaz; iznajmljivanje kajaka, pedalina i bicikla",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Forest loop trail for runners — about 8 km",
         "sr_lat": "Šumska trkačka petlja — oko 8 km",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -1587,24 +1766,28 @@
         {
           "en": "The locals' summer cool-down — busy and lively",
           "sr_lat": "Letnja gradska oaza — živo i puno ljudi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Cheap grilled food along the lakeshore",
           "sr_lat": "Jeftina roštilj-hrana duž obale",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Beaches get packed Saturday afternoons",
           "sr_lat": "Plaže prepune subotom popodne",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Water quality depends on the week — check the city flag",
           "sr_lat": "Kvalitet vode varira nedeljno — proverite gradsku zastavu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -1612,12 +1795,14 @@
       {
         "en": "Rent a bike at the entrance — the peninsula is bigger than it looks",
         "sr_lat": "Iznajmite bicikl na ulazu — poluostrvo je veće nego što izgleda",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Beach 3 has the shallowest water for kids",
         "sr_lat": "Plaža 3 ima najplića voda za decu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -1625,12 +1810,14 @@
         "title": {
           "en": "Swim at Beach 3",
           "sr_lat": "Plivanje na Plaži 3",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Shallowest section — best for kids; lifeguarded in season.",
           "sr_lat": "Najplića plaža — najbolja za decu; spasilac u sezoni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "pool",
         "durationMin": 120,
@@ -1641,12 +1828,14 @@
         "title": {
           "en": "Rent a bike at the entrance",
           "sr_lat": "Iznajmite bicikl na ulazu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Peninsula is bigger than it looks — 8 km forest loop around the lake.",
           "sr_lat": "Poluostrvo je veće nego što izgleda — 8 km šumske petlje oko jezera.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "pedal_bike",
         "durationMin": 90,
@@ -1657,12 +1846,14 @@
         "title": {
           "en": "Grilled lunch at a splav",
           "sr_lat": "Roštilj na splavu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Cheap meat-and-side plates along the lakeshore. Cash preferred.",
           "sr_lat": "Jeftin roštilj duž obale jezera. Gotovina poželjna.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "outdoor_grill",
         "durationMin": 60,
@@ -1678,17 +1869,20 @@
     "name": {
       "en": "Zemun Quay & Gardoš Tower",
       "sr_lat": "Zemunski kej i Kula na Gardošu",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Walk the Danube quay through old Zemun, then climb to Gardoš Tower for the postcard view back over the rooftops.",
       "sr_lat": "Prošetajte dunavskim kejem kroz stari Zemun, pa se popnite do Kule na Gardošu za panoramski pogled na krovove.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Zemunski kej",
       "sr_lat": "Zemunski kej",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.405,
     "lat": 44.846,
@@ -1723,12 +1917,14 @@
         "title": {
           "en": "Sunset at Zemun Quay & Gardoš Tower",
           "sr_lat": "Zalazak na Zemunski kej i Kula na Gardošu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -1739,12 +1935,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -1760,17 +1958,20 @@
     "name": {
       "en": "Gardoš (Millennium) Tower",
       "sr_lat": "Kula na Gardošu (Milenijumska kula)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Hilltop tower above Zemun built in 1896. Best sunset viewpoint in greater Belgrade.",
       "sr_lat": "Kula na brdu iznad Zemuna, podignuta 1896. Najbolje mesto za gledanje zalaska sunca u široj okolini Beograda.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Grobljanska, Zemun",
       "sr_lat": "Grobljanska, Zemun",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.398,
     "lat": 44.847,
@@ -1807,12 +2008,14 @@
         "title": {
           "en": "Sunset at Gardoš (Millennium) Tower",
           "sr_lat": "Zalazak na Kula na Gardošu (Milenijumska kula)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -1823,12 +2026,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -1844,17 +2049,20 @@
     "name": {
       "en": "Hotel Moskva (Café)",
       "sr_lat": "Hotel Moskva (kafe)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
       "sr_lat": "Secesijska znamenitost iz 1908. godine. Naručite Moskva Šnit uz kafu i posmatrajte kako pola Beograda prolazi.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Balkanska 1",
       "sr_lat": "Balkanska 1",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4593,
     "lat": 44.8131,
@@ -1891,22 +2099,26 @@
       {
         "en": "Russian Art Nouveau (Secession) facade from 1908",
         "sr_lat": "Ruska secesija — fasada iz 1908.",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Famous Moskva šnit pastry served since the 1970s",
         "sr_lat": "Čuveni \"Moskva šnit\" koji se služi od 1970-ih",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Albert Einstein, Indira Gandhi and Hitchcock all stayed here",
         "sr_lat": "Među gostima: Ajnštajn, Indira Gandi, Hičkok",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Belgrade's most photographed building on Terazije",
         "sr_lat": "Najfotografisanije zdanje na Terazijama",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -1914,24 +2126,28 @@
         {
           "en": "Cake-and-coffee stop with no hotel-guest gatekeeping",
           "sr_lat": "Kafa i kolač bez ulaska kao gost hotela",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Period interior — marble, brass, mosaic floors",
           "sr_lat": "Autentičan enterijer — mermer, mesing, mozaik podovi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Premium prices on the café terrace",
           "sr_lat": "Premium cene na terasi kafića",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Service can be slow at peak hours",
           "sr_lat": "Posluga zna biti spora u špicu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -1939,12 +2155,14 @@
       {
         "en": "Sit inside, not on the terrace, to see the historic café",
         "sr_lat": "Sedite unutra — terasa krije pravi izgled istorijskog kafića",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Order Moskva šnit and a Turkish coffee for the full ritual",
         "sr_lat": "Naručite Moskva šnit i tursku kafu za potpuni doživljaj",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -1952,12 +2170,14 @@
         "title": {
           "en": "Order Moskva šnit & Turkish coffee",
           "sr_lat": "Naručite Moskva šnit i tursku kafu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Signature 1970s pastry. Sit INSIDE — marble, brass, mosaic floors. ~6 €.",
           "sr_lat": "Slastica iz 1970-ih. Sedite UNUTRA — mermer, mesing, mozaik. ~6 €.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "cake",
         "durationMin": 45,
@@ -1968,12 +2188,14 @@
         "title": {
           "en": "Photo of the Secession facade",
           "sr_lat": "Fotka secesijske fasade",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Cross to the south side of Terazije for the full 1908 Russian Art Nouveau frontage.",
           "sr_lat": "Pređite na južnu stranu Terazija za celu ruskosesionsku fasadu.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -1989,17 +2211,20 @@
     "name": {
       "en": "Kafana ?",
       "sr_lat": "Kafana ?",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Belgrade's oldest kafana (1823), opposite the cathedral. The name is the literal punctuation — long story involving the church.",
       "sr_lat": "Najstarija beogradska kafana (1823), nasuprot katedrale. Ime je bukvalno interpunkcijski znak — duga priča u kojoj učestvuje crkva.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kralja Petra 6",
       "sr_lat": "Kralja Petra 6",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4525,
     "lat": 44.8181,
@@ -2035,22 +2260,26 @@
       {
         "en": "Belgrade's oldest still-operating kafana (1823)",
         "sr_lat": "Najstarija beogradska kafana u radu (1823)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Named \"?\" after a 19th-century church complaint about its sign",
         "sr_lat": "Ime \"?\" potiče iz crkvene tužbe na natpis u 19. veku",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Wooden interior, low tables, handwritten menu",
         "sr_lat": "Drveni enterijer, niski stolovi, ručno pisan jelovnik",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Across from the Princess Ljubica Residence — convenient pairing",
         "sr_lat": "Preko puta Konaka kneginje Ljubice — prirodno spajanje",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -2058,24 +2287,28 @@
         {
           "en": "Authentic Serbian classics at fair prices",
           "sr_lat": "Autentična srpska klasika po poštenoj ceni",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "One of the few central restaurants with true period interior",
           "sr_lat": "Jedan od retkih u centru s pravim istorijskim enterijerom",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Tight benches — not great for groups over six",
           "sr_lat": "Skučene klupe — nezgodno za grupe veće od šest",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Cash preferred for small bills",
           "sr_lat": "Gotovina poželjna za sitne iznose",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -2083,12 +2316,14 @@
       {
         "en": "Try ćevapi or sarma — and don't skip the homemade rakija flight",
         "sr_lat": "Probajte ćevape ili sarmu — i flajt domaće rakije",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Lunch is faster than dinner; service slows after 19:00",
         "sr_lat": "Ručak je brži — posle 19h posluga usporava",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -2096,12 +2331,14 @@
         "title": {
           "en": "Order ćevapi or sarma",
           "sr_lat": "Naručite ćevape ili sarmu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Classic Serbian comfort food in Belgrade's oldest kafana. Cash preferred.",
           "sr_lat": "Klasična srpska kuhinja u najstarijoj kafani. Gotovina poželjna.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "restaurant",
         "durationMin": 60,
@@ -2112,12 +2349,14 @@
         "title": {
           "en": "Try the rakija flight",
           "sr_lat": "Probajte flajt rakije",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Three small pours — quince, plum, apricot — before the meal, never during.",
           "sr_lat": "Tri male čaše — dunja, šljiva, kajsija — pre jela, ne uz njega.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_bar",
         "durationMin": 20,
@@ -2128,12 +2367,14 @@
         "title": {
           "en": "Pair with Princess Ljubica Residence",
           "sr_lat": "Spajanje s Konakom kneginje Ljubice",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "The princess's 19th-c. residence is across the street — a natural lunch+museum pairing.",
           "sr_lat": "Konak je preko ulice — prirodno se spaja ručak + muzej.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "castle",
         "durationMin": 60,
@@ -2149,17 +2390,20 @@
     "name": {
       "en": "Smokvica",
       "sr_lat": "Smokvica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Hidden courtyard café with a fig tree at the centre. Brunch and shaded tables; arrive early on weekends.",
       "sr_lat": "Skriveni dvorišni kafić sa smokvom u centru. Brunch i stolovi u hladovini — vikendom dođite ranije.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kralja Petra 73",
       "sr_lat": "Kralja Petra 73",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4605,
     "lat": 44.812,
@@ -2196,12 +2440,14 @@
         "title": {
           "en": "Slow coffee at Smokvica",
           "sr_lat": "Lagana kafa u Smokvica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade café culture is unhurried — sit, watch the street, refills are common.",
           "sr_lat": "Beogradska kafana je opuštena — sedite, gledajte ulicu, dolivanje je uobičajeno.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_cafe",
         "durationMin": 45,
@@ -2212,12 +2458,14 @@
         "title": {
           "en": "Try a Serbian breakfast",
           "sr_lat": "Srpski doručak",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Eggs, kajmak, prosciutto and warm bread — most cafés serve until 12:00.",
           "sr_lat": "Jaja, kajmak, pršuta i topli hleb — većina kafića servira do 12h.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "brunch_dining",
         "durationMin": 60,
@@ -2233,17 +2481,20 @@
     "name": {
       "en": "Tašmajdan Park",
       "sr_lat": "Tašmajdanski park",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Central park around Saint Mark's Church. Locals jog here; in summer, open-air concerts.",
       "sr_lat": "Centralni park oko Crkve Svetog Marka. Meštani trče ovde; leti se održavaju koncerti na otvorenom.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Bulevar kralja Aleksandra",
       "sr_lat": "Bulevar kralja Aleksandra",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.473,
     "lat": 44.8083,
@@ -2277,22 +2528,26 @@
       {
         "en": "Park built over Roman quarries — \"Taš\" means stone in Turkish",
         "sr_lat": "Park nad rimskim kamenolomima — \"taš\" znači kamen na turskom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Saint Mark's Church anchors the south side",
         "sr_lat": "Crkva Svetog Marka na južnoj strani",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "City swimming pool open in summer months",
         "sr_lat": "Gradski bazen radi tokom letnjih meseci",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Locals jog the perimeter loop at dusk",
         "sr_lat": "Lokalci kruže obodom predveče u trci",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -2300,24 +2555,28 @@
         {
           "en": "Mature plane trees give deep shade",
           "sr_lat": "Stari platani daju gustu hladovinu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Playground, sport courts and chess tables",
           "sr_lat": "Igralište, sportski tereni i šahovski stolovi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Limited public toilets",
           "sr_lat": "Malo javnih toaleta",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Busy on weekend afternoons",
           "sr_lat": "Gužva vikendom popodne",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -2325,12 +2584,14 @@
       {
         "en": "Combine with Saint Mark's Church (free entry)",
         "sr_lat": "Spojite s Crkvom Svetog Marka (besplatan ulaz)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "The Tašmajdan pool day pass is the cheapest swim in central Belgrade",
         "sr_lat": "Dnevna karta na Tašmajdanu — najjeftinije plivanje u centru",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -2338,12 +2599,14 @@
         "title": {
           "en": "Loop the perimeter at dusk",
           "sr_lat": "Krug parkom predveče",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Locals jog the 1.2 km path under mature plane trees.",
           "sr_lat": "Lokalci trče 1,2 km krug ispod platana.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_run",
         "durationMin": 20,
@@ -2354,12 +2617,14 @@
         "title": {
           "en": "Swim at Tašmajdan pool",
           "sr_lat": "Plivanje na Tašmajdanu",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Cheapest swim in central Belgrade; day pass at the entrance.",
           "sr_lat": "Najjeftiniji bazen u centru — dnevna karta na ulazu.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "pool",
         "durationMin": 90,
@@ -2370,12 +2635,14 @@
         "title": {
           "en": "Saint Mark's Church visit",
           "sr_lat": "Crkva Svetog Marka",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Free entry; Serbian-Byzantine revival; on the park's south edge.",
           "sr_lat": "Besplatan ulaz; srpsko-vizantijski stil; južni rub parka.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "church",
         "durationMin": 20,
@@ -2391,17 +2658,20 @@
     "name": {
       "en": "Saint Mark's Church",
       "sr_lat": "Crkva Svetog Marka",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Serbo-Byzantine red-and-yellow brick church holding the tomb of Tsar Dušan. Quieter than Saint Sava, often overlooked.",
       "sr_lat": "Srpsko-vizantijska crkva od crvene i žute opeke u kojoj se čuva grob cara Dušana. Mirnija od Hrama Svetog Save, često previđena.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Bulevar kralja Aleksandra 17",
       "sr_lat": "Bulevar kralja Aleksandra 17",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4732,
     "lat": 44.8088,
@@ -2433,22 +2703,26 @@
       {
         "en": "Serbian-Byzantine revival church (1940)",
         "sr_lat": "Crkva u srpsko-vizantijskom stilu (1940)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Holds the sarcophagus of medieval Tsar Dušan",
         "sr_lat": "Čuva sarkofag srednjovekovnog cara Dušana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Free entry — open daily",
         "sr_lat": "Besplatan ulaz — otvoreno svakog dana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Anchors the south edge of Tašmajdan Park",
         "sr_lat": "Stoji na južnoj ivici Tašmajdana",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -2456,24 +2730,28 @@
         {
           "en": "Cool, hushed interior — good summer break",
           "sr_lat": "Hladan, miran enterijer — dobro za odmor leti",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Five-domed silhouette photographs well from the park",
           "sr_lat": "Pet kupola — efektna silueta iz parka",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Modest dress expected",
           "sr_lat": "Pristojno odevanje obavezno",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "No formal tours — interpretation is light",
           "sr_lat": "Bez vodiča — natpisa malo",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -2481,12 +2759,14 @@
       {
         "en": "Combine with Tašmajdan park in a single 60-minute loop",
         "sr_lat": "Spojite sa Tašmajdanom u 60-minutnu šetnju",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Sunday choir starts ~10:00 — arrive 10 min early",
         "sr_lat": "Nedeljom hor počinje oko 10h — stignite ranije",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -2494,12 +2774,14 @@
         "title": {
           "en": "Look up at the iconostasis",
           "sr_lat": "Pogledajte ikonostas",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Serbian-Byzantine revival icons on a tall iconostasis — free, no booking.",
           "sr_lat": "Ikone u srpsko-vizantijskom maniru na visokom ikonostasu — besplatno.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "visibility",
         "durationMin": 15,
@@ -2510,12 +2792,14 @@
         "title": {
           "en": "Tsar Dušan's sarcophagus",
           "sr_lat": "Sarkofag cara Dušana",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Medieval Serbian emperor — tomb sits to the right of the altar.",
           "sr_lat": "Srednjovekovni srpski car — sarkofag desno od oltara.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "history_edu",
         "durationMin": 10,
@@ -2526,12 +2810,14 @@
         "title": {
           "en": "Sunday choir at 10:00",
           "sr_lat": "Hor nedeljom u 10h",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Liturgy with a strong choir; arrive 10 min early; dress modestly.",
           "sr_lat": "Liturgija s jakim horom; stignite ranije, pristojna odeća.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "music_note",
         "durationMin": 60,
@@ -2547,17 +2833,20 @@
     "name": {
       "en": "Bajrakli Mosque",
       "sr_lat": "Bajrakli džamija",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "The only surviving Ottoman mosque in Belgrade, dating to the 1570s. Tucked into a narrow Dorćol street.",
       "sr_lat": "Jedina preživela osmanska džamija u Beogradu, iz 1570-ih godina. Sakriven u uskoj dorćolskoj ulici.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Gospodar Jevremova 11",
       "sr_lat": "Gospodar Jevremova 11",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4598,
     "lat": 44.821,
@@ -2588,22 +2877,26 @@
       {
         "en": "Belgrade's only surviving Ottoman mosque (1575)",
         "sr_lat": "Jedina sačuvana osmanska džamija u Beogradu (1575)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Hidden inside the old Dorćol quarter",
         "sr_lat": "Sakrivena u starom Dorćolu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Free, quiet outside prayer times",
         "sr_lat": "Besplatno, mirno van vremena namaza",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "One of the oldest buildings in central Belgrade",
         "sr_lat": "Jedno od najstarijih zdanja u centru Beograda",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -2611,24 +2904,28 @@
         {
           "en": "Tranquil courtyard — rare quiet in the centre",
           "sr_lat": "Mirno dvorište — retka tišina u centru",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Friendly community will let you peek inside",
           "sr_lat": "Zajednica je gostoljubiva — pustiće vas unutra",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Closed to non-Muslim visitors during prayer",
           "sr_lat": "Zatvoreno za posetioce tokom namaza",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Shoes off; women cover hair inside",
           "sr_lat": "Skidanje obuće; žene prekriju kosu unutra",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -2636,12 +2933,14 @@
       {
         "en": "Visit late morning between prayers — usually 10–11:30",
         "sr_lat": "Posetite kasno jutro između namaza — obično 10–11:30",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Combine with a walk through old Dorćol",
         "sr_lat": "Spojite sa šetnjom kroz stari Dorćol",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -2649,12 +2948,14 @@
         "title": {
           "en": "Quiet visit between prayer times",
           "sr_lat": "Tihi obilazak van vremena namaza",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade's only Ottoman mosque (1575). Shoes off, modest dress, women cover hair.",
           "sr_lat": "Jedina osmanska džamija (1575). Skinite obuću, pristojna odeća, žene prekrivaju kosu.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "mosque",
         "durationMin": 20,
@@ -2665,12 +2966,14 @@
         "title": {
           "en": "See the mihrab and minbar",
           "sr_lat": "Mihrab i minber",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Carved-wood Ottoman calligraphy framing the prayer niche.",
           "sr_lat": "Rezbarena drvena osmanska kaligrafija oko mihraba.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "visibility",
         "durationMin": 10,
@@ -2681,12 +2984,14 @@
         "title": {
           "en": "Stroll old Dorćol afterwards",
           "sr_lat": "Šetnja kroz stari Dorćol",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Walk the surrounding Ottoman/Jewish quarter — kafanas, antique shops, synagogue site.",
           "sr_lat": "Šetnja kroz staru osmansko-jevrejsku četvrt — kafane, antikvarnice, sinagoga.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 45,
@@ -2702,17 +3007,20 @@
     "name": {
       "en": "Residence of Princess Ljubica",
       "sr_lat": "Konak kneginje Ljubice",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "1830s Balkan-Ottoman townhouse, fully furnished. The smallest, most personal museum in town.",
       "sr_lat": "Balkansko-osmanska gradska kuća iz 1830-ih, potpuno nameštena. Najmanji i najintimniji muzej u gradu.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kneza Sime Markovića 8",
       "sr_lat": "Kneza Sime Markovića 8",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4525,
     "lat": 44.819,
@@ -2750,12 +3058,14 @@
         "title": {
           "en": "Self-guided visit to Residence of Princess Ljubica",
           "sr_lat": "Samostalni obilazak Konak kneginje Ljubice",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -2766,12 +3076,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -2787,17 +3099,20 @@
     "name": {
       "en": "Belgrade Zoo (Vrt dobre nade)",
       "sr_lat": "Zoološki vrt Beograd (Vrt dobre nade)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Inside the Kalemegdan walls — strange and atmospheric, white tigers among the ramparts. Conditions are modest; bring perspective.",
       "sr_lat": "Unutar kalemegdanskih bedema — neobično i atmosferično, beli tigrovi među zidinama. Uslovi su skromni; dođite sa razumevanjem.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Mali Kalemegdan 8",
       "sr_lat": "Mali Kalemegdan 8",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.451,
     "lat": 44.8235,
@@ -2834,12 +3149,14 @@
         "title": {
           "en": "Walk a loop in Belgrade Zoo (Vrt dobre nade)",
           "sr_lat": "Krug kroz Zoološki vrt Beograd (Vrt dobre nade)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -2850,12 +3167,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -2871,17 +3190,20 @@
     "name": {
       "en": "Ada Bridge",
       "sr_lat": "Most na Adi",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "The 200-m pylon cable-stayed bridge that defines the modern skyline. Walk the pedestrian deck for river views.",
       "sr_lat": "Viseći most sa 200-metarskim pilonom koji definiše savremenu siluetu grada. Prošetajte pešačkom stazom za pogled na reku.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Most na Adi",
       "sr_lat": "Most na Adi",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.431,
     "lat": 44.799,
@@ -2915,12 +3237,14 @@
         "title": {
           "en": "Sunset at Ada Bridge",
           "sr_lat": "Zalazak na Most na Adi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -2931,12 +3255,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -2952,17 +3278,20 @@
     "name": {
       "en": "Brankov Most",
       "sr_lat": "Brankov most",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "The walking deck across the Sava, between Old Belgrade and Novi Beograd. Best at blue hour.",
       "sr_lat": "Pešačka staza preko Save, između starog Beograda i Novog Beograda. Najlepše u plavi sat.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Brankov most",
       "sr_lat": "Brankov most",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.452,
     "lat": 44.8155,
@@ -2997,12 +3326,14 @@
         "title": {
           "en": "Sunset at Brankov Most",
           "sr_lat": "Zalazak na Brankov most",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -3013,12 +3344,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -3034,17 +3367,20 @@
     "name": {
       "en": "Belgrade Waterfront Promenade",
       "sr_lat": "Šetalište Beograd na vodi",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Polished new riverside promenade running south from Beton Hala. Controversial development, pleasant walk.",
       "sr_lat": "Uređena nova savska promenada koja se proteže južno od Beton hale. Kontroverzni projekat, prijatna šetnja.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Sava Promenade",
       "sr_lat": "Savska promenada",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4435,
     "lat": 44.81,
@@ -3079,12 +3415,14 @@
         "title": {
           "en": "Walk a loop in Belgrade Waterfront Promenade",
           "sr_lat": "Krug kroz Šetalište Beograd na vodi",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -3095,12 +3433,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -3116,17 +3456,20 @@
     "name": {
       "en": "Savamala",
       "sr_lat": "Savamala",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Industrial-chic neighbourhood between the train tracks and the river. Galleries by day, bars by night.",
       "sr_lat": "Industrijsko-šik četvrt između pruge i reke. Galerije danju, barovi noću.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Savamala",
       "sr_lat": "Savamala",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.454,
     "lat": 44.8125,
@@ -3161,12 +3504,14 @@
         "title": {
           "en": "Late-night session at Savamala",
           "sr_lat": "Noćni izlazak u Savamala",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Doors usually 22:00; the crowd arrives after midnight — pace yourself.",
           "sr_lat": "Vrata oko 22h; gužva posle ponoći — krećite polako.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "nightlife",
         "durationMin": 180,
@@ -3177,12 +3522,14 @@
         "title": {
           "en": "Check the DJ schedule",
           "sr_lat": "Pogledajte raspored DJ-eva",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Different rooms / nights vary widely — Instagram is the authoritative source.",
           "sr_lat": "Sale i večeri se razlikuju — Instagram je glavni izvor.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "queue_music",
         "durationMin": 10,
@@ -3198,17 +3545,20 @@
     "name": {
       "en": "Manak's House (Ethnographic)",
       "sr_lat": "Manakova kuća (Etnografski muzej)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Tiny Balkan-era house turned ethnographic museum. Costumes, textiles, and old Belgrade photographs.",
       "sr_lat": "Mala balkanska kuća pretvorena u etnografski muzej. Nošnje, tekstil i stare fotografije Beograda.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Gavrila Principa 5",
       "sr_lat": "Gavrila Principa 5",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4567,
     "lat": 44.8141,
@@ -3246,12 +3596,14 @@
         "title": {
           "en": "Self-guided visit to Manak's House (Ethnographic)",
           "sr_lat": "Samostalni obilazak Manakova kuća (Etnografski muzej)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -3262,12 +3614,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -3283,17 +3637,20 @@
     "name": {
       "en": "Topčider Park",
       "sr_lat": "Topčiderski park",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Royal-residence park with one of Europe's oldest plane trees (over 180 years). Picnic-perfect.",
       "sr_lat": "Park kraljevske rezidencije sa jednim od najstarijih platana u Evropi (stariji od 180 godina). Idealno za piknik.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Topčider",
       "sr_lat": "Topčider",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.463,
     "lat": 44.778,
@@ -3328,12 +3685,14 @@
         "title": {
           "en": "Walk a loop in Topčider Park",
           "sr_lat": "Krug kroz Topčiderski park",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -3344,12 +3703,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -3365,17 +3726,20 @@
     "name": {
       "en": "Avala Tower",
       "sr_lat": "Avalski toranj",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "204-m TV tower on Avala mountain, 16 km out of town. Clear-day views to the Pannonian plain. Bus 401 from Voždovac.",
       "sr_lat": "TV toranj visok 204 m na planini Avali, 16 km od centra. Po vedrom vremenu pogled seže do Panonske nizije. Autobus 401 iz Voždovca.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Avala",
       "sr_lat": "Avala",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.515,
     "lat": 44.694,
@@ -3410,22 +3774,26 @@
       {
         "en": "205 m TV tower — tallest structure in the Balkans",
         "sr_lat": "TV-toranj visok 205 m — najviši objekat na Balkanu",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Original 1965 tower bombed in 1999, rebuilt 2010",
         "sr_lat": "Originalni toranj iz 1965. srušen 1999, obnovljen 2010.",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Glass-floored elevator to a 360° panorama deck",
         "sr_lat": "Lift sa staklenim podom do panoramske platforme 360°",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Sits on Mount Avala — 30 minutes from central Belgrade",
         "sr_lat": "Na planini Avali — 30 minuta od centra",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -3433,24 +3801,28 @@
         {
           "en": "Best long-distance view of Belgrade and Šumadija",
           "sr_lat": "Najdalji vidik na Beograd i Šumadiju",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Combined with the Unknown Hero Monument for a half-day trip",
           "sr_lat": "Spojiti sa Spomenikom Neznanom junaku za poludnevni izlet",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "400 RSD admission to the deck",
           "sr_lat": "Ulaz na platformu oko 400 RSD",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Closed on windy days for safety",
           "sr_lat": "Zatvoreno kad duva — bezbednost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -3458,12 +3830,14 @@
       {
         "en": "Check the wind forecast before driving up",
         "sr_lat": "Proverite prognozu vetra pre odlaska",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Café on the deck overprices coffee — bring water from town",
         "sr_lat": "Kafe na platformi je preskup — ponesite vodu iz grada",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -3471,12 +3845,14 @@
         "title": {
           "en": "Glass-floor elevator to the deck",
           "sr_lat": "Lift sa staklenim podom",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "205 m up — 360° panorama of Belgrade and Šumadija. Bring a wide lens.",
           "sr_lat": "Na visini 205 m — panorama Beograda i Šumadije. Ponesite širokougaoni objektiv.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "elevator",
         "durationMin": 40,
@@ -3487,12 +3863,14 @@
         "title": {
           "en": "Hike to the Unknown Hero Monument",
           "sr_lat": "Šetnja do Spomenika Neznanom junaku",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "1 km shaded forest path from the tower base.",
           "sr_lat": "1 km šumske staze od podnožja tornja.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "hiking",
         "durationMin": 30,
@@ -3508,17 +3886,20 @@
     "name": {
       "en": "Drugstore",
       "sr_lat": "Drugstore",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Industrial techno club inside a former slaughterhouse. Friday/Saturday only, open late.",
       "sr_lat": "Industrijski tehno klub u nekadašnjoj klanici. Radi samo petkom i subotom, do dugo u noć.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Bulevar despota Stefana 115",
       "sr_lat": "Bulevar despota Stefana 115",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.472,
     "lat": 44.826,
@@ -3555,12 +3936,14 @@
         "title": {
           "en": "Late-night session at Drugstore",
           "sr_lat": "Noćni izlazak u Drugstore",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Doors usually 22:00; the crowd arrives after midnight — pace yourself.",
           "sr_lat": "Vrata oko 22h; gužva posle ponoći — krećite polako.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "nightlife",
         "durationMin": 180,
@@ -3571,12 +3954,14 @@
         "title": {
           "en": "Check the DJ schedule",
           "sr_lat": "Pogledajte raspored DJ-eva",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Different rooms / nights vary widely — Instagram is the authoritative source.",
           "sr_lat": "Sale i večeri se razlikuju — Instagram je glavni izvor.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "queue_music",
         "durationMin": 10,
@@ -3592,17 +3977,20 @@
     "name": {
       "en": "Magistrala",
       "sr_lat": "Magistrala",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Specialty-coffee shop in Dorćol with consistent flat whites and an industrial fit-out. Take it to the river.",
       "sr_lat": "Specijalna kafeterija u Dorćolu sa pouzdanim flat whiteom i industrijskim enterijerom. Ponesite kafu do reke.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Cara Uroša 38",
       "sr_lat": "Cara Uroša 38",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.464,
     "lat": 44.8217,
@@ -3638,12 +4026,14 @@
         "title": {
           "en": "Slow coffee at Magistrala",
           "sr_lat": "Lagana kafa u Magistrala",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade café culture is unhurried — sit, watch the street, refills are common.",
           "sr_lat": "Beogradska kafana je opuštena — sedite, gledajte ulicu, dolivanje je uobičajeno.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_cafe",
         "durationMin": 45,
@@ -3654,12 +4044,14 @@
         "title": {
           "en": "Try a Serbian breakfast",
           "sr_lat": "Srpski doručak",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Eggs, kajmak, prosciutto and warm bread — most cafés serve until 12:00.",
           "sr_lat": "Jaja, kajmak, pršuta i topli hleb — većina kafića servira do 12h.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "brunch_dining",
         "durationMin": 60,
@@ -3675,17 +4067,20 @@
     "name": {
       "en": "Supermarket Concept Store",
       "sr_lat": "Supermarket Concept Store",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Dorćol concept store with all-day brunch and a courtyard. Vegetarian-friendly, design-leaning crowd.",
       "sr_lat": "Dorćolski concept store sa brunchom tokom celog dana i dvorištem. Vegetarijancima prijatan, publika iz sveta dizajna.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Višnjićeva 10",
       "sr_lat": "Višnjićeva 10",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.4628,
     "lat": 44.8208,
@@ -3722,12 +4117,14 @@
         "title": {
           "en": "Slow coffee at Supermarket Concept Store",
           "sr_lat": "Lagana kafa u Supermarket Concept Store",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade café culture is unhurried — sit, watch the street, refills are common.",
           "sr_lat": "Beogradska kafana je opuštena — sedite, gledajte ulicu, dolivanje je uobičajeno.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "local_cafe",
         "durationMin": 45,
@@ -3738,12 +4135,14 @@
         "title": {
           "en": "Try a Serbian breakfast",
           "sr_lat": "Srpski doručak",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Eggs, kajmak, prosciutto and warm bread — most cafés serve until 12:00.",
           "sr_lat": "Jaja, kajmak, pršuta i topli hleb — većina kafića servira do 12h.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "brunch_dining",
         "durationMin": 60,
@@ -3759,17 +4158,20 @@
     "name": {
       "en": "Petrovaradin Fortress",
       "sr_lat": "Petrovaradinska tvrđava",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Vauban-style citadel above the Danube opposite Novi Sad, with a famous clock tower, casemate tunnels, and sweeping river views. Hosts the EXIT music festival each July.",
       "sr_lat": "Tvrđava u Vobanovom stilu iznad Dunava, naspram Novog Sada. Poznata po toranjskom satu, kazamatskim tunelima i panoramskim pogledima na reku. Svakog jula domaćin je EXIT festivala.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Petrovaradin, 21131 Novi Sad",
       "sr_lat": "Petrovaradin, 21131 Novi Sad",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.8625,
     "lat": 45.2525,
@@ -3803,12 +4205,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Novi Sad",
           "sr_lat": "Novi Sad",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 36,
         "departures": [
@@ -3832,7 +4236,8 @@
         "notes": {
           "en": "From Novi Sad station ~15 min walk across the Varadin Bridge, or local bus 3/4 to Petrovaradin.",
           "sr_lat": "Od železničke stanice Novi Sad ~15 min hoda preko Varadinskog mosta, ili autobus 3/4 do Petrovaradina.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -3844,22 +4249,26 @@
       {
         "en": "\"Gibraltar of the Danube\" — vast 18th-century star fortress",
         "sr_lat": "\"Dunavski Gibraltar\" — ogromna zvezdana tvrđava 18. veka",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Iconic upside-down clock — minute hand longer than the hour hand",
         "sr_lat": "Slavni \"naopaki\" sat — minutara duža od kazaljke sata",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "16 km of underground military tunnels (guided only)",
         "sr_lat": "16 km vojnih podzemnih hodnika (samo s vodičem)",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "Hosts EXIT festival every July",
         "sr_lat": "Domaćin festivala EXIT svakog jula",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "whatToExpect": {
@@ -3867,24 +4276,28 @@
         {
           "en": "Sweeping view of Novi Sad across the Danube",
           "sr_lat": "Veličanstven pogled na Novi Sad preko Dunava",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Free to walk the upper plateau",
           "sr_lat": "Šetnja po gornjem platou besplatna",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ],
       "cons": [
         {
           "en": "Steep cobbled climb from the bridge",
           "sr_lat": "Strm uspon kaldrmom od mosta",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         {
           "en": "Tunnel tour requires booking — limited weekly slots",
           "sr_lat": "Tura kroz tunele zahteva rezervaciju — ograničeni termini",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       ]
     },
@@ -3892,12 +4305,14 @@
       {
         "en": "Climb at golden hour — Novi Sad lights up below",
         "sr_lat": "Popnite se u zlatni sat — Novi Sad se pali ispod",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       },
       {
         "en": "The artist studios on the plateau are open weekends",
         "sr_lat": "Umetnički ateljei na platou otvoreni su vikendom",
-        "sr_cyr": ""
+        "sr_cyr": "",
+        "tr": ""
       }
     ],
     "activities": [
@@ -3905,12 +4320,14 @@
         "title": {
           "en": "Climb the cobbled ramp at golden hour",
           "sr_lat": "Uspon kaldrmom u zlatni sat",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Steep but short — Novi Sad lights up below the upper plateau.",
           "sr_lat": "Strmo ali kratko — Novi Sad se pali ispod platoa.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 40,
@@ -3921,12 +4338,14 @@
         "title": {
           "en": "Underground tunnel tour",
           "sr_lat": "Tura kroz tunele",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "16 km of military tunnels — guided only, book ahead, limited weekly slots.",
           "sr_lat": "16 km vojnih tunela — samo s vodičem, rezervacija obavezna.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "tour",
         "durationMin": 90,
@@ -3937,12 +4356,14 @@
         "title": {
           "en": "Spot the upside-down clock",
           "sr_lat": "Naopaki sat",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Minute hand longer than the hour hand — built so sailors could read time from the Danube.",
           "sr_lat": "Minutara duža od kazaljke — da bi mornari videli sat sa Dunava.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "schedule",
         "durationMin": 10,
@@ -3958,17 +4379,20 @@
     "name": {
       "en": "Štrand (Novi Sad Danube Beach)",
       "sr_lat": "Štrand",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Half-kilometre city beach on the Danube in Novi Sad, with sand, sun loungers, river swimming, and summer cafés. Open and lifeguarded May through September.",
       "sr_lat": "Gradska plaža na Dunavu u Novom Sadu, dugačka pola kilometra. Pesak, ležaljke, kupanje u reci i letnji kafići. Otvorena i pod nadzorom spasilaca od maja do septembra.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Štrand, 21000 Novi Sad",
       "sr_lat": "Štrand, 21000 Novi Sad",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.84805556,
     "lat": 45.23611111,
@@ -4003,12 +4427,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Novi Sad",
           "sr_lat": "Novi Sad",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 36,
         "departures": [
@@ -4032,7 +4458,8 @@
         "notes": {
           "en": "From Novi Sad station ~25 min walk south to the riverside, or city bus 4 toward Liman.",
           "sr_lat": "Od železničke stanice Novi Sad ~25 min hoda na jug do obale, ili gradski autobus 4 ka Limanu.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4045,12 +4472,14 @@
         "title": {
           "en": "Walk a loop in Štrand (Novi Sad Danube Beach)",
           "sr_lat": "Krug kroz Štrand",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -4061,12 +4490,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -4082,17 +4513,20 @@
     "name": {
       "en": "Subotica City Hall",
       "sr_lat": "Gradska kuća Subotica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Hungarian Art Nouveau masterpiece (Komor & Jakab, 1910) on the main square, with a stained-glass council chamber and a clock-tower observation deck.",
       "sr_lat": "Remek-delo mađarske secesije (Komor i Jakab, 1910) na glavnom trgu. Veće sa vitražima i vidikovac na satnoj kuli.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg slobode 1, 24000 Subotica",
       "sr_lat": "Trg slobode 1, 24000 Subotica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.66444444,
     "lat": 46.09972222,
@@ -4126,12 +4560,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Subotica",
           "sr_lat": "Subotica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 95,
         "departures": [
@@ -4152,7 +4588,8 @@
         "notes": {
           "en": "Not every Soko continues past Novi Sad; check the current PDF schedule at srbvoz.rs. From Subotica station ~15 min walk to Trg slobode.",
           "sr_lat": "Ne nastavljaju svi Soko vozovi posle Novog Sada; proverite važeći red vožnje na srbvoz.rs. Od stanice ~15 min hoda do Trga slobode.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4165,12 +4602,14 @@
         "title": {
           "en": "Walk the grounds of Subotica City Hall",
           "sr_lat": "Šetnja kroz Gradska kuća Subotica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -4181,12 +4620,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -4202,17 +4643,20 @@
     "name": {
       "en": "Subotica Synagogue",
       "sr_lat": "Subotička sinagoga",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Hungarian Art Nouveau synagogue from 1902, one of the most striking in Central Europe — restored 2018, with stained-glass cupolas and floral motifs.",
       "sr_lat": "Mađarska secesijska sinagoga iz 1902, jedna od najupečatljivijih u srednjoj Evropi. Obnovljena 2018, sa vitražnim kupolama i cvetnim motivima.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg Sinagoge 2, 24000 Subotica",
       "sr_lat": "Trg Sinagoge 2, 24000 Subotica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.66777778,
     "lat": 46.10361111,
@@ -4246,12 +4690,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Subotica",
           "sr_lat": "Subotica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 95,
         "departures": [
@@ -4272,7 +4718,8 @@
         "notes": {
           "en": "Same train as Subotica City Hall; from Subotica station ~10 min walk north.",
           "sr_lat": "Isti voz kao za Gradsku kuću; od stanice ~10 min hoda na sever.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4285,12 +4732,14 @@
         "title": {
           "en": "Walk the grounds of Subotica Synagogue",
           "sr_lat": "Šetnja kroz Subotička sinagoga",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -4301,12 +4750,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -4322,17 +4773,20 @@
     "name": {
       "en": "Saint Nicholas Cathedral, Sremski Karlovci",
       "sr_lat": "Saborna crkva Svetog Nikole, Sremski Karlovci",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Serbian Orthodox cathedral on the main square of the wine-village Sremski Karlovci, seat of the historic Patriarchate, with a richly painted iconostasis from 1780.",
       "sr_lat": "Srpska pravoslavna saborna crkva na glavnom trgu vinogradarskog mestašca Sremski Karlovci. Sedište istorijske Patrijaršije. Bogato oslikan ikonostas iz 1780. godine.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg Branka Radičevića, 21205 Sremski Karlovci",
       "sr_lat": "Trg Branka Radičevića, 21205 Sremski Karlovci",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.9344314,
     "lat": 45.2028985,
@@ -4366,12 +4820,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Sremski Karlovci",
           "sr_lat": "Sremski Karlovci",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 75,
         "departures": [
@@ -4391,7 +4847,8 @@
         "notes": {
           "en": "Regional service via the legacy Belgrade-Novi Sad line (not the Soko corridor). Verify current departures at srbvoz.rs — service is limited compared to Soko, but the local train stops directly at Karlovci village. Alternative: take Soko to Novi Sad (36 min) then local bus 61 or taxi (15 min).",
           "sr_lat": "Regionalna linija preko stare pruge Beograd-Novi Sad (ne preko brze Soko-pruge). Proverite važeći red vožnje na srbvoz.rs — broj polazaka je manji nego za Soko, ali ovaj voz staje u samim Karlovcima. Alternativa: Soko do Novog Sada (36 min) pa lokalni autobus 61 ili taksi (15 min).",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4404,12 +4861,14 @@
         "title": {
           "en": "Walk the grounds of Saint Nicholas Cathedral, Sremski Karlovci",
           "sr_lat": "Šetnja kroz Saborna crkva Svetog Nikole, Sremski Karlovci",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -4420,12 +4879,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -4441,17 +4902,20 @@
     "name": {
       "en": "Smederevo Fortress",
       "sr_lat": "Smederevska tvrđava",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Medieval Serbian fortified capital on the Danube, 1430s — one of the largest plain fortresses in Europe, with 25 towers and an inner city of palaces in ruins.",
       "sr_lat": "Srednjovekovna prestonica Srpske despotovine na Dunavu iz 1430-ih. Jedna od najvećih ravničarskih tvrđava u Evropi, sa 25 kula i unutrašnjim gradom palata u ruševinama.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Despota Đurđa, 11300 Smederevo",
       "sr_lat": "Despota Đurđa, 11300 Smederevo",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.9276958,
     "lat": 44.6695928,
@@ -4485,12 +4949,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Smederevo",
           "sr_lat": "Smederevo",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 70,
         "departures": [
@@ -4509,7 +4975,8 @@
         "notes": {
           "en": "Train service to Smederevo is limited as of 2026 — typically 1-2 daily departures, sometimes replaced by rail-bus. Verify on srbvoz.rs the morning of travel. Reliable fallback: intercity-bus from BAS (~1 h, departures every 30 min). From Smederevo station ~20 min walk to the fortress.",
           "sr_lat": "Vozno povezivanje sa Smederevom je u 2026. ograničeno — obično 1-2 dnevna polaska, ponekad zamenjena železničkim autobusom. Proverite na srbvoz.rs ujutru pre puta. Pouzdana alternativa: međugradski autobus sa BAS (~1 h, polasci na svakih 30 min). Od železničke stanice ~20 min hoda do tvrđave.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4522,12 +4989,14 @@
         "title": {
           "en": "Walk the grounds of Smederevo Fortress",
           "sr_lat": "Šetnja kroz Smederevska tvrđava",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -4538,12 +5007,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -4559,17 +5030,20 @@
     "name": {
       "en": "St. George's Church, Oplenac (Karađorđević Mausoleum)",
       "sr_lat": "Crkva Svetog Đorđa na Oplencu (Mauzolej Karađorđevića)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Royal mausoleum of the Karađorđević dynasty crowning Oplenac hill above Topola. Marble exterior, mosaic interior copying 60 medieval Serbian churches, and the crypt of King Petar I.",
       "sr_lat": "Kraljevski mauzolej dinastije Karađorđević na vrhu brda Oplenac iznad Topole. Mermerna spoljašnjost, unutrašnji mozaici koji repliciraju 60 srednjovekovnih srpskih crkava, i kripta kralja Petra I.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Oplenac, 34310 Topola",
       "sr_lat": "Oplenac, 34310 Topola",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.6833,
     "lat": 44.2472,
@@ -4604,12 +5078,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Topola bus station",
           "sr_lat": "Topola autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 90,
         "departures": [
@@ -4633,7 +5109,8 @@
         "notes": {
           "en": "Operators include Sandžaktrans, Pupd Janjušević, Joe Travel. Times sourced 11 May 2026 from polazak.rs aggregator. From Topola station 15-20 min walk uphill to Oplenac or local taxi.",
           "sr_lat": "Prevoznici: Sandžaktrans, Pupd Janjušević, Joe Travel. Vremena preuzeta 11. maja 2026. iz agregatora polazak.rs. Od autobuske stanice u Topoli 15-20 min hoda uzbrdo do Oplenca ili lokalni taksi.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4646,12 +5123,14 @@
         "title": {
           "en": "Self-guided visit to St. George's Church, Oplenac (Karađorđević Mausoleum)",
           "sr_lat": "Samostalni obilazak Crkva Svetog Đorđa na Oplencu (Mauzolej Karađorđevića)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -4662,12 +5141,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -4683,17 +5164,20 @@
     "name": {
       "en": "Bukovička Banja (Aranđelovac Spa)",
       "sr_lat": "Bukovička banja",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Landscape park with mineral springs, the 19th-century Knez Mihailov konak, and the Bela Stena marble-sculpture park — anchor of the Aranđelovac spa town.",
       "sr_lat": "Park sa mineralnim izvorima, konakom kneza Mihaila iz 19. veka, i parkom mermernih skulptura Bela Stena — centar banje Aranđelovac.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Mišarska, 34300 Aranđelovac",
       "sr_lat": "Mišarska, 34300 Aranđelovac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.5520873,
     "lat": 44.3086876,
@@ -4728,12 +5212,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Aranđelovac bus station",
           "sr_lat": "Aranđelovac autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 80,
         "departures": [
@@ -4758,7 +5244,8 @@
         "notes": {
           "en": "Operators include Lasta, Transprodukt. 14 daily departures; fares 670-710 RSD one-way per polazak.rs (11 May 2026). From station ~10 min walk to the spa park.",
           "sr_lat": "Prevoznici: Lasta, Transprodukt. 14 dnevnih polaska; cena 670-710 RSD jednosmerno po polazak.rs (11. maj 2026). Od stanice ~10 min hoda do banje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4771,12 +5258,14 @@
         "title": {
           "en": "Walk a loop in Bukovička Banja (Aranđelovac Spa)",
           "sr_lat": "Krug kroz Bukovička banja",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -4787,12 +5276,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -4808,17 +5299,20 @@
     "name": {
       "en": "Šabac Old Town & Fortress",
       "sr_lat": "Šabac — Stari grad i tvrđava",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Sava-river town with an Ottoman fortress, the 1865 Jefimija quay promenade, and the cathedral Crkva Svetih Apostola Petra i Pavla. Mačvanski Folk Museum on the main square.",
       "sr_lat": "Grad na Savi sa osmanlijskom tvrđavom, šetalištem Jefimija iz 1865. i Crkvom Svetih Apostola Petra i Pavla. Mačvanski narodni muzej na glavnom trgu.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Gospodar Jevremova, 15000 Šabac",
       "sr_lat": "Gospodar Jevremova, 15000 Šabac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.6953972,
     "lat": 44.7571535,
@@ -4853,12 +5347,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Šabac bus station",
           "sr_lat": "Šabac autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 90,
         "departures": [
@@ -4882,7 +5378,8 @@
         "notes": {
           "en": "Operators include Raketa AB, Lastra, Mačva Expres, Banbus. Verified 11 May 2026 via polazak.rs. Regional train (Srbijavoz) also serves this route at 09:50 daily.",
           "sr_lat": "Prevoznici: Raketa AB, Lastra, Mačva Expres, Banbus. Provereno 11. maj 2026. preko polazak.rs. Regionalni voz (Srbijavoz) saobraća u 09:50 dnevno.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -4895,12 +5392,14 @@
         "title": {
           "en": "Walk the grounds of Šabac Old Town & Fortress",
           "sr_lat": "Šetnja kroz Šabac — Stari grad i tvrđava",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -4911,12 +5410,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -4932,17 +5433,20 @@
     "name": {
       "en": "Banja Koviljača",
       "sr_lat": "Banja Koviljača",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Elegant Austro-Hungarian spa town in western Serbia near the Drina river — sulphur springs, the 1908 Royal Bathhouse, and a tree-lined promenade.",
       "sr_lat": "Elegantna austrougarska banja u zapadnoj Srbiji pored Drine — sumporni izvori, Kraljevsko kupatilo iz 1908. i drvored za šetnju.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kralja Petra I 23, 15316 Banja Koviljača",
       "sr_lat": "Kralja Petra I 23, 15316 Banja Koviljača",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.1585984,
     "lat": 44.5138269,
@@ -4976,12 +5480,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Loznica bus station",
           "sr_lat": "Loznica autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 150,
         "departures": [
@@ -5006,7 +5512,8 @@
         "notes": {
           "en": "Operators include Raketa AB, Lastra, Banbus. 19 daily departures Belgrade→Loznica per polazak.rs (11 May 2026). From Loznica station local bus or 7 km taxi to Banja Koviljača (~10 min).",
           "sr_lat": "Prevoznici: Raketa AB, Lastra, Banbus. 19 dnevnih polaska Beograd→Loznica po polazak.rs (11. maj 2026). Od stanice u Loznici lokalni autobus ili 7 km taksi do Banje Koviljače (~10 min).",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5019,12 +5526,14 @@
         "title": {
           "en": "Walk a loop in Banja Koviljača",
           "sr_lat": "Krug kroz Banja Koviljača",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -5035,12 +5544,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -5056,17 +5567,20 @@
     "name": {
       "en": "Mladenovac",
       "sr_lat": "Mladenovac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Belgrade-municipality town with the Selters Banja mineral park, the 1903 Saint Petka church, and the surrounding Kosmaj hills for hiking.",
       "sr_lat": "Mestašce u Beogradskoj opštini sa parkom mineralne vode Selters Banja, Crkvom Svete Petke iz 1903. i obližnjim brdima Kosmaj za planinarenje.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Trg Gradskog Heroja, 11400 Mladenovac",
       "sr_lat": "Trg Gradskog Heroja, 11400 Mladenovac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.6941535,
     "lat": 44.4401166,
@@ -5101,12 +5615,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Mladenovac",
           "sr_lat": "Mladenovac",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 55,
         "departures": [
@@ -5129,7 +5645,8 @@
         "notes": {
           "en": "BG:Voz line 3 (Mladenovac—Ovča/Zemun via Belgrade Centre). Approximate times; verify current schedule at srbvoz.rs the day of travel.",
           "sr_lat": "BG:Voz linija 3 (Mladenovac—Ovča/Zemun preko Beograda Centra). Vremena su približna; proverite važeći red vožnje na srbvoz.rs na dan putovanja.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5142,12 +5659,14 @@
         "title": {
           "en": "Walk the grounds of Mladenovac",
           "sr_lat": "Šetnja kroz Mladenovac",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -5158,12 +5677,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -5179,17 +5700,20 @@
     "name": {
       "en": "Lazarevac",
       "sr_lat": "Lazarevac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Coal-country town south-west of Belgrade with the Saint Demetrius church-memorial complex commemorating the 1914 Kolubara Battle, and the Đorđe Andrejević Kun art collection.",
       "sr_lat": "Mestašce jugozapadno od Beograda, centar rudarskog basena, sa crkvom-spomenikom Svetog Dimitrija u sećanje na Kolubarsku bitku 1914. i umetničkom zbirkom Đorđa Andrejevića Kuna.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Karađorđeva, 11550 Lazarevac",
       "sr_lat": "Karađorđeva, 11550 Lazarevac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.261033,
     "lat": 44.3815176,
@@ -5223,12 +5747,14 @@
         "fromStation": {
           "en": "Belgrade Centre (Prokop)",
           "sr_lat": "Beograd Centar (Prokop)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Lazarevac",
           "sr_lat": "Lazarevac",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 75,
         "departures": [
@@ -5249,7 +5775,8 @@
         "notes": {
           "en": "BG:Voz line 4 (Lazarevac—Ovča via Belgrade Centre). Approximate times — line 4 has fewer departures than line 3; verify at srbvoz.rs the day of travel.",
           "sr_lat": "BG:Voz linija 4 (Lazarevac—Ovča preko Beograda Centra). Približna vremena — linija 4 ima manje polaska od linije 3; proverite na srbvoz.rs na dan putovanja.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5262,12 +5789,14 @@
         "title": {
           "en": "Walk the grounds of Lazarevac",
           "sr_lat": "Šetnja kroz Lazarevac",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Take in the building exterior, surrounding square and any free-to-enter spaces.",
           "sr_lat": "Pogledajte spoljašnjost, okolni trg i delove dostupne posetiocima.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "directions_walk",
         "durationMin": 30,
@@ -5278,12 +5807,14 @@
         "title": {
           "en": "Take a landmark photo",
           "sr_lat": "Fotografišite znamenitost",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Find the postcard angle — usually from across the square or under the main facade.",
           "sr_lat": "Pronađite najbolji ugao — obično s trga ili ispred glavne fasade.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 10,
@@ -5299,17 +5830,20 @@
     "name": {
       "en": "Tomb of the Unknown Hero (Avala)",
       "sr_lat": "Spomenik neznanom junaku (Avala)",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Meštrović's 1938 marble mausoleum on the summit of Avala, eight caryatids in regional dress flanking the crypt. Sweeping views toward Belgrade and the Šumadija hills.",
       "sr_lat": "Mermerni mauzolej Ivana Meštrovića iz 1938. na vrhu Avale, sa osam karijatida u narodnim nošnjama oko kripte. Pogled na Beograd i šumadijska brda.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Avala summit, 11400 Belgrade",
       "sr_lat": "Avala (vrh), 11400 Beograd",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.51580556,
     "lat": 44.68869444,
@@ -5342,12 +5876,14 @@
         "fromStation": {
           "en": "Voždovac (Trošarina)",
           "sr_lat": "Voždovac (Trošarina)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Avala (terminus)",
           "sr_lat": "Avala (terminus)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 35,
         "departures": [
@@ -5372,7 +5908,8 @@
         "notes": {
           "en": "GSP line 401 (Voždovac—Avala) — approximate hourly through the day. BusPlus card or paper ticket at the entry. From the terminus 5-10 min walk uphill to the monument; the Avala Tower viewpoint is 400 m further.",
           "sr_lat": "GSP linija 401 (Voždovac—Avala) — približno satnica tokom dana. BusPlus kartica ili papirna karta na ulazu. Od stanice 5-10 min hoda uzbrdo do spomenika; vidikovac Avala je 400 m dalje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5385,12 +5922,14 @@
         "title": {
           "en": "Sunset at Tomb of the Unknown Hero (Avala)",
           "sr_lat": "Zalazak na Spomenik neznanom junaku (Avala)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -5401,12 +5940,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -5422,17 +5963,20 @@
     "name": {
       "en": "Vinča-Belo Brdo Archaeological Site",
       "sr_lat": "Arheološki lokalitet Vinča-Belo Brdo",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "One of the largest Neolithic settlements in Europe (5700–4500 BC), excavated since 1908 — type site of the Vinča culture. Visitor centre with reconstructions and original artefacts.",
       "sr_lat": "Jedno od najvećih neolitskih naselja u Evropi (5700–4500. p.n.e), istraživano od 1908. — tip-lokalitet vinčanske kulture. Posetilački centar sa rekonstrukcijama i originalnim nalazima.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Belo Brdo, 11051 Vinča",
       "sr_lat": "Belo Brdo, 11051 Vinča",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.6232963,
     "lat": 44.7620957,
@@ -5466,12 +6010,14 @@
         "fromStation": {
           "en": "Pančevački most (City bus terminus)",
           "sr_lat": "Pančevački most (terminus)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Vinča",
           "sr_lat": "Vinča",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 45,
         "departures": [
@@ -5494,7 +6040,8 @@
         "notes": {
           "en": "GSP lines 304E and 313 from Pančevački most or Trg Republike. From Vinča village ~10 min walk to the visitor centre. Schedule approximate — verify on gsp.rs day of travel.",
           "sr_lat": "GSP linije 304E i 313 sa Pančevačkog mosta ili Trga Republike. Od Vinče ~10 min hoda do posetiteljskog centra. Raspored je približan — proverite na gsp.rs na dan putovanja.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5507,12 +6054,14 @@
         "title": {
           "en": "Self-guided visit to Vinča-Belo Brdo Archaeological Site",
           "sr_lat": "Samostalni obilazak Arheološki lokalitet Vinča-Belo Brdo",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -5523,12 +6072,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -5544,17 +6095,20 @@
     "name": {
       "en": "Kosmaj Mountain",
       "sr_lat": "Kosmaj",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Forested 626 m peak south of Belgrade, with the 1971 partisan memorial of five concrete spikes by Vojin Stojić — a Yugoslav modernist landmark. Marked hiking trails through oak and beech forest.",
       "sr_lat": "Šumovit vrh od 626 m južno od Beograda, sa partizanskim spomenikom iz 1971. — pet betonskih šiljaka koje je projektovao Vojin Stojić, simbol jugoslovenskog modernizma. Obeležene staze kroz hrastovu i bukovu šumu.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Kosmaj, 11450 Sopot",
       "sr_lat": "Kosmaj, 11450 Sopot",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.56555556,
     "lat": 44.46555556,
@@ -5588,12 +6142,14 @@
         "fromStation": {
           "en": "Voždovac (Trošarina)",
           "sr_lat": "Voždovac (Trošarina)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Sopot (then trail to summit)",
           "sr_lat": "Sopot (zatim staza ka vrhu)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 70,
         "departures": [
@@ -5615,7 +6171,8 @@
         "notes": {
           "en": "GSP line 411 (Trošarina—Sopot). From Sopot bus station the marked Kosmaj trail is ~5 km / 90 min on foot to the summit and memorial. Allow a full day. Schedule approximate; verify on gsp.rs.",
           "sr_lat": "GSP linija 411 (Trošarina—Sopot). Od autobuske stanice u Sopotu obeležena staza ka Kosmaju je ~5 km / 90 min hoda do vrha i spomenika. Računajte na ceo dan. Raspored je približan; proverite na gsp.rs.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5628,12 +6185,14 @@
         "title": {
           "en": "Sunset at Kosmaj Mountain",
           "sr_lat": "Zalazak na Kosmaj",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Arrive 30–45 min before the golden hour for the best light.",
           "sr_lat": "Stignite 30–45 min pre zlatnog sata — najbolja svetla.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "wb_twilight",
         "durationMin": 45,
@@ -5644,12 +6203,14 @@
         "title": {
           "en": "Wide-angle photo from the parapet",
           "sr_lat": "Širokougaona fotka sa ograde",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Bring a wide lens or use the phone's 0.5× — the panorama is too big for standard.",
           "sr_lat": "Ponesite širokougaoni objektiv ili koristite 0,5× — panorama je preširoka za standardni.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "photo_camera",
         "durationMin": 15,
@@ -5665,17 +6226,20 @@
     "name": {
       "en": "Fruška Gora National Park",
       "sr_lat": "Nacionalni park Fruška gora",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Vojvodina ridgeline studded with 16 Serbian Orthodox monasteries (the \"Holy Mount\"), oak-and-linden forest, vineyard villages, and panoramic ridge roads.",
       "sr_lat": "Planinski venac u Vojvodini sa 16 srpskih pravoslavnih manastira (Sveta gora Srbije), hrastovo-lipovim šumama, vinogradarskim selima i panoramskim putevima.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Iriški venac, 22406 Irig",
       "sr_lat": "Iriški venac, 22406 Irig",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 19.7625585,
     "lat": 45.1593142,
@@ -5710,12 +6274,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Irig (ridgeline base)",
           "sr_lat": "Irig (podnožje grebena)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 105,
         "departures": [
@@ -5737,7 +6303,8 @@
         "notes": {
           "en": "Most travellers take Soko to Novi Sad (36 min) then local bus 53/74 to Irig village (40 min); the intercity bus listed above goes via Šid. Best monasteries (Krušedol, Velika Remeta) need a taxi or guided day-tour from Irig.",
           "sr_lat": "Većina putnika ide Soko-vozom do Novog Sada (36 min) pa lokalnim autobusom 53/74 do Iriga (40 min); međugradski autobus iznad ide preko Šida. Najpoznatiji manastiri (Krušedol, Velika Remeta) zahtevaju taksi ili organizovanu turu iz Iriga.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5750,12 +6317,14 @@
         "title": {
           "en": "Walk a loop in Fruška Gora National Park",
           "sr_lat": "Krug kroz Nacionalni park Fruška gora",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Belgrade parks are unfenced — wander any path; benches are everywhere.",
           "sr_lat": "Beogradski parkovi nisu ograđeni — lutajte stazama; klupa ima posvuda.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "park",
         "durationMin": 60,
@@ -5766,12 +6335,14 @@
         "title": {
           "en": "Picnic with bakery food",
           "sr_lat": "Piknik s pekarskim zalogajima",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Grab burek, pita and yoghurt from a nearby pekara — under 5 € for two.",
           "sr_lat": "Burek, pita, jogurt iz obližnje pekare — manje od 5 € za dvoje.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "bakery_dining",
         "durationMin": 45,
@@ -5787,17 +6358,20 @@
     "name": {
       "en": "Viminacium Roman Archaeological Park",
       "sr_lat": "Arheološki park Viminacijum",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "Capital of Roman Moesia Superior — amphitheatre, mausolea, baths, and a third-century mammoth-skeleton find. Onsite reconstructions and a visitor centre 12 km east of Požarevac.",
       "sr_lat": "Prestonica rimske provincije Gornje Mezije — amfiteatar, mauzoleji, terme i nalaz mamutovog skeleta iz 3. veka. Rekonstrukcije i posetilački centar 12 km istočno od Požarevca.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Stari Kostolac, 12208 Požarevac",
       "sr_lat": "Stari Kostolac, 12208 Požarevac",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 21.2,
     "lat": 44.74,
@@ -5830,12 +6404,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Požarevac bus station",
           "sr_lat": "Požarevac autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 90,
         "departures": [
@@ -5859,7 +6435,8 @@
         "notes": {
           "en": "Frequent BAS departures to Požarevac (Lasta, Sirius); from Požarevac a 12 km taxi to the Viminacium site (~15 min). Some operators run direct charter day-tours from Belgrade in season — check viminacium.org.rs.",
           "sr_lat": "Česti polasci sa BAS-a ka Požarevcu (Lasta, Sirius); od Požarevca taksi 12 km do lokaliteta (~15 min). Pojedini prevoznici organizuju direktne dnevne ture iz Beograda u sezoni — proverite na viminacium.org.rs.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5872,12 +6449,14 @@
         "title": {
           "en": "Self-guided visit to Viminacium Roman Archaeological Park",
           "sr_lat": "Samostalni obilazak Arheološki park Viminacijum",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -5888,12 +6467,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
@@ -5909,17 +6490,20 @@
     "name": {
       "en": "Gallery of Naïve Art, Kovačica",
       "sr_lat": "Galerija naivne umetnosti Kovačica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "description": {
       "en": "World-renowned Slovak naïve-painting tradition. Founded 1955, the Kovačica gallery shows 1,200+ works by self-taught village painters — Banat scenes, harvests, and folk dance.",
       "sr_lat": "Svetski poznata tradicija slovačkog naivnog slikarstva. Osnovana 1955, kovačička galerija pokazuje preko 1.200 dela samoukih seoskih slikara — banatski pejzaži, žetve, folklor.",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "address": {
       "en": "Masarikova 65, 26210 Kovačica",
       "sr_lat": "Masarikova 65, 26210 Kovačica",
-      "sr_cyr": ""
+      "sr_cyr": "",
+      "tr": ""
     },
     "lng": 20.624059,
     "lat": 45.1125168,
@@ -5953,12 +6537,14 @@
         "fromStation": {
           "en": "Belgrade BAS (Central bus station)",
           "sr_lat": "Beograd BAS (Glavna autobuska stanica)",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "toStation": {
           "en": "Kovačica bus station",
           "sr_lat": "Kovačica autobuska stanica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "durationMinutes": 60,
         "departures": [
@@ -5980,7 +6566,8 @@
         "notes": {
           "en": "Operators include Lasta and APP Aleksinac. From the bus station ~5 min walk to the gallery on Masarikova.",
           "sr_lat": "Prevoznici: Lasta, APP Aleksinac. Od autobuske stanice ~5 min hoda do galerije u Masarikovoj ulici.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         }
       }
     ],
@@ -5993,12 +6580,14 @@
         "title": {
           "en": "Self-guided visit to Gallery of Naïve Art, Kovačica",
           "sr_lat": "Samostalni obilazak Galerija naivne umetnosti Kovačica",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
           "sr_lat": "Računajte oko 90 minuta; većina muzeja ima dvojezičnu signalizaciju.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "museum",
         "durationMin": 90,
@@ -6009,12 +6598,14 @@
         "title": {
           "en": "Catch a temporary exhibit",
           "sr_lat": "Privremena izložba",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "summary": {
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
-          "sr_cyr": ""
+          "sr_cyr": "",
+          "tr": ""
         },
         "icon": "palette",
         "durationMin": 45,
