@@ -114,6 +114,8 @@
     "empty_body": "Bir yerin yer imine dokunarak burada saklayabilirsin."
   },
   "trips": {
+    "title": "Günlük Geziler",
+    "subtitle": "Belgrad dışında, ulaşım bilgisiyle tam günlük gezi rotaları.",
     "empty_title": "Günlük geziler yakında",
     "empty_body": "Novi Sad, Topola, Avala ve daha fazlası — ulaşım bilgisiyle — bir sonraki güncellemede.",
     "eyebrow": "Belgrad'ın ötesi"

@@ -114,6 +114,8 @@
     "empty_body": "Tap the bookmark on a place to keep it here for later."
   },
   "trips": {
+    "title": "Day Trips",
+    "subtitle": "Curated full-day excursions beyond Belgrade — with transit.",
     "empty_title": "Day trips coming soon",
     "empty_body": "Novi Sad, Topola, Avala and more — with transit info — land in the next update.",
     "eyebrow": "Beyond Belgrade"

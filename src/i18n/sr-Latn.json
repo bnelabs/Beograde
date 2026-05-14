@@ -114,6 +114,8 @@
     "empty_body": "Dodirni oznaku na mestu da bi ga sačuvao ovde."
   },
   "trips": {
+    "title": "Izleti iz Beograda",
+    "subtitle": "Celodnevni izleti van Beograda — sa uputstvima za prevoz.",
     "empty_title": "Izleti uskoro",
     "empty_body": "Novi Sad, Topola, Avala i još mnogo toga — sa info o prevozu — stižu u sledećem ažuriranju.",
     "eyebrow": "Van Beograda"

@@ -1,14 +1,52 @@
 <div class="trips">
   <header class="trips-head">
     <span class="trips-eyebrow">{{ t().trips.eyebrow }}</span>
-    <h1 class="trips-title">{{ t().tabs.trips }}</h1>
+    <h1 class="trips-title">{{ t().trips.title }}</h1>
+    <p class="trips-sub">{{ t().trips.subtitle }}</p>
   </header>
 
-  <app-card variant="concrete">
-    <div class="trips-empty">
-      <span class="material-symbols-outlined" aria-hidden="true">directions_train</span>
-      <h2>{{ t().trips.empty_title }}</h2>
-      <p>{{ t().trips.empty_body }}</p>
-    </div>
-  </app-card>
+  @if (dayTrips.length === 0) {
+    <app-card variant="concrete">
+      <div class="trips-empty">
+        <span class="material-symbols-outlined" aria-hidden="true">directions_train</span>
+        <h2>{{ t().trips.empty_title }}</h2>
+        <p>{{ t().trips.empty_body }}</p>
+      </div>
+    </app-card>
+  } @else {
+    <ul class="trips-list">
+      @for (it of dayTrips; track it.id) {
+        <li>
+          <a [routerLink]="['/itinerary', it.id]" class="block">
+            <app-card>
+              <div class="trips-mosaic">
+                @for (tile of mosaicTiles(it); track $index) {
+                  <div class="trips-mosaic-cell">
+                    @if (tile.src) {
+                      <img class="trips-mosaic-img" [src]="tile.src" [alt]="tile.alt" loading="lazy" decoding="async" />
+                    } @else {
+                      <span class="material-symbols-outlined trips-mosaic-icon">{{ tile.icon }}</span>
+                    }
+                  </div>
+                }
+              </div>
+              <div class="trips-card-body">
+                <div class="trips-card-h">
+                  <h2 class="trips-card-title">{{ it.title | i18nText }}</h2>
+                  <span class="trips-card-meta">{{ hours(it.durationMinutes) }}</span>
+                </div>
+                <p class="trips-card-sub">{{ it.subtitle | i18nText }}</p>
+                <div class="trips-card-vibes">
+                  @for (v of it.vibe; track v) {
+                    <span class="trips-vibe">{{ v }}</span>
+                  }
+                  <span class="trips-vibe trips-vibe-stops">{{ t().itinerary.stops.replace('{n}', it.stops.length.toString()) }}</span>
+                </div>
+              </div>
+            </app-card>
+          </a>
+        </li>
+      }
+    </ul>
+  }
 </div>

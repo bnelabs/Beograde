@@ -5,6 +5,7 @@ const bg = (en: string, sr: string = en): Bilingual => ({ en, sr_lat: sr, sr_cyr
 export const ITINERARIES: Itinerary[] = [
   {
     id: 'history-walk',
+    kind: 'city',
     title: bg('A Full Day in Royal Belgrade', 'Ceo dan u kraljevskom Beogradu'),
     subtitle: bg('Fortress to temple to bohemia — 9 stops, no rushing.', 'Od tvrđave do hrama do boemije — 9 stanica, bez žurbe.'),
     durationMinutes: 540,
@@ -28,6 +29,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'foodie-crawl',
+    kind: 'city',
     title: bg('All-Day Foodie Crawl Through Dorćol', 'Celodnevna gastro tura kroz Dorćol'),
     subtitle: bg('Eight stops, ten hours, no shame.', 'Osam stanica, deset sati, nimalo srama.'),
     durationMinutes: 600,
@@ -50,6 +52,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'riverside-splavovi',
+    kind: 'city',
     title: bg('Sava to Splav — Sunset to 3 AM', 'Od Save do splava — od zalaska do tri ujutru'),
     subtitle: bg('Walk the river, eat at water level, dance on it.', 'Hodaj uz reku, večeraj na vodi, igraj na njoj.'),
     durationMinutes: 540,
@@ -71,6 +74,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'family-day',
+    kind: 'city',
     title: bg('Active Family Day — Walls, Water, Animals', 'Aktivni porodični dan — bedemi, voda, životinje'),
     subtitle: bg('Zoo, fortress, swim at Ada, science demo, ice cream stops.', 'Zoo, tvrđava, kupanje na Adi, nauka, sladoled.'),
     durationMinutes: 540,
@@ -95,6 +99,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'rainy-day',
+    kind: 'city',
     title: bg('Rainy Day Museums + Cafés', 'Kišni dan — muzeji i kafići'),
     subtitle: bg('Three museums, two cafés, never get wet.', 'Tri muzeja, dva kafića, bez kiše.'),
     durationMinutes: 420,
@@ -115,6 +120,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'viewpoint-sunset',
+    kind: 'city',
     title: bg('Golden Hour to Blue Hour Photo Day', 'Foto-dan od zlatnog do plavog sata'),
     subtitle: bg('Six viewpoints chasing the light. Pack a tripod.', 'Šest vidikovaca u poteri za svetlom. Ponesi stativ.') ,
     durationMinutes: 480,
@@ -139,6 +145,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'avala-kosmaj-twin-peaks',
+    kind: 'day-trip',
     title: bg('Twin Peaks — Avala + Kosmaj in One Day', 'Dva vrha — Avala i Kosmaj u jednom danu'),
     subtitle: bg('Two summits, two tower climbs, real hiking. Bus 401 + driver helps.', 'Dva vrha, dve kule, pravo planinarenje. Autobus 401 + vozač pomažu.'),
     durationMinutes: 600,
@@ -162,6 +169,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'fruska-gora-day-trip',
+    kind: 'day-trip',
     title: bg('Fruška Gora + Novi Sad — Monasteries to Beach', 'Fruška gora + Novi Sad — od manastira do plaže'),
     subtitle: bg('Twelve-hour day-trip. Car or organised tour required.', 'Dvanaestočasovni izlet. Auto ili organizovana tura.'),
     durationMinutes: 720,
@@ -185,6 +193,7 @@ export const ITINERARIES: Itinerary[] = [
   },
   {
     id: 'ada-watersports-day',
+    kind: 'city',
     title: bg('Ada Ciganlija All-Day Adventure', 'Ada Ciganlija — celodnevna avantura'),
     subtitle: bg('Bike, swim, kayak, climb, dance. Ten hours, no museums.', 'Bicikl, kupanje, kajak, penjanje, ples. Deset sati, bez muzeja.'),
     durationMinutes: 600,
