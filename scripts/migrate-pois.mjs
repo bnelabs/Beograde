@@ -46,7 +46,7 @@ const HOURS_MAP = {
 };
 
 function bilingual(s) {
-  return { en: s, sr_lat: s, sr_cyr: '' };
+  return { en: s, sr_lat: s, sr_cyr: '', tr: '' };
 }
 
 function isV2(p) {

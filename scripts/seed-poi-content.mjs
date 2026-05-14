@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-function b(en, sr_lat) { return { en, sr_lat, sr_cyr: '' }; }
+function b(en, sr_lat) { return { en, sr_lat, sr_cyr: '', tr: '' }; }
 function blist(pairs) { return pairs.map(([en, sr]) => b(en, sr)); }
 
 /**
