@@ -1,0 +1,14 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "51dd20ff7167753440590cc5c2b57f684640f00102f901b831690100000000c00201920319d09ad0bdd0b5d0b7d0b020d09cd0b8d185d0b0d0b8d0bbd0b0",
+  "matched": {
+    "place_id": "51dd20ff7167753440590cc5c2b57f684640f00102f901b831690100000000c00201920319d09ad0bdd0b5d0b7d0b020d09cd0b8d185d0b0d0b8d0bbd0b0",
+    "name": "Кнеза Михаила",
+    "lat": 44.8163974,
+    "lng": 20.4586097,
+    "distanceM": 127
+  },
+  "goodToKnow": {
+    "wikidata": "Q1420986"
+  }
+}

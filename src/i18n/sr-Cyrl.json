@@ -27,7 +27,7 @@
     "min_walk": "{n} мин пешака",
     "offline_intro_title": "Припреми се за рад без интернета",
     "offline_intro_body": "Београд водич треба једном да преузме пакет карте за Београд. После тога апликација ради и у авионском режиму.",
-    "one_time_wifi": "Једнократно · препоручује се Wi-Fi"
+    "one_time_wifi": "Једнократно · препоручује се Wи-Фи"
   },
   "categories": {
     "sight": "Знаменитости",
@@ -91,7 +91,22 @@
     "budget_mid": "Средње",
     "budget_high": "Премиум",
     "show_distance": "Прикажи удаљеност",
-    "open_in_maps": "Отвори у Мапама"
+    "open_in_maps": "Отвори у Мапама",
+    "good_to_know": "Добро је знати",
+    "gtk_heritage_unesco": "UNESCO светска баштина",
+    "gtk_heritage_national": "Споменик културе",
+    "gtk_heritage_regional": "Под заштитом",
+    "gtk_built": "Саграђено {year}.",
+    "gtk_wheelchair_yes": "Приступачно за колица",
+    "gtk_wheelchair_limited": "Делимично приступачно",
+    "gtk_wifi_free": "Бесплатан Wi-Fi",
+    "gtk_wifi_yes": "Има Wi-Fi",
+    "gtk_outdoor": "Башта",
+    "gtk_takeaway": "За понети",
+    "gtk_delivery": "Достава",
+    "gtk_cards": "Прима картице",
+    "gtk_stars": "{n}★ хотел",
+    "gtk_official_site": "Званични сајт"
   },
   "itinerary": {
     "back": "Назад",
@@ -150,7 +165,7 @@
     "not_downloaded": "Није преузето",
     "downloading_short": "Преузимање…",
     "status_unknown": "Статус непознат",
-    "foot": "Београд · ради и офлајн"
+    "foot": "Београд · ради и оффлине"
   },
   "common": {
     "close": "Затвори",

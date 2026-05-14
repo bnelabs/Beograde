@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "51a2783afcda73344059562b137ea9684640f00102f90137bc861700000000c00201920314d09ad0b0d184d0b0d0bdd0b020e2809e3fe2809d",
+  "matched": {
+    "place_id": "51a2783afcda73344059562b137ea9684640f00102f90137bc861700000000c00201920314d09ad0b0d184d0b0d0bdd0b020e2809e3fe2809d",
+    "name": "Кафана „?”",
+    "lat": 44.8176725,
+    "lng": 20.4525602,
+    "distanceM": 48
+  },
+  "goodToKnow": {
+    "wikidata": "Q3048853",
+    "buildingYear": 1823
+  }
+}

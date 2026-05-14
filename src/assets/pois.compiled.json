@@ -248,7 +248,12 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1409017",
+      "heritage": "national",
+      "website": "https://www.beogradskatvrdjava.co.rs/"
+    }
   },
   {
     "id": "saint-sava",
@@ -1461,7 +1466,10 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1420986"
+    }
   },
   {
     "id": "republic-square",
@@ -1791,7 +1799,12 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1277393",
+      "buildingYear": 1903,
+      "website": "http://www.narodnimuzej.rs"
+    }
   },
   {
     "id": "tesla-museum",
@@ -1920,7 +1933,11 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q613201",
+      "website": "https://tesla-museum.org/"
+    }
   },
   {
     "id": "house-of-flowers",
@@ -2901,7 +2918,11 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q3048853",
+      "buildingYear": 1823
+    }
   },
   {
     "id": "smokvica",
@@ -3231,7 +3252,10 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q2062450"
+    }
   },
   {
     "id": "saint-mark",
@@ -3437,7 +3461,13 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1254795",
+      "heritage": "national",
+      "buildingYear": 1940,
+      "website": "http://www.crkvasvetogmarka.rs/index.html"
+    }
   },
   {
     "id": "bajrakli-mosque",
@@ -3642,7 +3672,12 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q804208",
+      "heritage": "national",
+      "buildingYear": 1575
+    }
   },
   {
     "id": "princess-ljubica",
@@ -4012,7 +4047,10 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1272855"
+    }
   },
   {
     "id": "brankov-most",
@@ -5435,7 +5473,11 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q2586088",
+      "heritage": "national"
+    }
   },
   {
     "id": "strand-novi-sad",
@@ -5928,7 +5970,12 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1039834",
+      "heritage": "national",
+      "buildingYear": 1902
+    }
   },
   {
     "id": "sremski-karlovci-cathedral",
@@ -6247,7 +6294,11 @@
         "budget": "free",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q2588696",
+      "heritage": "national"
+    }
   },
   {
     "id": "oplenac",
@@ -7566,7 +7617,11 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q3560333",
+      "heritage": "national"
+    }
   },
   {
     "id": "kosmaj",
@@ -7888,7 +7943,10 @@
         "budget": "low",
         "intensity": "easy"
       }
-    ]
+    ],
+    "goodToKnow": {
+      "wikidata": "Q1280258"
+    }
   },
   {
     "id": "viminacium",

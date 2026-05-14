@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "51f5a2d1787ded3440598bd18437b5554640f00102f901ef671e2f00000000c00201920312536d6564657265766f20466f727472657373",
+  "matched": {
+    "place_id": "51f5a2d1787ded3440598bd18437b5554640f00102f901ef671e2f00000000c00201920312536d6564657265766f20466f727472657373",
+    "name": "Smederevo Fortress",
+    "lat": 44.6695928,
+    "lng": 20.9276958,
+    "distanceM": 0
+  },
+  "goodToKnow": {
+    "wikidata": "Q2588696",
+    "heritage": "national"
+  }
+}

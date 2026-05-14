@@ -91,7 +91,22 @@
     "budget_mid": "Orta harcama",
     "budget_high": "Yüksek harcama",
     "show_distance": "Mesafeyi göster",
-    "open_in_maps": "Haritada Aç"
+    "open_in_maps": "Haritada Aç",
+    "good_to_know": "Bilmekte fayda var",
+    "gtk_heritage_unesco": "UNESCO Dünya Mirası",
+    "gtk_heritage_national": "Kültür anıtı",
+    "gtk_heritage_regional": "Tescilli yapı",
+    "gtk_built": "{year} yapımı",
+    "gtk_wheelchair_yes": "Tekerlekli sandalye erişimi",
+    "gtk_wheelchair_limited": "Kısmen erişilebilir",
+    "gtk_wifi_free": "Ücretsiz Wi-Fi",
+    "gtk_wifi_yes": "Wi-Fi var",
+    "gtk_outdoor": "Açık alan",
+    "gtk_takeaway": "Paket servisi",
+    "gtk_delivery": "Eve teslim",
+    "gtk_cards": "Kart geçer",
+    "gtk_stars": "{n}★ otel",
+    "gtk_official_site": "Resmi site"
   },
   "itinerary": {
     "back": "Geri",

@@ -91,7 +91,22 @@
     "budget_mid": "Srednje",
     "budget_high": "Premium",
     "show_distance": "Prikaži udaljenost",
-    "open_in_maps": "Otvori u Mapama"
+    "open_in_maps": "Otvori u Mapama",
+    "good_to_know": "Dobro je znati",
+    "gtk_heritage_unesco": "UNESCO svetska baština",
+    "gtk_heritage_national": "Spomenik kulture",
+    "gtk_heritage_regional": "Pod zaštitom",
+    "gtk_built": "Sagrađeno {year}.",
+    "gtk_wheelchair_yes": "Pristupačno za kolica",
+    "gtk_wheelchair_limited": "Delimično pristupačno",
+    "gtk_wifi_free": "Besplatan Wi-Fi",
+    "gtk_wifi_yes": "Ima Wi-Fi",
+    "gtk_outdoor": "Bašta",
+    "gtk_takeaway": "Za poneti",
+    "gtk_delivery": "Dostava",
+    "gtk_cards": "Prima kartice",
+    "gtk_stars": "{n}★ hotel",
+    "gtk_official_site": "Zvanični sajt"
   },
   "itinerary": {
     "back": "Nazad",

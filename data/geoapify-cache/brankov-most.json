@@ -1,0 +1,12 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "5141e20d1fc7733440595688a29b58684640f00103f90190815f7a00000000c00201920317d091d180d0b0d0bdd0bad0bed0b220d0bcd0bed181d182",
+  "matched": {
+    "place_id": "5141e20d1fc7733440595688a29b58684640f00103f90190815f7a00000000c00201920317d091d180d0b0d0bdd0bad0bed0b220d0bcd0bed181d182",
+    "name": "Бранков мост",
+    "lat": 44.8152041,
+    "lng": 20.4522571,
+    "distanceM": 39
+  },
+  "goodToKnow": {}
+}

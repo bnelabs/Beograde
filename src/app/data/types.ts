@@ -91,6 +91,30 @@ export interface PoiActivity {
   summary: Bilingual;
 }
 
+/** Factual venue traits pulled from Geoapify/OSM at build time and rendered
+ * as a chip row on the POI detail page. All fields are optional — they only
+ * appear in `pois.compiled.json` when the upstream source actually tagged
+ * them, so the chip row gracefully collapses to nothing for unknown venues. */
+export interface GoodToKnow {
+  wheelchair?: 'yes' | 'limited' | 'no';
+  wifi?: 'free' | 'yes' | 'no';
+  outdoorSeating?: boolean;
+  takeaway?: boolean;
+  delivery?: boolean;
+  payments?: ('cash' | 'cards' | 'contactless')[];
+  /** Free-text OSM cuisine tag (e.g. 'serbian', 'balkan', 'pizza'). */
+  cuisine?: string;
+  /** Wikidata Q-ID — surfaces no UI yet, but anchors future cross-language blurbs. */
+  wikidata?: string;
+  heritage?: 'unesco' | 'national' | 'regional';
+  /** Hotel stars (1..5) — set only for accommodation POIs. */
+  stars?: number;
+  /** Year the building was completed (parsed from OSM start_date). */
+  buildingYear?: number;
+  /** Official website URL — surfaced as a tap-out link. */
+  website?: string;
+}
+
 export interface POI {
   id: string;
   region: 'city' | 'metro' | 'day-trip';
@@ -115,6 +139,9 @@ export interface POI {
   /** Concrete things to DO at this POI. Surfaces as photo-led cards with time + budget + intensity hints. */
   activities?: PoiActivity[];
   transit?: TransitInfo[];
+  /** Factual venue traits (accessibility, wifi, heritage, payments…) sourced
+   * from Geoapify/OSM at build time. See `GoodToKnow`. */
+  goodToKnow?: GoodToKnow;
   verifiedAt: string;
   /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */
   wikipediaTitle?: string;

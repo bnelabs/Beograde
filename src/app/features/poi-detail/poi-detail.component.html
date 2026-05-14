@@ -92,6 +92,30 @@
 
       <p class="poi-desc">{{ poi()!.description | i18nText }}</p>
 
+      <!-- Good to know: factual venue traits (heritage, building year, official site, accessibility, wifi…)
+           sourced from Geoapify/OSM at build time. Renders only when at least one chip is available. -->
+      @if (goodToKnowChips().length) {
+        <section class="poi-gtk">
+          <h3 class="poi-section-h"><span class="material-symbols-outlined" aria-hidden="true">info</span>{{ t().poi.good_to_know }}</h3>
+          <div class="poi-gtk-row">
+            @for (chip of goodToKnowChips(); track chip.key) {
+              @if (chip.href) {
+                <a class="poi-gtk-chip poi-gtk-chip--link" [href]="chip.href" target="_blank" rel="noopener noreferrer">
+                  <span class="material-symbols-outlined" aria-hidden="true">{{ chip.icon }}</span>
+                  <span>{{ chip.label }}</span>
+                  <span class="material-symbols-outlined poi-gtk-chip-arrow" aria-hidden="true">arrow_outward</span>
+                </a>
+              } @else {
+                <span class="poi-gtk-chip">
+                  <span class="material-symbols-outlined" aria-hidden="true">{{ chip.icon }}</span>
+                  <span>{{ chip.label }}</span>
+                </span>
+              }
+            }
+          </div>
+        </section>
+      }
+
       <!-- Highlights: photo-led cards -->
       @if (poi()!.highlights?.length) {
         <section class="poi-section">

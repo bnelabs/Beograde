@@ -1,0 +1,16 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "518363e0ca23733440592457fb8568694640f00102f901be07df1a00000000c0020192031142656c677261646520466f727472657373",
+  "matched": {
+    "place_id": "518363e0ca23733440592457fb8568694640f00102f901be07df1a00000000c0020192031142656c677261646520466f727472657373",
+    "name": "Belgrade Fortress",
+    "lat": 44.8235023,
+    "lng": 20.4497649,
+    "distanceM": 109
+  },
+  "goodToKnow": {
+    "wikidata": "Q1409017",
+    "heritage": "national",
+    "website": "https://www.beogradskatvrdjava.co.rs/"
+  }
+}
