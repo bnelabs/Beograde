@@ -1,13 +1,13 @@
 <div class="rl">
   <header class="rl-head">
-    <span class="rl-eyebrow">Belgrade · curated</span>
-    <h1 class="rl-title">Routes</h1>
-    <p class="rl-sub">Hand-curated walks through the city.</p>
+    <span class="rl-eyebrow">{{ t().routes.eyebrow }}</span>
+    <h1 class="rl-title">{{ t().routes.title }}</h1>
+    <p class="rl-sub">{{ t().routes.subtitle }}</p>
   </header>
 
   @if (activeItinerary(); as it) {
     <section class="rl-active">
-      <span class="rl-active-label">In progress</span>
+      <span class="rl-active-label">{{ t().routes.in_progress }}</span>
       <a [routerLink]="['/itinerary', it.id]" class="block">
         <app-card variant="elevated">
           <div class="rl-mosaic rl-mosaic-active">
@@ -59,7 +59,7 @@
                 @for (v of it.vibe; track v) {
                   <span class="rl-vibe">{{ v }}</span>
                 }
-                <span class="rl-vibe rl-vibe-stops">{{ it.stops.length }} stops</span>
+                <span class="rl-vibe rl-vibe-stops">{{ t().itinerary.stops.replace('{n}', it.stops.length.toString()) }}</span>
               </div>
             </div>
           </app-card>

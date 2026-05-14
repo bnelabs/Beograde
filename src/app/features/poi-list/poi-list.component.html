@@ -1,14 +1,14 @@
 <div class="pl">
   <header class="pl-head">
     <div class="pl-head-row">
-      <h1 class="pl-title">Places</h1>
-      <span class="pl-count">{{ visible().length }} found</span>
+      <h1 class="pl-title">{{ t().places.title }}</h1>
+      <span class="pl-count">{{ t().places.found.replace('{n}', visible().length.toString()) }}</span>
     </div>
 
     @if (!geo.position() && geo.permission() !== 'denied') {
       <button type="button" (click)="enableGps()" class="pl-gps-btn">
         <span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;">my_location</span>
-        Enable GPS to sort by distance
+        {{ t().places.enable_gps }}
       </button>
     }
 

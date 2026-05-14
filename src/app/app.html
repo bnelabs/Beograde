@@ -7,9 +7,9 @@
     <div class="ios-tip">
       <span class="material-symbols-outlined" aria-hidden="true">ios_share</span>
       <div class="ios-tip-body">
-        <strong>Install Beograde:</strong> tap Share, then <em>Add to Home Screen</em>.
+        <strong>{{ t().settings.install }}:</strong> {{ t().settings.install_ios }}
       </div>
-      <button type="button" (click)="dismissedInstallTip.set(true)" aria-label="Dismiss" class="ios-tip-close">
+      <button type="button" (click)="dismissedInstallTip.set(true)" [attr.aria-label]="t().common.dismiss" class="ios-tip-close">
         <span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;">close</span>
       </button>
     </div>

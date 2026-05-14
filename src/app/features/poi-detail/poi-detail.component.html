@@ -23,7 +23,7 @@
     </header>
 
     <div class="poi-title-block">
-      <app-chip variant="filter-active">{{ labels[poi()!.category] }}</app-chip>
+      <app-chip variant="filter-active">{{ t().categories[poi()!.category] }}</app-chip>
       <h1 class="poi-name">{{ poi()!.name | i18nText }}</h1>
     </div>
 

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { POIS, CATEGORY_LABELS, CATEGORY_ICONS } from '../../data/pois';
+import { POIS, CATEGORY_ICONS } from '../../data/pois';
 import { POI } from '../../data/types';
 import { GeolocationService } from '../../core/geolocation.service';
 import { ProximityService } from '../../core/proximity.service';
@@ -22,7 +22,6 @@ type Filter = POI['category'] | 'all' | 'open-now';
 })
 export class PoiListComponent {
   protected readonly filters: Filter[] = ['all', 'open-now', 'sight', 'cuisine', 'cafe', 'museum', 'viewpoint', 'park', 'nightlife'];
-  protected readonly labels = CATEGORY_LABELS;
   protected readonly icons = CATEGORY_ICONS;
   protected readonly geo = inject(GeolocationService);
   private proximity = inject(ProximityService);
@@ -57,9 +56,9 @@ export class PoiListComponent {
   });
 
   filterLabel(f: Filter): string {
-    if (f === 'all') return 'All';
+    if (f === 'all') return this.t().places.filter_all;
     if (f === 'open-now') return this.t().poi.open_now;
-    return this.labels[f];
+    return this.t().categories[f];
   }
 
   fmtDistance(meters: number | null): string {

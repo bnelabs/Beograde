@@ -2,9 +2,9 @@
   <header class="home-head">
     <div>
       <span class="home-eyebrow"><app-two-rivers-mark [size]="14" /> {{ t().home.greeting }}</span>
-      <h1 class="home-title">Beograd</h1>
+      <h1 class="home-title">{{ t().home.city_name }}</h1>
     </div>
-    <a routerLink="/settings" class="home-settings" aria-label="Settings">
+    <a routerLink="/settings" class="home-settings" [attr.aria-label]="t().common.settings_aria">
       <span class="material-symbols-outlined" aria-hidden="true">settings</span>
     </a>
   </header>
