@@ -1,0 +1,16 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "51c0c12852ab75344059ac1bef8e8c684640f00102f9018ffa5f0100000000c002019203194e6174696f6e616c204d757365756d206f6620536572626961",
+  "matched": {
+    "place_id": "51c0c12852ab75344059ac1bef8e8c684640f00102f9018ffa5f0100000000c002019203194e6174696f6e616c204d757365756d206f6620536572626961",
+    "name": "National Museum of Serbia",
+    "lat": 44.8167895,
+    "lng": 20.4596454,
+    "distanceM": 64
+  },
+  "goodToKnow": {
+    "wikidata": "Q1277393",
+    "buildingYear": 1903,
+    "website": "http://www.narodnimuzej.rs"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "515f251fbb0b78344059e188a4ccbc674640f00102f901e6c4bc0600000000c002019203135361696e74204d61726b277320436875726368",
+  "matched": {
+    "place_id": "515f251fbb0b78344059e188a4ccbc674640f00102f901e6c4bc0600000000c002019203135361696e74204d61726b277320436875726368",
+    "name": "Saint Mark's Church",
+    "lat": 44.8104492,
+    "lng": 20.468929,
+    "distanceM": 384
+  },
+  "goodToKnow": {
+    "wikidata": "Q1254795",
+    "heritage": "national",
+    "buildingYear": 1940,
+    "website": "http://www.crkvasvetogmarka.rs/index.html"
+  }
+}

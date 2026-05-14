@@ -2,5 +2,8 @@
   "_doc": "Manual overrides for Latin→Cyrillic translit. Keys are dot-paths into sr-Latn.json. Values are the explicit Cyrillic forms — typically loanwords (Wi-Fi, café names, foreign brand names) and trademarks. Run `npm run build:i18n` to apply.",
   "settings.language_en": "English",
   "poi.osm": "OpenStreetMap",
-  "settings.language_sr_cyr": "Српски (ћирилица)"
+  "settings.language_sr_cyr": "Српски (ћирилица)",
+  "poi.gtk_wifi_free": "Бесплатан Wi-Fi",
+  "poi.gtk_wifi_yes": "Има Wi-Fi",
+  "poi.gtk_heritage_unesco": "UNESCO светска баштина"
 }

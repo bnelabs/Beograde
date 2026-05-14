@@ -133,6 +133,42 @@ export class PoiDetailComponent {
     this.poi()?.sources.find(s => s.kind === 'google-places') as { reviewCount: number; rating: number } | undefined
   );
 
+  /** Build the "Good to know" chip row from the POI's optional `goodToKnow`
+   * block. Each chip pairs a Material icon, a localised label, and (for
+   * `website`) an outbound href. Heritage/building-year/wheelchair/wifi etc.
+   * fields collapse to nothing when undefined. */
+  protected readonly goodToKnowChips = computed(() => {
+    const gtk = this.poi()?.goodToKnow;
+    const labels = this.t().poi;
+    if (!gtk) return [] as { key: string; icon: string; label: string; href?: string }[];
+    const out: { key: string; icon: string; label: string; href?: string }[] = [];
+    if (gtk.heritage) {
+      const heritageLabel = gtk.heritage === 'unesco' ? labels.gtk_heritage_unesco
+        : gtk.heritage === 'national' ? labels.gtk_heritage_national
+        : labels.gtk_heritage_regional;
+      out.push({ key: 'heritage', icon: 'shield', label: heritageLabel });
+    }
+    if (gtk.buildingYear) {
+      out.push({ key: 'year', icon: 'foundation', label: labels.gtk_built.replace('{year}', String(gtk.buildingYear)) });
+    }
+    if (gtk.wheelchair === 'yes' || gtk.wheelchair === 'limited') {
+      const lbl = gtk.wheelchair === 'yes' ? labels.gtk_wheelchair_yes : labels.gtk_wheelchair_limited;
+      out.push({ key: 'wheelchair', icon: 'accessible', label: lbl });
+    }
+    if (gtk.wifi === 'free' || gtk.wifi === 'yes') {
+      out.push({ key: 'wifi', icon: 'wifi', label: gtk.wifi === 'free' ? labels.gtk_wifi_free : labels.gtk_wifi_yes });
+    }
+    if (gtk.outdoorSeating) out.push({ key: 'outdoor', icon: 'deck', label: labels.gtk_outdoor });
+    if (gtk.takeaway) out.push({ key: 'takeaway', icon: 'takeout_dining', label: labels.gtk_takeaway });
+    if (gtk.delivery) out.push({ key: 'delivery', icon: 'delivery_dining', label: labels.gtk_delivery });
+    if (gtk.payments?.includes('cards')) out.push({ key: 'cards', icon: 'credit_card', label: labels.gtk_cards });
+    if (gtk.stars) out.push({ key: 'stars', icon: 'star', label: labels.gtk_stars.replace('{n}', String(gtk.stars)) });
+    if (gtk.website) {
+      out.push({ key: 'website', icon: 'language', label: labels.gtk_official_site, href: gtk.website });
+    }
+    return out;
+  });
+
   /**
    * Map of POI category → set of three Material symbol icons used for the
    * highlight cards in round-robin. Keeps highlight cards visually distinct

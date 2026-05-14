@@ -1,0 +1,16 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "518a5759db1475344059a737482d39694640f00102f901e90f631700000000c0020192030f42616a72616b6c69204d6f73717565",
+  "matched": {
+    "place_id": "518a5759db1475344059a737482d39694640f00102f901e90f631700000000c0020192030f42616a72616b6c69204d6f73717565",
+    "name": "Bajrakli Mosque",
+    "lat": 44.8220574,
+    "lng": 20.4573495,
+    "distanceM": 226
+  },
+  "goodToKnow": {
+    "wikidata": "Q804208",
+    "heritage": "national",
+    "buildingYear": 1575
+  }
+}

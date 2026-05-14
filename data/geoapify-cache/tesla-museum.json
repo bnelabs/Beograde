@@ -1,0 +1,15 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "5100bbe4c97f783440594c6c3eae0d674640f00103f9019fb7a0fd02000000c002019203134e696b6f6c61205465736c61204d757365756d",
+  "matched": {
+    "place_id": "5100bbe4c97f783440594c6c3eae0d674640f00103f9019fb7a0fd02000000c002019203134e696b6f6c61205465736c61204d757365756d",
+    "name": "Nikola Tesla Museum",
+    "lat": 44.805105,
+    "lng": 20.4706999,
+    "distanceM": 102
+  },
+  "goodToKnow": {
+    "wikidata": "Q613201",
+    "website": "https://tesla-museum.org/"
+  }
+}

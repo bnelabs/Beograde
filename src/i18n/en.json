@@ -91,7 +91,22 @@
     "budget_mid": "Mid spend",
     "budget_high": "Premium",
     "show_distance": "Show distance",
-    "open_in_maps": "Open in Maps"
+    "open_in_maps": "Open in Maps",
+    "good_to_know": "Good to know",
+    "gtk_heritage_unesco": "UNESCO World Heritage",
+    "gtk_heritage_national": "National heritage",
+    "gtk_heritage_regional": "Heritage site",
+    "gtk_built": "Built {year}",
+    "gtk_wheelchair_yes": "Wheelchair accessible",
+    "gtk_wheelchair_limited": "Partly accessible",
+    "gtk_wifi_free": "Free Wi-Fi",
+    "gtk_wifi_yes": "Wi-Fi available",
+    "gtk_outdoor": "Outdoor seating",
+    "gtk_takeaway": "Takeaway",
+    "gtk_delivery": "Delivery",
+    "gtk_cards": "Cards accepted",
+    "gtk_stars": "{n}★ hotel",
+    "gtk_official_site": "Official site"
   },
   "itinerary": {
     "back": "Back",

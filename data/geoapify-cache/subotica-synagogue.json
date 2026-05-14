@@ -1,0 +1,16 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "5102c985144da9334059f14a92e7fa0c4740f00102f9016480d20400000000c002019203125375626f746963612053796e61676f677565",
+  "matched": {
+    "place_id": "5102c985144da9334059f14a92e7fa0c4740f00102f9016480d20400000000c002019203125375626f746963612053796e61676f677565",
+    "name": "Subotica Synagogue",
+    "lat": 46.101407,
+    "lng": 19.6613324,
+    "distanceM": 554
+  },
+  "goodToKnow": {
+    "wikidata": "Q1039834",
+    "heritage": "national",
+    "buildingYear": 1902
+  }
+}

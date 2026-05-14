@@ -8,6 +8,7 @@ const result = await runBuildProvenance({
   srcPath: resolve('src/assets/pois.json'),
   outPath: resolve('src/assets/pois.compiled.json'),
   cacheDir: resolve('data/provenance-cache'),
+  geoapifyCacheDir: resolve('data/geoapify-cache'),
   fetchFn: globalThis.fetch,
 });
 

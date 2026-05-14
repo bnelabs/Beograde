@@ -1,0 +1,14 @@
+{
+  "fetchedAt": "2026-05-14",
+  "place_id": "516dc9aa0837c3334059ea645f6864944640f00101f9019ff1900000000000c0020792030832323231322b7273",
+  "matched": {
+    "place_id": "516dc9aa0837c3334059ea645f6864944640f00101f9019ff1900000000000c0020792030832323231322b7273",
+    "name": "Fruska Gora National Park",
+    "lat": 45.1593142,
+    "lng": 19.7625585,
+    "distanceM": 0
+  },
+  "goodToKnow": {
+    "wikidata": "Q1280258"
+  }
+}

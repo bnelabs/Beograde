@@ -74,6 +74,21 @@
 .poi-hours-notes { font-size: 12px; color: var(--ink-2); margin: 8px 0 0; }
 
 .poi-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ---- "Good to know" chip row — factual venue traits from Geoapify/OSM ---- */
+.poi-gtk { display: flex; flex-direction: column; gap: 8px; }
+.poi-gtk-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.poi-gtk-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px; border-radius: 999px;
+  background: rgba(0,0,0,0.04); color: var(--ink);
+  font-size: 12px; font-weight: 500; text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.poi-gtk-chip .material-symbols-outlined { font-size: 16px; color: var(--accent); }
+.poi-gtk-chip--link { cursor: pointer; transition: background 0.12s ease; }
+.poi-gtk-chip--link:hover { background: rgba(0,0,0,0.07); }
+.poi-gtk-chip-arrow { font-size: 12px !important; opacity: 0.6; }
 .poi-desc { font-size: 15px; line-height: 1.55; color: var(--ink); margin: 0; }
 
 /* ---- Generic section header ---- */

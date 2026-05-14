@@ -26,7 +26,7 @@ function fillBothList(list) {
  * Drives the four-check pipeline over every POI and writes pois.compiled.json.
  * `fetchFn` is injected so unit tests can run without network.
  */
-export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }) {
+export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn, geoapifyCacheDir }) {
   const list = JSON.parse(readFileSync(srcPath, 'utf8'));
   let published = 0, failed = 0;
   const compiled = [];
@@ -101,6 +101,19 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
     const enriched = { ...poi, sources, reliability };
     if (priorImages.has(poi.id)) {
       enriched.images = priorImages.get(poi.id);
+    }
+    if (geoapifyCacheDir) {
+      const geoPath = join(geoapifyCacheDir, `${poi.id}.json`);
+      if (existsSync(geoPath)) {
+        try {
+          const rec = JSON.parse(readFileSync(geoPath, 'utf8'));
+          if (rec?.goodToKnow && Object.keys(rec.goodToKnow).length > 0) {
+            enriched.goodToKnow = rec.goodToKnow;
+          }
+        } catch (e) {
+          throw new Error(`failed to parse geoapify cache for ${poi.id} at ${geoPath}: ${e.message}`);
+        }
+      }
     }
     if (!isPublishable({ checks, editorialConfidence: poi.editorialConfidence })) {
       failed++;
