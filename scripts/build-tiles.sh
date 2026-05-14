@@ -4,7 +4,9 @@
 # so day-trip destinations (Subotica, Viminacium, Banja Koviljača, etc.) render
 # over the basemap rather than over blank tiles.
 #
-# Output: src/assets/tiles/belgrade.pmtiles  (~50–90 MB at maxzoom=15)
+# Output: src/assets/tiles/belgrade.pmtiles  (~190 MB at maxzoom=15 for this bbox;
+# lower MAXZOOM to 13 if a smaller first-download is preferred — costs street detail
+# outside Belgrade)
 #
 # Requirements (one-time install on your laptop or build server):
 #   - Java 17+              (for planetiler)

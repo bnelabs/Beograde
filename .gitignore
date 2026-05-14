@@ -52,6 +52,7 @@ src/assets/fonts/
 
 # Tile build workspace
 .tilebuild/
+planetiler.jar
 # Planetiler downloads + tile-build inputs (multi-GB OSM extracts, lake centerlines, natural-earth)
 data/sources/
 data/tile_weights.tsv.gz
