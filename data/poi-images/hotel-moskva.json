@@ -5,6 +5,20 @@
       "credit": "Suicasmo, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Hotel_Moskva_(Belgrade)_20180227.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1370379821811073",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1370379821811073"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1277458100762740",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1277458100762740"
     }
   ],
   "fetchedAt": "2026-05-11"

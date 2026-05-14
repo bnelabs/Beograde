@@ -1,0 +1,26 @@
+{
+  "images": [
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "903831765596371",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=903831765596371"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "927637766518108",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=927637766518108"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1686804922684645",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1686804922684645"
+    }
+  ],
+  "fetchedAt": "2026-05-11"
+}

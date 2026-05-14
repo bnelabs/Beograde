@@ -5,6 +5,20 @@
       "credit": "Unknown author, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:White_Hill_in_Vin%C4%8Da,_profile_and_approach.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "24117524994608071",
+      "credit": "pmilanovic (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=24117524994608071"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1225070712279448",
+      "credit": "pmilanovic (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1225070712279448"
     }
   ],
   "fetchedAt": "2026-05-11"

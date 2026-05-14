@@ -73,9 +73,18 @@
       <div class="map-near-row">
         @for (item of nearestThree(); track item.poi.id) {
           <a [routerLink]="['/poi', item.poi.id]" class="map-near-card">
-            <span class="map-near-eyebrow">{{ categoryLabel(item.poi.category) }} · {{ formatDistance(item.meters) }}</span>
-            <span class="map-near-name">{{ item.poi.name | i18nText }}</span>
-            <span class="map-near-walk">{{ t().map.min_walk.replace('{n}', item.walkMinutes.toString()) }}</span>
+            <div class="map-near-thumb">
+              @if (item.poi.images[0]; as img) {
+                <img class="map-near-img" [src]="img.src" [alt]="(item.poi.name | i18nText) || ''" loading="lazy" decoding="async" />
+              } @else {
+                <span class="material-symbols-outlined map-near-icon">{{ icons[item.poi.category] }}</span>
+              }
+            </div>
+            <div class="map-near-body">
+              <span class="map-near-eyebrow">{{ categoryLabel(item.poi.category) }} · {{ formatDistance(item.meters) }}</span>
+              <span class="map-near-name">{{ item.poi.name | i18nText }}</span>
+              <span class="map-near-walk">{{ t().map.min_walk.replace('{n}', item.walkMinutes.toString()) }}</span>
+            </div>
           </a>
         }
       </div>

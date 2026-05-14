@@ -5,6 +5,20 @@
       "credit": "Antidiskriminator, public domain, via Wikimedia Commons",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Spomenik_u_Mladenovcu.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1498854681861381",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1498854681861381"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "32471703865811107",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=32471703865811107"
     }
   ],
   "fetchedAt": "2026-05-11"

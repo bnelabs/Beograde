@@ -5,6 +5,20 @@
       "credit": "Aleksandr Petukhov (Skelanard), CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:The_Temple_of_Saint_Sava_from_the_North-West.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "494512171698560",
+      "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=494512171698560"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "152704126808683",
+      "credit": "kaartcam (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=152704126808683"
     }
   ],
   "fetchedAt": "2026-05-11"

@@ -5,6 +5,20 @@
       "credit": "Pudelek (Marcin Szala), CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Branko%27s_Bridge_in_Belgrade_by_night.JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "244853581331846",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=244853581331846"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1444641762884367",
+      "credit": "pmilanovic (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1444641762884367"
     }
   ],
   "fetchedAt": "2026-05-11"

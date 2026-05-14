@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
+import { runBuildImages, jpegLqip, transcodeAvif, loadCurator, fetchCommonsFile, fetchDirectUrl, fetchMapillary, resolveSource, slugFor, slugify, writeAvifSet, buildImageAssetEntries } from './build-images-core.mjs';
 import sharp from 'sharp';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -301,6 +301,310 @@ async function setupFixture() {
   return { root, compiledPath, cacheDir, outDir, fetchFn };
 }
 
+describe('loadCurator direct-url variant', () => {
+  test('accepts sourceType=direct-url with fetchUrl and whitelisted license', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'ok.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          credit: 'Alice, CC BY 2.0',
+          license: 'CC BY 2.0',
+          source: 'https://www.flickr.com/photos/alice/123/',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      const c = loadCurator(file);
+      assert.equal(c.images[0].sourceType, 'direct-url');
+      assert.equal(c.images[0].fetchUrl, 'https://example.test/image.jpg');
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url with non-whitelisted license', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          credit: 'Bob, All Rights Reserved',
+          license: 'All Rights Reserved',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /not in the direct-url accepted list/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url missing fetchUrl', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          credit: 'Alice, CC BY 4.0',
+          license: 'CC BY 4.0',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /requires "fetchUrl"/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects direct-url carrying commonsFile', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/image.jpg',
+          commonsFile: 'File:X.jpg',
+          credit: 'X, CC0',
+          license: 'CC0',
+          source: 'https://example.test',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /must not carry commonsFile/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+
+  test('rejects unknown sourceType', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'curator-'));
+    try {
+      const file = join(dir, 'bad.json');
+      writeFileSync(file, JSON.stringify({
+        images: [{ sourceType: 'flickr-api', credit: 'X', license: 'CC0', source: 'x' }],
+        fetchedAt: '2026-05-11',
+      }));
+      assert.throws(() => loadCurator(file), /unknown sourceType/);
+    } finally {
+      rmSync(dir, { recursive: true });
+    }
+  });
+});
+
+describe('fetchDirectUrl', () => {
+  test('fetches the URL verbatim and returns buffer + dimensions', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 800, height: 600, channels: 3, background: { r: 50, g: 100, b: 150 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url, opts) => {
+      calls.push({ url, opts });
+      return {
+        ok: true, status: 200,
+        arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength),
+      };
+    };
+    const { buffer, width, height } = await fetchDirectUrl('https://example.test/x.jpg', fetchFn);
+    assert.ok(Buffer.isBuffer(buffer));
+    assert.equal(width, 800);
+    assert.equal(height, 600);
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0].url, 'https://example.test/x.jpg');
+    assert.match(calls[0].opts?.headers?.['User-Agent'] ?? '', /Beograde/);
+  });
+
+  test('throws on non-2xx', async () => {
+    const fetchFn = async () => ({ ok: false, status: 403, statusText: 'Forbidden' });
+    await assert.rejects(
+      () => fetchDirectUrl('https://example.test/x.jpg', fetchFn),
+      /403/,
+    );
+  });
+});
+
+describe('slugFor', () => {
+  test('Commons image (default sourceType) derives slug from commonsFile', () => {
+    assert.equal(
+      slugFor('kalemegdan', { commonsFile: 'File:Kalemegdan_Belgrade.jpg', source: 'x' }),
+      'kalemegdan-belgrade',
+    );
+  });
+
+  test('direct-url image derives slug from poiId + 8-char hash of source URL', () => {
+    const slug = slugFor('smokvica', {
+      sourceType: 'direct-url',
+      fetchUrl: 'https://example.test/image.jpg',
+      source: 'https://www.flickr.com/photos/alice/123/',
+    });
+    assert.match(slug, /^smokvica-[a-f0-9]{8}$/);
+  });
+
+  test('same source URL produces a stable hash slug', () => {
+    const img = { sourceType: 'direct-url', fetchUrl: 'x', source: 'https://stable.example/img' };
+    assert.equal(slugFor('p', img), slugFor('p', img));
+  });
+});
+
+describe('resolveSource', () => {
+  test('dispatches to fetchCommonsFile for default sourceType', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource({ commonsFile: 'File:X.jpg', source: 's' }, fetchFn);
+    assert.match(calls[0], /commons\.wikimedia\.org\/wiki\/Special:FilePath\/X\.jpg/);
+  });
+
+  test('dispatches to fetchDirectUrl for direct-url sourceType', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const calls = [];
+    const fetchFn = async (url) => {
+      calls.push(url);
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource({ sourceType: 'direct-url', fetchUrl: 'https://example.test/x.jpg', source: 's' }, fetchFn);
+    assert.equal(calls[0], 'https://example.test/x.jpg');
+  });
+
+  test('dispatches to fetchMapillary for mapillary sourceType, threads token', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 100, height: 100, channels: 3, background: { r: 0, g: 0, b: 0 } },
+    }).jpeg().toBuffer();
+    const fetchCalls = [];
+    const fetchFn = async (url, init) => {
+      fetchCalls.push({ url, headers: init?.headers ?? {} });
+      if (url.startsWith('https://graph.mapillary.com/')) {
+        return { ok: true, status: 200, json: async () => ({ thumb_2048_url: 'https://cdn.mapillary.test/abc.jpg' }) };
+      }
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    await resolveSource(
+      { sourceType: 'mapillary', mapillaryId: '12345', source: 'https://www.mapillary.com/app/?focus=photo&pKey=12345' },
+      fetchFn,
+      { mapillaryToken: 'MLY|fake|token' },
+    );
+    assert.equal(fetchCalls.length, 2);
+    assert.match(fetchCalls[0].url, /graph\.mapillary\.com\/12345/);
+    assert.equal(fetchCalls[0].headers.Authorization, 'OAuth MLY|fake|token');
+    assert.equal(fetchCalls[1].url, 'https://cdn.mapillary.test/abc.jpg');
+  });
+});
+
+describe('fetchMapillary', () => {
+  test('throws when no access token is provided', async () => {
+    await assert.rejects(
+      () => fetchMapillary('12345', async () => ({ ok: true }), undefined),
+      /MAPILLARY_TOKEN is required/,
+    );
+  });
+
+  test('two-step fetch: Graph API → CDN URL → buffer + dimensions', async () => {
+    const fakeBuffer = await sharp({
+      create: { width: 200, height: 150, channels: 3, background: { r: 100, g: 100, b: 100 } },
+    }).jpeg().toBuffer();
+    const fetchFn = async (url) => {
+      if (url.startsWith('https://graph.mapillary.com/')) {
+        return { ok: true, status: 200, json: async () => ({ thumb_2048_url: 'https://cdn.mapillary.test/x.jpg' }) };
+      }
+      return { ok: true, status: 200, arrayBuffer: async () => fakeBuffer.buffer.slice(fakeBuffer.byteOffset, fakeBuffer.byteOffset + fakeBuffer.byteLength) };
+    };
+    const result = await fetchMapillary('999', fetchFn, 'MLY|t|t');
+    assert.equal(result.width, 200);
+    assert.equal(result.height, 150);
+    assert.ok(Buffer.isBuffer(result.buffer));
+  });
+
+  test('throws on Graph API non-ok response', async () => {
+    const fetchFn = async () => ({ ok: false, status: 401, statusText: 'Unauthorized' });
+    await assert.rejects(
+      () => fetchMapillary('1', fetchFn, 'token'),
+      /fetchMapillary:.*401/,
+    );
+  });
+
+  test('throws when Graph API response is missing thumb_2048_url', async () => {
+    const fetchFn = async () => ({ ok: true, status: 200, json: async () => ({}) });
+    await assert.rejects(
+      () => fetchMapillary('1', fetchFn, 'token'),
+      /missing thumb_2048_url/,
+    );
+  });
+});
+
+describe('loadCurator mapillary variant', () => {
+  let tmpDir;
+  const writeFixture = (obj) => {
+    const p = join(tmpDir, 'p.json');
+    writeFileSync(p, JSON.stringify(obj));
+    return p;
+  };
+
+  test.before(() => { tmpDir = mkdtempSync(join(tmpdir(), 'curator-mly-')); });
+  test.after(() => { rmSync(tmpDir, { recursive: true, force: true }); });
+
+  test('accepts valid mapillary entry', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{
+        sourceType: 'mapillary',
+        mapillaryId: '498763181449570',
+        credit: 'username (Mapillary), CC BY-SA 4.0',
+        license: 'CC BY-SA 4.0',
+        source: 'https://www.mapillary.com/app/?focus=photo&pKey=498763181449570',
+      }],
+    });
+    const raw = loadCurator(p);
+    assert.equal(raw.images[0].sourceType, 'mapillary');
+  });
+
+  test('rejects non-numeric mapillaryId', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: 'abc-not-numeric', credit: 'c', license: 'CC BY-SA 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(p), /mapillaryId.*numeric string/);
+  });
+
+  test('rejects wrong license for mapillary', () => {
+    const p = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: '1', credit: 'c', license: 'CC BY 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(p), /license must be exactly "CC BY-SA 4.0"/);
+  });
+
+  test('rejects mapillary entry that carries commonsFile or fetchUrl', () => {
+    const a = writeFixture({
+      fetchedAt: '2026-05-11',
+      images: [{ sourceType: 'mapillary', mapillaryId: '1', commonsFile: 'File:X.jpg', credit: 'c', license: 'CC BY-SA 4.0', source: 's' }],
+    });
+    assert.throws(() => loadCurator(a), /must not carry commonsFile/);
+  });
+});
+
+describe('slugFor mapillary', () => {
+  test('mapillary slug is deterministic and bounded to 12 chars of id', () => {
+    const a = slugFor('kalemegdan', { sourceType: 'mapillary', mapillaryId: '498763181449570', source: 's' });
+    const b = slugFor('kalemegdan', { sourceType: 'mapillary', mapillaryId: '498763181449570', source: 's' });
+    assert.equal(a, b);
+    assert.equal(a, 'kalemegdan-mly-498763181449');
+  });
+});
+
 describe('runBuildImages', () => {
   test('writes AVIFs and merges ImageAsset[] into compiled.json', async () => {
     const fx = await setupFixture();
@@ -375,6 +679,58 @@ describe('runBuildImages', () => {
       );
     } finally {
       rmSync(fx.root, { recursive: true });
+    }
+  });
+
+  test('runBuildImages handles a direct-url curator entry end-to-end', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'build-images-direct-'));
+    try {
+      const compiledPath = join(root, 'pois.compiled.json');
+      const cacheDir = join(root, 'poi-images');
+      const outDir = join(root, 'poi-out');
+      mkdirSync(cacheDir, { recursive: true });
+      mkdirSync(outDir, { recursive: true });
+
+      writeFileSync(compiledPath, JSON.stringify([{ id: 'smokvica', region: 'city', images: [] }]));
+      writeFileSync(join(cacheDir, 'smokvica.json'), JSON.stringify({
+        images: [{
+          sourceType: 'direct-url',
+          fetchUrl: 'https://example.test/cafe.jpg',
+          credit: 'Alice, CC BY 4.0, via Flickr',
+          license: 'CC BY 4.0',
+          source: 'https://www.flickr.com/photos/alice/123/',
+        }],
+        fetchedAt: '2026-05-11',
+      }));
+
+      const fakeImage = await sharp({
+        create: { width: 1200, height: 800, channels: 3, background: { r: 200, g: 80, b: 60 } },
+      }).jpeg().toBuffer();
+      const calls = [];
+      const fetchFn = async (url, opts) => {
+        calls.push({ url, opts });
+        return { ok: true, status: 200, arrayBuffer: async () => fakeImage.buffer.slice(fakeImage.byteOffset, fakeImage.byteOffset + fakeImage.byteLength) };
+      };
+
+      const result = await runBuildImages({ compiledPath, cacheDir, outDir, fetchFn, force: false });
+      assert.equal(result.curated, 1);
+      // Direct-URL: the fetch goes to the curator's fetchUrl verbatim, not to Commons.
+      assert.equal(calls[0].url, 'https://example.test/cafe.jpg');
+
+      const after = JSON.parse(readFileSync(compiledPath, 'utf8'));
+      const smok = after.find((p) => p.id === 'smokvica');
+      assert.equal(smok.images.length, 1);
+      assert.match(smok.images[0].src, /^\/assets\/poi\/smokvica\/smokvica-[a-f0-9]{8}-1024\.avif$/);
+      assert.equal(smok.images[0].credit, 'Alice, CC BY 4.0, via Flickr');
+      assert.equal(smok.images[0].license, 'CC BY 4.0');
+      assert.equal(smok.images[0].source, 'https://www.flickr.com/photos/alice/123/');
+      // All three widths land on disk.
+      const slug = smok.images[0].src.split('/').pop().replace('-1024.avif', '');
+      for (const w of [640, 1024, 1600]) {
+        assert.ok(existsSync(join(outDir, 'smokvica', `${slug}-${w}.avif`)));
+      }
+    } finally {
+      rmSync(root, { recursive: true });
     }
   });
 

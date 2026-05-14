@@ -27,7 +27,7 @@ if [[ ! -f "$WORK/serbia-latest.osm.pbf" ]]; then
   curl -L -o "$WORK/serbia-latest.osm.pbf" "$SOURCE_URL"
 fi
 
-echo "→ Clipping to Belgrade bbox $BBOX…"
+echo "→ Clipping to Belgrade bbox ${BBOX}…"
 osmium extract -b "$BBOX" "$WORK/serbia-latest.osm.pbf" \
   -o "$WORK/belgrade.osm.pbf" --overwrite
 
@@ -36,6 +36,7 @@ java -Xmx4g -jar "$PLANETILER_JAR" \
   --osm-path="$WORK/belgrade.osm.pbf" \
   --output="$WORK/belgrade.mbtiles" \
   --maxzoom="$MAXZOOM" \
+  --download \
   --force
 
 echo "→ Converting MBTiles → PMTiles…"

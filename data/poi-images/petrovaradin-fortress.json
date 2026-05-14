@@ -5,6 +5,20 @@
       "credit": "Pudelek (Marcin Szala), CC BY-SA 3.0 rs, via Wikimedia Commons",
       "license": "CC BY-SA 3.0 rs",
       "source": "https://commons.wikimedia.org/wiki/File:Petrovaradin_Fortress_(P%C3%A9terv%C3%A1radi_v%C3%A1r,_Peterwardein).JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "2365426983920000",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=2365426983920000"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "24858082667202575",
+      "credit": "fivewho (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=24858082667202575"
     }
   ],
   "fetchedAt": "2026-05-11"

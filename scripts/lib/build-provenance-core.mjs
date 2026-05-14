@@ -15,6 +15,11 @@ function fillCyr(b) {
   return { ...b, sr_cyr: latnToCyrl(b.sr_lat || b.en || '') };
 }
 
+function fillCyrList(list) {
+  if (!Array.isArray(list)) return list;
+  return list.map(fillCyr);
+}
+
 /**
  * Drives the four-check pipeline over every POI and writes pois.compiled.json.
  * `fetchFn` is injected so unit tests can run without network.
@@ -75,6 +80,22 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
     poi.description = fillCyr(poi.description);
     poi.address = fillCyr(poi.address);
     if (poi.hours?.notes) poi.hours.notes = fillCyr(poi.hours.notes);
+    if (poi.highlights) poi.highlights = fillCyrList(poi.highlights);
+    if (poi.tips) poi.tips = fillCyrList(poi.tips);
+    if (poi.history) poi.history = fillCyr(poi.history);
+    if (poi.whatToExpect) {
+      poi.whatToExpect = {
+        pros: fillCyrList(poi.whatToExpect.pros ?? []),
+        cons: fillCyrList(poi.whatToExpect.cons ?? []),
+      };
+    }
+    if (Array.isArray(poi.activities)) {
+      poi.activities = poi.activities.map(a => ({
+        ...a,
+        title: fillCyr(a.title),
+        summary: fillCyr(a.summary),
+      }));
+    }
     const enriched = { ...poi, sources, reliability };
     if (priorImages.has(poi.id)) {
       enriched.images = priorImages.get(poi.id);

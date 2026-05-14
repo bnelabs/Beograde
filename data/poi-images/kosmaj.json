@@ -5,6 +5,20 @@
       "credit": "CrniBombarder!!!, public domain, via Wikimedia Commons",
       "license": "Public domain",
       "source": "https://commons.wikimedia.org/wiki/File:Kosmaj1.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1076323417894956",
+      "credit": "pmilanovic (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1076323417894956"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "196149955695805",
+      "credit": "puky (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=196149955695805"
     }
   ],
   "fetchedAt": "2026-05-11"

@@ -5,6 +5,20 @@
       "credit": "Vanilica, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Zgrada_Trijumf,_%C5%A0abac_001.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1830398627588512",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1830398627588512"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1356544102620330",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1356544102620330"
     }
   ],
   "fetchedAt": "2026-05-11"

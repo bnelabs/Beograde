@@ -1,10 +1,25 @@
 {
   "images": [
     {
-      "commonsFile": "File:Bajrakli Mosque- Belgrade.jpg",
-      "credit": "Ahmed Abouaiana, CC BY 4.0, via Wikimedia Commons",
-      "license": "CC BY 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Bajrakli_Mosque-_Belgrade.jpg"
+      "sourceType": "mapillary",
+      "mapillaryId": "1276304651216108",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1276304651216108"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1158773259765227",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1158773259765227"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1094335869294718",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1094335869294718"
     }
   ],
   "fetchedAt": "2026-05-11"

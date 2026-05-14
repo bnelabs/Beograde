@@ -5,6 +5,20 @@
       "credit": "Frotronic, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:SREMSKI_KARLOVCI_Sveti_Nikola.JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1822159118732103",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1822159118732103"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1263395962035864",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1263395962035864"
     }
   ],
   "fetchedAt": "2026-05-11"

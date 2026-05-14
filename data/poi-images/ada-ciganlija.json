@@ -5,6 +5,20 @@
       "credit": "Andrija12345678, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B2%D1%98%D0%B5%D1%82%D0%BB%D0%BE%D0%BF%D0%B8%D1%81_%D0%90%D0%B4%D0%B5_%D0%A1%D0%B8%D0%BD%D0%B3%D0%B0%D0%BB%D0%B8%D1%98%D0%B5_%D1%83_%D0%91%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1688536199939745",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1688536199939745"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1561880002028206",
+      "credit": "shoorick (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1561880002028206"
     }
   ],
   "fetchedAt": "2026-05-11"

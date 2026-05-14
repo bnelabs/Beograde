@@ -5,6 +5,20 @@
       "credit": "Ванилица (Vanilica), CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Wiki_%C5%A0umadija_XI_Bukovi%C4%8Dka_banja_989.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "945358143978769",
+      "credit": "pmilanovic (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=945358143978769"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "619550495686050",
+      "credit": "aleksajov (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=619550495686050"
     }
   ],
   "fetchedAt": "2026-05-11"

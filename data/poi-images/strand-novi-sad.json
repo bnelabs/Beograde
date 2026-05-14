@@ -5,6 +5,20 @@
       "credit": "Milica Buha, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Beach_in_Novi_Sad_-_%C5%A0trand_03.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "34929701273343656",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=34929701273343656"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1457482272434903",
+      "credit": "fivewho (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1457482272434903"
     }
   ],
   "fetchedAt": "2026-05-11"

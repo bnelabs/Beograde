@@ -6,6 +6,8 @@ import { CardComponent } from '../../ui/card/card.component';
 import { ChipComponent } from '../../ui/chip/chip.component';
 import { I18nTextPipe } from '../../ui/i18n-text/i18n-text.pipe';
 import { TwoRiversMarkComponent } from '../../ui/two-rivers-mark/two-rivers-mark.component';
+import { AppImageComponent } from '../../ui/app-image/app-image.component';
+import { getPoi, POIS } from '../../data/pois';
 import { ProximityService } from '../../core/proximity.service';
 import { GeolocationService } from '../../core/geolocation.service';
 import { HoursService } from '../../core/hours/hours.service';
@@ -17,7 +19,7 @@ import { StringsService } from '../../core/i18n/strings.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, HeroCardComponent, CardComponent, ChipComponent, I18nTextPipe, TwoRiversMarkComponent],
+  imports: [CommonModule, RouterLink, HeroCardComponent, CardComponent, ChipComponent, I18nTextPipe, TwoRiversMarkComponent, AppImageComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -55,6 +57,32 @@ export class HomeComponent {
       })
       .filter(r => r.openState !== 'closed') // keep open + unknown
       .slice(0, 5);
+  });
+
+  /** Belgrade highlights: curated city sights/cuisine/cafe rows for the home scroller. */
+  protected readonly highlights = computed(() => {
+    const ids = [
+      'kalemegdan', 'saint-sava', 'skadarlija', 'knez-mihailova',
+      'republic-square', 'hotel-moskva', 'beton-hala', 'tasmajdan-park',
+      'kafana-question-mark', 'cetinjska',
+    ];
+    return ids.map(id => getPoi(id)).filter((p): p is NonNullable<typeof p> => !!p);
+  });
+
+  /** Day-trip POIs with at least one curated image. */
+  protected readonly dayTrips = computed(() =>
+    POIS.filter(p => p.region === 'day-trip' && p.images.length > 0)
+  );
+
+  /** Cover image for Today's pick: the lead POI of the picked itinerary. */
+  protected readonly todaysPickImage = computed(() => {
+    const stops = this.todaysPick().stops ?? [];
+    for (const stop of stops) {
+      const poi = getPoi(stop.poiId);
+      const img = poi?.images?.[0];
+      if (img) return img;
+    }
+    return undefined;
   });
 
   formatHourMeta(durationMinutes: number): string {

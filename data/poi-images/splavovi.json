@@ -5,6 +5,20 @@
       "credit": "Goran Anđelić, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Houseboats,_Belgrade,_Serbia.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "25703848452601262",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=25703848452601262"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1292408399598959",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1292408399598959"
     }
   ],
   "fetchedAt": "2026-05-11"

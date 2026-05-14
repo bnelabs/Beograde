@@ -5,6 +5,20 @@
       "credit": "Sadko, CC BY 4.0, via Wikimedia Commons",
       "license": "CC BY 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Oplenac_2025-05-25_(7).jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1693272397910037",
+      "credit": "sm4rk0 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1693272397910037"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "9085635094794491",
+      "credit": "sm4rk0 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=9085635094794491"
     }
   ],
   "fetchedAt": "2026-05-11"

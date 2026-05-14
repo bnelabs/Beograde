@@ -67,6 +67,24 @@ export interface TransitInfo {
   notes?: Bilingual;
 }
 
+export type BudgetTier = 'free' | 'low' | 'mid' | 'high';
+export type Intensity = 'easy' | 'moderate' | 'active';
+
+export interface PoiActivity {
+  /** Action verb + object: "Walk the ramparts", "Order Moskva šnit", "Descend to the crypt". */
+  title: Bilingual;
+  /** Material symbol name (e.g., 'directions_walk', 'restaurant'). */
+  icon: string;
+  /** Typical time commitment in minutes — used for the duration pill. */
+  durationMin: number;
+  /** Free | low (<10 €) | mid (10–30 €) | high (>30 €) — renders as a 4-dot bar. */
+  budget: BudgetTier;
+  /** Physical effort: easy (sit / stroll), moderate (stairs / 30+ min walk), active (climb / 1h+). */
+  intensity: Intensity;
+  /** One short line of what to expect: what you'll do, see, taste. */
+  summary: Bilingual;
+}
+
 export interface POI {
   id: string;
   region: 'city' | 'metro' | 'day-trip';
@@ -80,6 +98,16 @@ export interface POI {
   pricing?: { tier: '€' | '€€' | '€€€'; rsd?: { min: number; max: number } };
   tags: string[];
   images: ImageAsset[];
+  /** 3–5 concrete, factual nuggets that signal why this place matters. Surfaces as photo-led cards. */
+  highlights?: Bilingual[];
+  /** Pros/cons pair to set honest expectations before a visit. */
+  whatToExpect?: { pros: Bilingual[]; cons: Bilingual[] };
+  /** 1–3 practical visit tips (best time, sneaky entrance, dress code, etc.). */
+  tips?: Bilingual[];
+  /** Short verifiable background paragraph — only present where the curator was confident. */
+  history?: Bilingual;
+  /** Concrete things to DO at this POI. Surfaces as photo-led cards with time + budget + intensity hints. */
+  activities?: PoiActivity[];
   transit?: TransitInfo[];
   verifiedAt: string;
   /** Optional Wikipedia article title (English unless overridden by lang field elsewhere). */
@@ -106,9 +134,11 @@ export interface Itinerary {
   durationMinutes: number;
   vibe: string[];
   stops: ItineraryStop[];
-  geometryUrl: string;
+  geometryUrl?: string;
   elevationProfileUrl?: string;
   bestStartHourLocal?: number;
+  /** Public-transport / driving guidance for non-walking legs of the route. */
+  gettingThere?: Bilingual;
   provenance: ProvenanceMeta;
 }
 

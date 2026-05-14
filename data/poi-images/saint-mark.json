@@ -5,6 +5,20 @@
       "credit": "Petar Milošević, CC BY-SA 4.0, via Wikimedia Commons",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Crkva_svetog_Marka,_Beograd_(St._Mark%27s_Church,_Belgrade).jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "978392638497229",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=978392638497229"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1447515340738827",
+      "credit": "smajser1 (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1447515340738827"
     }
   ],
   "fetchedAt": "2026-05-11"

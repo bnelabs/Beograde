@@ -1,0 +1,61 @@
+@if (assets().length > 0) {
+  <div class="pg" (scroll)="onScroll($event)">
+    @for (a of assets(); track a.src; let i = $index) {
+      <figure class="pg-slide">
+        <div class="pg-back" [style.background-image]="'url(' + a.lqip + ')'"></div>
+        <img class="pg-img"
+             [src]="a.src"
+             [srcset]="srcsetFor(a)"
+             sizes="100vw"
+             [alt]="alt() + ' photo ' + (i + 1)"
+             (click)="openLightbox(i)"
+             [attr.loading]="i === 0 ? null : 'lazy'"
+             decoding="async" />
+      </figure>
+    }
+  </div>
+  @if (assets().length > 1) {
+    <div class="pg-dots" aria-hidden="true">
+      @for (a of assets(); track a.src; let i = $index) {
+        <span class="pg-dot" [class.active]="i === currentIndex()"></span>
+      }
+    </div>
+    <div class="pg-count">{{ currentIndex() + 1 }} / {{ assets().length }}</div>
+  }
+} @else if (fallbackIcon(); as icon) {
+  <div class="pg-fallback">
+    <span class="material-symbols-outlined" aria-hidden="true">{{ icon }}</span>
+  </div>
+}
+
+@if (lightboxOpen()) {
+  <div class="lb" role="dialog" aria-modal="true" (click)="closeLightbox()">
+    <button type="button"
+            class="lb-close"
+            (click)="closeLightbox(); $event.stopPropagation()"
+            aria-label="Close">
+      <span class="material-symbols-outlined" aria-hidden="true">close</span>
+    </button>
+    <div #lbScroller class="lb-track" (scroll)="onLightboxScroll($event)" (click)="$event.stopPropagation()">
+      @for (a of assets(); track a.src) {
+        <div class="lb-slide">
+          <img class="lb-img"
+               [src]="a.src"
+               [srcset]="srcsetFor(a)"
+               sizes="100vw"
+               [alt]="alt()" />
+        </div>
+      }
+    </div>
+    <div class="lb-meta" (click)="$event.stopPropagation()">
+      <span class="lb-count">{{ lightboxIndex() + 1 }} / {{ assets().length }}</span>
+      @if (currentCredit(); as c) {
+        @if (currentSource(); as src) {
+          <a class="lb-credit" [href]="src" target="_blank" rel="noopener noreferrer">{{ c }}</a>
+        } @else {
+          <span class="lb-credit">{{ c }}</span>
+        }
+      }
+    </div>
+  </div>
+}

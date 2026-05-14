@@ -5,6 +5,20 @@
       "credit": "Dungodung, CC BY-SA 3.0, via Wikimedia Commons",
       "license": "CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Gen%C4%8Di%C4%87eva_ku%C4%87a_6.jpg"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "647395744469745",
+      "credit": "puky (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=647395744469745"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1523994938270372",
+      "credit": "puky (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1523994938270372"
     }
   ],
   "fetchedAt": "2026-05-11"

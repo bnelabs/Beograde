@@ -97,6 +97,84 @@ describe('build-provenance', () => {
     rmSync(dir, { recursive: true, force: true });
   });
 
+  test('translit-fills sr_cyr inside activities[].title and activities[].summary', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    const src = [
+      {
+        id: 'p1', region: 'city', category: 'sight',
+        name: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        description: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        address: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        lng: 0, lat: 0, tags: [], images: [],
+        verifiedAt: '2026-05-04',
+        sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+        reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+        editorialConfidence: 'high',
+        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        activities: [{
+          title: { en: 'Walk the ramparts', sr_lat: 'Šetnja bedemima', sr_cyr: '' },
+          icon: 'directions_walk', durationMin: 45, budget: 'free', intensity: 'easy',
+          summary: { en: 'Loop the upper terraces.', sr_lat: 'Obilazak gornje terase.', sr_cyr: '' },
+        }],
+      },
+    ];
+    writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
+    await runBuildProvenance({
+      srcPath: join(dir, 'pois.json'),
+      outPath: join(dir, 'pois.compiled.json'),
+      cacheDir: dir,
+      fetchFn: async () => ({ ok: false }),
+    });
+    const compiled = JSON.parse(readFileSync(join(dir, 'pois.compiled.json'), 'utf8'));
+    assert.equal(compiled[0].activities[0].title.sr_cyr, 'Шетња бедемима');
+    assert.equal(compiled[0].activities[0].summary.sr_cyr, 'Обилазак горње терасе.');
+    // Non-bilingual fields should pass through untouched.
+    assert.equal(compiled[0].activities[0].icon, 'directions_walk');
+    assert.equal(compiled[0].activities[0].durationMin, 45);
+    assert.equal(compiled[0].activities[0].budget, 'free');
+    assert.equal(compiled[0].activities[0].intensity, 'easy');
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  test('translit-fills sr_cyr for highlights, tips, history, whatToExpect', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    const src = [
+      {
+        id: 'p1', region: 'city', category: 'sight',
+        name: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        description: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        address: { en: 'X', sr_lat: 'X', sr_cyr: '' },
+        lng: 0, lat: 0, tags: [], images: [],
+        verifiedAt: '2026-05-04',
+        sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+        reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+        editorialConfidence: 'high',
+        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+        highlights: [{ en: 'Old wall', sr_lat: 'Stari zid', sr_cyr: '' }],
+        tips: [{ en: 'Go at sunset', sr_lat: 'Idite u sumrak', sr_cyr: '' }],
+        history: { en: 'Built in 1521.', sr_lat: 'Sagrađen 1521.', sr_cyr: '' },
+        whatToExpect: {
+          pros: [{ en: 'Free entry', sr_lat: 'Besplatan ulaz', sr_cyr: '' }],
+          cons: [{ en: 'Steep stairs', sr_lat: 'Strme stepenice', sr_cyr: '' }],
+        },
+      },
+    ];
+    writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
+    await runBuildProvenance({
+      srcPath: join(dir, 'pois.json'),
+      outPath: join(dir, 'pois.compiled.json'),
+      cacheDir: dir,
+      fetchFn: async () => ({ ok: false }),
+    });
+    const compiled = JSON.parse(readFileSync(join(dir, 'pois.compiled.json'), 'utf8'));
+    assert.equal(compiled[0].highlights[0].sr_cyr, 'Стари зид');
+    assert.equal(compiled[0].tips[0].sr_cyr, 'Идите у сумрак');
+    assert.equal(compiled[0].history.sr_cyr, 'Саграђен 1521.');
+    assert.equal(compiled[0].whatToExpect.pros[0].sr_cyr, 'Бесплатан улаз');
+    assert.equal(compiled[0].whatToExpect.cons[0].sr_cyr, 'Стрме степенице');
+    rmSync(dir, { recursive: true, force: true });
+  });
+
   test('preserves images[] from a prior compiled.json so build-images data is not stripped', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'bp-'));
     const src = [

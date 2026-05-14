@@ -5,6 +5,20 @@
       "credit": "Rasevic, CC BY 3.0, via Wikimedia Commons",
       "license": "CC BY 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Fountain_in_Banja_Koviljaca.JPG"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "694830903545518",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=694830903545518"
+    },
+    {
+      "sourceType": "mapillary",
+      "mapillaryId": "1135471495077072",
+      "credit": "borovac (Mapillary), CC BY-SA 4.0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://www.mapillary.com/app/?focus=photo&pKey=1135471495077072"
     }
   ],
   "fetchedAt": "2026-05-11"
