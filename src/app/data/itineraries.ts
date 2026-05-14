@@ -21,7 +21,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'republic-square', arrivalOffsetMinutes: 460, durationMinutes: 20 },
       { poiId: 'skadarlija', arrivalOffsetMinutes: 485, durationMinutes: 55, notes: bg('Dinner with live tamburica.', 'Večera uz tamburicu uživo.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'foodie-crawl',
@@ -40,7 +43,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'skadarlija', arrivalOffsetMinutes: 525, durationMinutes: 90, notes: bg('Real dinner. Live tamburica, kafana décor.', 'Prava večera. Tamburica uživo, kafanska atmosfera.') },
       { poiId: 'cetinjska', arrivalOffsetMinutes: 540, durationMinutes: 60, notes: bg('Last drink in the brewery courtyard. Stay till midnight.', 'Poslednje piće u dvorištu pivare. Ostani do ponoći.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'riverside-splavovi',
@@ -58,7 +64,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'drugstore', arrivalOffsetMinutes: 365, durationMinutes: 75, notes: bg('Warm up the night in the ex-slaughterhouse.', 'Zagrejavanje za noć u bivšoj klanici.') },
       { poiId: 'splavovi', arrivalOffsetMinutes: 450, durationMinutes: 90, notes: bg('Pick a splav by the music spilling out. Stay till 3 AM.', 'Biraj splav po muzici. Ostani do tri.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'family-day',
@@ -79,7 +88,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'ada-ciganlija', arrivalOffsetMinutes: 320, durationMinutes: 150, notes: bg('Swim, kayak, paddleboat. Rent bikes for the lake loop.', 'Kupanje, kajak, pedaline. Iznajmi bicikle za krug oko jezera.') },
       { poiId: 'tasmajdan-park', arrivalOffsetMinutes: 490, durationMinutes: 45, notes: bg('Cool-down lap before dinner. Playground at the south end.', 'Pauza pre večere. Igralište na južnom kraju.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'rainy-day',
@@ -96,7 +108,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'manaks-house', arrivalOffsetMinutes: 330, durationMinutes: 45 },
       { poiId: 'smokvica', arrivalOffsetMinutes: 385, durationMinutes: 35, notes: bg('Hot chocolate before heading home.', 'Topla čokolada pre povratka.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'viewpoint-sunset',
@@ -117,7 +132,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'ada-bridge', arrivalOffsetMinutes: 325, durationMinutes: 45, notes: bg('Blue hour at the pylon — long exposure of cars and tram.', 'Plavi sat na stubu — duga ekspozicija auta i tramvaja.') },
       { poiId: 'saint-sava', arrivalOffsetMinutes: 395, durationMinutes: 60, notes: bg('Lit dome at night. Walk around for the symmetry shot.', 'Osvetljena kupola noću. Obiđi je za simetrični kadar.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'avala-kosmaj-twin-peaks',
@@ -137,7 +155,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'topcider-park', arrivalOffsetMinutes: 405, durationMinutes: 60, notes: bg('Cool down under the giant plane tree. Konak museum on the way.', 'Pauza pod ogromnim platanom. Konak muzej usput.') },
       { poiId: 'skadarlija', arrivalOffsetMinutes: 510, durationMinutes: 90, notes: bg('Earned dinner. Sit until the candles are low.', 'Zaslužena večera. Sedi dok sveće ne dogore.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'fruska-gora-day-trip',
@@ -157,7 +178,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'strand-novi-sad', arrivalOffsetMinutes: 540, durationMinutes: 90, notes: bg('Cool off in the Danube. Drinks on the sand.', 'Osveži se u Dunavu. Piće na pesku.') },
       { poiId: 'kafana-question-mark', arrivalOffsetMinutes: 660, durationMinutes: 60, notes: bg('Late dinner back in Belgrade. You earned it.', 'Kasna večera u Beogradu. Zaslužio si.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
   {
     id: 'ada-watersports-day',
@@ -178,7 +202,10 @@ export const ITINERARIES: Itinerary[] = [
       { poiId: 'cetinjska', arrivalOffsetMinutes: 480, durationMinutes: 60 },
       { poiId: 'splavovi', arrivalOffsetMinutes: 555, durationMinutes: 45, notes: bg('Hour or two on the dance floor — earned it twice over.', 'Sat-dva na podijumu — dvostruko zaslužio.') },
     ],
-    provenance: { translatedBy: 'auto-draft' as const, lastReviewedAt: '2026-05-11' },
+    provenance: {
+      translatedBy: { sr: 'auto-draft' as const, tr: 'auto-draft' as const },
+      lastReviewedAt: '2026-05-11',
+    },
   },
 ];
 

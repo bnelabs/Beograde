@@ -79,4 +79,6 @@ Single canonical Turkish term per concept. If a synonym is more natural in a spe
 
 ## Provenance
 
-Every POI touched by an LLM-draft translation pass MUST have `provenance.translatedBy: "auto-draft"`. A future Turkish-fluent curator pass will flip these to `"curator"`. Do not change the value to `"curator"` from the model side.
+`provenance.translatedBy` is per-locale: `{ sr, tr }`. Each locale carries `"auto-draft"` or `"curator"` independently — `en` is source-of-truth, `sr_cyr` is transliterated from `sr_lat`, so only `sr` and `tr` need a curator flag.
+
+Every POI touched by an LLM-draft Turkish pass MUST have `provenance.translatedBy.tr: "auto-draft"`. A future Turkish-fluent curator pass will flip `tr` to `"curator"`. Do not change `tr` to `"curator"` from the model side. Leave `sr` alone — its state reflects Serbian-content review history, not Turkish work.

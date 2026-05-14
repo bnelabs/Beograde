@@ -12,9 +12,14 @@ export interface Bilingual {
   tr: string;
 }
 
+/** Per-locale translation provenance. `en` is source-of-truth and `sr_cyr` is
+ * mechanically transliterated from `sr_lat`, so only `sr` (Latin) and `tr`
+ * carry a curator/auto-draft state. */
+export type TranslationStatus = 'auto-draft' | 'curator';
+
 /** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
 export interface ProvenanceMeta {
-  translatedBy: 'auto-draft' | 'curator';
+  translatedBy: { sr: TranslationStatus; tr: TranslationStatus };
   lastReviewedAt: string;
 }
 
