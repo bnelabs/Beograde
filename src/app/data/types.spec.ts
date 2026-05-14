@@ -5,7 +5,7 @@ import {
 
 describe('types', () => {
   it('POI carries bilingual fields, optional transit, provenance', () => {
-    const bg: Bilingual = { en: 'a', sr_lat: 'a', sr_cyr: 'a' };
+    const bg: Bilingual = { en: 'a', sr_lat: 'a', sr_cyr: 'a', tr: 'a' };
     const poi: POI = {
       id: 'x',
       region: 'city',
@@ -30,7 +30,7 @@ describe('types', () => {
   });
 
   it('Itinerary has bilingual title/subtitle and stops', () => {
-    const bg: Bilingual = { en: 't', sr_lat: 't', sr_cyr: 't' };
+    const bg: Bilingual = { en: 't', sr_lat: 't', sr_cyr: 't', tr: 't' };
     const stop: ItineraryStop = { poiId: 'x', arrivalOffsetMinutes: 0, durationMinutes: 30 };
     const it: Itinerary = {
       id: 'i',
@@ -46,7 +46,7 @@ describe('types', () => {
   });
 
   it('TransitInfo carries departures and validity', () => {
-    const bg: Bilingual = { en: 's', sr_lat: 's', sr_cyr: 's' };
+    const bg: Bilingual = { en: 's', sr_lat: 's', sr_cyr: 's', tr: 's' };
     const t: TransitInfo = {
       mode: 'soko',
       fromStation: bg,
@@ -82,5 +82,10 @@ describe('types', () => {
       checks: { wikipedia: true, osm: true, official: true, crowdsourced: false },
     };
     expect(r.score).toBe(75);
+  });
+
+  it('Bilingual carries a Turkish field', () => {
+    const bg: Bilingual = { en: 'a', sr_lat: 'a', sr_cyr: 'a', tr: 'a' };
+    expect(bg.tr).toBe('a');
   });
 });

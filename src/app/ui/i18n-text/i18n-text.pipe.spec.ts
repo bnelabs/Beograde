@@ -14,12 +14,12 @@ describe('I18nTextPipe', () => {
 
   it('returns English by default', () => {
     i18n.setLocale({ locale: 'en', script: 'Latn' });
-    expect(pipe.transform({ en: 'Hi', sr_lat: 'Zdravo', sr_cyr: '' })).toBe('Hi');
+    expect(pipe.transform({ en: 'Hi', sr_lat: 'Zdravo', sr_cyr: '', tr: '' })).toBe('Hi');
   });
 
   it('returns Serbian Latin when locale is sr', () => {
     i18n.setLocale({ locale: 'sr', script: 'Latn' });
-    expect(pipe.transform({ en: 'Hi', sr_lat: 'Zdravo', sr_cyr: '' })).toBe('Zdravo');
+    expect(pipe.transform({ en: 'Hi', sr_lat: 'Zdravo', sr_cyr: '', tr: '' })).toBe('Zdravo');
   });
 
   it('returns empty string for null/undefined inputs', () => {

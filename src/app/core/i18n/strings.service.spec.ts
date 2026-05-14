@@ -35,4 +35,9 @@ describe('StringsService', () => {
     i18n.locale.set({ locale: 'sr', script: 'Cyrl' });
     expect(svc.t().tabs.home).toBe('Početna');
   });
+
+  it('returns TR when locale is tr', () => {
+    i18n.locale.set({ locale: 'tr', script: 'Latn' });
+    expect(svc.t().tabs.home).toBe('Ana sayfa');
+  });
 });

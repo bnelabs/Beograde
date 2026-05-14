@@ -244,4 +244,35 @@ describe('build-provenance', () => {
     assert.equal(compiled[0].id, 'p1');
     rmSync(dir, { recursive: true, force: true });
   });
+
+  test('auto-drafts tr from en when tr is empty; preserves existing tr', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bp-'));
+    const src = [
+      {
+        id: 'p1', region: 'city', category: 'sight',
+        name: { en: 'Kalemegdan', sr_lat: 'Kalemegdan', sr_cyr: '', tr: '' },
+        description: { en: 'Old fort.', sr_lat: 'Stara tvrđava.', sr_cyr: '', tr: 'Eski kale.' },
+        address: { en: 'Kalemegdan Park', sr_lat: 'Kalemegdanski park', sr_cyr: '', tr: '' },
+        lng: 0, lat: 0, tags: [], images: [],
+        verifiedAt: '2026-05-04', sources: [{ kind: 'official', url: 'x', org: 'TOB' }],
+        reliability: { score: 0, checks: { wikipedia: false, osm: false, official: false, crowdsourced: false } },
+        editorialConfidence: 'high',
+        provenance: { translatedBy: 'auto-draft', lastReviewedAt: '2026-05-04' },
+      },
+    ];
+    writeFileSync(join(dir, 'pois.json'), JSON.stringify(src));
+    await runBuildProvenance({
+      srcPath: join(dir, 'pois.json'),
+      outPath: join(dir, 'pois.compiled.json'),
+      cacheDir: dir,
+      fetchFn: async () => ({ ok: false }),
+    });
+    const compiled = JSON.parse(readFileSync(join(dir, 'pois.compiled.json'), 'utf8'));
+    // Empty tr is auto-drafted from en.
+    assert.equal(compiled[0].name.tr, 'Kalemegdan');
+    assert.equal(compiled[0].address.tr, 'Kalemegdan Park');
+    // Existing non-empty tr is preserved.
+    assert.equal(compiled[0].description.tr, 'Eski kale.');
+    rmSync(dir, { recursive: true, force: true });
+  });
 });
