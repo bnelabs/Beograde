@@ -42,6 +42,7 @@ export class SettingsComponent {
   protected readonly localeLabel = computed(() => {
     const loc = this.i18n.locale();
     if (loc.locale === 'en') return this.t().settings.language_en;
+    if (loc.locale === 'tr') return this.t().settings.language_tr;
     if (loc.script === 'Cyrl') return this.t().settings.language_sr_cyr;
     return this.t().settings.language_sr;
   });
@@ -59,8 +60,10 @@ export class SettingsComponent {
     const cur = this.i18n.locale();
     if (cur.locale === 'en') {
       this.i18n.setLocale({ locale: 'sr', script: 'Latn' });
-    } else if (cur.script === 'Latn') {
+    } else if (cur.locale === 'sr' && cur.script === 'Latn') {
       this.i18n.setLocale({ locale: 'sr', script: 'Cyrl' });
+    } else if (cur.locale === 'sr' && cur.script === 'Cyrl') {
+      this.i18n.setLocale({ locale: 'tr', script: 'Latn' });
     } else {
       this.i18n.setLocale({ locale: 'en', script: 'Latn' });
     }
