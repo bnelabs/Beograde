@@ -1,14 +1,15 @@
 export type Category = 'sight' | 'cuisine' | 'nightlife' | 'cafe' | 'museum' | 'viewpoint' | 'park';
 
-export type Locale = 'en' | 'sr';
+export type Locale = 'en' | 'sr' | 'tr';
 export type Script = 'Latn' | 'Cyrl';
 
-/** Bilingual content. sr_cyr is auto-transliterated from sr_lat at build time
- * (Phase 1b enables the Cyrillic UI toggle once the override file is reviewed). */
+/** Localized content. sr_cyr is auto-transliterated from sr_lat at build time.
+ * tr is auto-drafted from en at build time and curated later. */
 export interface Bilingual {
   en: string;
   sr_lat: string;
   sr_cyr: string;
+  tr: string;
 }
 
 /** Audit trail. Tells curators which translations / sources are draft vs reviewed. */
