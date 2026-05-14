@@ -1,6 +1,6 @@
 import { Itinerary, Bilingual } from './types';
 
-const bg = (en: string, sr: string = en): Bilingual => ({ en, sr_lat: sr, sr_cyr: '' });
+const bg = (en: string, sr: string = en): Bilingual => ({ en, sr_lat: sr, sr_cyr: '', tr: '' });
 
 export const ITINERARIES: Itinerary[] = [
   {

@@ -1,7 +1,7 @@
 import { defaultLocaleFromBrowser, pick } from './i18n';
 import type { Bilingual } from '../../data/types';
 
-const sample: Bilingual = { en: 'Hello', sr_lat: 'Zdravo', sr_cyr: 'Здраво' };
+const sample: Bilingual = { en: 'Hello', sr_lat: 'Zdravo', sr_cyr: 'Здраво', tr: '' };
 
 describe('i18n helpers', () => {
   describe('pick', () => {
@@ -18,7 +18,7 @@ describe('i18n helpers', () => {
     });
 
     it('falls back to English when sr field is empty', () => {
-      const partial: Bilingual = { en: 'Only', sr_lat: '', sr_cyr: '' };
+      const partial: Bilingual = { en: 'Only', sr_lat: '', sr_cyr: '', tr: '' };
       expect(pick(partial, { locale: 'sr', script: 'Latn' })).toBe('Only');
     });
   });
