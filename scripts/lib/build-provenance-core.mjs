@@ -20,6 +20,20 @@ function fillCyrList(list) {
   return list.map(fillCyr);
 }
 
+function fillTr(b) {
+  if (b.tr) return b;
+  return { ...b, tr: b.en || '' };
+}
+
+function fillBoth(b) {
+  return fillTr(fillCyr(b));
+}
+
+function fillBothList(list) {
+  if (!Array.isArray(list)) return list;
+  return list.map(fillBoth);
+}
+
 /**
  * Drives the four-check pipeline over every POI and writes pois.compiled.json.
  * `fetchFn` is injected so unit tests can run without network.
@@ -76,24 +90,24 @@ export async function runBuildProvenance({ srcPath, outPath, cacheDir, fetchFn }
       crowdsourced: crowd.pass,
     };
     const reliability = { score: score(checks), checks };
-    poi.name = fillCyr(poi.name);
-    poi.description = fillCyr(poi.description);
-    poi.address = fillCyr(poi.address);
-    if (poi.hours?.notes) poi.hours.notes = fillCyr(poi.hours.notes);
-    if (poi.highlights) poi.highlights = fillCyrList(poi.highlights);
-    if (poi.tips) poi.tips = fillCyrList(poi.tips);
-    if (poi.history) poi.history = fillCyr(poi.history);
+    poi.name = fillBoth(poi.name);
+    poi.description = fillBoth(poi.description);
+    poi.address = fillBoth(poi.address);
+    if (poi.hours?.notes) poi.hours.notes = fillBoth(poi.hours.notes);
+    if (poi.highlights) poi.highlights = fillBothList(poi.highlights);
+    if (poi.tips) poi.tips = fillBothList(poi.tips);
+    if (poi.history) poi.history = fillBoth(poi.history);
     if (poi.whatToExpect) {
       poi.whatToExpect = {
-        pros: fillCyrList(poi.whatToExpect.pros ?? []),
-        cons: fillCyrList(poi.whatToExpect.cons ?? []),
+        pros: fillBothList(poi.whatToExpect.pros ?? []),
+        cons: fillBothList(poi.whatToExpect.cons ?? []),
       };
     }
     if (Array.isArray(poi.activities)) {
       poi.activities = poi.activities.map(a => ({
         ...a,
-        title: fillCyr(a.title),
-        summary: fillCyr(a.summary),
+        title: fillBoth(a.title),
+        summary: fillBoth(a.summary),
       }));
     }
     const enriched = { ...poi, sources, reliability };
