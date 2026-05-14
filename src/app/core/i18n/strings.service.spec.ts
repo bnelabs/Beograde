@@ -40,4 +40,17 @@ describe('StringsService', () => {
     i18n.locale.set({ locale: 'tr', script: 'Latn' });
     expect(svc.t().tabs.home).toBe('Ana sayfa');
   });
+
+  it('exposes a non-empty language_tr label for every bundle (parity smoke check)', () => {
+    for (const loc of [
+      { locale: 'en' as const, script: 'Latn' as const },
+      { locale: 'sr' as const, script: 'Latn' as const },
+      { locale: 'sr' as const, script: 'Cyrl' as const },
+      { locale: 'tr' as const, script: 'Latn' as const },
+    ]) {
+      i18n.cyrillicEnabled.set(true);
+      i18n.locale.set(loc);
+      expect(svc.t().settings.language_tr, `locale=${loc.locale}/${loc.script}`).toBeTruthy();
+    }
+  });
 });
