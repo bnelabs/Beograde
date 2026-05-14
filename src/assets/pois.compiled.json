@@ -1477,7 +1477,7 @@
       "en": "The city's central meeting point — \"kod konja\" (by the horse). Anchored by the National Museum and National Theatre.",
       "sr_lat": "Centralno gradsko okupljalište — \"kod konja\". Omeđen Narodnim muzejom i Narodnim pozorištem.",
       "sr_cyr": "Централно градско окупљалиште — \"код коња\". Омеђен Народним музејом и Народним позориштем.",
-      "tr": "Şehrin merkezi buluşma noktası — \"kod konja\" (heykelin yanında). Narodni Muzej (Ulusal Müze) ve Narodno Pozorište (Ulusal Tiyatro) ile çevrili."
+      "tr": "Şehrin merkezi buluşma noktası — \"kod konja\" (atın yanında). Narodni Muzej (Ulusal Müze) ve Narodno Pozorište (Ulusal Tiyatro) ile çevrili."
     },
     "address": {
       "en": "Trg Republike",
@@ -1560,7 +1560,7 @@
         "en": "National Museum and National Theatre flank the square",
         "sr_lat": "Narodni muzej i Narodno pozorište okružuju trg",
         "sr_cyr": "Народни музеј и Народно позориште окружују трг",
-        "tr": "Narodni Muzej (Ulusal Müze) ve Narodno Pozorište (Ulusal Tiyatro) meydanı çevreler"
+        "tr": "Narodni Muzej (Ulusal Müze) ve Narodno Pozorište (Ulusal Tiyatro) meydanın iki yanında yer alır"
       },
       {
         "en": "Pedestrian since the 2019–2020 redesign",
@@ -1604,7 +1604,7 @@
         "en": "Use it as the start/end pin for every walking tour",
         "sr_lat": "Postavite ga kao početak/kraj svake šetnje",
         "sr_cyr": "Поставите га као почетак/крај сваке шетње",
-        "tr": "Her şehir turunun başlangıç/bitiş noktası olarak kullanın"
+        "tr": "Şehir turunuza buradan başlayın veya burada bitirin"
       },
       {
         "en": "The \"M\" Komunalac branch on the square stays open late",
@@ -1936,7 +1936,7 @@
       "en": "Tito's resting place inside the Museum of Yugoslavia complex. Pair with the main museum for a full Yugoslav-era afternoon.",
       "sr_lat": "Titovo počivalište unutar kompleksa Muzeja Jugoslavije. Kombinujte s glavnim muzejom za celo popodne posvećeno jugoslovenskom dobu.",
       "sr_cyr": "Титово почивалиште унутар комплекса Музеја Југославије. Комбинујте с главним музејом за цело поподне посвећено југословенском добу.",
-      "tr": "Yugoslavya Müzesi kompleksindeki Tito'nun istirahat yeri. Tam bir Yugoslav dönemi öğleden sonrası için ana müzeyle birleştirin."
+      "tr": "Yugoslavya Müzesi kompleksindeki Tito'nun son istirahat yeri. Tam bir Yugoslav dönemi öğleden sonrası için ana müzeyle birleştirin."
     },
     "address": {
       "en": "Botićeva 6, Dedinje",
@@ -2011,7 +2011,7 @@
           "en": "Self-guided visit to House of Flowers (Tito's Mausoleum)",
           "sr_lat": "Samostalni obilazak Kuća cveća (Titov mauzolej)",
           "sr_cyr": "Самостални обилазак Кућа цвећа (Титов маузолеј)",
-          "tr": "Çiçekler Evi (Tito'nun Anıtmezarı)'na rehbersiz ziyaret"
+          "tr": "Çiçekler Evi'ne rehbersiz ziyaret"
         },
         "summary": {
           "en": "Allow about 90 minutes; signage is bilingual in most museums.",
@@ -2035,7 +2035,7 @@
           "en": "Worth checking — Belgrade museums rotate guest collections every few months.",
           "sr_lat": "Vredi proveriti — beogradski muzeji rotiraju izložbe svakih nekoliko meseci.",
           "sr_cyr": "Вреди проверити — београдски музеји ротирају изложбе сваких неколико месеци.",
-          "tr": "Kontrol etmeye değer — Belgrad müzeleri her birkaç ayda bir konuk koleksiyonları döndürür."
+          "tr": "Kontrol etmeye değer — Belgrad müzeleri birkaç ayda bir konuk koleksiyonlarını değiştirir."
         },
         "icon": "palette",
         "durationMin": 45,
@@ -2148,7 +2148,7 @@
         "en": "Forest loop trail for runners — about 8 km",
         "sr_lat": "Šumska trkačka petlja — oko 8 km",
         "sr_cyr": "Шумска тркачка петља — око 8 км",
-        "tr": "Koşucular için orman döngü patikası — yaklaşık 8 km"
+        "tr": "Koşucular için yaklaşık 8 km'lik orman içi döngü patikası"
       }
     ],
     "whatToExpect": {
@@ -2192,7 +2192,7 @@
         "en": "Beach 3 has the shallowest water for kids",
         "sr_lat": "Plaža 3 ima najplića voda za decu",
         "sr_cyr": "Плажа 3 има најплића вода за децу",
-        "tr": "3 No'lu Plaj çocuklar için en sığ suya sahip"
+        "tr": "Çocuklar için en sığ su 3 No'lu Plaj'da"
       }
     ],
     "activities": [
@@ -2243,7 +2243,7 @@
           "en": "Cheap meat-and-side plates along the lakeshore. Cash preferred.",
           "sr_lat": "Jeftin roštilj duž obale jezera. Gotovina poželjna.",
           "sr_cyr": "Јефтин роштиљ дуж обале језера. Готовина пожељна.",
-          "tr": "Göl kıyısında uygun fiyatlı et-garnitür tabakları. Nakit tercih edilir."
+          "tr": "Göl kıyısında uygun fiyatlı et ve garnitür tabakları. Nakit tercih edilir."
         },
         "icon": "outdoor_grill",
         "durationMin": 60,
@@ -2514,7 +2514,7 @@
       "en": "Art-Nouveau landmark from 1908. Order the Moskva Šnit cake with a coffee and watch all of Belgrade walk past.",
       "sr_lat": "Secesijska znamenitost iz 1908. godine. Naručite Moskva Šnit uz kafu i posmatrajte kako pola Beograda prolazi.",
       "sr_cyr": "Сецесијска знаменитост из 1908. године. Наручите Москва Шнит уз кафу и посматрајте како пола Београда пролази.",
-      "tr": "1908 yılından kalma art nouveau (secession) bir simge. Bir kahvenin yanında Moskva Šnit pastasını sipariş edin ve Belgrad'ın gelip geçişini izleyin."
+      "tr": "1908'den kalma art nouveau (secession) bir simge. Moskva şnit pastasını bir kahveyle sipariş edin ve Belgrad'ın gelip geçişini izleyin."
     },
     "address": {
       "en": "Balkanska 1",
@@ -2595,19 +2595,19 @@
         "en": "Famous Moskva šnit pastry served since the 1970s",
         "sr_lat": "Čuveni \"Moskva šnit\" koji se služi od 1970-ih",
         "sr_cyr": "Чувени \"Москва шнит\" који се служи од 1970-их",
-        "tr": "1970'lerden bu yana servis edilen meşhur Moskva šnit pastası"
+        "tr": "1970'lerden bu yana servis edilen meşhur Moskva şnit pastası"
       },
       {
         "en": "Albert Einstein, Indira Gandhi and Hitchcock all stayed here",
         "sr_lat": "Među gostima: Ajnštajn, Indira Gandi, Hičkok",
         "sr_cyr": "Међу гостима: Ајнштајн, Индира Ганди, Хичкок",
-        "tr": "Einstein, Indira Gandhi ve Hitchcock burada konaklayan ünlüler arasında"
+        "tr": "Einstein, Indira Gandhi ve Hitchcock gibi ünlüler burada konakladı"
       },
       {
         "en": "Belgrade's most photographed building on Terazije",
         "sr_lat": "Najfotografisanije zdanje na Terazijama",
         "sr_cyr": "Најфотографисаније здање на Теразијама",
-        "tr": "Terazije'deki en çok fotoğraflanan Belgrad binası"
+        "tr": "Belgrad'ın Terazije'de en çok fotoğraflanan binası"
       }
     ],
     "whatToExpect": {
@@ -2651,7 +2651,7 @@
         "en": "Order Moskva šnit and a Turkish coffee for the full ritual",
         "sr_lat": "Naručite Moskva šnit i tursku kafu za potpuni doživljaj",
         "sr_cyr": "Наручите Москва шнит и турску кафу за потпуни доживљај",
-        "tr": "Klasik deneyim için Moskva šnit ve Türk kahvesi sipariş edin"
+        "tr": "Klasik deneyim için Moskva şnit ve Türk kahvesi sipariş edin"
       }
     ],
     "activities": [
@@ -2660,13 +2660,13 @@
           "en": "Order Moskva šnit & Turkish coffee",
           "sr_lat": "Naručite Moskva šnit i tursku kafu",
           "sr_cyr": "Наручите Москва шнит и турску кафу",
-          "tr": "Moskva šnit ve Türk kahvesi sipariş edin"
+          "tr": "Moskva şnit ve Türk kahvesi sipariş edin"
         },
         "summary": {
           "en": "Signature 1970s pastry. Sit INSIDE — marble, brass, mosaic floors. ~6 €.",
           "sr_lat": "Slastica iz 1970-ih. Sedite UNUTRA — mermer, mesing, mozaik. ~6 €.",
           "sr_cyr": "Сластица из 1970-их. Седите УНУТРА — мермер, месинг, мозаик. ~6 €.",
-          "tr": "1970'lerden imza pasta. İÇERİDE oturun — mermer, pirinç, mozaik döşeme. ~6 €."
+          "tr": "1970'lerden gelen imza pasta. İÇERİDE oturun — mermer, pirinç, mozaik döşeme. ~6 €."
         },
         "icon": "cake",
         "durationMin": 45,
@@ -3335,7 +3335,7 @@
         "en": "Anchors the south edge of Tašmajdan Park",
         "sr_lat": "Stoji na južnoj ivici Tašmajdana",
         "sr_cyr": "Стоји на јужној ивици Ташмајдана",
-        "tr": "Tašmajdan Parkı'nın güney kenarına demir atar"
+        "tr": "Tašmajdan Parkı'nın güney kenarında yer alır"
       }
     ],
     "whatToExpect": {
@@ -3350,7 +3350,7 @@
           "en": "Five-domed silhouette photographs well from the park",
           "sr_lat": "Pet kupola — efektna silueta iz parka",
           "sr_cyr": "Пет купола — ефектна силуета из парка",
-          "tr": "Beş kubbeli silüet parktan iyi fotoğraflanır"
+          "tr": "Beş kubbeli silüetin parktan güzel fotoğrafları çıkar"
         }
       ],
       "cons": [
@@ -3358,13 +3358,13 @@
           "en": "Modest dress expected",
           "sr_lat": "Pristojno odevanje obavezno",
           "sr_cyr": "Пристојно одевање обавезно",
-          "tr": "Mütevazı kıyafet bekleniyor"
+          "tr": "Mütevazı kıyafet beklenir"
         },
         {
           "en": "No formal tours — interpretation is light",
           "sr_lat": "Bez vodiča — natpisa malo",
           "sr_cyr": "Без водича — натписа мало",
-          "tr": "Resmi tur yok — açıklamalar yetersiz"
+          "tr": "Resmi tur yok — açıklamalar sınırlı"
         }
       ]
     },
